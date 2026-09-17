@@ -1,6 +1,7 @@
 # Awesome TypeSafe
 
 [![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
+[![Live site](https://img.shields.io/badge/live-GitHub%20Pages-111827?logo=github)](https://abdelstark.github.io/awesome-typesafe/)
 [![Checks](https://github.com/AbdelStark/awesome-typesafe/actions/workflows/checks.yml/badge.svg)](https://github.com/AbdelStark/awesome-typesafe/actions/workflows/checks.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#0b1020">
+    <title>{{ page.title | default: site.title | escape }}</title>
+    <meta name="description" content="{{ page.description | default: site.description | escape }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+    <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+    <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to the list</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="Awesome TypeSafe home">
+          <span class="wordmark__mark" aria-hidden="true">∵</span>
+          <span>Awesome TypeSafe</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="https://docs.typesafe.ai/">Docs</a>
+          <a href="https://discord.gg/typesafe">Discord</a>
+          <a class="site-nav__primary" href="https://github.com/AbdelStark/awesome-typesafe">View on GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="content" class="page-shell">
+      {% unless page.hide_intro %}
+      <section class="site-intro" aria-labelledby="mirror-title">
+        <div>
+          <p class="eyebrow">Community-curated directory</p>
+          <h2 id="mirror-title">The live web mirror</h2>
+          <p>Official references, independent tools, working demos, and evidence-bearing evaluations—rendered directly from the repository README.</p>
+        </div>
+        <a class="intro-link" href="https://github.com/AbdelStark/awesome-typesafe/blob/main/CONTRIBUTING.md">
+          Add a resource <span aria-hidden="true">↗</span>
+        </a>
+      </section>
+      {% endunless %}
+
+      <article class="markdown-body">
+        {{ content }}
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>Independent community project. Not affiliated with or endorsed by TypeSafe AI.</p>
+        <p><a href="https://github.com/AbdelStark/awesome-typesafe">Source</a> · <a href="https://github.com/AbdelStark/awesome-typesafe/issues">Suggest a resource</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

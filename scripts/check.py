@@ -13,6 +13,7 @@ README = ROOT / "README.md"
 COMMUNITY_START = "## Community projects"
 COMMUNITY_END = "## Contributing"
 MINIMUM_COMMUNITY_ENTRIES = 20
+LIVE_SITE = "https://abdelstark.github.io/awesome-typesafe/"
 
 
 def github_slug(heading: str) -> str:
@@ -35,12 +36,29 @@ def main() -> int:
         "https://awesome.re/badge-flat2.svg": "missing Awesome badge",
         "**Independent community project.**": "missing independence disclaimer",
         "Last reviewed:": "missing review date",
+        LIVE_SITE: "missing live-site badge or link",
         COMMUNITY_START: "missing community-projects section",
         "CONTRIBUTING.md": "missing contribution-guide link",
     }
     for needle, message in required.items():
         if needle not in text:
             fail(message, failures)
+
+    site_files = {
+        ROOT / "_config.yml": "missing GitHub Pages configuration",
+        ROOT / "_layouts" / "default.html": "missing site layout",
+        ROOT / "assets" / "style.css": "missing site stylesheet",
+        ROOT / "index.md": "missing site entry point",
+    }
+    for path, message in site_files.items():
+        if not path.is_file():
+            fail(message, failures)
+
+    index_path = ROOT / "index.md"
+    if index_path.is_file() and "{% include_relative README.md %}" not in index_path.read_text(
+        encoding="utf-8"
+    ):
+        fail("index.md must render README.md as the single source of truth", failures)
 
     for line_number, line in enumerate(lines, start=1):
         if line.rstrip() != line:

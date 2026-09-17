@@ -1,0 +1,16 @@
+title: Awesome TypeSafe
+description: >-
+  A curated list of official resources and community projects for TypeSafe,
+  System One models, and Jev.
+url: https://abdelstark.github.io
+baseurl: /awesome-typesafe
+repository: AbdelStark/awesome-typesafe
+lang: en
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+permalink: pretty
+exclude:
+  - scripts
+  - vendor
