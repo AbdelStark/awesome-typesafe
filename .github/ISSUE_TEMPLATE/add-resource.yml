@@ -1,0 +1,63 @@
+name: Suggest a resource
+description: Propose an official resource or community project for the list.
+title: "Add: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion. Please read `CONTRIBUTING.md` first; this is a curated list rather than a complete directory.
+
+  - type: input
+    id: name
+    attributes:
+      label: Resource name
+      placeholder: Project or article name
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: Canonical URL
+      placeholder: https://github.com/owner/project
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Suggested category
+      options:
+        - Official resource
+        - Client library or integration
+        - Agent or developer tooling
+        - Browser agent
+        - Game, robotics, or interactive demo
+        - Evaluation or independent research
+        - Showcase or field note
+    validations:
+      required: true
+
+  - type: textarea
+    id: value
+    attributes:
+      label: Why it belongs
+      description: Explain what a builder can use, learn, or reproduce.
+    validations:
+      required: true
+
+  - type: textarea
+    id: caveats
+    attributes:
+      label: Evidence and limitations
+      description: Link methods or results and state any material caveats.
+
+  - type: dropdown
+    id: affiliation
+    attributes:
+      label: Are you affiliated with this resource?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
