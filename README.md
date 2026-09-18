@@ -127,6 +127,7 @@ Community projects are independent unless their repository says otherwise. Read 
 
 ### Evaluations and independent research
 
+- [Jev Judge vs Dimension Scores](https://agentjournal.dev/blog/llm-judge-vs-feature-extraction/) — Independent measurement on three classification tasks: one direct Jev question per row against 12–14 Jev-scored dimensions with locally fitted weights, 5,477 test rows and 34.1M input tokens for $1.43; decomposition reached 0.9076 against 0.8373 on Japanese NLI but flagged about 25× more hard benign rows as attacks, and four repair attempts failed, on dimensions the author wrote himself.
 - [Jev Rerank Bench](https://github.com/anessbelbati/jev-rerank-bench) — Reranking comparison with raw provider responses, scoring code, dataset-level results, uncertainty intervals, and documented limitations.
 - [Jev Spam Eval](https://github.com/bitnovus/jev-spam-eval) — Exploratory zero-shot spam study against trained TF-IDF baselines, including results and explicit post-hoc-tuning caveats.
 - [OpenJev](https://github.com/TheoLeeCJ/openjev) — Independent open-model research baseline for direct typed option scoring; it reproduces the interface pattern, not Jev's undisclosed model or training.
