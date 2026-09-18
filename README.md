@@ -117,7 +117,6 @@ Community projects are independent unless their repository says otherwise. Read 
 
 ### Browser agents
 
-- [Jev Browser](https://github.com/vlad-terin/jev-browser) — Agent skill and runtime that lets Jev select browser actions inside a continuous observation-action-verification loop.
 - [Jev Ultrafast](https://github.com/browser-use/jev-ultrafast) — Browser Use agent with a dynamic indexed action space, batched operation and target decisions, traces, and a measured Google Flights demo.
 
 ### Games, robotics, and interactive demos
