@@ -123,6 +123,7 @@ Community projects are independent unless their repository says otherwise. Read 
 - [pi-warden](https://github.com/DevMortimer/pi-warden) — Pi guardrails built on pi-typesafe that return Jev's verdict to the agent as a held tool result or a short steer instead of a dialog, check writes against a project rules file, and grade their own holds against the user's next message on recorded sessions; the action guard is calibrated on one user's 17k calls, the other guards on synthetic cases only.
 - [Supercov](https://github.com/supercorp-ai/supercov) — Code quality for coding agents: Jev scores each source file so the agent knows what to fix first.
 - [TypeSafe MCP](https://github.com/itsmostafa/typesafe-mcp) — Go CLI and single-binary MCP server with setup for Claude Desktop, Claude Code, and Codex.
+- [wakegate](https://github.com/shitianfang/wakegate) — Experimental TypeScript gate for long-running agents on Workers, Durable Objects, and Node: before a sleeping agent's LLM is resumed on a timer or incoming event, Jev answers one Choice (wake, not yet, unrelated) against the agent's own sleep note, and code skips the wakeup only below 0.2 on wake while always waking on user messages, bare timers, a skip limit, errors, and timeouts; its eval is 21 hand-written scenarios, not a benchmark.
 
 ### Browser agents
 
