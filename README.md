@@ -26,6 +26,7 @@ TypeSafe's Jev returns typed, probabilistic decisions instead of generated text.
   - [Client libraries and integrations](#client-libraries-and-integrations)
   - [Agent and developer tooling](#agent-and-developer-tooling)
   - [Browser agents](#browser-agents)
+  - [Finance and trading](#finance-and-trading)
   - [Games, robotics, and interactive demos](#games-robotics-and-interactive-demos)
   - [Evaluations and independent research](#evaluations-and-independent-research)
   - [Showcases and field notes](#showcases-and-field-notes)
@@ -138,9 +139,13 @@ Community projects are independent unless their repository says otherwise. Read 
 
 - [Jev Social](https://github.com/socai-io/jev-social) — Local Instagram and TikTok research app where Jev makes confidence-gated typed choices over the platform and next socai operation, deterministic Node code validates each decision, and the local socai CLI performs read-only browser capture.
 - [Jev Ultrafast](https://github.com/browser-use/jev-ultrafast) — Browser Use agent with a dynamic indexed action space, batched operation and target decisions, traces, and a measured Google Flights demo.
-- [JevBrowserExt](https://github.com/chy4pro/JevBrowserExt) — Chrome extension (Manifest V3) port of Jev Ultrafast: Jev picks the operation and DOM element in one request, a small text model writes typed values, and it runs in the user's own tabs through OpenRouter, TypeSafe or Cloudflare; includes a 17-task headless-Chromium suite with recorded traces.
 - [jev-agent-browser](https://github.com/forvela/jev-agent-browser) — Delegated browser execution for parent agents: Jev selects bounded typed actions, agent-browser performs them, and ambiguous or blocked flows escalate back to the parent.
 - [jev-skip](https://github.com/valentynkit/jev-skip) — Browser extension that reads the YouTube caption track and paints a per-segment sponsor probability on the seek bar before the intro ends, with no crowd database; reports catching 77% of SponsorBlock's sponsor seconds across 23 videos at $0.0008 a video.
+- [JevBrowserExt](https://github.com/chy4pro/JevBrowserExt) — Chrome extension (Manifest V3) port of Jev Ultrafast: Jev picks the operation and DOM element in one request, a small text model writes typed values, and it runs in the user's own tabs through OpenRouter, TypeSafe or Cloudflare; includes a 17-task headless-Chromium suite with recorded traces.
+
+### Finance and trading
+
+- [QuantDinger](https://github.com/OpenByteInc/QuantDinger) — Self-hosted quantitative trading platform that uses Jev System One as an optional, auditable PASS / REJECT gate for strategy and Quick Trade entry orders, with LLM fallback and deterministic bypasses for exits and protective orders; enabling the filter sends its prepared decision context to the configured AI provider.
 
 ### Games, robotics, and interactive demos
 
