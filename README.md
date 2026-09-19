@@ -141,6 +141,7 @@ Community projects are independent unless their repository says otherwise. Read 
 - [Jev Plays Pokémon](https://github.com/anxkhn/JevPlaysPokemon) — A Pokémon agent that lets you emulate GBA games and has Jev make the battle decisions based on the current stats, state, moves, and Pokémon.
 - [Jev Plays StarCraft](https://github.com/phyous/tsai-sc) — Structured-state harness, verified run, probability trace, and evidence bundle for the original StarCraft shareware campaign.
 - [Jev Search](https://github.com/superagents-lab/jev-search) — Web search demo using Jev's typed Choice and Noul judgments to select sources, time ranges, and query candidates, then rank results retrieved through Search1API; relevance scores are model judgments, not verified accuracy.
+- [Jev Trade](https://github.com/aowang-ai/jev-trade) — Live Hyperliquid desk across five isolated wallets: each tick packages book, tape, and position as state, Jev answers Choice questions for long/short, open/close/hold, and leverage, and application code places or pulls the quote (hold sends no order). Documents a dry-run path; a configured live key sends real testnet or mainnet orders. Demo at https://www.jev-trade.com/.
 - [TypeSafe Mario](https://github.com/fhshaik/typesafe-mario) — NES controller experiment that turns emulator telemetry into structured state and has Jev choose legal actions.
 - [TypeSafe Typewriter](https://typesafe-demo.val.run/) — Live Val Town demo that updates 16 typed judgments as text changes.
 
