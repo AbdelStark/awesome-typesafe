@@ -113,6 +113,7 @@ Community projects are independent unless their repository says otherwise. Read 
 ### Agent and developer tooling
 
 - [Bicameral](https://github.com/AbdelStark/bicameral) — Pi coding harness where an LLM writes while Jev supplies typed reflexes for policy, loop detection, and review; explicitly not a sandbox.
+- [DGP](https://github.com/numerous-com/dgp) — Experimental decision-based agent protocol with a Jev adapter, immutable evidence frames, typed assessments, and application-guarded commits; the local reference app simulates domain effects, and opt-in live mode sends decision evidence to TypeSafe.
 - [Every](https://github.com/sufianetaouil/every) — Semantic code search CLI that asks a yes/no question of every function and ranks the resulting probabilities.
 - [is-malicious](https://github.com/luantak/is-malicious) — CLI that scans source, configuration, build, and CI files with Jev, reports suspicious behavior with file and line pointers, and sends scanned file contents to TypeSafe's API.
 - [Jev MCP](https://github.com/blakestone-x/jev-mcp) — Python MCP server exposing classify, score, check, match, and screen tools to MCP-compatible agents.
