@@ -16,28 +16,10 @@
           "permalink": "/projects/gh-pithings-advocaat/"
         },
         {
-          "name": "BTK audit studies",
-          "url": "https://boringtoolskit.com/blog/seo-audit-cost-2026/",
-          "description_markdown": "Production SEO studies driven by Jev striking-distance triage: 1,204 pages judged per run, 4,816 typed judgments in under 3 minutes, $0.0048 per 12-query batch (jev-1.13.0).",
-          "permalink": "/projects/site-boringtoolskit-com-blog-seo-audit-cost-2026/"
-        },
-        {
-          "name": "DocJev",
-          "url": "https://github.com/jerryjliu/docjev",
-          "description_markdown": "Python library, CLI, and local app that uses LiteParse for document text and Jev to classify PDF, DOCX, and PPTX files or split mixed packets; optional LlamaParse provides cloud OCR. Its published 40-document, eight-packet comparison includes raw results but no human label review; normalized page text goes to the decision provider.",
-          "permalink": "/projects/gh-jerryjliu-docjev/"
-        },
-        {
           "name": "DuckDB Jev",
           "url": "https://github.com/prasanthj/duckdb-jev",
           "description_markdown": "Native DuckDB extension for Jev predicates, Choice classification, Score rubrics, and streaming batched judgments over SQL rows, with per-query budgets, caching, and request telemetry; published live throughput uses a repeated synthetic ticket corpus and does not measure classification accuracy, and binaries must match the DuckDB version and platform.",
           "permalink": "/projects/gh-prasanthj-duckdb-jev/"
-        },
-        {
-          "name": "HA-Jev",
-          "url": "https://github.com/AboveColin/HA-Jev",
-          "description_markdown": "Home Assistant integration that turns typed questions about entity state into sensors and automation actions, with entities reporting daily calls, tokens, and estimated cost and a token budget that halts evaluation; answers carry no explanation, so it is not suitable for safety decisions.",
-          "permalink": "/projects/gh-abovecolin-ha-jev/"
         },
         {
           "name": "Hunch",
@@ -298,12 +280,6 @@
           "permalink": "/projects/gh-eugeniughelbur-jev-engineering/"
         },
         {
-          "name": "jev-fit",
-          "url": "https://jev-fit.com",
-          "description_markdown": "Hosted fit checker and public API: paste a software idea, and one Jev call over a fixed typed rubric returns plain code, Jev, or a reasoning LLM with probabilities, while application code adds an image veto and a low-confidence \"not sure\" state; closed source, and the pasted text is sent to TypeSafe's API.",
-          "permalink": "/projects/site-jev-fit-com/"
-        },
-        {
           "name": "jev-logtriage",
           "url": "https://github.com/jyatesdotdev/jev-logtriage",
           "description_markdown": "CLI that asks Jev Noul, Score, and Choice questions of collapsed Loki log batches and maps answers in code to suppress, watch, review, notify, or page; remediations stay candidates and nothing is executed.",
@@ -468,27 +444,93 @@
       ]
     },
     {
-      "id": "finance-and-trading",
-      "name": "Finance and trading",
+      "id": "applications-and-workflows",
+      "name": "Applications and workflows",
       "resources": [
         {
-          "name": "QuantDinger",
-          "url": "https://github.com/OpenByteInc/QuantDinger",
-          "description_markdown": "Self-hosted quantitative trading platform that uses Jev System One as an optional, auditable PASS / REJECT gate for strategy and Quick Trade entry orders, with LLM fallback and deterministic bypasses for exits and protective orders; enabling the filter sends its prepared decision context to the configured AI provider.",
-          "permalink": "/projects/gh-openbyteinc-quantdinger/"
-        }
-      ]
-    },
-    {
-      "id": "games-robotics-and-interactive-demos",
-      "name": "Games, robotics, and interactive demos",
-      "resources": [
+          "name": "BTK audit studies",
+          "url": "https://boringtoolskit.com/blog/seo-audit-cost-2026/",
+          "description_markdown": "Production SEO studies driven by Jev striking-distance triage: 1,204 pages judged per run, 4,816 typed judgments in under 3 minutes, $0.0048 per 12-query batch (jev-1.13.0).",
+          "permalink": "/projects/site-boringtoolskit-com-blog-seo-audit-cost-2026/"
+        },
         {
           "name": "Crowdcheck",
           "url": "https://crowdcheck-ai.vercel.app/",
           "description_markdown": "Live demo that tests a 144-character post on 10,000 persistent synthetic personas: code decides who sees it, and batched Jev calls return read, like/dislike, agreement, repost, follow, and block probabilities per persona group; posting requires Google sign-in, post text is sent to Jev through Vercel AI Gateway, and the simulated reactions are not a forecast of real audience behavior.",
           "permalink": "/projects/site-crowdcheck-ai-vercel-app/"
         },
+        {
+          "name": "DocJev",
+          "url": "https://github.com/jerryjliu/docjev",
+          "description_markdown": "Python library, CLI, and local app that uses LiteParse for document text and Jev to classify PDF, DOCX, and PPTX files or split mixed packets; optional LlamaParse provides cloud OCR. Its published 40-document, eight-packet comparison includes raw results but no human label review; normalized page text goes to the decision provider.",
+          "permalink": "/projects/gh-jerryjliu-docjev/"
+        },
+        {
+          "name": "HA-Jev",
+          "url": "https://github.com/AboveColin/HA-Jev",
+          "description_markdown": "Home Assistant integration that turns typed questions about entity state into sensors and automation actions, with entities reporting daily calls, tokens, and estimated cost and a token budget that halts evaluation; answers carry no explanation, so it is not suitable for safety decisions.",
+          "permalink": "/projects/gh-abovecolin-ha-jev/"
+        },
+        {
+          "name": "Jev Search",
+          "url": "https://github.com/superagents-lab/jev-search",
+          "description_markdown": "Web search demo using Jev's typed Choice and Noul judgments to select sources, time ranges, and query candidates, then rank results retrieved through Search1API; relevance scores are model judgments, not verified accuracy.",
+          "permalink": "/projects/gh-superagents-lab-jev-search/"
+        },
+        {
+          "name": "Jev Trade",
+          "url": "https://github.com/aowang-ai/jev-trade",
+          "description_markdown": "Live Hyperliquid desk across five isolated wallets: each tick packages book, tape, and position as state, Jev answers Choice questions for long/short, open/close/hold, and leverage, and application code places or pulls the quote (hold sends no order). Documents a dry-run path; a configured live key sends real testnet or mainnet orders. [Live demo](https://www.jev-trade.com/).",
+          "permalink": "/projects/gh-aowang-ai-jev-trade/"
+        },
+        {
+          "name": "Jev Wrapped",
+          "url": "https://wrapped.ivanhabor.com",
+          "description_markdown": "Live X-ray of a public Telegram channel: code reads up to 1,500 posts of the last twelve months from Telegram's public web preview, sampled evenly across the months when there are more, Jev answers a Choice over ten kinds of post and three Noul questions (paid ad, clickbait, emotional pressure) about each, and code applies fixed thresholds and draws the shares month by month on a shareable card that links the highest-scoring posts for a manual check; only public post texts are sent to Jev, the shares are model judgments that can misread partner promotions as ads, no sign-in, open source (MIT).",
+          "permalink": "/projects/site-wrapped-ivanhabor-com/"
+        },
+        {
+          "name": "jev-fit",
+          "url": "https://jev-fit.com",
+          "description_markdown": "Hosted fit checker and public API: paste a software idea, and one Jev call over a fixed typed rubric returns plain code, Jev, or a reasoning LLM with probabilities, while application code adds an image veto and a low-confidence \"not sure\" state; closed source, and the pasted text is sent to TypeSafe's API.",
+          "permalink": "/projects/site-jev-fit-com/"
+        },
+        {
+          "name": "JevNoiseGate",
+          "url": "https://github.com/ufec/jev-block-android-ad",
+          "description_markdown": "Android app that asks Jev whether each incoming notification or SMS is noise and suppresses only what Jev explicitly flags, with a local pre-filter for verification codes that never reaches the API and a fail-open default on every uncertain path; experimental and developed against a single device, message bodies are sent to the API except when that local gate matches, and credentials are stored unencrypted in app-private storage.",
+          "permalink": "/projects/gh-ufec-jev-block-android-ad/"
+        },
+        {
+          "name": "Jevtown",
+          "url": "https://jevtown.ivanhabor.com",
+          "description_markdown": "Town of 10,000 computed personas that reads a post, listing, product, or headline: one opening request scores the text against about 60 audience attributes, 83 for a listing or a product, plus seven moderation questions, and plans the first wave of 600 readers; batched Choice questions then return each persona's reaction, and the text reaches the next wave only while glad reactions outweigh sorry ones. Also returns the audience by interest, job, age, city, and budget, the question buyers would ask a listing first, and a demand curve over an author-set price ladder. Personas are computed from their id rather than written by a model, and each reaction is sampled from the returned probabilities with a fixed seed, so the result is a simulation of a typed audience and not a forecast of real behaviour; open source (MIT), no sign-in, runs on a TypeSafe or OpenRouter key.",
+          "permalink": "/projects/site-jevtown-ivanhabor-com/"
+        },
+        {
+          "name": "Paper Trellis Citation Verifier",
+          "url": "https://github.com/MarissaFamularo/citation-verifier",
+          "description_markdown": "Human-reviewed manuscript citation checker: code verifies retrieved passages, Claude proposes evidence, and Jev scores whether the cited passage supports the claim; citation text and paper content go to the selected providers, and the model verdicts have no labelled biomedical validation set yet.",
+          "permalink": "/projects/gh-marissafamularo-citation-verifier/"
+        },
+        {
+          "name": "QuantDinger",
+          "url": "https://github.com/OpenByteInc/QuantDinger",
+          "description_markdown": "Self-hosted quantitative trading platform that uses Jev System One as an optional, auditable PASS / REJECT gate for strategy and Quick Trade entry orders, with LLM fallback and deterministic bypasses for exits and protective orders; enabling the filter sends its prepared decision context to the configured AI provider.",
+          "permalink": "/projects/gh-openbyteinc-quantdinger/"
+        },
+        {
+          "name": "TypeSafe Typewriter",
+          "url": "https://typesafe-demo.val.run/",
+          "description_markdown": "Live Val Town demo that updates 16 typed judgments as text changes.",
+          "permalink": "/projects/site-typesafe-demo-val-run/"
+        }
+      ]
+    },
+    {
+      "id": "games-and-robotics",
+      "name": "Games and robotics",
+      "resources": [
         {
           "name": "HEIST//ONE",
           "url": "https://github.com/AbdelStark/heist-one",
@@ -514,24 +556,6 @@
           "permalink": "/projects/gh-phyous-tsai-sc/"
         },
         {
-          "name": "Jev Search",
-          "url": "https://github.com/superagents-lab/jev-search",
-          "description_markdown": "Web search demo using Jev's typed Choice and Noul judgments to select sources, time ranges, and query candidates, then rank results retrieved through Search1API; relevance scores are model judgments, not verified accuracy.",
-          "permalink": "/projects/gh-superagents-lab-jev-search/"
-        },
-        {
-          "name": "Jev Trade",
-          "url": "https://github.com/aowang-ai/jev-trade",
-          "description_markdown": "Live Hyperliquid desk across five isolated wallets: each tick packages book, tape, and position as state, Jev answers Choice questions for long/short, open/close/hold, and leverage, and application code places or pulls the quote (hold sends no order). Documents a dry-run path; a configured live key sends real testnet or mainnet orders. [Live demo](https://www.jev-trade.com/).",
-          "permalink": "/projects/gh-aowang-ai-jev-trade/"
-        },
-        {
-          "name": "Jev Wrapped",
-          "url": "https://wrapped.ivanhabor.com",
-          "description_markdown": "Live X-ray of a public Telegram channel: code reads up to 1,500 posts of the last twelve months from Telegram's public web preview, sampled evenly across the months when there are more, Jev answers a Choice over ten kinds of post and three Noul questions (paid ad, clickbait, emotional pressure) about each, and code applies fixed thresholds and draws the shares month by month on a shareable card that links the highest-scoring posts for a manual check; only public post texts are sent to Jev, the shares are model judgments that can misread partner promotions as ads, no sign-in, open source (MIT).",
-          "permalink": "/projects/site-wrapped-ivanhabor-com/"
-        },
-        {
           "name": "jev-physical-ai",
           "url": "https://github.com/robokrunch/jev-physical-ai",
           "description_markdown": "Reproducible warehouse-fleet triage demo with 300 Jev calls, raw results, and a local-model cost comparison; incidents are simulated from templates, and no robot hardware or production accuracy was tested.",
@@ -544,12 +568,6 @@
           "permalink": "/projects/gh-valentynkit-jev-plays-pokemon-red/"
         },
         {
-          "name": "Jevtown",
-          "url": "https://jevtown.ivanhabor.com",
-          "description_markdown": "Town of 10,000 computed personas that reads a post, listing, product, or headline: one opening request scores the text against about 60 audience attributes, 83 for a listing or a product, plus seven moderation questions, and plans the first wave of 600 readers; batched Choice questions then return each persona's reaction, and the text reaches the next wave only while glad reactions outweigh sorry ones. Also returns the audience by interest, job, age, city, and budget, the question buyers would ask a listing first, and a demand curve over an author-set price ladder. Personas are computed from their id rather than written by a model, and each reaction is sampled from the returned probabilities with a fixed seed, so the result is a simulation of a typed audience and not a forecast of real behaviour; open source (MIT), no sign-in, runs on a TypeSafe or OpenRouter key.",
-          "permalink": "/projects/site-jevtown-ivanhabor-com/"
-        },
-        {
           "name": "PlayJev",
           "url": "https://github.com/OmniJev/PlayJev",
           "description_markdown": "Open 0.8B model that plays ten browser games from the frame alone, one forward pass per move, with public weights and a browser demo.",
@@ -560,12 +578,6 @@
           "url": "https://github.com/fhshaik/typesafe-mario",
           "description_markdown": "NES controller experiment that turns emulator telemetry into structured state and has Jev choose legal actions.",
           "permalink": "/projects/gh-fhshaik-typesafe-mario/"
-        },
-        {
-          "name": "TypeSafe Typewriter",
-          "url": "https://typesafe-demo.val.run/",
-          "description_markdown": "Live Val Town demo that updates 16 typed judgments as text changes.",
-          "permalink": "/projects/site-typesafe-demo-val-run/"
         }
       ]
     },
@@ -698,18 +710,6 @@
           "url": "https://github.com/yuyang2230/jev-agent-skill",
           "description_markdown": "Claude Code / ZCode skill that offloads small judgments (classify/route, batch screening, scoring, compliance pre-checks) from the main model to Jev on OpenCode Zen's free `/v1/systemone` endpoint; bundles a zero-dependency `jev.py` caller with retries for the gateway's transient 500s, a WAF-safe User-Agent, GBK-pipe-safe stdin handling, SKILL.md auto-trigger rules so agents invoke it unprompted, and a production e-commerce comment-triage case study; adapted from the official typesafe-ai/skills SKILL.md (MIT).",
           "permalink": "/projects/gh-yuyang2230-jev-agent-skill/"
-        },
-        {
-          "name": "JevNoiseGate",
-          "url": "https://github.com/ufec/jev-block-android-ad",
-          "description_markdown": "Android app that asks Jev whether each incoming notification or SMS is noise and suppresses only what Jev explicitly flags, with a local pre-filter for verification codes that never reaches the API and a fail-open default on every uncertain path; experimental and developed against a single device, message bodies are sent to the API except when that local gate matches, and credentials are stored unencrypted in app-private storage.",
-          "permalink": "/projects/gh-ufec-jev-block-android-ad/"
-        },
-        {
-          "name": "Paper Trellis Citation Verifier",
-          "url": "https://github.com/MarissaFamularo/citation-verifier",
-          "description_markdown": "Human-reviewed manuscript citation checker: code verifies retrieved passages, Claude proposes evidence, and Jev scores whether the cited passage supports the claim; citation text and paper content go to the selected providers, and the model verdicts have no labelled biomedical validation set yet.",
-          "permalink": "/projects/gh-marissafamularo-citation-verifier/"
         },
         {
           "name": "Qwen on Cerebras comparison",
