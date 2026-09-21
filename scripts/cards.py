@@ -108,6 +108,14 @@ def render_card(name: str, category: str, description: str) -> bytes:
     for index, line in enumerate(summary_lines):
         draw.text((48, summary_top + index * 42), line, font=summary_face, fill="#bfd0d5")
 
+    # The README descriptions often exceed a share card's three-line preview.
+    # Make the destination explicit even when the text ends in an ellipsis.
+    call_to_action = "READ THE FULL LISTING"
+    action_face = font(17, 700)
+    action_width = int(draw.textlength(call_to_action, font=action_face)) + 32
+    draw.rectangle((48, 470, 48 + action_width, 507), fill="#1d383b", outline="#608d83")
+    draw.text((64, 477), call_to_action, font=action_face, fill=MINT)
+
     draw.line((48, 529, 1152, 529), fill="#354c53")
     draw.text((48, 547), "abdelstark.github.io/awesome-typesafe-jev", font=font(18, mono=True), fill=MINT)
     footer = "LISTED, NOT ENDORSED"
