@@ -8,7 +8,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-66-9de3bc.svg?style=flat-square)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-<p class="hero-claim">Jev gives your software a typed judgment. Your code stays in charge.</p>
+<p class="hero-claim"><strong>Jev gives your software a typed judgment. Your code stays in charge.</strong></p>
 
 <p class="hero-description">A community field guide to TypeSafe's Jev: see one documented call, try live projects, copy a starter, and inspect independent tests.</p>
 
