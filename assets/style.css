@@ -403,4 +403,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .markdown-body > table:first-of-type td, .markdown-body > table:first-of-type th { min-width: 11rem; }
   .site-footer__inner { flex-direction: column; }
 }
+@media (max-width: 360px) {
+  .site-nav__browse-detail, .site-nav__github-arrow { display: none; }
+}
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
