@@ -285,6 +285,14 @@
       }
       if (description.querySelector('a[href]')) description.classList.add('resource-list__description--linked');
       source.after(description);
+      const summary = document.createElement('p');
+      summary.className = 'resource-list__summary';
+      const plain = description.textContent.replace(/\s+/g, ' ').trim();
+      const preview = plain.slice(0, 170);
+      summary.textContent = plain.length > 170
+        ? `${preview.slice(0, preview.lastIndexOf(' ') > 0 ? preview.lastIndexOf(' ') : 170)}…`
+        : plain;
+      description.after(summary);
       if (projectPath) {
         const thumbnail = document.createElement('a');
         thumbnail.className = 'resource-thumbnail';

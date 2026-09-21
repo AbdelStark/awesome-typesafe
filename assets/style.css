@@ -236,6 +236,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .resource-list--gallery li > a.resource-source { font-size: 1.08rem; }
 .resource-list__description { display: -webkit-box; margin: .35rem 0 .8rem; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 4; }
 .resource-list__description--linked { display: block; overflow: visible; }
+.resource-list__summary { display: none; }
+.resource-list--gallery .resource-list__description { display: none; }
+.resource-list--gallery .resource-list__summary { display: -webkit-box; margin: .35rem 0 .8rem; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 4; }
 .resource-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem 1rem; margin-top: auto; }
 .resource-permalink, .resource-badge { width: fit-content; color: var(--aqua); font-family: inherit; font-size: .75rem; font-weight: 700; line-height: 1.5; text-decoration: none; }
 .resource-permalink:hover { text-decoration: underline; }
