@@ -27,6 +27,9 @@ jobs:
       - name: Run structural checks
         run: python3 scripts/check.py
 
+      - name: Check discovery sampling
+        run: python3 -m unittest discover -s tests -p 'test_discover.py'
+
       - name: Verify README-derived directory and social cards
         run: python3 scripts/export.py --check
 

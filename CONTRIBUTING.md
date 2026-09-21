@@ -57,7 +57,7 @@ Removal is maintenance, not a judgment on the author.
 
 ## Maintainer discovery
 
-The [Ecosystem discovery workflow](https://github.com/AbdelStark/awesome-typesafe-jev/actions/workflows/discovery.yml) writes a daily review queue to its run summary. Run `python3 scripts/discover.py` locally for the same report (the GitHub CLI must be authenticated), or pass `--since YYYY-MM-DD` to widen the search window. The script samples bounded GitHub repository searches, removes GitHub URLs already listed in the community section, and shows both recently pushed and starred results. A search hit is not a recommendation: inspect the project's own code, license, documentation, and evidence against the criteria above before changing the README. GitHub search can omit results, and the report states when it has sampled only a fraction of the matches.
+The [Ecosystem discovery workflow](https://github.com/AbdelStark/awesome-typesafe-jev/actions/workflows/discovery.yml) writes a daily review queue to its run summary. Run `python3 scripts/discover.py` locally for the same report (the GitHub CLI must be authenticated), or pass `--since YYYY-MM-DD` to widen the search window. The script samples up to two pages in both recent-update and star order for each bounded GitHub repository search, removes GitHub URLs already listed in the community section, and shows both recently pushed and starred results. Use `--pages 1` for a smaller sweep or `--pages 3` for a wider one. A search hit is not a recommendation: inspect the project's own code, license, documentation, and evidence against the criteria above before changing the README. GitHub search can omit results, and the report shows exactly how much of each query it sampled.
 
 ## Share your listing
 
