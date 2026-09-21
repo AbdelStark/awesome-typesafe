@@ -44,7 +44,7 @@
     </script>
     {% endif %}
     <script src="{{ '/assets/example.js' | relative_url }}?v={{ asset_version }}" defer></script>
-    <script src="{{ '/assets/directory.js' | relative_url }}?v={{ asset_version }}" defer></script>
+    <script src="{{ '/assets/directory.js' | relative_url }}?v={{ asset_version }}" data-directory-version="{{ asset_version }}" defer></script>
     <script src="{{ '/assets/policy.js' | relative_url }}?v={{ asset_version }}" defer></script>
     <script src="{{ '/assets/designer.js' | relative_url }}?v={{ asset_version }}" defer></script>
     <script src="{{ '/assets/contribute.js' | relative_url }}?v={{ asset_version }}" defer></script>

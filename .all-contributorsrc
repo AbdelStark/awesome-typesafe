@@ -9,7 +9,7 @@
   "imageSize": 56,
   "contributorsPerLine": 7,
   "contributorsSortAlphabetically": true,
-  "contributorTemplate": "<% if (contributor.profile) { %><a href=\"<%- contributor.profile %>\"><% } %><img src=\"<%- contributor.avatar_url %>?s=<%= options.imageSize %>\" width=\"<%= options.imageSize %>px;\" alt=\"\"/><br /><sub><b><%- contributor.name || contributor.login %></b></sub><% if (contributor.profile) { %></a><% } %><br /><%= contributions %>",
+  "contributorTemplate": "<% if (contributor.profile) { %><a href=\"<%- contributor.profile %>\"><% } %><img src=\"<%- contributor.avatar_url %>?s=<%= options.imageSize %>\" width=\"<%= options.imageSize %>\" height=\"<%= options.imageSize %>\" loading=\"lazy\" decoding=\"async\" alt=\"\"/><br /><sub><b><%- contributor.name || contributor.login %></b></sub><% if (contributor.profile) { %></a><% } %><br /><%= contributions %>",
   "commit": false,
   "skipCi": false,
   "contributors": [

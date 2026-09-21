@@ -26,7 +26,10 @@
   const projectPaths = new Map();
   const projectResources = new Map();
   try {
-    const response = await fetch(new URL('resources.json', location.href));
+    const directoryUrl = new URL('resources.json', location.href);
+    const buildVersion = document.currentScript?.dataset.directoryVersion;
+    if (buildVersion) directoryUrl.searchParams.set('v', buildVersion);
+    const response = await fetch(directoryUrl);
     if (response.ok) {
       const directory = await response.json();
       for (const category of directory.categories) {
