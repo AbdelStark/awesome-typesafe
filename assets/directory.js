@@ -24,7 +24,6 @@
 
   const projectPaths = new Map();
   const projectResources = new Map();
-  const projectPages = new Map();
   try {
     const response = await fetch(new URL('resources.json', location.href));
     if (response.ok) {
@@ -35,7 +34,6 @@
           projectPaths.set(url, resource.permalink);
           const entry = { ...resource, category: category.name };
           projectResources.set(url, entry);
-          projectPages.set(new URL(resource.permalink.replace(/^\//, ''), location.href).href, entry);
         }
       }
     }
@@ -50,7 +48,7 @@
   const featuredPreviews = article.querySelector('#featured-previews');
   const featured = [...(featuredPreviews?.querySelectorAll('a[href]') || [])]
     .filter((link) => link.querySelector('img'))
-    .map((link) => projectPages.get(link.href))
+    .map((link) => projectResources.get(link.href))
     .filter(Boolean)
     .slice(0, 3);
   if (featured.length === 3) {
@@ -77,8 +75,8 @@
       const slug = resource.permalink.split('/').filter(Boolean).at(-1);
       const imageLink = document.createElement('a');
       imageLink.className = 'featured-live__image';
-      imageLink.href = path.href;
-      imageLink.setAttribute('aria-label', `Read the Awesome Jev listing for ${resource.name}`);
+      imageLink.href = resource.url;
+      imageLink.setAttribute('aria-label', `Open the original ${resource.name} project`);
       const image = document.createElement('img');
       image.src = new URL(`assets/cards/${slug}.png`, location.href).href;
       image.alt = '';

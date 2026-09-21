@@ -14,7 +14,7 @@
 
 Explore the docs, live builds, and independent tests behind Jev. It turns context into a probability, choice, or score; your code decides what happens next.
 
-<p class="quick-actions"><a href="https://abdelstark.github.io/awesome-typesafe-jev/#shape-a-typed-question">Try the decision designer</a> <a href="https://abdelstark.github.io/awesome-typesafe-jev/#community-projects">Explore community projects</a> <a href="https://abdelstark.github.io/awesome-typesafe-jev/#build-a-listing">Add your project</a> <a href="https://github.com/AbdelStark/awesome-typesafe-jev">Star on GitHub</a></p>
+<p class="quick-actions"><a href="https://abdelstark.github.io/awesome-typesafe-jev/#see-jev-at-work">Try a live build</a> <a href="https://abdelstark.github.io/awesome-typesafe-jev/#shape-a-typed-question">Shape a decision</a> <a href="https://abdelstark.github.io/awesome-typesafe-jev/#community-projects">Explore projects</a> <a href="https://abdelstark.github.io/awesome-typesafe-jev/#build-a-listing">Add your project</a> <a href="https://github.com/AbdelStark/awesome-typesafe-jev">Star on GitHub</a></p>
 
 > **One call, three typed answers.** [TypeSafe's documented support-ticket example](https://docs.typesafe.ai/introduction/quickstart) shows the saved `jev-1.13.0` response below. This is a published example, not a live model call. Application code still decides when to route or escalate.
 
@@ -27,12 +27,12 @@ Explore the docs, live builds, and independent tests behind Jev. It turns contex
 
 ## See Jev at work
 
-Open a live build, or read what it actually does before you try it.
+Open a live build from a preview, or read its listing first.
 
 <div id="featured-previews">
-  <a href="https://abdelstark.github.io/awesome-typesafe-jev/projects/site-jevchess-com/"><img src="assets/cards/site-jevchess-com.png" width="260" height="137" alt="Jev Chess — play and inspect a Jev-controlled chessboard"></a>
-  <a href="https://abdelstark.github.io/awesome-typesafe-jev/projects/site-typesafe-demo-val-run/"><img src="assets/cards/site-typesafe-demo-val-run.png" width="260" height="137" alt="TypeSafe Typewriter — try 16 typed judgments on changing text"></a>
-  <a href="https://abdelstark.github.io/awesome-typesafe-jev/projects/site-jevtown-ivanhabor-com/"><img src="assets/cards/site-jevtown-ivanhabor-com.png" width="260" height="137" alt="Jevtown — explore a simulated audience"></a>
+  <a href="https://jevchess.com"><img src="assets/cards/site-jevchess-com.png" width="260" height="137" alt="Jev Chess — play and inspect a Jev-controlled chessboard"></a>
+  <a href="https://typesafe-demo.val.run/"><img src="assets/cards/site-typesafe-demo-val-run.png" width="260" height="137" alt="TypeSafe Typewriter — try 16 typed judgments on changing text"></a>
+  <a href="https://jevtown.ivanhabor.com"><img src="assets/cards/site-jevtown-ivanhabor-com.png" width="260" height="137" alt="Jevtown — explore a simulated audience"></a>
 </div>
 
 | I want to… | Go here |
