@@ -110,6 +110,42 @@
     (article.querySelector(':scope > blockquote') || article.querySelector('#contents'))?.before(spotlight);
   }
 
+  // Present the README's four intent routes as cards on Pages. The table stays
+  // readable in the README and remains the single source for every route.
+  const routeTable = article.querySelector(':scope > table:first-of-type');
+  const routes = [...(routeTable?.tBodies[0]?.rows || [])]
+    .filter((row) => row.cells.length === 2 && row.cells[0].textContent.trim());
+  if (routes.length) {
+    const paths = document.createElement('section');
+    paths.className = 'reader-paths';
+    paths.setAttribute('aria-labelledby', 'reader-paths-title');
+    const heading = document.createElement('h2');
+    heading.id = 'reader-paths-title';
+    heading.textContent = 'Pick a path';
+    const intro = document.createElement('p');
+    intro.className = 'reader-paths__intro';
+    intro.textContent = 'Choose what you want to do next.';
+    const grid = document.createElement('div');
+    grid.className = 'reader-paths__grid';
+    routes.forEach((row, index) => {
+      const card = document.createElement('article');
+      card.className = 'reader-paths__card';
+      const number = document.createElement('span');
+      number.className = 'reader-paths__number';
+      number.textContent = String(index + 1).padStart(2, '0');
+      number.setAttribute('aria-hidden', 'true');
+      const title = document.createElement('h3');
+      title.textContent = row.cells[0].textContent.trim();
+      const detail = document.createElement('p');
+      detail.className = 'reader-paths__detail';
+      detail.append(...[...row.cells[1].childNodes].map((node) => node.cloneNode(true)));
+      card.append(number, title, detail);
+      grid.append(card);
+    });
+    paths.append(heading, intro, grid);
+    routeTable.replaceWith(paths);
+  }
+
   const itemText = new WeakMap();
   const resourceItems = new Map();
   for (const section of sections) {

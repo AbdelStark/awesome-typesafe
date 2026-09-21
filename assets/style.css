@@ -111,6 +111,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .featured-live__actions { display: flex; flex-wrap: wrap; gap: .4rem 1rem; margin-top: auto; font-size: .78rem; font-weight: 750; }
 .featured-live__actions a { color: var(--aqua); }
 
+.reader-paths { margin: 2.3rem 0 2.6rem; }
+.reader-paths h2 { margin: 0 0 .25rem; padding: 0; border: 0; font-size: clamp(1.7rem, 3vw, 2.3rem); }
+.reader-paths h2::before { content: none; }
+.reader-paths__intro { margin: 0 0 1rem !important; color: var(--muted); font-size: .94rem; }
+.reader-paths__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
+.reader-paths__card { position: relative; min-width: 0; padding: 1.1rem 1.25rem 1.25rem; border: 1px solid #4f7271; border-radius: .55rem; background: linear-gradient(125deg, #1b3639, var(--panel) 65%); }
+.reader-paths__card:hover { border-color: var(--mint); }
+.reader-paths__number { display: block; margin-bottom: .55rem; color: var(--mint); font: 700 .72rem/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .09em; }
+.reader-paths h3 { margin: 0 0 .4rem; color: var(--text); font-size: 1.1rem; }
+.reader-paths__detail { margin: 0 !important; color: var(--muted); font-size: .88rem; line-height: 1.55; }
+.reader-paths__detail a { color: var(--aqua); font-weight: 700; }
+
 .decision-designer { margin: 1.35rem 0 1.7rem; overflow: hidden; border: 1px solid #648b82; border-radius: .65rem; background: #11232a; }
 .decision-designer__header, .decision-designer__preview-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .3rem 1rem; }
 .decision-designer__header { padding: .75rem 1.1rem; border-bottom: 1px solid var(--line); background: #173238; color: var(--muted); font-size: .75rem; }
@@ -258,6 +270,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .site-nav .site-nav__primary { font-size: .76rem; }
   .page-shell { padding-top: 1.4rem; }
   .directory-tools__controls { grid-template-columns: 1fr; }
+  .reader-paths__grid { grid-template-columns: 1fr; }
   .policy-lab__body { grid-template-columns: 1fr; }
   .policy-lab__control { grid-column: auto; grid-row: auto; }
   .markdown-body > table:first-of-type td, .markdown-body > table:first-of-type th { min-width: 11rem; }
