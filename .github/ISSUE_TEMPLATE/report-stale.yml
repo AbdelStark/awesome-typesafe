@@ -1,0 +1,44 @@
+name: Report a listing correction
+description: Flag a broken link, outdated description, inaccurate claim, or missing caveat.
+title: "Fix: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep the guide accurate. If you can make the correction directly, [edit README.md](https://github.com/AbdelStark/awesome-typesafe-jev/edit/main/README.md) and open a pull request. Otherwise, tell us what needs fixing here.
+
+  - type: input
+    id: listing
+    attributes:
+      label: Listing URL
+      description: Link to the project page or the original resource as it appears in the guide.
+      placeholder: https://abdelstark.github.io/awesome-typesafe-jev/projects/...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: problem
+    attributes:
+      label: What needs correcting?
+      options:
+        - Broken or moved link
+        - Outdated description
+        - Inaccurate claim
+        - Missing limitation or data-handling note
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: What changed, and where can we verify it?
+      description: Link to a current source, code, release, or result when possible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested wording or replacement URL
+      description: Optional; a precise correction helps us fix the listing faster.

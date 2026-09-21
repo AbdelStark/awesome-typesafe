@@ -29,7 +29,7 @@ Explore the docs, live builds, and independent tests behind Jev. It turns contex
 
 **Independent community project.** This repository is not affiliated with or endorsed by TypeSafe AI. Community entries are labeled by section; inclusion is not a claim that TypeSafe has reviewed or approved them.
 
-Last updated: 2026-09-21. Links and project descriptions change; please [report a stale entry](https://github.com/AbdelStark/awesome-typesafe-jev/issues/new?template=add-resource.yml).
+Last updated: 2026-09-21. Links and project descriptions change; please [report a stale entry](https://github.com/AbdelStark/awesome-typesafe-jev/issues/new?template=report-stale.yml).
 
 ## Contents
 

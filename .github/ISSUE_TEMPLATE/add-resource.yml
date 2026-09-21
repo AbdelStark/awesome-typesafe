@@ -5,7 +5,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for the suggestion. Please read `CONTRIBUTING.md` first; this is a curated list rather than a complete directory.
+        Ready to add the entry yourself? [Edit README.md](https://github.com/AbdelStark/awesome-typesafe-jev/edit/main/README.md) and open a pull request using the [contribution guide](https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/CONTRIBUTING.md). That is the fastest path to a listing and contributor credit.
+
+        Use this form to nominate a resource when you cannot send a pull request. Suggestions are reviewed against the same inclusion rules and may need follow-up evidence.
 
   - type: input
     id: name

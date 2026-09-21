@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping make Awesome TypeSafe more useful.
+Thank you for helping make Awesome Jev more useful.
 
 This is a curated list, not a directory of every repository that mentions Jev. A submission should help someone learn the model shape, build a real integration, reproduce an experiment, or understand a limitation.
 
@@ -20,6 +20,8 @@ For evaluations and benchmarks, include the method, model version, task data, ra
 Very early work is welcome when it teaches something concrete, but please label it as experimental. Empty repositories, generic wrappers with no documentation, copied launch summaries, referral links, and projects whose only evidence is a private claim will not be added.
 
 ## Add an entry
+
+You can [edit the README on GitHub](https://github.com/AbdelStark/awesome-typesafe-jev/edit/main/README.md) and open a pull request. If you cannot send a pull request, [suggest a resource](https://github.com/AbdelStark/awesome-typesafe-jev/issues/new?template=add-resource.yml) instead. To correct an existing entry, use a pull request or [report a listing correction](https://github.com/AbdelStark/awesome-typesafe-jev/issues/new?template=report-stale.yml).
 
 1. Choose exactly one section in `README.md`.
 2. Add one bullet in alphabetical order by display name.
