@@ -38,7 +38,7 @@ Very early work is welcome when it teaches something concrete, but please label 
    python3 scripts/check.py
    ```
 
-   Commit the updated `resources.json` with `README.md`. The JSON directory is generated from the README; edit only the README entry.
+   Commit `resources.json` and the changed `projects/*.html` pages with `README.md`. Both are generated from the README; edit only the README entry by hand.
 
 6. In the pull request, explain why the resource belongs and disclose whether you maintain or are affiliated with it.
 

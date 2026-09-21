@@ -22,4 +22,5 @@
 - [ ] The entry is in exactly one section and alphabetized by display name.
 - [ ] The description is factual, concise, and free of star counts or promotional superlatives.
 - [ ] Source code has a license and does not instruct users to commit credentials.
-- [ ] I ran `python3 scripts/check.py`.
+- [ ] I ran `python3 scripts/export.py` after changing a community entry and committed the generated `resources.json` and `projects/*.html` changes.
+- [ ] I ran `python3 scripts/check.py` and `python3 scripts/export.py --check`.
