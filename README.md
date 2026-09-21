@@ -387,7 +387,7 @@ Independent tests and open decision-model alternatives provide methods and resul
 - [Rizzo Flow](https://github.com/Rizzo-AI-Academy/rizzo-flow) — Local, open-model decision server that reads answer-token probabilities instead of generating text, with a Jev-compatible Choice, Score, and Noul API plus its own numeric primitive. Its authors explicitly make no quality-parity claim with Jev; probabilities need calibration on the user's own data.
 - [SemIf (formerly OpenJev)](https://github.com/TheoLeeCJ/SemIf) — Independent open-model research baseline for direct typed option scoring; it reproduces the interface pattern, not Jev's undisclosed model or training.
 - [TypeSafe AI Benchmark](https://github.com/iammrduncan/typesafe-ai-benchmark) — Side-by-side Jev and Qwen-on-Cerebras comparison with raw exports, cost accounting, methodology, and task-specific limitations.
-- [Von](https://github.com/wfzyx/von) — Open local OptionMarker decision model with Choice, Noul, and Score, a System One-shaped HTTP API, published weights, training code, and benchmark runners. Its README gives a 91.23% accuracy headline without a matching result artifact in the repo, while its 49-task comparison table reports 71.5% macro accuracy; treat those comparisons as author-reported until reproduced.
+- [Von](https://github.com/wfzyx/von) — Open local Choice, Noul, and Score model with public weights, training code, and a System One-shaped API. Benchmark comparisons are author-reported: its README gives a 91.23% accuracy headline without a matching result artifact in the repo, while its 49-task table reports 71.5% macro accuracy.
 
 ### Showcases and field notes
 
