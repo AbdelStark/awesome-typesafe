@@ -20,7 +20,7 @@ Official docs, working integrations, independent experiments, and the builders p
 | :--- | :--- |
 | Understand the idea in 2 minutes | [Try the policy threshold](#try-a-policy-threshold), then read [the introduction](https://docs.typesafe.ai/introduction) and [the three primitives](https://docs.typesafe.ai/primitives) |
 | Make my first typed call | [Copy the runnable example](#make-your-first-decision), [shape your own question](#shape-a-typed-question), then explore the [official SDKs](#sdks-and-developer-tools) |
-| See it work live | [Typewriter's 16 judgments](https://typesafe-demo.val.run/) or [Jevtown's simulated audience](https://jevtown.ivanhabor.com/); explore [applications and workflows](#applications-and-workflows) |
+| See it work live | Play [Jev Chess](https://jevchess.com/), try [Typewriter's 16 judgments](https://typesafe-demo.val.run/) or [Jevtown's simulated audience](https://jevtown.ivanhabor.com/); browse [more applications](#applications-and-workflows) |
 | Test the claims | [Independent evaluations](#evaluations-and-independent-research) and [TypeSafe's own evals](https://evals.typesafe.ai/) |
 
 **[Shape a typed question →](https://abdelstark.github.io/awesome-typesafe-jev/#shape-a-typed-question)** · **[Explore the searchable web directory](https://abdelstark.github.io/awesome-typesafe-jev/)** · **[Download the JSON directory](resources.json)** · **[Suggest a resource](https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/CONTRIBUTING.md)** · **[Join the builder community](https://discord.gg/typesafe)**
