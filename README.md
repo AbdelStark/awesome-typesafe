@@ -1,7 +1,5 @@
 # Awesome Jev / TypeSafe
 
-<p><a href="https://abdelstark.github.io/awesome-typesafe-jev/#community-projects"><picture><source media="(max-width: 640px)" srcset="https://abdelstark.github.io/awesome-typesafe-jev/assets/jev-map-mobile.svg"><img src="assets/jev-map.svg" alt="A visual map of Jev: context enters a typed judgment, then application code decides what happens. Explore the directory."></picture></a></p>
-
 [![Awesome](https://awesome.re/badge-flat2.svg)](https://github.com/sindresorhus/awesome)
 [![Live site](https://img.shields.io/badge/explore-live%20directory-111827?logo=github)](https://abdelstark.github.io/awesome-typesafe-jev/)
 [![Checks](https://github.com/AbdelStark/awesome-typesafe-jev/actions/workflows/checks.yml/badge.svg)](https://github.com/AbdelStark/awesome-typesafe-jev/actions/workflows/checks.yml)
@@ -10,11 +8,13 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-66-9de3bc.svg?style=flat-square)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-**The field guide to typed decisions.**
+<p class="hero-claim">Jev gives your software a typed judgment. Your code stays in charge.</p>
 
-Explore the docs, live builds, and independent tests behind Jev. It turns context into a probability, choice, or score; your code decides what happens next.
+<p class="hero-description">A community field guide to TypeSafe's Jev: see one documented call, try live projects, copy a starter, and inspect independent tests.</p>
 
 <p class="quick-actions"><a href="https://abdelstark.github.io/awesome-typesafe-jev/#see-jev-at-work">Try a live build</a> <a href="https://abdelstark.github.io/awesome-typesafe-jev/#shape-a-typed-question">Shape a decision</a> <a href="https://abdelstark.github.io/awesome-typesafe-jev/#community-projects">Explore projects</a> <a href="https://abdelstark.github.io/awesome-typesafe-jev/#build-a-listing">Add your project</a> <a href="https://github.com/AbdelStark/awesome-typesafe-jev">Star on GitHub</a></p>
+
+<p class="hero-map"><a href="https://abdelstark.github.io/awesome-typesafe-jev/#community-projects"><picture><source media="(max-width: 640px)" srcset="https://abdelstark.github.io/awesome-typesafe-jev/assets/jev-map-mobile.svg"><img src="assets/jev-map.svg" alt="A visual map of Jev: context enters a typed judgment, then application code decides what happens. Explore the directory."></picture></a></p>
 
 > **One call, three typed answers.** [TypeSafe's documented support-ticket example](https://docs.typesafe.ai/introduction/quickstart) shows the saved `jev-1.13.0` response below. This is a published example, not a live model call. Application code still decides when to route or escalate.
 
