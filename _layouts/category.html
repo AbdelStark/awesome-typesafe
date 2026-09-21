@@ -13,7 +13,7 @@ layout: default
       <p class="category-page__eyebrow">Community projects / {{ page.resources.size }} listings</p>
       <h1>{{ page.category_name | escape }}</h1>
       <p class="category-page__intro">{{ page.description | escape }}</p>
-      <p class="category-page__actions"><a href="{{ '/' | relative_url }}?category={{ page.category_id | url_encode }}#community-projects">Search this category in the full directory →</a></p>
+      <p class="category-page__actions"><a href="#category-projects">Browse {{ page.resources.size }} listings ↓</a> <span aria-hidden="true">·</span> <a href="{{ '/' | relative_url }}?category={{ page.category_id | url_encode }}#community-projects">Search this category →</a></p>
     </header>
     <a class="category-page__visual" href="{{ page.social_image | relative_url }}" download="awesome-jev-{{ page.category_id | escape }}.png" aria-label="Download the share card for {{ page.category_name | escape }}">
       <img src="{{ page.social_image | relative_url }}" width="1200" height="630" alt="Awesome Jev share card for {{ page.category_name | escape }}" decoding="async">
@@ -21,9 +21,11 @@ layout: default
     </a>
   </div>
 
-  <section class="resource-share" aria-labelledby="share-title">
-    <h2 id="share-title">Share this topic</h2>
-    <p>Help people find the projects and evidence in this category. Listings are independent and inclusion is not an endorsement.</p>
+  <section class="resource-share resource-share--category" aria-labelledby="share-title">
+    <div class="resource-share__intro">
+      <h2 id="share-title">Share this topic</h2>
+      <p>Help people find these projects. Inclusion is not an endorsement.</p>
+    </div>
     <div class="resource-share__buttons">
       <a href="{{ page.social_image | relative_url }}" download="awesome-jev-{{ page.category_id | escape }}.png">Download topic card</a>
     </div>
@@ -37,7 +39,7 @@ layout: default
     {% endfor %}
   </nav>
 
-  <div class="category-page__grid">
+  <div class="category-page__grid" id="category-projects" tabindex="-1">
     {% for resource in page.resources %}
     <article class="category-page__card">
       <a class="category-page__image" href="{{ resource.permalink | relative_url }}" aria-label="Read the Awesome Jev listing for {{ resource.name | escape }}">
