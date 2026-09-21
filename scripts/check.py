@@ -50,6 +50,9 @@ def main() -> int:
         ROOT / "_config.yml": "missing GitHub Pages configuration",
         ROOT / "_layouts" / "default.html": "missing site layout",
         ROOT / "assets" / "style.css": "missing site stylesheet",
+        ROOT / "assets" / "directory.js": "missing site directory enhancement",
+        ROOT / "assets" / "jev-map.svg": "missing visual guide",
+        ROOT / "assets" / "jev-social.png": "missing site sharing image",
         ROOT / "index.md": "missing site entry point",
     }
     for path, message in site_files.items():

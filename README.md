@@ -54,6 +54,16 @@ Last updated: 2026-09-21. Links and project descriptions change; please [report 
 - [How to build with TypeSafe](https://docs.typesafe.ai/concepts/how-to-build-with-system-one) — Design guidance for decomposing a workflow into narrow judgments while keeping policy and side effects in code.
 - [TypeSafe Console](https://console.typesafe.ai/) — Create keys and inspect live Jev requests.
 
+One state can answer several focused questions in the same request. Pick the answer shape your code can use directly:
+
+| Question shape | Use it for | What comes back |
+| :--- | :--- | :--- |
+| **Noul** | A clear yes/no claim, such as “Does this message request a refund?” | A number from 0 to 1: the probability of yes. |
+| **Choice** | Selecting from named options, such as billing, technical, or sales. | The selected option, a probability for every option, and confidence. |
+| **Score** | An ordered rubric, such as calm, concerned, or angry. | A position on your rubric, probabilities over its levels, and confidence. |
+
+Ask independent questions together. Set thresholds, fallback behavior, and side effects in application code.
+
 ## Official resources
 
 ### Product and documentation

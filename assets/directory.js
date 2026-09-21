@@ -22,6 +22,38 @@
   const tools = document.createElement('section');
   tools.className = 'directory-tools';
   tools.setAttribute('aria-label', 'Find a community resource');
+  const categoryTitle = document.createElement('h3');
+  categoryTitle.className = 'directory-tools__title';
+  categoryTitle.textContent = 'Browse by category';
+  const categoryGrid = document.createElement('div');
+  categoryGrid.className = 'category-grid';
+  categoryGrid.setAttribute('role', 'group');
+  categoryGrid.setAttribute('aria-label', 'Filter projects by category');
+  const categoryButtons = [];
+  function addCategory(id, name, count) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'category-card';
+    button.dataset.category = id;
+    button.setAttribute('aria-pressed', 'false');
+    const number = document.createElement('span');
+    number.className = 'category-card__count';
+    number.textContent = String(count).padStart(2, '0');
+    const label = document.createElement('span');
+    label.className = 'category-card__name';
+    label.textContent = name;
+    button.append(number, label);
+    button.addEventListener('click', () => {
+      select.value = id;
+      update();
+    });
+    categoryButtons.push(button);
+    categoryGrid.append(button);
+  }
+  addCategory('', 'All projects', sections.reduce((total, section) => total + section.items.length, 0));
+  for (const section of sections) {
+    addCategory(section.heading.id, section.heading.textContent.trim(), section.items.length);
+  }
   const label = document.createElement('label');
   label.htmlFor = 'resource-search';
   label.textContent = 'Find a project';
@@ -44,12 +76,30 @@
   status.className = 'directory-tools__status';
   status.setAttribute('role', 'status');
   status.setAttribute('aria-live', 'polite');
+  const statusRow = document.createElement('div');
+  statusRow.className = 'directory-tools__status-row';
+  const share = document.createElement('button');
+  share.type = 'button';
+  share.className = 'directory-tools__share';
+  share.textContent = 'Copy this view';
+  share.setAttribute('aria-live', 'polite');
+  share.hidden = !navigator.clipboard?.writeText;
+  share.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(location.href);
+      share.textContent = 'Link copied';
+    } catch {
+      share.textContent = 'Copy unavailable';
+    }
+    window.setTimeout(() => { share.textContent = 'Copy this view'; }, 2000);
+  });
+  statusRow.append(status, share);
   const empty = document.createElement('p');
   empty.className = 'directory-tools__empty';
   empty.hidden = true;
   empty.textContent = 'No projects match. Try another term or category.';
   controls.append(search, select);
-  tools.append(label, controls, status, empty);
+  tools.append(categoryTitle, categoryGrid, label, controls, statusRow, empty);
   start.after(tools);
 
   const params = new URLSearchParams(location.search);
@@ -59,6 +109,9 @@
 
   function update() {
     const query = search.value.trim().toLocaleLowerCase();
+    for (const button of categoryButtons) {
+      button.setAttribute('aria-pressed', String(button.dataset.category === select.value));
+    }
     let shown = 0;
     let total = 0;
     for (const section of sections) {

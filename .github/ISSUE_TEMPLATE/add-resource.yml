@@ -32,6 +32,7 @@ body:
         - Client library or integration
         - Agent or developer tooling
         - Browser agent
+        - Finance or trading
         - Game, robotics, or interactive demo
         - Evaluation or independent research
         - Showcase or field note
@@ -50,7 +51,7 @@ body:
     id: caveats
     attributes:
       label: Evidence and limitations
-      description: Link methods or results and state any material caveats.
+      description: Link methods or results; note data sent off-device, credential handling, and material caveats.
 
   - type: dropdown
     id: affiliation
