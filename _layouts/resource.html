@@ -40,10 +40,19 @@ layout: default
   <p class="resource-page__correction"><a href="https://github.com/AbdelStark/awesome-typesafe-jev/issues/new?template=report-stale.yml">Found an outdated or inaccurate detail? Report a correction →</a></p>
 
   {% if page.related.size > 0 %}
-  <h2>More in {{ page.category_name | escape }}</h2>
+  <h2 id="more-projects">Explore more in {{ page.category_name | escape }}</h2>
   <ul class="resource-page__related">
     {% for related in page.related %}
-    <li><a href="{{ related.permalink | relative_url }}">{{ related.name | escape }} →</a></li>
+    <li>
+      <a class="resource-page__related-image" href="{{ related.permalink | relative_url }}" aria-label="Read the Awesome Jev listing for {{ related.name | escape }}">
+        <img src="{{ related.image | relative_url }}" width="1200" height="630" alt="" loading="lazy" decoding="async">
+      </a>
+      <div class="resource-page__related-body">
+        <h3><a href="{{ related.permalink | relative_url }}">{{ related.name | escape }}</a></h3>
+        <p>{{ related.description | escape }}</p>
+        <a class="resource-page__related-cta" href="{{ related.permalink | relative_url }}">Read listing →</a>
+      </div>
+    </li>
     {% endfor %}
   </ul>
   {% endif %}

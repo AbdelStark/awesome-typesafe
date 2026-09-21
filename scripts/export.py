@@ -92,9 +92,8 @@ def build_pages(document: dict[str, object]) -> dict[Path, str]:
         resources = category["resources"]
         for index, resource in enumerate(resources):
             related = [
-                resources[neighbor]
-                for neighbor in (index - 1, index + 1, index + 2)
-                if 0 <= neighbor < len(resources)
+                resources[(index + offset) % len(resources)]
+                for offset in range(1, min(4, len(resources)))
             ]
             metadata = {
                 "layout": "resource",
@@ -117,6 +116,8 @@ def build_pages(document: dict[str, object]) -> dict[Path, str]:
             for other in related:
                 lines.append(f"  - name: {json.dumps(other['name'], ensure_ascii=False)}")
                 lines.append(f"    permalink: {json.dumps(other['permalink'], ensure_ascii=False)}")
+                lines.append(f"    description: {json.dumps(plain_description(other['description_markdown']), ensure_ascii=False)}")
+                lines.append(f"    image: {json.dumps('/assets/cards/' + project_slug(other['url']) + '.png', ensure_ascii=False)}")
             lines.extend(["---", ""])
             slug = resource["permalink"].strip("/").split("/")[-1]
             path = PROJECTS_DIR / f"{slug}.html"
