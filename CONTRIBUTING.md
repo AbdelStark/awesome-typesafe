@@ -65,4 +65,4 @@ npx --yes all-contributors-cli@6.26.1 check
 python3 scripts/check.py
 ```
 
-Use the [contribution types](https://allcontributors.org/en/emoji-key/) that describe the actual work. Commit both `.all-contributorsrc` and `README.md`. Do not credit a project author solely because their project is listed; credit their contribution to this repository.
+Use the [contribution types](https://allcontributors.org/en/reference/emoji-key/) that describe the actual work. Commit both `.all-contributorsrc` and `README.md`. Do not credit a project author solely because their project is listed; credit their contribution to this repository.
