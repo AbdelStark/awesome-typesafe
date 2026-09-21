@@ -152,6 +152,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .resource-page__actions a { font-weight: 750; }
 .resource-page__primary { display: inline-block; padding: .7rem 1rem; border: 1px solid var(--mint); border-radius: .4rem; background: var(--mint); color: #0b1820; text-decoration: none; }
 .resource-page__primary:hover { background: #e5ffec; color: #0b1820; }
+.resource-share { margin: 1.35rem 0 1.6rem; padding: 1rem 1.2rem .75rem; border: 1px solid var(--line); border-radius: .5rem; background: var(--panel); }
+.resource-share h2 { margin: 0 0 .3rem !important; padding: 0 !important; border: 0 !important; font-size: 1.1rem !important; letter-spacing: -.02em !important; }
+.resource-share h2::before { content: none; }
+.resource-share p { margin: 0 0 .8rem; color: var(--muted); font-size: .85rem; }
+.resource-share__buttons { display: flex; flex-wrap: wrap; gap: .55rem; }
+.resource-share__buttons button { padding: .45rem .75rem; border: 1px solid #6a978d; border-radius: .35rem; background: #1c383a; color: var(--mint); font-family: inherit; font-size: .8rem; font-weight: 700; line-height: 1.4; cursor: pointer; }
+.resource-share__buttons button:hover { border-color: var(--mint); background: #25504a; }
+.resource-share__status { display: block; min-height: 1.35rem; margin-top: .45rem; color: var(--mint); font-size: .78rem; }
 .resource-page__note { max-width: 70ch; padding-left: 1rem; border-left: 3px solid var(--gold); color: var(--muted); font-size: .89rem; }
 .resource-page__related { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .65rem; padding: 0 !important; list-style: none; }
 .resource-page__related li { min-width: 0; margin: 0; padding: .8rem 1rem; border: 1px solid var(--line); border-radius: .4rem; background: var(--panel); overflow-wrap: anywhere; }
