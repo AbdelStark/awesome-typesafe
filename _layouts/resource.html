@@ -2,14 +2,21 @@
 layout: default
 ---
 <div class="resource-page">
-  <p class="resource-page__eyebrow">Community project / {{ page.category_name | escape }}</p>
-  <h1>{{ page.resource_name | escape }}</h1>
-  <div class="resource-page__description">{{ page.description_markdown | escape | markdownify }}</div>
-
-  <div class="resource-page__actions">
-    <a class="resource-page__primary" href="{{ page.resource_url | escape }}">Open the original resource ↗</a>
-    <a href="{{ '/' | relative_url }}?resource={{ page.resource_url | url_encode }}#community-projects">See it in the full directory</a>
-    <a href="{{ '/' | relative_url }}?category={{ page.category_id | url_encode }}#community-projects">Browse all {{ page.category_name | escape }}</a>
+  <div class="resource-page__hero">
+    <div class="resource-page__intro">
+      <p class="resource-page__eyebrow">Community project / {{ page.category_name | escape }}</p>
+      <h1>{{ page.resource_name | escape }}</h1>
+      <div class="resource-page__description">{{ page.description_markdown | escape | markdownify }}</div>
+      <div class="resource-page__actions">
+        <a class="resource-page__primary" href="{{ page.resource_url | escape }}">Open the original resource ↗</a>
+        <a href="{{ '/' | relative_url }}?resource={{ page.resource_url | url_encode }}#community-projects">See it in the full directory</a>
+        <a href="{{ '/' | relative_url }}?category={{ page.category_id | url_encode }}#community-projects">Browse all {{ page.category_name | escape }}</a>
+      </div>
+    </div>
+    <a class="resource-page__visual" href="{{ page.social_image | relative_url }}" download="awesome-jev-{{ page.resource_slug | escape }}.png" aria-label="Download the share card for {{ page.resource_name | escape }}">
+      <img src="{{ page.social_image | relative_url }}" width="1200" height="630" alt="Awesome Jev share card for {{ page.resource_name | escape }}" decoding="async">
+      <span>Download share card <span aria-hidden="true">↓</span></span>
+    </a>
   </div>
 
   <section class="resource-share" aria-labelledby="share-title">
