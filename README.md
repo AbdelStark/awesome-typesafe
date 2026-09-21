@@ -18,7 +18,7 @@ Official docs, working integrations, independent experiments, and the builders p
 
 | I want to… | Go here |
 | :--- | :--- |
-| Understand the idea in 2 minutes | [The introduction](https://docs.typesafe.ai/introduction) and [the three primitives](https://docs.typesafe.ai/primitives) |
+| Understand the idea in 2 minutes | [Try the policy threshold](#try-a-policy-threshold), then read [the introduction](https://docs.typesafe.ai/introduction) and [the three primitives](https://docs.typesafe.ai/primitives) |
 | Make my first typed call | [Quick start](https://docs.typesafe.ai/introduction/quickstart) and [official SDKs](#sdks-and-developer-tools) |
 | See it work live | [Typewriter's 16 judgments](https://typesafe-demo.val.run/) or [Jevtown's simulated audience](https://jevtown.ivanhabor.com/); then browse [all community projects](#community-projects) |
 | Test the claims | [Independent evaluations](#evaluations-and-independent-research) and [TypeSafe's own evals](https://evals.typesafe.ai/) |
