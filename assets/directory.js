@@ -374,6 +374,25 @@
   status.setAttribute('aria-live', 'polite');
   const statusRow = document.createElement('div');
   statusRow.className = 'directory-tools__status-row';
+  const shareActions = document.createElement('div');
+  shareActions.className = 'directory-tools__share-actions';
+  if (navigator.share) {
+    const nativeShare = document.createElement('button');
+    nativeShare.type = 'button';
+    nativeShare.className = 'directory-tools__share';
+    nativeShare.textContent = 'Share this view';
+    nativeShare.addEventListener('click', async () => {
+      try {
+        await navigator.share({ title: document.title, url: location.href });
+        nativeShare.textContent = 'View shared';
+      } catch (error) {
+        if (error?.name === 'AbortError') return;
+        nativeShare.textContent = 'Share unavailable';
+      }
+      window.setTimeout(() => { nativeShare.textContent = 'Share this view'; }, 2000);
+    });
+    shareActions.append(nativeShare);
+  }
   const share = document.createElement('button');
   share.type = 'button';
   share.className = 'directory-tools__share';
@@ -389,7 +408,8 @@
     }
     window.setTimeout(() => { share.textContent = 'Copy this view'; }, 2000);
   });
-  statusRow.append(status, share);
+  shareActions.append(share);
+  statusRow.append(status, shareActions);
   const empty = document.createElement('p');
   empty.className = 'directory-tools__empty';
   empty.hidden = true;

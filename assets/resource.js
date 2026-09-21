@@ -1,11 +1,11 @@
-/* Enhance the static project page with clipboard actions. */
+/* Enhance the static project page with sharing and clipboard actions. */
 (() => {
   const share = document.querySelector('.resource-share');
   const buttons = share?.querySelector('.resource-share__buttons');
   const status = share?.querySelector('.resource-share__status');
   const canonical = document.querySelector('link[rel="canonical"]');
   const home = document.querySelector('.wordmark');
-  if (!buttons || !status || !canonical || !home || !navigator.clipboard?.writeText) return;
+  if (!buttons || !status || !canonical || !home) return;
 
   let resetTimer;
   function report(message) {
@@ -30,10 +30,26 @@
   }
 
   const pageUrl = canonical.href;
-  const badgeUrl = new URL('assets/listed-badge.svg', home.href).href;
-  const badge = `[![Listed in Awesome Jev](${badgeUrl})](${pageUrl})`;
-  buttons.prepend(
-    copyButton('Copy page link', pageUrl, 'Page link copied.'),
-    copyButton('Copy listing badge', badge, 'Badge Markdown copied.'),
-  );
+  if (navigator.clipboard?.writeText) {
+    const badgeUrl = new URL('assets/listed-badge.svg', home.href).href;
+    const badge = `[![Listed in Awesome Jev](${badgeUrl})](${pageUrl})`;
+    buttons.prepend(
+      copyButton('Copy page link', pageUrl, 'Page link copied.'),
+      copyButton('Copy listing badge', badge, 'Badge Markdown copied.'),
+    );
+  }
+  if (navigator.share) {
+    const shareButton = document.createElement('button');
+    shareButton.type = 'button';
+    shareButton.textContent = 'Share project';
+    shareButton.addEventListener('click', async () => {
+      try {
+        await navigator.share({ title: document.title, url: pageUrl });
+        report('Project shared.');
+      } catch (error) {
+        if (error?.name !== 'AbortError') report('Share unavailable in this browser.');
+      }
+    });
+    buttons.prepend(shareButton);
+  }
 })();

@@ -213,6 +213,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .directory-tools input, .directory-tools select { width: 100%; min-height: 3rem; padding: .6rem .8rem; border: 1px solid #6f858b; border-radius: .4rem; background: #0f1d28; color: var(--text); font: inherit; }
 .directory-tools input::placeholder { color: #9cafb8; }
 .directory-tools__status-row { display: flex; align-items: center; justify-content: space-between; gap: .8rem; margin-top: .7rem; }
+.directory-tools__share-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .25rem; }
 .directory-tools__status { margin: 0 !important; color: var(--muted); font-size: .84rem; }
 .directory-tools__share { padding: .3rem .5rem; border: 1px solid transparent; border-radius: .25rem; background: transparent; color: var(--mint); font-family: inherit; font-size: .8rem; font-weight: 700; text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
 .directory-tools__share:hover { border-color: var(--mint); }
