@@ -212,7 +212,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .directory-tools__controls { display: grid; grid-template-columns: minmax(0, 2fr) minmax(13rem, 1fr); gap: .8rem; }
 .directory-tools input, .directory-tools select { width: 100%; min-height: 3rem; padding: .6rem .8rem; border: 1px solid #6f858b; border-radius: .4rem; background: #0f1d28; color: var(--text); font: inherit; }
 .directory-tools input::placeholder { color: #9cafb8; }
-.directory-tools__status-row { display: flex; align-items: center; justify-content: space-between; gap: .8rem; margin-top: .7rem; }
+.directory-tools__status-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem .8rem; margin-top: .7rem; }
+.directory-tools__views { display: flex; padding: .2rem; border: 1px solid #6f858b; border-radius: .4rem; background: #0f1d28; }
+.directory-tools__views button { padding: .25rem .65rem; border: 0; border-radius: .25rem; background: transparent; color: var(--muted); font-family: inherit; font-size: .8rem; font-weight: 700; line-height: 1.5; cursor: pointer; }
+.directory-tools__views button:hover { color: var(--text); }
+.directory-tools__views button[aria-pressed="true"] { background: var(--mint); color: #0b1820; }
 .directory-tools__share-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .25rem; }
 .directory-tools__status { margin: 0 !important; color: var(--muted); font-size: .84rem; }
 .directory-tools__share { padding: .3rem .5rem; border: 1px solid transparent; border-radius: .25rem; background: transparent; color: var(--mint); font-family: inherit; font-size: .8rem; font-weight: 700; text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
@@ -222,8 +226,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .resource-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; padding-left: 0 !important; list-style: none; }
 .resource-list li { display: flex; flex-direction: column; min-width: 0; margin: 0; padding: 1rem 1.1rem; border: 1px solid var(--line); border-radius: .45rem; background: var(--panel); color: var(--muted); font-size: .91rem; line-height: 1.55; overflow-wrap: anywhere; }
 .resource-list li:hover { border-color: #76a99c; background: var(--panel-raised); }
-.resource-list li > a:first-child { color: var(--text); font-weight: 760; font-size: 1rem; text-decoration-color: #60837c; }
-.resource-list li > a:first-child:hover { color: var(--mint); }
+.resource-list li > a.resource-source { color: var(--text); font-weight: 760; font-size: 1rem; text-decoration-color: #60837c; }
+.resource-list li > a.resource-source:hover { color: var(--mint); }
+.resource-thumbnail { display: none; }
+.resource-list--gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.resource-list--gallery li { overflow: hidden; }
+.resource-list--gallery .resource-thumbnail { display: block; margin: -1rem -1.1rem 1rem; border-bottom: 1px solid var(--line); }
+.resource-thumbnail img { display: block; width: 100%; height: auto; }
+.resource-list--gallery li > a.resource-source { font-size: 1.08rem; }
 .resource-list__description { display: -webkit-box; margin: .35rem 0 .8rem; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 4; }
 .resource-list__description--linked { display: block; overflow: visible; }
 .resource-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem 1rem; margin-top: auto; }
@@ -288,6 +298,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .resource-page__related { grid-template-columns: 1fr; }
   .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .resource-list { grid-template-columns: 1fr; }
+  .resource-list--gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .field-evidence { grid-template-columns: 1fr; }
   .markdown-body #contents + ul { columns: 1; }
 }
@@ -302,6 +313,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .site-nav .site-nav__primary { font-size: .76rem; }
   .page-shell { padding-top: 1.4rem; }
   .directory-tools__controls { grid-template-columns: 1fr; }
+  .resource-list--gallery { grid-template-columns: 1fr; }
   .reader-paths__grid { grid-template-columns: 1fr; }
   .policy-lab__body { grid-template-columns: 1fr; }
   .policy-lab__control { grid-column: auto; grid-row: auto; }
