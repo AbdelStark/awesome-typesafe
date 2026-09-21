@@ -65,5 +65,12 @@
   foot.append(next, actions);
 
   section.append(heading, state, answers, foot);
-  table.replaceWith(section);
+  const heroMap = article.querySelector(':scope > p.hero-map');
+  if (heroMap) {
+    heroMap.before(section);
+    table.remove();
+    source.remove();
+  } else {
+    table.replaceWith(section);
+  }
 })();
