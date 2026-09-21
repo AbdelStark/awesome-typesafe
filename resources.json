@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-21",
-  "total_resources": 123,
+  "total_resources": 124,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -189,6 +189,12 @@
       "id": "agent-and-developer-tooling",
       "name": "Agent and developer tooling",
       "resources": [
+        {
+          "name": "Augustus",
+          "url": "https://github.com/24601/Augustus",
+          "description_markdown": "Design-judgment skill for the decision-model class (classifiers, enc/dec, specialized AR heads, System One); TypeSafe Jev is the dominant exemplar for composition, question design, and validation gates.",
+          "permalink": "/projects/gh-24601-augustus/"
+        },
         {
           "name": "Bicameral",
           "url": "https://github.com/AbdelStark/bicameral",

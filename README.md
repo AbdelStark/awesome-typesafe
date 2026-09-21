@@ -234,6 +234,7 @@ Community projects are independent unless their repository says otherwise. Read 
 
 ### Agent and developer tooling
 
+- [Augustus](https://github.com/24601/Augustus) — Design-judgment skill for the decision-model class (classifiers, enc/dec, specialized AR heads, System One); TypeSafe Jev is the dominant exemplar for composition, question design, and validation gates.
 - [Bicameral](https://github.com/AbdelStark/bicameral) — Pi coding harness where an LLM writes while Jev supplies typed reflexes for policy, loop detection, and review; explicitly not a sandbox.
 - [DGP](https://github.com/numerous-com/dgp) — Experimental decision-based agent protocol with a Jev adapter, immutable evidence frames, typed assessments, and application-guarded commits; the local reference app simulates domain effects, and opt-in live mode sends decision evidence to TypeSafe.
 - [Every](https://github.com/sufianetaouil/every) — Semantic code search CLI that asks a yes/no question of every function and ranks the resulting probabilities.
