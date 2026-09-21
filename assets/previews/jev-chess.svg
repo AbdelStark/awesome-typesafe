@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Jev Chess illustrated preview</title>
+  <desc id="desc">A chessboard with a highlighted legal move and branching choice paths. The image illustrates the live game; it is not a recorded model result.</desc>
+  <defs>
+    <linearGradient id="back" x2="1" y2="1">
+      <stop stop-color="#101b29"/>
+      <stop offset="1" stop-color="#18383a"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#8de8ee" stroke-opacity=".06"/>
+    </pattern>
+    <pattern id="board" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="#172834"/>
+      <rect width="50" height="50" fill="#2d4a4b"/>
+      <rect x="50" y="50" width="50" height="50" fill="#2d4a4b"/>
+    </pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#020910" flood-opacity=".42"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#back)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <path d="M0 1H1200M0 629H1200" stroke="#83bba9" stroke-opacity=".38"/>
+  <circle cx="69" cy="57" r="8" fill="#b9f6d6"/>
+  <text x="91" y="65" fill="#d7e9e9" font-family="ui-monospace,monospace" font-size="20" letter-spacing="3">LIVE BUILD / 01</text>
+  <text x="1120" y="65" fill="#9fc8c7" font-family="ui-monospace,monospace" font-size="18" text-anchor="end">ILLUSTRATION</text>
+  <g filter="url(#shadow)">
+    <rect x="66" y="127" width="416" height="416" rx="16" fill="#091722" stroke="#98c9ba" stroke-opacity=".6" stroke-width="2"/>
+    <rect x="74" y="135" width="400" height="400" rx="7" fill="url(#board)"/>
+    <rect x="174" y="335" width="50" height="50" fill="#b9f6d6" opacity=".52"/>
+    <rect x="274" y="235" width="50" height="50" fill="#8de8ee" opacity=".54"/>
+    <rect x="324" y="285" width="50" height="50" fill="#efca86" opacity=".42"/>
+    <path d="M199 360 299 260M199 360 349 310" fill="none" stroke="#e8fff4" stroke-width="5" stroke-linecap="round" stroke-dasharray="13 13" opacity=".9"/>
+    <circle cx="199" cy="360" r="25" fill="#e8fff4"/>
+    <text x="199" y="369" fill="#14202c" font-family="system-ui,sans-serif" font-size="26" font-weight="800" text-anchor="middle">N</text>
+    <circle cx="299" cy="260" r="11" fill="#b9f6d6" stroke="#0e2029" stroke-width="4"/>
+    <circle cx="349" cy="310" r="11" fill="#efca86" stroke="#0e2029" stroke-width="4"/>
+    <circle cx="149" cy="210" r="22" fill="#809697"/>
+    <circle cx="399" cy="460" r="22" fill="#809697"/>
+    <circle cx="349" cy="160" r="22" fill="#809697"/>
+    <circle cx="249" cy="460" r="22" fill="#e8fff4"/>
+  </g>
+  <text x="556" y="217" fill="#b9f6d6" font-family="ui-monospace,monospace" font-size="20" letter-spacing="3">PLAYABLE / TYPED CHOICE</text>
+  <text x="552" y="302" fill="#f1f8f6" font-family="Inter,system-ui,sans-serif" font-size="78" font-weight="800" letter-spacing="-4">Jev Chess</text>
+  <text x="557" y="365" fill="#c4d7d8" font-family="Inter,system-ui,sans-serif" font-size="31">Every legal move becomes an option.</text>
+  <text x="557" y="405" fill="#c4d7d8" font-family="Inter,system-ui,sans-serif" font-size="31">See the probabilities on the board.</text>
+  <rect x="556" y="452" width="278" height="60" rx="10" fill="#b9f6d6"/>
+  <text x="585" y="491" fill="#0b1820" font-family="ui-monospace,monospace" font-size="23" font-weight="700">PLAY THE GAME ↗</text>
+  <text x="67" y="591" fill="#9fb8bb" font-family="ui-monospace,monospace" font-size="19" letter-spacing="2">AWESOME JEV / SEE IT WORK</text>
+</svg>

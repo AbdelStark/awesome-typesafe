@@ -47,9 +47,8 @@
   const featuredIntro = featuredHeading?.nextElementSibling;
   const featuredPreviews = article.querySelector('#featured-previews');
   const featured = [...(featuredPreviews?.querySelectorAll('a[href]') || [])]
-    .filter((link) => link.querySelector('img'))
-    .map((link) => projectResources.get(link.href))
-    .filter(Boolean)
+    .map((link) => ({ resource: projectResources.get(link.href), previewImage: link.querySelector('img')?.src }))
+    .filter(({ resource, previewImage }) => resource && previewImage)
     .slice(0, 3);
   if (featured.length === 3) {
     const spotlight = document.createElement('section');
@@ -68,17 +67,16 @@
     cards.className = 'featured-live__cards';
     cards.setAttribute('role', 'group');
     cards.setAttribute('aria-label', 'Featured Jev projects');
-    for (const resource of featured) {
+    for (const { resource, previewImage } of featured) {
       const card = document.createElement('article');
       card.className = 'featured-live__card';
       const path = new URL(resource.permalink.replace(/^\//, ''), location.href);
-      const slug = resource.permalink.split('/').filter(Boolean).at(-1);
       const imageLink = document.createElement('a');
       imageLink.className = 'featured-live__image';
       imageLink.href = resource.url;
       imageLink.setAttribute('aria-label', `Open the original ${resource.name} project`);
       const image = document.createElement('img');
-      image.src = new URL(`assets/cards/${slug}.png`, location.href).href;
+      image.src = previewImage;
       image.alt = '';
       image.width = 1200;
       image.height = 630;

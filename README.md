@@ -30,9 +30,9 @@ Explore the docs, live builds, and independent tests behind Jev. It turns contex
 Open a live build from a preview, or read its listing first.
 
 <div id="featured-previews">
-  <a href="https://jevchess.com"><img src="assets/cards/site-jevchess-com.png" width="260" height="137" alt="Jev Chess — play and inspect a Jev-controlled chessboard"></a>
-  <a href="https://typesafe-demo.val.run/"><img src="assets/cards/site-typesafe-demo-val-run.png" width="260" height="137" alt="TypeSafe Typewriter — try 16 typed judgments on changing text"></a>
-  <a href="https://jevtown.ivanhabor.com"><img src="assets/cards/site-jevtown-ivanhabor-com.png" width="260" height="137" alt="Jevtown — explore a simulated audience"></a>
+  <a href="https://jevchess.com"><img src="assets/previews/jev-chess.svg" width="260" height="137" alt="Illustration of Jev Chess: a chessboard and branching game decisions"></a>
+  <a href="https://typesafe-demo.val.run/"><img src="assets/previews/typesafe-typewriter.svg" width="260" height="137" alt="Illustration of TypeSafe Typewriter: text and sixteen typed signals"></a>
+  <a href="https://jevtown.ivanhabor.com"><img src="assets/previews/jevtown.svg" width="260" height="137" alt="Illustration of Jevtown: simulated audience groups around a post"></a>
 </div>
 
 | I want to… | Go here |
