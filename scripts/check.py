@@ -54,6 +54,8 @@ def main() -> int:
         ROOT / "assets" / "jev-map.svg": "missing visual guide",
         ROOT / "assets" / "jev-social.png": "missing site sharing image",
         ROOT / "resources.json": "missing README-derived JSON directory",
+        ROOT / "llms.txt": "missing agent-readable site index",
+        ROOT / "sitemap.xml": "missing site sitemap",
         ROOT / "index.md": "missing site entry point",
     }
     for path, message in site_files.items():

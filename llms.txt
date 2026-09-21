@@ -1,0 +1,16 @@
+# Awesome Jev / TypeSafe
+
+> An independent, source-backed field guide to Jev and TypeSafe's System One models. The README is the canonical list; the JSON file is generated from its community entries. Inclusion is not endorsement.
+
+Use the README for descriptions and caveats. Use the JSON file when you need structured category, project, URL, and description fields. Check linked sources before relying on a project or a reported result.
+
+## Directory
+
+- [Full directory in Markdown](https://abdelstark.github.io/awesome-typesafe-jev/README.md): Official resources, community projects, practical starting points, and contribution guidance.
+- [Community directory in JSON](https://abdelstark.github.io/awesome-typesafe-jev/resources.json): README-derived, machine-readable community entries grouped by category.
+- [Contribution guide](https://abdelstark.github.io/awesome-typesafe-jev/CONTRIBUTING.md): Inclusion rules, evidence requirements, and correction process.
+
+## Optional
+
+- [Human-readable directory](https://abdelstark.github.io/awesome-typesafe-jev/): Searchable visual mirror of the README.
+- [Official TypeSafe documentation](https://docs.typesafe.ai/): Current product and API documentation, maintained by TypeSafe AI.
