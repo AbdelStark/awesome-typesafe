@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-22",
-  "total_resources": 161,
+  "total_resources": 163,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -218,6 +218,12 @@
           "permalink": "/projects/gh-24601-augustus/"
         },
         {
+          "name": "Beacon",
+          "url": "https://github.com/Asymptote-Labs/agent-beacon",
+          "description_markdown": "Cross-harness agent memory tool with an explicit `beacon memory evaluations run` command: Jev judges bounded, redacted trace projections for reusable lessons, which a person reviews before adding to project memory or installing as a skill. Hooks and dry runs do not call Jev; normal capture can retain sensitive session text locally, so inspect retention before enabling it.",
+          "permalink": "/projects/gh-asymptote-labs-agent-beacon/"
+        },
+        {
           "name": "Bicameral",
           "url": "https://github.com/AbdelStark/bicameral",
           "description_markdown": "Pi coding harness where an LLM writes while Jev supplies typed reflexes for policy, loop detection, and review; explicitly not a sandbox.",
@@ -234,6 +240,12 @@
           "url": "https://github.com/numerous-com/dgp",
           "description_markdown": "Experimental decision-based agent protocol with a Jev adapter, immutable evidence frames, typed assessments, and application-guarded commits; the local reference app simulates domain effects, and opt-in live mode sends decision evidence to TypeSafe.",
           "permalink": "/projects/gh-numerous-com-dgp/"
+        },
+        {
+          "name": "Distill",
+          "url": "https://github.com/samuelfaj/distill",
+          "description_markdown": "Coding agent harness that can use Jev to select a model and effort, route bounded utility tasks, and judge what context to retain. Code constrains the choices and validates utility results; failed or low-confidence decisions leave the normal path in place. Jev does not decide tool permissions, and routing can send the user's request and recent steps to the configured endpoint.",
+          "permalink": "/projects/gh-samuelfaj-distill/"
         },
         {
           "name": "Every",
