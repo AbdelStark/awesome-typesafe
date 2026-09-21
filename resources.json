@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-21",
-  "total_resources": 136,
+  "total_resources": 138,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -470,6 +470,18 @@
           "url": "https://github.com/cline/plugins/tree/main/plugins/jev-browser",
           "description_markdown": "Cline plugin that delegates bounded Playwright browser steps to Jev through Vercel AI Gateway using structured DOM observations; a separate text model fills form values, page text and field values go to Gateway, and its review instruction is model guidance rather than an enforced safety boundary.",
           "permalink": "/projects/gh-cline-plugins-tree-main-plugins-jev-browser/"
+        },
+        {
+          "name": "fastbrowse",
+          "url": "https://github.com/agent-labs-dev/fastbrowse",
+          "description_markdown": "Pre-alpha browser agent where Jev picks actions from observed controls, an LLM plans and reads, and code requires page quotes for answer claims and explicit authorization for consequential actions; its author publishes per-run comparisons, but the 14-task head-to-head used an earlier build and its success count varied on a same-day repeat.",
+          "permalink": "/projects/gh-agent-labs-dev-fastbrowse/"
+        },
+        {
+          "name": "Jev Browser",
+          "url": "https://github.com/jkudish/jev-browser",
+          "description_markdown": "MIT-licensed Playwright navigator with MCP, CLI, and library interfaces: Jev chooses DOM actions and judges goal/stuck state while code bounds the loop and returns a trace, final page, and screenshot; early software without iframe, shadow-DOM, or file-input support.",
+          "permalink": "/projects/gh-jkudish-jev-browser/"
         },
         {
           "name": "Jev for Chrome",

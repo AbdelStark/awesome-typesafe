@@ -100,6 +100,10 @@ def report(since: str, per_query: int, limit: int) -> str:
                 or repository_name.startswith(("awesome-jev", "awesome-typesafe"))
             ):
                 continue
+            # A README mention alone can come from a dependency or link in a
+            # large, unrelated repository. Use this query only as corroboration.
+            if label == "TypeSafe README" and slug not in candidates:
+                continue
             if slug not in candidates:
                 candidates[slug] = {**item, "searches": set()}
             candidates[slug]["searches"].add(label)
@@ -135,6 +139,10 @@ def report(since: str, per_query: int, limit: int) -> str:
         f"[CONTRIBUTING.md]({CONTRIBUTING_URL}). Stars and search overlap are "
         "triage signals, not quality or endorsement. The README remains the "
         "sole source for published listings.",
+        "",
+        "The TypeSafe README query only adds a signal to repositories already "
+        "found by a Jev topic or name/description search; a README mention "
+        "alone does not enter the queue.",
         "",
         f"GitHub [repository search]({SEARCH_URL}) returns at most {per_query} "
         "recent results per query here. Counts above that limit mean this "
