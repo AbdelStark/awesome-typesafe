@@ -12,7 +12,9 @@
 
 **The field guide to typed decisions.**
 
-Official docs, working integrations, independent experiments, and the builders pushing Jev into new territory. Jev turns context into a probability, a choice, or a score; your code owns the threshold and the action.
+Explore the docs, live builds, and independent tests behind Jev. It turns context into a probability, choice, or score; your code decides what happens next.
+
+<p class="quick-actions"><a href="https://abdelstark.github.io/awesome-typesafe-jev/#shape-a-typed-question">Try the decision designer</a> <a href="https://abdelstark.github.io/awesome-typesafe-jev/#community-projects">Explore community projects</a> <a href="https://github.com/AbdelStark/awesome-typesafe-jev">Star on GitHub</a></p>
 
 > **One call, three typed answers.** In [TypeSafe's documented support-ticket example](https://docs.typesafe.ai/introduction/quickstart), Jev chooses the technical team (0.85 probability), scores frustration at level 1 on a 0–2 rubric, and gives urgency a 1.0 Noul probability. The example response is from `jev-1.13.0`; application code still decides when to route or escalate.
 
@@ -23,7 +25,7 @@ Official docs, working integrations, independent experiments, and the builders p
 | See it work live | Play [Jev Chess](https://jevchess.com/), try [Typewriter's 16 judgments](https://typesafe-demo.val.run/) or [Jevtown's simulated audience](https://jevtown.ivanhabor.com/); browse [more applications](#applications-and-workflows) |
 | Test the claims | [Read what independent tests found](#before-you-trust-a-decision), inspect [JevBench's cross-model results](https://github.com/fstandhartinger/jevbench/blob/main/RESULTS-v1.2.md), then browse [independent evaluations](#evaluations-and-independent-research) and [TypeSafe's own evals](https://evals.typesafe.ai/) |
 
-**[See live builds →](https://abdelstark.github.io/awesome-typesafe-jev/)** · **[Shape a typed question](https://abdelstark.github.io/awesome-typesafe-jev/#shape-a-typed-question)** · **[Explore the searchable web directory](https://abdelstark.github.io/awesome-typesafe-jev/#community-projects)** · **[Download the JSON directory](resources.json)** · **[Use with a coding agent](https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/skills/awesome-jev/SKILL.md)** · **[Suggest a resource](https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/CONTRIBUTING.md)** · **[Join the builder community](https://discord.gg/typesafe)**
+**[Download the JSON directory](resources.json)** · **[Use with a coding agent](https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/skills/awesome-jev/SKILL.md)** · **[Suggest a resource](https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/CONTRIBUTING.md)** · **[Join the builder community](https://discord.gg/typesafe)**
 
 **Independent community project.** This repository is not affiliated with or endorsed by TypeSafe AI. Community entries are labeled by section; inclusion is not a claim that TypeSafe has reviewed or approved them.
 

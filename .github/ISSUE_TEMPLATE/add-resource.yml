@@ -32,8 +32,8 @@ body:
         - Client library or integration
         - Agent or developer tooling
         - Browser agent
-        - Finance or trading
-        - Game, robotics, or interactive demo
+        - Application or workflow
+        - Game or robotics
         - Evaluation or independent research
         - Showcase or field note
     validations:

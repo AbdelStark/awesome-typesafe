@@ -61,6 +61,8 @@
     intro.textContent = 'Open a live build, or read what it actually does before you try it.';
     const cards = document.createElement('div');
     cards.className = 'featured-live__cards';
+    cards.setAttribute('role', 'group');
+    cards.setAttribute('aria-label', 'Featured Jev projects');
     for (const resource of featured) {
       const card = document.createElement('article');
       card.className = 'featured-live__card';
@@ -106,8 +108,47 @@
       card.append(imageLink, body);
       cards.append(card);
     }
-    spotlight.append(label, title, intro, cards);
+    const navigation = document.createElement('div');
+    navigation.className = 'featured-live__navigation';
+    const position = document.createElement('span');
+    position.className = 'featured-live__position';
+    position.setAttribute('aria-live', 'polite');
+    const controls = document.createElement('div');
+    controls.className = 'featured-live__controls';
+    const previous = document.createElement('button');
+    previous.type = 'button';
+    previous.textContent = '←';
+    previous.setAttribute('aria-label', 'Previous featured project');
+    const next = document.createElement('button');
+    next.type = 'button';
+    next.textContent = '→';
+    next.setAttribute('aria-label', 'Next featured project');
+    controls.append(previous, next);
+    navigation.append(position, controls);
+    spotlight.append(label, title, intro, navigation, cards);
     (article.querySelector(':scope > blockquote') || article.querySelector('#contents'))?.before(spotlight);
+    const cardOffsets = () => [...cards.children].map((card) => card.offsetLeft - cards.firstElementChild.offsetLeft);
+    const currentCard = () => cardOffsets().reduce((best, offset, index, offsets) =>
+      Math.abs(offset - cards.scrollLeft) < Math.abs(offsets[best] - cards.scrollLeft) ? index : best, 0);
+    const updateNavigation = () => {
+      const index = currentCard();
+      position.textContent = `${index + 1} of ${featured.length} · Swipe to explore`;
+      previous.disabled = index === 0;
+      next.disabled = index === featured.length - 1;
+    };
+    const move = (step) => {
+      const offsets = cardOffsets();
+      const target = Math.max(0, Math.min(offsets.length - 1, currentCard() + step));
+      cards.scrollTo({
+        left: offsets[target],
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
+      });
+    };
+    previous.addEventListener('click', () => move(-1));
+    next.addEventListener('click', () => move(1));
+    cards.addEventListener('scroll', updateNavigation, { passive: true });
+    window.addEventListener('resize', updateNavigation);
+    updateNavigation();
   }
 
   // Present the README's four intent routes as cards on Pages. The table stays
