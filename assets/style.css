@@ -84,6 +84,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .markdown-body > table:first-of-type { margin: 1.8rem 0; }
 .markdown-body > table:first-of-type td:first-child { width: 15rem; color: var(--text); font-weight: 750; }
 .markdown-body blockquote { margin: 1.5rem 0; padding: .4rem 1.25rem; border-left: 3px solid var(--mint); background: var(--panel); }
+.markdown-body > blockquote:first-of-type { margin: 1.5rem 0 1.8rem; padding: .85rem 1.25rem; border: 1px solid #55796f; border-left: 4px solid var(--mint); border-radius: .45rem; background: linear-gradient(105deg, #17343a, var(--panel)); }
+.markdown-body > blockquote:first-of-type strong { color: var(--mint); }
 .markdown-body code { padding: .1rem .3rem; border: 1px solid var(--line); border-radius: .2rem; background: var(--panel); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .9em; }
 .markdown-body pre { overflow-x: auto; padding: 1rem; border: 1px solid var(--line); border-radius: .4rem; background: var(--panel); }
 .markdown-body pre code { padding: 0; border: 0; }

@@ -1,6 +1,6 @@
 # Awesome Jev / TypeSafe
 
-![A visual map of Jev: context enters a typed judgment, then application code decides what happens](assets/jev-map.svg)
+[![A visual map of Jev: context enters a typed judgment, then application code decides what happens](assets/jev-map.svg)](https://abdelstark.github.io/awesome-typesafe-jev/#community-projects)
 
 [![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
 [![Live site](https://img.shields.io/badge/explore-live%20directory-111827?logo=github)](https://abdelstark.github.io/awesome-typesafe-jev/)
@@ -13,6 +13,8 @@
 **The field guide to typed decisions.**
 
 Official docs, working integrations, independent experiments, and the builders pushing Jev into new territory. Jev turns context into a probability, a choice, or a score; your code owns the threshold and the action.
+
+> **One call, three typed answers.** In [TypeSafe's documented support-ticket example](https://docs.typesafe.ai/introduction/quickstart), Jev chooses the technical team (0.85 probability), scores frustration at level 1 on a 0–2 rubric, and gives urgency a 1.0 Noul probability. The example response is from `jev-1.13.0`; application code still decides when to route or escalate.
 
 | I want to… | Go here |
 | :--- | :--- |
