@@ -258,6 +258,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .directory-tools__views button[aria-pressed="true"] { background: var(--mint); color: #0b1820; }
 .directory-tools__share-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .25rem; }
 .directory-tools__status { margin: 0 !important; color: var(--muted); font-size: .84rem; }
+.directory-tools__reset { padding: .3rem .5rem; border: 1px solid transparent; border-radius: .25rem; background: transparent; color: var(--mint); font-family: inherit; font-size: .8rem; font-weight: 700; text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
+.directory-tools__reset:hover { border-color: var(--mint); }
 .directory-tools__share { padding: .3rem .5rem; border: 1px solid transparent; border-radius: .25rem; background: transparent; color: var(--mint); font-family: inherit; font-size: .8rem; font-weight: 700; text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
 .directory-tools__share:hover { border-color: var(--mint); }
 .directory-tools__empty { margin: .8rem 0 0 !important; color: var(--gold); }

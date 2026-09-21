@@ -370,6 +370,7 @@
     button.append(number, label);
     button.addEventListener('click', () => {
       activeResource = '';
+      search.value = '';
       select.value = id;
       update();
     });
@@ -404,6 +405,17 @@
   status.setAttribute('aria-live', 'polite');
   const statusRow = document.createElement('div');
   statusRow.className = 'directory-tools__status-row';
+  const reset = document.createElement('button');
+  reset.type = 'button';
+  reset.className = 'directory-tools__reset';
+  reset.textContent = 'Clear filters';
+  reset.addEventListener('click', () => {
+    search.value = '';
+    select.value = '';
+    activeResource = '';
+    update();
+    search.focus();
+  });
   const viewControls = document.createElement('div');
   viewControls.className = 'directory-tools__views';
   viewControls.setAttribute('role', 'group');
@@ -454,7 +466,7 @@
     window.setTimeout(() => { share.textContent = 'Copy this view'; }, 2000);
   });
   shareActions.append(share);
-  statusRow.append(status, viewControls, shareActions);
+  statusRow.append(status, reset, viewControls, shareActions);
   const empty = document.createElement('p');
   empty.className = 'directory-tools__empty';
   empty.hidden = true;
@@ -505,6 +517,7 @@
       section.list.hidden = visibleInSection === 0;
     }
     status.textContent = `Showing ${shown} of ${total} community projects`;
+    reset.hidden = !query && !select.value && !activeResource;
     empty.hidden = shown !== 0;
     const url = new URL(location.href);
     if (query) url.searchParams.set('q', search.value.trim());
