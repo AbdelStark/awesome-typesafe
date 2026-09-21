@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-21",
-  "total_resources": 140,
+  "total_resources": 141,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -390,6 +390,12 @@
           "url": "https://github.com/droidrun/mobile-jev",
           "description_markdown": "Local Android agent and studio using Mobilerun: Jev selects operations and observed targets, code rejects stale actions, and the included dark-theme demo checks the resulting switch; it needs a device plus Mobilerun and TypeSafe keys, while CI tests do not control a live phone.",
           "permalink": "/projects/gh-droidrun-mobile-jev/"
+        },
+        {
+          "name": "oxlint-plugin-jev",
+          "url": "https://github.com/wobsoriano/oxlint-plugin-jev",
+          "description_markdown": "Oxlint plugin with one rule, `jev/ask`, that turns plain-English yes/no questions about functions, calls, JSX elements, or files into Jev checks and reports an error above a cutoff you choose; experimental, sends matched snippets to TypeSafe, and warns rather than fails when Jev is unreachable unless `ci` is set to `\"fail\"`.",
+          "permalink": "/projects/gh-wobsoriano-oxlint-plugin-jev/"
         },
         {
           "name": "pi-heed",
