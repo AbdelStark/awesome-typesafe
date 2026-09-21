@@ -580,6 +580,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "xinyao27",
+      "name": "Xinyao",
+      "avatar_url": "https://avatars.githubusercontent.com/u/27852165",
+      "profile": "https://github.com/xinyao27",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-9de3bc.svg?style=flat-square)](#contributors)"
