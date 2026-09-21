@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-21",
-  "total_resources": 129,
+  "total_resources": 132,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -326,6 +326,12 @@
           "permalink": "/projects/gh-friedjof-jev-mobile/"
         },
         {
+          "name": "jev-pref",
+          "url": "https://github.com/doeixd/jev-pref",
+          "description_markdown": "CLI and GitHub Action that turn project-defined semantic preferences into Jev Noul or Choice checks over code changes, then map results to advisory or blocking outcomes in code; supports tuning on labelled diffs, and sends reviewed change text to TypeSafe.",
+          "permalink": "/projects/gh-doeixd-jev-pref/"
+        },
+        {
           "name": "jev-router",
           "url": "https://github.com/gargpratyush/jev-router",
           "description_markdown": "Claude Code and Codex wrappers that ask Jev to choose a model tier for each fresh user turn while retaining the native CLI sessions and authentication; prompt text goes to TypeSafe, and the documented compatibility testing is on Windows with specific CLI versions.",
@@ -414,6 +420,12 @@
           "url": "https://github.com/lukstei/slop-grader",
           "description_markdown": "CLI tool that grades markdown and text files against custom rulesets for AI slop, grammar, and documentation quality using Jev scores and flags, then guides an AI agent to auto-fix violations.",
           "permalink": "/projects/gh-lukstei-slop-grader/"
+        },
+        {
+          "name": "Sniff Test",
+          "url": "https://github.com/DanRWilloughby/snifftest",
+          "description_markdown": "Prose linter with local countable rules and opt-in Jev Noul judgments over individual paragraphs, available as a CLI, pre-commit hook, and GitHub Action; its author-published comparison uses a small seeded corpus, with some judgment rules tuned on those same seeds.",
+          "permalink": "/projects/gh-danrwilloughby-snifftest/"
         },
         {
           "name": "Supercov",
@@ -630,6 +642,12 @@
           "url": "https://github.com/anxkhn/JevPlaysPokemon",
           "description_markdown": "A Pokémon agent that lets you emulate GBA games and has Jev make the battle decisions based on the current stats, state, moves, and Pokémon.",
           "permalink": "/projects/gh-anxkhn-jevplayspokemon/"
+        },
+        {
+          "name": "Jev plays Snake",
+          "url": "https://github.com/sorrycc/typesafe-snake",
+          "description_markdown": "Browser Snake demo where code computes legal moves, food distance, and reachable space, then asks Jev to choose one move per tick through a server-side SDK call; a late answer leaves the snake going straight. Requires an API key; the public source has no license.",
+          "permalink": "/projects/gh-sorrycc-typesafe-snake/"
         },
         {
           "name": "Jev Plays StarCraft",
