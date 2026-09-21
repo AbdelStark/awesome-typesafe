@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-21",
-  "total_resources": 158,
+  "total_resources": 159,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -842,6 +842,12 @@
           "url": "https://github.com/jujumilk3/jev-calibration-audit",
           "description_markdown": "Independent Jev-1.13.0 audit with reproducible code and per-call JSONL: tests abstention options, matched Korean and English items, question-shape interference, and option order; its strong abstention finding is on the KoBBQ dataset, not a universal calibration guarantee.",
           "permalink": "/projects/gh-jujumilk3-jev-calibration-audit/"
+        },
+        {
+          "name": "jev-certify",
+          "url": "https://github.com/nikkoxgonzales/jev-certify",
+          "description_markdown": "Early Python toolkit and CLINC150 study of conformal routing thresholds and prediction-powered audits over Jev 1.13 through OpenRouter, with request plans, 2,412 journalled answers and usage records, analysis code, and tests; its per-incoming-query risk bound depends on matching calibration and deployment traffic, and the study shows the scope gate missing its target after out-of-scope prevalence shifts while fallback accuracy remains unmeasured.",
+          "permalink": "/projects/gh-nikkoxgonzales-jev-certify/"
         },
         {
           "name": "jev-measured",
