@@ -60,6 +60,8 @@ If your project is listed, you can link back with this optional badge:
 
 For a badge that links to your specific entry, find your card in the [live directory](https://abdelstark.github.io/awesome-typesafe-jev/) or open its project page and use **Copy listing badge**. The copied Markdown is ready for your project's README. “Listed” means the resource met this directory's inclusion rules; it does not imply an endorsement or security review.
 
+Each project page also has **Download share card**. It draws a 1200×630 PNG from the README-derived name, category, and description in your browser. Share it alongside the page link so readers can inspect the full entry and its caveats.
+
 ## Pull request scope
 
 Keep each pull request focused. One resource or one coherent maintenance pass is ideal. Do not reformat unrelated sections.
