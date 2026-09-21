@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-21",
-  "total_resources": 156,
+  "total_resources": 158,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -46,6 +46,12 @@
           "url": "https://github.com/formulahendry/jev-acp",
           "description_markdown": "Standalone ACP agent for Jev Choice, Score, and Noul decisions, with guided input, reusable templates, and probability displays; requires a TypeSafe API key and sends decision inputs to TypeSafe.",
           "permalink": "/projects/gh-formulahendry-jev-acp/"
+        },
+        {
+          "name": "jevframe",
+          "url": "https://github.com/ktaletsk/jevframe",
+          "description_markdown": "Early Python library adding async Jev Noul, Choice, Score, and multi-question evaluation to pandas and eager Polars, with full Choice and Score probability distributions, bounded row concurrency, and opt-in memory caching; each uncached row sends selected context to TypeSafe, and LazyFrame expressions are outside v0.",
+          "permalink": "/projects/gh-ktaletsk-jevframe/"
         },
         {
           "name": "jevql",
@@ -402,6 +408,12 @@
           "url": "https://github.com/allebee/jevgrep",
           "description_markdown": "Streaming grep-by-meaning CLI (`jevgrep-cli` on PyPI) for logs and other text, including `tail -f`: it batches one Jev Noul per line and prints lines above a code-set threshold. Its hand-labelled, 195-line synthetic-log benchmark compares Jev with Claude; every judged line goes to TypeSafe or OpenRouter, and optional `--explain` sends selected lines to Anthropic through OpenRouter.",
           "permalink": "/projects/gh-allebee-jevgrep/"
+        },
+        {
+          "name": "Jeview",
+          "url": "https://github.com/andududu/jeview",
+          "description_markdown": "Experimental unofficial loopback proxy and live map of Jev calls, grouping decisions by project and linking later calls to earlier answers; it forwards requests to TypeSafe and stores requests, responses, and the API key in local SQLite (the key in plaintext), so keep it off public addresses.",
+          "permalink": "/projects/gh-andududu-jeview/"
         },
         {
           "name": "Jevonian",
