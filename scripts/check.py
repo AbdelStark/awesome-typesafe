@@ -57,6 +57,8 @@ def main() -> int:
         ROOT / "assets" / "resource.js": "missing project page share controls",
         ROOT / "assets" / "jev-map.svg": "missing visual guide",
         ROOT / "assets" / "jev-social.png": "missing site sharing image",
+        ROOT / "scripts" / "cards.py": "missing README-derived social-card renderer",
+        ROOT / "scripts" / "requirements.txt": "missing social-card build dependency",
         ROOT / "assets" / "listed-badge.svg": "missing shareable listing badge",
         ROOT / "resources.json": "missing README-derived JSON directory",
         ROOT / "llms.txt": "missing agent-readable site index",

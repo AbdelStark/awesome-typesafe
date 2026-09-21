@@ -191,8 +191,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .resource-share h2::before { content: none; }
 .resource-share p { margin: 0 0 .8rem; color: var(--muted); font-size: .85rem; }
 .resource-share__buttons { display: flex; flex-wrap: wrap; gap: .55rem; }
-.resource-share__buttons button { padding: .45rem .75rem; border: 1px solid #6a978d; border-radius: .35rem; background: #1c383a; color: var(--mint); font-family: inherit; font-size: .8rem; font-weight: 700; line-height: 1.4; cursor: pointer; }
-.resource-share__buttons button:hover { border-color: var(--mint); background: #25504a; }
+.resource-share__buttons button, .resource-share__buttons a { display: inline-block; padding: .45rem .75rem; border: 1px solid #6a978d; border-radius: .35rem; background: #1c383a; color: var(--mint); font-family: inherit; font-size: .8rem; font-weight: 700; line-height: 1.4; text-decoration: none; cursor: pointer; }
+.resource-share__buttons button:hover, .resource-share__buttons a:hover { border-color: var(--mint); background: #25504a; }
 .resource-share__status { display: block; min-height: 1.35rem; margin-top: .45rem; color: var(--mint); font-size: .78rem; }
 .resource-page__note { max-width: 70ch; padding-left: 1rem; border-left: 3px solid var(--gold); color: var(--muted); font-size: .89rem; }
 .resource-page__related { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .65rem; padding: 0 !important; list-style: none; }

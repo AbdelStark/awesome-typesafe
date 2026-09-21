@@ -1,4 +1,5 @@
 __pycache__/
+.venv/
 *.py[cod]
 .DS_Store
 .lycheecache

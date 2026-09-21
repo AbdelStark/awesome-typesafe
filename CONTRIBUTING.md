@@ -33,12 +33,13 @@ Very early work is welcome when it teaches something concrete, but please label 
 5. Run the local checks:
 
    ```bash
+   python3 -m pip install -r scripts/requirements.txt
    python3 scripts/export.py
    python3 scripts/export.py --check
    python3 scripts/check.py
    ```
 
-   Commit `resources.json` and the changed `projects/*.html` pages with `README.md`. Both are generated from the README; edit only the README entry by hand.
+   Commit `resources.json`, changed `projects/*.html` pages, and changed `assets/cards/*.png` images with `README.md`. All are generated from the README; edit only the README entry by hand. Use a virtual environment if your Python installation does not allow global package installs.
 
 6. In the pull request, explain why the resource belongs and disclose whether you maintain or are affiliated with it.
 
@@ -60,7 +61,7 @@ If your project is listed, you can link back with this optional badge:
 
 For a badge that links to your specific entry, find your card in the [live directory](https://abdelstark.github.io/awesome-typesafe-jev/) or open its project page and use **Copy listing badge**. The copied Markdown is ready for your project's README. “Listed” means the resource met this directory's inclusion rules; it does not imply an endorsement or security review.
 
-Each project page also has **Download share card**. It draws a 1200×630 PNG from the README-derived name, category, and description in your browser. Share it alongside the page link so readers can inspect the full entry and its caveats.
+Each project page also has **Download share card**. Its 1200×630 PNG is generated from the README-derived name, category, and description. That same image appears when the project-page URL is shared on services that support Open Graph previews.
 
 ## Pull request scope
 

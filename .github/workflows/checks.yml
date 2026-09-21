@@ -21,10 +21,13 @@ jobs:
         with:
           python-version: "3.13"
 
+      - name: Install card renderer
+        run: python3 -m pip install --requirement scripts/requirements.txt
+
       - name: Run structural checks
         run: python3 scripts/check.py
 
-      - name: Verify README-derived JSON directory
+      - name: Verify README-derived directory and social cards
         run: python3 scripts/export.py --check
 
       - name: Check site JavaScript

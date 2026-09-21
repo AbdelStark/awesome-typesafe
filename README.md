@@ -320,6 +320,8 @@ Contributions are welcome. Please read the [contribution guide](https://github.c
 
 The short version: submit a public, directly useful resource; describe what it actually does; put it in one category; and include limitations when a result depends on a private dataset, a single run, or an unverified claim.
 
+Listed here? Your [project page](https://abdelstark.github.io/awesome-typesafe-jev/#community-projects) has a direct link, a README badge, and a downloadable image for sharing your entry.
+
 ## Contributors
 
 Thanks to everyone who has improved the list. The portraits below are generated from [All Contributors](https://allcontributors.org/en/cli/); contribution types reflect work in this repository.
