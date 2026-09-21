@@ -278,7 +278,7 @@ Community projects are independent unless their repository says otherwise. Read 
 ### Games and robotics
 
 - [HEIST//ONE](https://github.com/AbdelStark/heist-one) — Observable browser stealth game where Jev supplies batched typed judgments for six guards while deterministic code owns the simulation and validates every proposal; includes a Decision Lens, scripted offline mode, evidence traces, tests, and one documented live sandbox extraction.
-- [Jev Chess](https://jevchess.com) — One shared chessboard where the internet plays collectively against Jev in real time: every legal move is an option of a single Choice question (illegal moves are impossible by construction), returned probabilities shade the pieces, and a live panel scores each claimed confidence against a one-ply material check; closed-source site, and the calibration check is deliberately narrow.
+- [Jev Chess](https://jevchess.com) — Anyone can play Jev on a shared chessboard. One Choice question covers every legal move; probabilities shade the board. Its confidence panel uses a narrow, one-ply material check. Source is closed.
 - [Jev Drone](https://github.com/RomanSlack/jev-drone) — MuJoCo quadrotor stack that keeps control and safety in code while using Jev for slower tactical judgments.
 - [Jev Plays Pokémon](https://github.com/anxkhn/JevPlaysPokemon) — A Pokémon agent that lets you emulate GBA games and has Jev make the battle decisions based on the current stats, state, moves, and Pokémon.
 - [Jev Plays StarCraft](https://github.com/phyous/tsai-sc) — Structured-state harness, verified run, probability trace, and evidence bundle for the original StarCraft shareware campaign.

@@ -546,7 +546,7 @@
         {
           "name": "Jev Chess",
           "url": "https://jevchess.com",
-          "description_markdown": "One shared chessboard where the internet plays collectively against Jev in real time: every legal move is an option of a single Choice question (illegal moves are impossible by construction), returned probabilities shade the pieces, and a live panel scores each claimed confidence against a one-ply material check; closed-source site, and the calibration check is deliberately narrow.",
+          "description_markdown": "Anyone can play Jev on a shared chessboard. One Choice question covers every legal move; probabilities shade the board. Its confidence panel uses a narrow, one-ply material check. Source is closed.",
           "permalink": "/projects/site-jevchess-com/"
         },
         {
