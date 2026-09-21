@@ -10,6 +10,7 @@ import sys
 from pathlib import Path
 from urllib.parse import urlsplit
 
+from cards import card_matches, render_card
 from check import github_slug
 
 
@@ -17,6 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 README = ROOT / "README.md"
 OUTPUT = ROOT / "resources.json"
 PROJECTS_DIR = ROOT / "projects"
+CARDS_DIR = ROOT / "assets" / "cards"
 ENTRY = re.compile(r"^- \[([^]]+)]\((https://[^)]+)\) — (.+)$")
 
 
@@ -84,10 +86,12 @@ def build_pages(document: dict[str, object]) -> dict[Path, str]:
                 "description": plain_description(resource["description_markdown"]),
                 "permalink": resource["permalink"],
                 "resource_name": resource["name"],
+                "resource_slug": project_slug(resource["url"]),
                 "resource_url": resource["url"],
                 "description_markdown": resource["description_markdown"],
                 "category_name": category["name"],
                 "category_id": category["id"],
+                "social_image": f"/assets/cards/{project_slug(resource['url'])}.png",
             }
             lines = ["---"] + [
                 f"{key}: {json.dumps(value, ensure_ascii=False)}"
@@ -106,33 +110,55 @@ def build_pages(document: dict[str, object]) -> dict[Path, str]:
     return pages
 
 
+def card_specs(document: dict[str, object]) -> dict[Path, tuple[str, str, str]]:
+    cards: dict[Path, tuple[str, str, str]] = {}
+    for category in document["categories"]:
+        for resource in category["resources"]:
+            path = CARDS_DIR / f"{project_slug(resource['url'])}.png"
+            if path in cards:
+                raise ValueError(f"Project card collision: {resource['url']}")
+            cards[path] = (
+                resource["name"],
+                category["name"],
+                plain_description(resource["description_markdown"]),
+            )
+    return cards
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--check", action="store_true", help="fail if resources.json is stale")
+    parser.add_argument("--check", action="store_true", help="fail if README-derived artifacts are stale")
     args = parser.parse_args()
     try:
         document = build_document()
         generated = json.dumps(document, ensure_ascii=False, indent=2) + "\n"
         pages = build_pages(document)
+        cards = card_specs(document)
     except (IndexError, ValueError) as error:
         print(f"ERROR: {error}", file=sys.stderr)
         return 1
     if args.check:
         actual_pages = set(PROJECTS_DIR.glob("*.html"))
+        actual_cards = set(CARDS_DIR.glob("*.png"))
         if not OUTPUT.is_file() or OUTPUT.read_text(encoding="utf-8") != generated or actual_pages != set(pages) or any(
             path.read_text(encoding="utf-8") != content for path, content in pages.items()
-        ):
-            print("ERROR: README-derived directory or project pages are stale; run python3 scripts/export.py", file=sys.stderr)
+        ) or actual_cards != set(cards) or any(not card_matches(path, *spec) for path, spec in cards.items()):
+            print("ERROR: README-derived directory, project pages, or social cards are stale; run python3 scripts/export.py", file=sys.stderr)
             return 1
-        print(f"OK: resources.json and {len(pages)} project pages match README.md")
+        print(f"OK: resources.json, {len(pages)} project pages, and {len(cards)} social cards match README.md")
         return 0
     PROJECTS_DIR.mkdir(exist_ok=True)
     for stale in set(PROJECTS_DIR.glob("*.html")) - set(pages):
         stale.unlink()
     for path, content in pages.items():
         path.write_text(content, encoding="utf-8")
+    CARDS_DIR.mkdir(exist_ok=True)
+    for stale in set(CARDS_DIR.glob("*.png")) - set(cards):
+        stale.unlink()
+    for path, spec in cards.items():
+        path.write_bytes(render_card(*spec))
     OUTPUT.write_text(generated, encoding="utf-8")
-    print(f"Exported {document['total_resources']} resources to resources.json and {len(pages)} project pages")
+    print(f"Exported {document['total_resources']} resources to resources.json, {len(pages)} project pages, and {len(cards)} social cards")
     return 0
 
 
