@@ -23,18 +23,91 @@
   if (!sections.length) return;
 
   const projectPaths = new Map();
+  const projectResources = new Map();
   try {
     const response = await fetch(new URL('resources.json', location.href));
     if (response.ok) {
       const directory = await response.json();
       for (const category of directory.categories) {
         for (const resource of category.resources) {
-          projectPaths.set(new URL(resource.url).href, resource.permalink);
+          const url = new URL(resource.url).href;
+          projectPaths.set(url, resource.permalink);
+          projectResources.set(url, { ...resource, category: category.name });
         }
       }
     }
   } catch {
     // The README-rendered directory still works if the JSON feed is unavailable.
+  }
+
+  const liveRow = [...article.querySelectorAll(':scope > table:first-of-type tbody tr')]
+    .find((row) => row.cells[0]?.textContent.trim() === 'See it work live');
+  const featured = [...(liveRow?.cells[1]?.querySelectorAll('a[href]') || [])]
+    .map((link) => projectResources.get(link.href))
+    .filter(Boolean)
+    .slice(0, 3);
+  if (featured.length) {
+    const spotlight = document.createElement('section');
+    spotlight.className = 'featured-live';
+    spotlight.setAttribute('aria-labelledby', 'featured-live-title');
+    const label = document.createElement('p');
+    label.className = 'featured-live__label';
+    label.textContent = 'A few places to start';
+    const title = document.createElement('h2');
+    title.id = 'featured-live-title';
+    title.textContent = 'See Jev at work';
+    const intro = document.createElement('p');
+    intro.className = 'featured-live__intro';
+    intro.textContent = 'Open a live build, or read what it actually does before you try it.';
+    const cards = document.createElement('div');
+    cards.className = 'featured-live__cards';
+    for (const resource of featured) {
+      const card = document.createElement('article');
+      card.className = 'featured-live__card';
+      const path = new URL(resource.permalink.replace(/^\//, ''), location.href);
+      const slug = resource.permalink.split('/').filter(Boolean).at(-1);
+      const imageLink = document.createElement('a');
+      imageLink.className = 'featured-live__image';
+      imageLink.href = path.href;
+      imageLink.setAttribute('aria-label', `Read the Awesome Jev listing for ${resource.name}`);
+      const image = document.createElement('img');
+      image.src = new URL(`assets/cards/${slug}.png`, location.href).href;
+      image.alt = '';
+      image.width = 1200;
+      image.height = 630;
+      image.loading = 'lazy';
+      image.decoding = 'async';
+      imageLink.append(image);
+      const body = document.createElement('div');
+      body.className = 'featured-live__body';
+      const category = document.createElement('p');
+      category.className = 'featured-live__category';
+      category.textContent = resource.category;
+      const name = document.createElement('h3');
+      const nameLink = document.createElement('a');
+      nameLink.href = path.href;
+      nameLink.textContent = resource.name;
+      name.append(nameLink);
+      const description = document.createElement('p');
+      description.className = 'featured-live__description';
+      description.textContent = resource.description_markdown
+        .replace(/\[([^\]]+)]\(https?:\/\/[^)]+\)/g, '$1')
+        .replace(/[`*_]/g, '');
+      const actions = document.createElement('div');
+      actions.className = 'featured-live__actions';
+      const original = document.createElement('a');
+      original.href = resource.url;
+      original.textContent = 'Open original ↗';
+      const listing = document.createElement('a');
+      listing.href = path.href;
+      listing.textContent = 'Read listing →';
+      actions.append(original, listing);
+      body.append(category, name, description, actions);
+      card.append(imageLink, body);
+      cards.append(card);
+    }
+    spotlight.append(label, title, intro, cards);
+    (article.querySelector(':scope > blockquote') || article.querySelector('#contents'))?.before(spotlight);
   }
 
   const itemText = new WeakMap();
