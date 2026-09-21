@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Jev turns context into typed judgments</title>
+  <desc id="desc">Evidence enters Jev, which returns Noul, Choice, or Score. Application code owns the threshold and action.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1">
+      <stop stop-color="#101724"/>
+      <stop offset="1" stop-color="#172636"/>
+    </linearGradient>
+    <linearGradient id="signal" x2="1" y2="0">
+      <stop stop-color="#b9f6d6"/>
+      <stop offset="1" stop-color="#8de8ee"/>
+    </linearGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" fill="none" stroke="#94a3b8" stroke-opacity=".09"/>
+    </pattern>
+    <style>
+      .mono{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+      .sans{font-family:Inter,Arial,sans-serif}
+    </style>
+  </defs>
+  <rect width="1200" height="420" rx="22" fill="url(#bg)"/>
+  <rect width="1200" height="420" rx="22" fill="url(#grid)"/>
+  <path d="M0 73H1200M0 350H1200" stroke="#607587" stroke-opacity=".36"/>
+  <circle cx="46" cy="37" r="6" fill="#b9f6d6"/>
+  <text x="65" y="43" class="mono" fill="#bed5df" font-size="17" letter-spacing="2">AWESOME JEV / TYPESAFE</text>
+  <text x="45" y="126" class="sans" fill="#fff" font-size="34" font-weight="700">Make a judgment.</text>
+  <text x="45" y="170" class="sans" fill="#b9f6d6" font-size="34" font-weight="700">Keep control.</text>
+  <text x="45" y="212" class="sans" fill="#b9c9d2" font-size="16">A map of tools, demos, and evidence for typed decisions.</text>
+  <rect x="46" y="265" width="170" height="48" rx="8" fill="#223342" stroke="#4a6470"/>
+  <text x="67" y="294" class="mono" fill="#e0edf0" font-size="17">input: context</text>
+  <path d="M228 289H282" stroke="url(#signal)" stroke-width="2"/>
+  <path d="m274 282 8 7-8 7" fill="none" stroke="#b9f6d6" stroke-width="2"/>
+  <rect x="296" y="246" width="210" height="86" rx="10" fill="#183c3c" stroke="#89d8c5"/>
+  <text x="319" y="278" class="mono" fill="#b9f6d6" font-size="15">MODEL / JEV</text>
+  <text x="319" y="307" class="sans" fill="#fff" font-size="21" font-weight="700">typed judgment</text>
+  <path d="M517 289H571" stroke="url(#signal)" stroke-width="2"/>
+  <path d="m563 282 8 7-8 7" fill="none" stroke="#b9f6d6" stroke-width="2"/>
+  <rect x="585" y="245" width="287" height="87" rx="10" fill="#223342" stroke="#4a6470"/>
+  <text x="606" y="275" class="mono" fill="#a7bbca" font-size="14">OUTPUT / PROBABILITIES</text>
+  <text x="606" y="307" class="mono" fill="#fff" font-size="18">Noul · Choice · Score</text>
+  <path d="M883 289H937" stroke="url(#signal)" stroke-width="2"/>
+  <path d="m929 282 8 7-8 7" fill="none" stroke="#b9f6d6" stroke-width="2"/>
+  <rect x="951" y="245" width="203" height="87" rx="10" fill="#293240" stroke="#efca86"/>
+  <text x="971" y="275" class="mono" fill="#efca86" font-size="14">YOUR CODE</text>
+  <text x="971" y="307" class="sans" fill="#fff" font-size="20" font-weight="700">threshold → action</text>
+  <text x="46" y="386" class="mono" fill="#9aabb8" font-size="14">OFFICIAL REFERENCES  /  COMMUNITY BUILDS  /  REPRODUCIBLE EVIDENCE</text>
+</svg>

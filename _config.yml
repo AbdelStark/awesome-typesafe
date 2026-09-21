@@ -1,10 +1,10 @@
-title: Awesome TypeSafe
+title: Awesome Jev / TypeSafe
 description: >-
-  A curated list of official resources and community projects for TypeSafe,
-  System One models, and Jev.
+  A field guide to Jev and TypeSafe: official docs, SDKs, agent tools,
+  working demos, and independent evaluations.
 url: https://abdelstark.github.io
-baseurl: /awesome-typesafe
-repository: AbdelStark/awesome-typesafe
+baseurl: /awesome-typesafe-jev
+repository: AbdelStark/awesome-typesafe-jev
 lang: en
 markdown: kramdown
 kramdown:

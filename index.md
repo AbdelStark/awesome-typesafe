@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Awesome TypeSafe
-description: Official resources and community projects for TypeSafe, System One models, and Jev.
+title: Awesome Jev / TypeSafe
+description: A field guide to Jev and TypeSafe: official docs, SDKs, agent tools, working demos, and independent evaluations.
 permalink: /
 ---
 

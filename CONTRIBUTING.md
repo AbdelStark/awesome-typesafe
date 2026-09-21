@@ -51,3 +51,18 @@ Removal is maintenance, not a judgment on the author.
 Keep each pull request focused. One resource or one coherent maintenance pass is ideal. Do not reformat unrelated sections.
 
 By participating, you agree to keep discussion technical, specific, and respectful. Critique claims and artifacts, not people.
+
+## Credit contributors
+
+We use the [All Contributors CLI](https://allcontributors.org/en/cli/usage/) to credit work on the list, including documentation and code. The `.all-contributorsrc` file records the contribution types, and the CLI generates the badge and portrait table in `README.md`. Since the Pages site renders that same README, credits appear in both places.
+
+To add a contributor after their contribution has landed, run:
+
+```bash
+npx --yes all-contributors-cli@6.26.1 add USERNAME doc
+npx --yes all-contributors-cli@6.26.1 generate
+npx --yes all-contributors-cli@6.26.1 check
+python3 scripts/check.py
+```
+
+Use the [contribution types](https://allcontributors.org/en/emoji-key/) that describe the actual work. Commit both `.all-contributorsrc` and `README.md`. Do not credit a project author solely because their project is listed; credit their contribution to this repository.

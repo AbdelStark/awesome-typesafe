@@ -13,7 +13,7 @@ README = ROOT / "README.md"
 COMMUNITY_START = "## Community projects"
 COMMUNITY_END = "## Contributing"
 MINIMUM_COMMUNITY_ENTRIES = 20
-LIVE_SITE = "https://abdelstark.github.io/awesome-typesafe/"
+LIVE_SITE = "https://abdelstark.github.io/awesome-typesafe-jev/"
 
 
 def github_slug(heading: str) -> str:
@@ -32,13 +32,15 @@ def main() -> int:
     failures: list[str] = []
 
     required = {
-        "# Awesome TypeSafe": "missing canonical title",
+        "# Awesome Jev / TypeSafe": "missing canonical title",
         "https://awesome.re/badge-flat2.svg": "missing Awesome badge",
         "**Independent community project.**": "missing independence disclaimer",
-        "Last reviewed:": "missing review date",
+        "Last updated:": "missing update date",
         LIVE_SITE: "missing live-site badge or link",
         COMMUNITY_START: "missing community-projects section",
         "CONTRIBUTING.md": "missing contribution-guide link",
+        "<!-- ALL-CONTRIBUTORS-LIST:START": "missing contributors table",
+        "<!-- ALL-CONTRIBUTORS-BADGE:START": "missing contributors badge",
     }
     for needle, message in required.items():
         if needle not in text:
@@ -78,6 +80,9 @@ def main() -> int:
     for url in external_links:
         if "utm_" in url or "?ref=" in url:
             fail(f"tracking parameter in URL: {url}", failures)
+    # Navigation and badges deliberately repeat links that also appear in the list.
+    curated = text.split("## Start here", 1)[-1].split(COMMUNITY_END, 1)[0]
+    for url in re.findall(r"\]\((https?://[^)]+)\)", curated):
         seen[url] = seen.get(url, 0) + 1
     for url, count in seen.items():
         if count > 1:
@@ -136,6 +141,12 @@ def main() -> int:
         if names != sorted(names):
             ordered = ", ".join(name for name, _ in sorted(entries))
             fail(f"'{heading}' is not alphabetical; expected: {ordered}", failures)
+
+    config = ROOT / ".all-contributorsrc"
+    if not config.is_file():
+        fail("missing All Contributors CLI configuration", failures)
+    elif '"projectName": "awesome-typesafe-jev"' not in config.read_text(encoding="utf-8"):
+        fail("All Contributors CLI targets the wrong repository", failures)
 
     if failures:
         for message in failures:
