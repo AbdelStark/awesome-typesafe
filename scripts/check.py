@@ -56,6 +56,7 @@ def main() -> int:
         ROOT / "assets" / "designer.js": "missing typed-question designer enhancement",
         ROOT / "assets" / "resource.js": "missing project page share controls",
         ROOT / "assets" / "jev-map.svg": "missing visual guide",
+        ROOT / "assets" / "jev-map-mobile.svg": "missing mobile visual guide",
         ROOT / "assets" / "jev-social.png": "missing site sharing image",
         ROOT / "scripts" / "cards.py": "missing README-derived social-card renderer",
         ROOT / "scripts" / "requirements.txt": "missing social-card build dependency",
