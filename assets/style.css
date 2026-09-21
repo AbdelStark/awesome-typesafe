@@ -449,5 +449,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 @media (max-width: 360px) {
   .site-nav__browse-detail, .site-nav__github-arrow { display: none; }
+  .documented-example__answers article:first-child strong { font-size: .85rem; letter-spacing: -.04em; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
