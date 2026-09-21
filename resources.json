@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
-  "last_updated": "2026-09-21",
-  "total_resources": 159,
+  "last_updated": "2026-09-22",
+  "total_resources": 161,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -242,6 +242,12 @@
           "permalink": "/projects/gh-sufianetaouil-every/"
         },
         {
+          "name": "evoke",
+          "url": "https://github.com/evoke-build/evoke",
+          "description_markdown": "Rust CLI and TypeScript SDK that ask Jev to select an installed reflex and bounded arguments, then gate the outcome in code as run, confirm, ask, or abstain. Reflexes fetched from Git run as your user without a sandbox, so inspect them before installing.",
+          "permalink": "/projects/gh-evoke-build-evoke/"
+        },
+        {
           "name": "fx",
           "url": "https://github.com/vercel-labs/fx",
           "description_markdown": "Experimental Zig coding agent with an [optional Jev permission reviewer](https://github.com/vercel-labs/fx/blob/main/src/builtins/gateway/typesafe_permission_reviewer.zig): setting `review_model` to `typesafeai/jev` sends the composed policy, context, and pending action to TypeSafe directly or through Vercel AI Gateway, then maps Jev's Choice to a permission decision; recorded probabilities and confidence are not threshold gates.",
@@ -444,6 +450,12 @@
           "url": "https://github.com/tyler-dot-earth/patdown",
           "description_markdown": "CLI, GitHub Action, and agent hooks that judge files or changes against Markdown rules with a provider-swappable Jev backend and configurable probability threshold; it sends matched file content to TypeSafe, has no request budget or result cache yet, and its semantic verdicts need human review for consequential gates.",
           "permalink": "/projects/gh-tyler-dot-earth-patdown/"
+        },
+        {
+          "name": "perch",
+          "url": "https://github.com/lakeday-org/perch",
+          "description_markdown": "Code scanner that parses methods and their call graph, asks Jev typed questions about each method in scope, and ranks potential defects and security findings; `--since` scopes CI runs. It sends method source to TypeSafe and reads every method in scope, so review request cost and findings before using it as a gate.",
+          "permalink": "/projects/gh-lakeday-org-perch/"
         },
         {
           "name": "pi-heed",
