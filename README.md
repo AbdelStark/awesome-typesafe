@@ -19,7 +19,7 @@ Official docs, working integrations, independent experiments, and the builders p
 | I want to… | Go here |
 | :--- | :--- |
 | Understand the idea in 2 minutes | [Try the policy threshold](#try-a-policy-threshold), then read [the introduction](https://docs.typesafe.ai/introduction) and [the three primitives](https://docs.typesafe.ai/primitives) |
-| Make my first typed call | [Quick start](https://docs.typesafe.ai/introduction/quickstart) and [official SDKs](#sdks-and-developer-tools) |
+| Make my first typed call | [Copy the runnable example](#make-your-first-decision), then explore the [official SDKs](#sdks-and-developer-tools) |
 | See it work live | [Typewriter's 16 judgments](https://typesafe-demo.val.run/) or [Jevtown's simulated audience](https://jevtown.ivanhabor.com/); then browse [all community projects](#community-projects) |
 | Test the claims | [Independent evaluations](#evaluations-and-independent-research) and [TypeSafe's own evals](https://evals.typesafe.ai/) |
 
@@ -32,6 +32,7 @@ Last updated: 2026-09-21. Links and project descriptions change; please [report 
 ## Contents
 
 - [Start here](#start-here)
+  - [Make your first decision](#make-your-first-decision)
   - [Try a policy threshold](#try-a-policy-threshold)
   - [Before you trust a decision](#before-you-trust-a-decision)
 - [Official resources](#official-resources)
@@ -67,6 +68,33 @@ One state can answer several focused questions in the same request. Pick the ans
 | **Score** | An ordered rubric, such as calm, concerned, or angry. | A position on your rubric, probabilities over its levels, and confidence. |
 
 Ask independent questions together. Set thresholds, fallback behavior, and side effects in application code.
+
+### Make your first decision
+
+Install the [official JavaScript SDK](#sdks-and-developer-tools) with `npm install @typesafe-ai/sdk` (Node.js 20+), set `TYPESAFE_API_KEY` in your environment, save this as `first-decision.mjs`, then run `node first-decision.mjs`:
+
+```js
+import { choice, noul, TypeSafeClient } from '@typesafe-ai/sdk';
+
+const { answers } = await new TypeSafeClient().systemOne({
+  state: { ticket: 'I was charged twice. Please refund the extra payment.' },
+  questions: {
+    team: choice('Which team should handle this ticket?', {
+      billing: 'Payments and refunds',
+      technical: 'Bugs and integrations',
+      other: 'None of the above',
+    }),
+    refund: noul('Does the customer explicitly request a refund?'),
+  },
+});
+
+const team = answers.team.choice;
+const probability = answers.team.probabilities[team];
+const action = probability >= 0.9 ? `route to ${team}` : 'send to review';
+console.log({ team, probability, refundProbability: answers.refund.noul, action });
+```
+
+Jev returns the typed answers; the `0.9` routing rule is ordinary application code. It is an illustrative threshold, not a measured or recommended operating point. The ticket text is sent to TypeSafe's API; use a synthetic ticket for this first call.
 
 ### Try a policy threshold
 
