@@ -589,6 +589,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "24601",
+      "name": "Basit Mustafa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1157207",
+      "profile": "https://modyl.to/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-9de3bc.svg?style=flat-square)](#contributors)"
