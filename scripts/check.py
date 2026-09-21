@@ -53,6 +53,7 @@ def main() -> int:
         ROOT / "assets" / "directory.js": "missing site directory enhancement",
         ROOT / "assets" / "jev-map.svg": "missing visual guide",
         ROOT / "assets" / "jev-social.png": "missing site sharing image",
+        ROOT / "assets" / "listed-badge.svg": "missing shareable listing badge",
         ROOT / "resources.json": "missing README-derived JSON directory",
         ROOT / "llms.txt": "missing agent-readable site index",
         ROOT / "sitemap.xml": "missing site sitemap",

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 156 36" role="img" aria-labelledby="title desc">
+  <title id="title">Listed in Awesome Jev</title>
+  <desc id="desc">A badge for projects included in the independent Awesome Jev directory.</desc>
+  <rect x=".5" y=".5" width="155" height="35" rx="6" fill="#14202c" stroke="#60837c"/>
+  <rect x="7" y="7" width="23" height="22" rx="4" fill="#0b111a" stroke="#b9f6d6"/>
+  <circle cx="15" cy="14" r="1.5" fill="#b9f6d6"/>
+  <circle cx="22" cy="14" r="1.5" fill="#b9f6d6"/>
+  <circle cx="18.5" cy="21" r="1.5" fill="#b9f6d6"/>
+  <text x="38" y="14" fill="#b0c0c8" font-family="Arial,sans-serif" font-size="8" font-weight="700" letter-spacing="1.2">LISTED IN</text>
+  <text x="38" y="27" fill="#eef5f4" font-family="Arial,sans-serif" font-size="13" font-weight="700">awesome</text>
+  <text x="98" y="27" fill="#b9f6d6" font-family="Arial,sans-serif" font-size="13" font-weight="700">jev</text>
+</svg>
