@@ -24,6 +24,11 @@ jobs:
       - name: Run structural checks
         run: python3 scripts/check.py
 
+      - name: Verify generated contributor credits
+        run: |
+          npx --yes all-contributors-cli@6.26.1 generate
+          git diff --exit-code -- README.md
+
       - name: Lint Markdown
         uses: DavidAnson/markdownlint-cli2-action@21c1be1b93ad9ed58fa840aacc3f279cde2a72ff # v24.2.0
         with:
