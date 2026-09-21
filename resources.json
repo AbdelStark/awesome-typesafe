@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-21",
-  "total_resources": 115,
+  "total_resources": 116,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -542,6 +542,12 @@
           "url": "https://github.com/AbdelStark/heist-one",
           "description_markdown": "Observable browser stealth game where Jev supplies batched typed judgments for six guards while deterministic code owns the simulation and validates every proposal; includes a Decision Lens, scripted offline mode, evidence traces, tests, and one documented live sandbox extraction.",
           "permalink": "/projects/gh-abdelstark-heist-one/"
+        },
+        {
+          "name": "Jev Chess",
+          "url": "https://jevchess.com",
+          "description_markdown": "One shared chessboard where the internet plays collectively against Jev in real time: every legal move is an option of a single Choice question (illegal moves are impossible by construction), returned probabilities shade the pieces, and a live panel scores each claimed confidence against a one-ply material check; closed-source site, and the calibration check is deliberately narrow.",
+          "permalink": "/projects/site-jevchess-com/"
         },
         {
           "name": "Jev Drone",
