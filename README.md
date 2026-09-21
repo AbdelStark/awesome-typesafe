@@ -90,7 +90,8 @@ const { answers } = await new TypeSafeClient().systemOne({
 
 const team = answers.team.choice;
 const probability = answers.team.probabilities[team];
-const action = probability >= 0.9 ? `route to ${team}` : 'send to review';
+const action = team !== 'other' && probability >= 0.9
+  ? `route to ${team}` : 'send to review';
 console.log({ team, probability, refundProbability: answers.refund.noul, action });
 ```
 
