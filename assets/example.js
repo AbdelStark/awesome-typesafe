@@ -17,7 +17,8 @@
   const heading = document.createElement('div');
   heading.className = 'documented-example__heading';
   const eyebrow = document.createElement('span');
-  eyebrow.textContent = 'DOCUMENTED RESPONSE / JEV-1.13.0';
+  const model = source.textContent.match(/\bjev-\d+(?:\.\d+)*\b/i)?.[0] || 'Jev';
+  eyebrow.textContent = `DOCUMENTED RESPONSE / ${model.toUpperCase()}`;
   const title = document.createElement('h2');
   title.id = 'documented-example-title';
   title.textContent = 'One request. Three typed answers.';
@@ -65,8 +66,13 @@
   foot.append(next, actions);
 
   section.append(heading, state, answers, foot);
+  const heroExample = article.querySelector(':scope > p.hero-example');
   const heroMap = article.querySelector(':scope > p.hero-map');
-  if (heroMap) {
+  if (heroExample) {
+    heroExample.replaceWith(section);
+    table.remove();
+    source.remove();
+  } else if (heroMap) {
     heroMap.before(section);
     table.remove();
     source.remove();

@@ -61,6 +61,7 @@ def main() -> int:
         ROOT / "assets" / "jev-map.svg": "missing visual guide",
         ROOT / "assets" / "jev-map-mobile.svg": "missing mobile visual guide",
         ROOT / "assets" / "jev-social.png": "missing site sharing image",
+        ROOT / "assets" / "jev-example.png": "missing README-derived response image",
         ROOT / "scripts" / "cards.py": "missing README-derived social-card renderer",
         ROOT / "scripts" / "category_cards.py": "missing README-derived category-card renderer",
         ROOT / "scripts" / "requirements.txt": "missing social-card build dependency",

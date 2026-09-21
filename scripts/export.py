@@ -13,6 +13,7 @@ from urllib.parse import urlsplit
 from cards import card_matches, render_card
 from category_cards import card_matches as category_card_matches, render_card as render_category_card
 from check import github_slug
+from example_card import card_matches as example_card_matches, parse_example, render_card as render_example_card
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,6 +23,7 @@ PROJECTS_DIR = ROOT / "projects"
 CATEGORIES_DIR = ROOT / "categories"
 CARDS_DIR = ROOT / "assets" / "cards"
 CATEGORY_CARDS_DIR = ROOT / "assets" / "category-cards"
+EXAMPLE_CARD = ROOT / "assets" / "jev-example.png"
 ENTRY = re.compile(r"^- \[([^]]+)]\((https://[^)]+)\) — (.+)$")
 
 
@@ -191,6 +193,7 @@ def main() -> int:
         category_pages = build_category_pages(document)
         cards = card_specs(document)
         category_cards = category_card_specs(document)
+        example_model, example = parse_example(README.read_text(encoding="utf-8"))
     except (IndexError, ValueError) as error:
         print(f"ERROR: {error}", file=sys.stderr)
         return 1
@@ -205,12 +208,14 @@ def main() -> int:
             path.read_text(encoding="utf-8") != content for path, content in category_pages.items()
         ) or actual_cards != set(cards) or any(not card_matches(path, *spec) for path, spec in cards.items()) or actual_category_cards != set(category_cards) or any(
             not category_card_matches(path, *spec) for path, spec in category_cards.items()
-        ):
+        ) or not example_card_matches(EXAMPLE_CARD, example_model, example):
             print("ERROR: README-derived directory, category pages, project pages, or social cards are stale; run python3 scripts/export.py", file=sys.stderr)
             return 1
         print(f"OK: resources.json, {len(category_pages)} category pages, {len(pages)} project pages, {len(cards)} project cards, and {len(category_cards)} category cards match README.md")
         return 0
     PROJECTS_DIR.mkdir(exist_ok=True)
+    if not example_card_matches(EXAMPLE_CARD, example_model, example):
+        EXAMPLE_CARD.write_bytes(render_example_card(example_model, example))
     for stale in set(PROJECTS_DIR.glob("*.html")) - set(pages):
         stale.unlink()
     for path, content in pages.items():
