@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-21",
-  "total_resources": 139,
+  "total_resources": 140,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -366,6 +366,12 @@
           "url": "https://github.com/antiyro/jevdroid",
           "description_markdown": "Experimental Python framework that uses Jev to choose Android actions from accessibility trees and executes them through ADB or UIAutomator2, with explicit action permissions and per-run budgets; goals and visible UI text are sent to the selected TypeSafe or Vercel provider.",
           "permalink": "/projects/gh-antiyro-jevdroid/"
+        },
+        {
+          "name": "jevgrep (allebee)",
+          "url": "https://github.com/allebee/jevgrep",
+          "description_markdown": "Streaming grep-by-meaning CLI (`jevgrep-cli` on PyPI) for logs and other text, including `tail -f`: it batches one Jev Noul per line and prints lines above a code-set threshold. Its hand-labelled, 195-line synthetic-log benchmark compares Jev with Claude; every judged line goes to TypeSafe or OpenRouter, and optional `--explain` sends selected lines to Anthropic through OpenRouter.",
+          "permalink": "/projects/gh-allebee-jevgrep/"
         },
         {
           "name": "Jevonian",
