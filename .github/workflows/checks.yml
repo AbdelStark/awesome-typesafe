@@ -32,6 +32,7 @@ jobs:
 
       - name: Check site JavaScript
         run: |
+          node --check assets/example.js
           node --check assets/directory.js
           node --check assets/policy.js
           node --check assets/designer.js

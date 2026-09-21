@@ -16,7 +16,14 @@ Explore the docs, live builds, and independent tests behind Jev. It turns contex
 
 <p class="quick-actions"><a href="https://abdelstark.github.io/awesome-typesafe-jev/#shape-a-typed-question">Try the decision designer</a> <a href="https://abdelstark.github.io/awesome-typesafe-jev/#community-projects">Explore community projects</a> <a href="https://abdelstark.github.io/awesome-typesafe-jev/#build-a-listing">Add your project</a> <a href="https://github.com/AbdelStark/awesome-typesafe-jev">Star on GitHub</a></p>
 
-> **One call, three typed answers.** In [TypeSafe's documented support-ticket example](https://docs.typesafe.ai/introduction/quickstart), Jev chooses the technical team (0.85 probability), scores frustration at level 1 on a 0–2 rubric, and gives urgency a 1.0 Noul probability. The example response is from `jev-1.13.0`; application code still decides when to route or escalate.
+> **One call, three typed answers.** [TypeSafe's documented support-ticket example](https://docs.typesafe.ai/introduction/quickstart) shows the saved `jev-1.13.0` response below. This is a published example, not a live model call. Application code still decides when to route or escalate.
+
+| Input or answer | Documented value |
+| :--- | :--- |
+| State | `Hi, I've been trying to connect my Stripe account for 3 days and the integration keeps failing. I'm losing sales. Please help ASAP.` |
+| Choice | `technical` · 0.85 selected probability |
+| Score | `1` on a 0–2 frustration rubric (`Frustrated but civil`) |
+| Noul | `1.0` urgency probability |
 
 | I want to… | Go here |
 | :--- | :--- |
@@ -25,7 +32,7 @@ Explore the docs, live builds, and independent tests behind Jev. It turns contex
 | See it work live | Play [Jev Chess](https://jevchess.com/), try [Typewriter's 16 judgments](https://typesafe-demo.val.run/) or [Jevtown's simulated audience](https://jevtown.ivanhabor.com/); browse [more applications](#applications-and-workflows) |
 | Test the claims | [Read what independent tests found](#before-you-trust-a-decision), inspect [JevBench's cross-model results](https://github.com/fstandhartinger/jevbench/blob/main/RESULTS-v1.2.md), then browse [independent evaluations](#evaluations-and-independent-research) and [TypeSafe's own evals](https://evals.typesafe.ai/) |
 
-**[Download the JSON directory](resources.json)** · **[Use with a coding agent](https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/skills/awesome-jev/SKILL.md)** · **[Suggest a resource](https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/CONTRIBUTING.md)** · **[Join the builder community](https://discord.gg/typesafe)**
+**[Download the JSON directory](resources.json)** · **[Use with a coding agent](https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/skills/awesome-jev/SKILL.md)** · **[Suggest a resource](https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/CONTRIBUTING.md)** · **[Follow updates](https://github.com/AbdelStark/awesome-typesafe-jev/releases)** · **[Join the builder community](https://discord.gg/typesafe)**
 
 **Independent community project.** This repository is not affiliated with or endorsed by TypeSafe AI. Community entries are labeled by section; inclusion is not a claim that TypeSafe has reviewed or approved them.
 

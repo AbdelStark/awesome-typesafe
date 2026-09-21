@@ -29,6 +29,7 @@
     <meta name="twitter:image:alt" content="{{ page.resource_name | default: page.category_name | default: 'A visual map of Jev typed decisions' | escape }} | Awesome Jev">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     <link rel="alternate" type="text/markdown" href="{{ '/README.md' | relative_url }}">
+    <link rel="alternate" type="application/atom+xml" title="Awesome Jev updates" href="https://github.com/AbdelStark/awesome-typesafe-jev/releases.atom">
     <link rel="describedby" href="{{ '/llms.txt' | relative_url }}">
     <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
     <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}?v={{ asset_version }}">
@@ -42,6 +43,7 @@
       ]}
     </script>
     {% endif %}
+    <script src="{{ '/assets/example.js' | relative_url }}?v={{ asset_version }}" defer></script>
     <script src="{{ '/assets/directory.js' | relative_url }}?v={{ asset_version }}" defer></script>
     <script src="{{ '/assets/policy.js' | relative_url }}?v={{ asset_version }}" defer></script>
     <script src="{{ '/assets/designer.js' | relative_url }}?v={{ asset_version }}" defer></script>
@@ -74,7 +76,7 @@
     <footer class="site-footer">
       <div class="site-footer__inner">
         <p>Independent community project. Not affiliated with or endorsed by TypeSafe AI.</p>
-        <p><a href="https://github.com/AbdelStark/awesome-typesafe-jev">Source</a> · <a href="https://github.com/AbdelStark/awesome-typesafe-jev/issues/new?template=add-resource.yml">Suggest a resource</a> · <a href="https://github.com/AbdelStark/awesome-typesafe-jev/issues/new?template=report-stale.yml">Report a correction</a></p>
+        <p><a href="https://github.com/AbdelStark/awesome-typesafe-jev">Source</a> · <a href="https://github.com/AbdelStark/awesome-typesafe-jev/releases">Updates</a> · <a href="https://github.com/AbdelStark/awesome-typesafe-jev/issues/new?template=add-resource.yml">Suggest a resource</a> · <a href="https://github.com/AbdelStark/awesome-typesafe-jev/issues/new?template=report-stale.yml">Report a correction</a></p>
       </div>
     </footer>
   </body>

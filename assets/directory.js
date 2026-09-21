@@ -40,7 +40,9 @@
     // The README-rendered directory still works if the JSON feed is unavailable.
   }
 
-  const liveRow = [...article.querySelectorAll(':scope > table:first-of-type tbody tr')]
+  const routeTable = [...article.querySelectorAll(':scope > table')]
+    .find((table) => table.tHead?.rows[0]?.cells[0]?.textContent.trim() === 'I want to…');
+  const liveRow = [...(routeTable?.tBodies[0]?.rows || [])]
     .find((row) => row.cells[0]?.textContent.trim() === 'See it work live');
   const featured = [...(liveRow?.cells[1]?.querySelectorAll('a[href]') || [])]
     .map((link) => projectResources.get(link.href))
@@ -126,7 +128,9 @@
     controls.append(previous, next);
     navigation.append(position, controls);
     spotlight.append(label, title, intro, navigation, cards);
-    (article.querySelector(':scope > blockquote') || article.querySelector('#contents'))?.before(spotlight);
+    const example = article.querySelector('.documented-example');
+    if (example) example.after(spotlight);
+    else (article.querySelector(':scope > blockquote') || article.querySelector('#contents'))?.before(spotlight);
     const cardOffsets = () => [...cards.children].map((card) => card.offsetLeft - cards.firstElementChild.offsetLeft);
     const currentCard = () => cardOffsets().reduce((best, offset, index, offsets) =>
       Math.abs(offset - cards.scrollLeft) < Math.abs(offsets[best] - cards.scrollLeft) ? index : best, 0);
@@ -153,7 +157,6 @@
 
   // Present the README's four intent routes as cards on Pages. The table stays
   // readable in the README and remains the single source for every route.
-  const routeTable = article.querySelector(':scope > table:first-of-type');
   const routes = [...(routeTable?.tBodies[0]?.rows || [])]
     .filter((row) => row.cells.length === 2 && row.cells[0].textContent.trim());
   if (routes.length) {
