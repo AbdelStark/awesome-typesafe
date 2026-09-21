@@ -74,7 +74,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .markdown-body > p:nth-of-type(7) strong { color: var(--gold); }
 .markdown-body h2 { margin: 4.3rem 0 1.1rem; padding: 0 0 .6rem; border-bottom: 1px solid var(--line); font-size: clamp(1.8rem, 3vw, 2.5rem); letter-spacing: -.055em; line-height: 1.16; }
 .markdown-body h3 { margin: 2.4rem 0 .8rem; font-size: 1.26rem; letter-spacing: -.025em; }
-.markdown-body h1, .markdown-body h2, .markdown-body h3 { scroll-margin-top: 6rem; }
 .markdown-body h2::before { content: '// '; color: var(--mint); font: 600 .68em ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: 0; }
 .markdown-body p { margin: .8rem 0 1.1rem; }
 .markdown-body ul, .markdown-body ol { padding-left: 1.4rem; }
