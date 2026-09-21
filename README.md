@@ -32,6 +32,7 @@ Last updated: 2026-09-21. Links and project descriptions change; please [report 
 ## Contents
 
 - [Start here](#start-here)
+  - [Before you trust a decision](#before-you-trust-a-decision)
 - [Official resources](#official-resources)
   - [Product and documentation](#product-and-documentation)
   - [SDKs and developer tools](#sdks-and-developer-tools)
@@ -65,6 +66,15 @@ One state can answer several focused questions in the same request. Pick the ans
 | **Score** | An ordered rubric, such as calm, concerned, or angry. | A position on your rubric, probabilities over its levels, and confidence. |
 
 Ask independent questions together. Set thresholds, fallback behavior, and side effects in application code.
+
+### Before you trust a decision
+
+- **Give uncertain cases somewhere to go.** In one [KoBBQ calibration audit](https://github.com/jujumilk3/jev-calibration-audit/blob/main/FINDINGS.md), removing the “unknown” Choice option forced answers to unanswerable items. Include a no-match or review path when the task allows ambiguity.
+- **Measure thresholds on your own labelled data.** [Janus](https://github.com/FirasSX914/Janus/blob/main/RESEARCH.md) found that a routing threshold useful on one dataset did not transfer to another; it ships no default threshold.
+- **Test ranking as ranking.** An [independent ordering study](https://github.com/yodablocks/jev-orderby-bench/blob/main/README.md) passed its topic-membership checks and failed several product-relevance checks. Classification accuracy alone does not establish that `ORDER BY` on a probability is useful.
+- **Audit the policy around the model.** In one [agent-action gate evaluation](https://github.com/ghubnab99/jev-enterprise-decision-fabric/blob/main/docs/evaluations/agent-action-gate-v1.md), the largest error source was the application’s own mapping from answers to actions. Keep permissions, thresholds, and side effects explicit in code.
+
+These studies use particular tasks, datasets, and model versions. Treat their results as test designs for your workload, not universal guarantees.
 
 ## Official resources
 
