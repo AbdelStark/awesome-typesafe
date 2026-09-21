@@ -146,6 +146,38 @@
     routeTable.replaceWith(paths);
   }
 
+  // Turn the README's tool-choice table into a visual three-path guide.
+  const toolHeading = article.querySelector('#choose-the-right-tool');
+  let toolTable = toolHeading?.nextElementSibling;
+  while (toolTable && !['TABLE', 'H2', 'H3'].includes(toolTable.tagName)) {
+    toolTable = toolTable.nextElementSibling;
+  }
+  if (toolTable?.tagName === 'TABLE') {
+    const rows = [...toolTable.tBodies[0].rows].filter((row) => row.cells.length === 3);
+    if (rows.length === 3) {
+      const guide = document.createElement('div');
+      guide.className = 'tool-fit';
+      for (const [index, row] of rows.entries()) {
+        const card = document.createElement('article');
+        card.className = 'tool-fit__card';
+        const number = document.createElement('span');
+        number.className = 'tool-fit__number';
+        number.textContent = `PATH ${String(index + 1).padStart(2, '0')}`;
+        const title = document.createElement('h4');
+        title.textContent = row.cells[1].textContent.trim();
+        const job = document.createElement('p');
+        job.className = 'tool-fit__job';
+        job.append(...[...row.cells[0].childNodes].map((node) => node.cloneNode(true)));
+        const example = document.createElement('p');
+        example.className = 'tool-fit__example';
+        example.append(...[...row.cells[2].childNodes].map((node) => node.cloneNode(true)));
+        card.append(number, title, job, example);
+        guide.append(card);
+      }
+      toolTable.replaceWith(guide);
+    }
+  }
+
   const evidenceHeading = article.querySelector('#before-you-trust-a-decision');
   let evidenceTable = evidenceHeading?.nextElementSibling;
   while (evidenceTable && !['TABLE', 'H2', 'H3'].includes(evidenceTable.tagName)) {

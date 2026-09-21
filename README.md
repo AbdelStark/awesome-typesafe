@@ -32,6 +32,7 @@ Last updated: 2026-09-21. Links and project descriptions change; please [report 
 ## Contents
 
 - [Start here](#start-here)
+  - [Choose the right tool](#choose-the-right-tool)
   - [Make your first decision](#make-your-first-decision)
   - [Shape a typed question](#shape-a-typed-question)
   - [Try a policy threshold](#try-a-policy-threshold)
@@ -59,6 +60,18 @@ Last updated: 2026-09-21. Links and project descriptions change; please [report 
 - [Quick start](https://docs.typesafe.ai/introduction/quickstart) — The shortest path from an API key to a typed decision in Python or JavaScript.
 - [How to build with TypeSafe](https://docs.typesafe.ai/concepts/how-to-build-with-system-one) — Design guidance for decomposing a workflow into narrow judgments while keeping policy and side effects in code.
 - [TypeSafe Console](https://console.typesafe.ai/) — Create keys and inspect live Jev requests.
+
+### Choose the right tool
+
+In a support workflow, separate the work before choosing a model. This is a practical design rule based on the TypeSafe introduction linked above, not a performance claim:
+
+| What the step needs | Use | Example |
+| :--- | :--- | :--- |
+| Apply an explicit rule to known fields | **Code** | Check an account flag or enforce a routing threshold. |
+| Judge messy context with a bounded answer | **Jev** | Choose billing, technical, or other for a ticket, with probabilities. |
+| Produce prose or work through an open-ended task | **Text LLM** | Draft the reply after the route is chosen. |
+
+Code still validates the answer and owns the action. Measure Jev's error and abstention rates on your own cases before automating a consequential step.
 
 One state can answer several focused questions in the same request. Pick the answer shape your code can use directly:
 
