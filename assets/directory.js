@@ -192,5 +192,10 @@
     }
   });
   update();
-  if (activeResource) resourceItems.get(activeResource).scrollIntoView({ block: 'center' });
+  if (activeResource) {
+    const selected = resourceItems.get(activeResource);
+    window.addEventListener('load', () => {
+      requestAnimationFrame(() => selected.scrollIntoView({ block: 'center', behavior: 'instant' }));
+    }, { once: true });
+  }
 })();
