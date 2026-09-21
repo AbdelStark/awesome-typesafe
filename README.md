@@ -21,7 +21,7 @@ Official docs, working integrations, independent experiments, and the builders p
 | Understand the idea in 2 minutes | [Try the policy threshold](#try-a-policy-threshold), then read [the introduction](https://docs.typesafe.ai/introduction) and [the three primitives](https://docs.typesafe.ai/primitives) |
 | Make my first typed call | [Copy the runnable example](#make-your-first-decision), [shape your own question](#shape-a-typed-question), then explore the [official SDKs](#sdks-and-developer-tools) |
 | See it work live | Play [Jev Chess](https://jevchess.com/), try [Typewriter's 16 judgments](https://typesafe-demo.val.run/) or [Jevtown's simulated audience](https://jevtown.ivanhabor.com/); browse [more applications](#applications-and-workflows) |
-| Test the claims | [Independent evaluations](#evaluations-and-independent-research) and [TypeSafe's own evals](https://evals.typesafe.ai/) |
+| Test the claims | [Read what independent tests found](#before-you-trust-a-decision), then browse [independent evaluations](#evaluations-and-independent-research) and [TypeSafe's own evals](https://evals.typesafe.ai/) |
 
 **[See live builds →](https://abdelstark.github.io/awesome-typesafe-jev/)** · **[Shape a typed question](https://abdelstark.github.io/awesome-typesafe-jev/#shape-a-typed-question)** · **[Explore the searchable web directory](https://abdelstark.github.io/awesome-typesafe-jev/#community-projects)** · **[Download the JSON directory](resources.json)** · **[Suggest a resource](https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/CONTRIBUTING.md)** · **[Join the builder community](https://discord.gg/typesafe)**
 
@@ -127,12 +127,16 @@ On the [live site](https://abdelstark.github.io/awesome-typesafe-jev/#try-a-poli
 
 ### Before you trust a decision
 
-- **Give uncertain cases somewhere to go.** In one [KoBBQ calibration audit](https://github.com/jujumilk3/jev-calibration-audit/blob/main/FINDINGS.md), removing the “unknown” Choice option forced answers to unanswerable items. Include a no-match or review path when the task allows ambiguity.
-- **Measure thresholds on your own labelled data.** [Janus](https://github.com/FirasSX914/Janus/blob/main/RESEARCH.md) found that a routing threshold useful on one dataset did not transfer to another; it ships no default threshold.
-- **Test ranking as ranking.** An [independent ordering study](https://github.com/yodablocks/jev-orderby-bench/blob/main/README.md) passed its topic-membership checks and failed several product-relevance checks. Classification accuracy alone does not establish that `ORDER BY` on a probability is useful.
-- **Audit the policy around the model.** In one [agent-action gate evaluation](https://github.com/ghubnab99/jev-enterprise-decision-fabric/blob/main/docs/evaluations/agent-action-gate-v1.md), the largest error source was the application’s own mapping from answers to actions. Keep permissions, thresholds, and side effects explicit in code.
+Independent studies make four failure modes concrete. Each result below belongs to the cited task, dataset, and model run; use it to design a test for your own workflow.
 
-These studies use particular tasks, datasets, and model versions. Treat their results as test designs for your workload, not universal guarantees.
+| Decision you want to make | What was measured | What to test before shipping |
+| :--- | :--- | :--- |
+| **Answer or abstain?** | In a [KoBBQ audit](https://github.com/jujumilk3/jev-calibration-audit/blob/main/FINDINGS.md), Jev chose “unknown” for 95% of 300 ambiguous items when that option was available. With that gold answer removed from the options, accuracy on those items was necessarily 0%; 79% of answers picked the dataset's stereotype. | Add an explicit no-match or review option where evidence can be missing. Measure wrong forced answers and needless abstentions on your own ambiguous cases. |
+| **Route to a fallback?** | [Janus](https://github.com/FirasSX914/Janus/blob/main/RESEARCH.md) tested 500 items each from Banking77 and Web of Science. Its tuned Jev-to-DeepSeek cascade improved Banking77 accuracy over either model alone, but on Web of Science matched Jev alone at 47% higher cost. | Label representative cases, price both legs, and choose a threshold on a held-out split. Confirm that the fallback actually fixes errors where Jev is uncertain. |
+| **Sort by probability?** | An [ordering study](https://github.com/yodablocks/jev-orderby-bench/blob/main/README.md) passed six ranking gates on 360 topic-membership rows, then failed four of six on 306 human-graded shopping pairs. On the first corpus, 53 rows tied at 0.99; batching 40 rows changed a passing ranking gate into a failure. | Measure pairwise order, ties at the cutoff, and the exact request shape on your relevance labels. A good classifier is not automatically a good sort key. |
+| **Approve an agent action?** | In a [111-case action-gate study](https://github.com/ghubnab99/jev-enterprise-decision-fabric/blob/main/docs/evaluations/agent-action-gate-v1.md), Jev matched 100 case labels and Claude matched 102; each had one unsafe allow. Contract and policy mapping was the largest single source of wrong decisions for both. | Test the answer-to-action mapping as well as the model. Escalate consequential tool families with deterministic policy even when a semantic answer seems confident. |
+
+These are independent, study-specific observations, not a leaderboard or a guarantee for another task. Read the linked protocols, labels, and limitations before carrying a number into a decision policy.
 
 ## Official resources
 

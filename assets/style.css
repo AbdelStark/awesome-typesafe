@@ -123,6 +123,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .reader-paths__detail { margin: 0 !important; color: var(--muted); font-size: .88rem; line-height: 1.55; }
 .reader-paths__detail a { color: var(--aqua); font-weight: 700; }
 
+.field-evidence { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin: 1.3rem 0 1.5rem; }
+.field-evidence__card { min-width: 0; padding: 1.2rem 1.35rem; border: 1px solid #536d72; border-radius: .55rem; background: var(--panel); overflow-wrap: anywhere; }
+.field-evidence__card:hover { border-color: var(--mint); }
+.field-evidence__number { color: var(--gold); font: 700 .7rem/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .08em; }
+.field-evidence h4 { margin: .3rem 0 .85rem; color: var(--text); font-size: 1.22rem; line-height: 1.3; letter-spacing: -.025em; }
+.field-evidence__card > strong { display: block; margin-top: .75rem; color: var(--mint); font-size: .75rem; letter-spacing: .035em; text-transform: uppercase; }
+.field-evidence p { margin: .25rem 0 .65rem !important; color: var(--muted); font-size: .88rem; line-height: 1.58; }
+.field-evidence a { color: var(--aqua); font-weight: 700; }
+
 .decision-designer { margin: 1.35rem 0 1.7rem; overflow: hidden; border: 1px solid #648b82; border-radius: .65rem; background: #11232a; }
 .decision-designer__header, .decision-designer__preview-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .3rem 1rem; }
 .decision-designer__header { padding: .75rem 1.1rem; border-bottom: 1px solid var(--line); background: #173238; color: var(--muted); font-size: .75rem; }
@@ -257,6 +266,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .resource-page__related { grid-template-columns: 1fr; }
   .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .resource-list { grid-template-columns: 1fr; }
+  .field-evidence { grid-template-columns: 1fr; }
   .markdown-body #contents + ul { columns: 1; }
 }
 @media (max-width: 620px) {

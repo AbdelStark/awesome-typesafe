@@ -146,6 +146,39 @@
     routeTable.replaceWith(paths);
   }
 
+  const evidenceHeading = article.querySelector('#before-you-trust-a-decision');
+  let evidenceTable = evidenceHeading?.nextElementSibling;
+  while (evidenceTable && !['TABLE', 'H2', 'H3'].includes(evidenceTable.tagName)) {
+    evidenceTable = evidenceTable.nextElementSibling;
+  }
+  if (evidenceTable?.tagName === 'TABLE') {
+    const rows = [...evidenceTable.tBodies[0].rows].filter((row) => row.cells.length === 3);
+    if (rows.length) {
+      const grid = document.createElement('div');
+      grid.className = 'field-evidence';
+      for (const [index, row] of rows.entries()) {
+        const card = document.createElement('article');
+        card.className = 'field-evidence__card';
+        const number = document.createElement('span');
+        number.className = 'field-evidence__number';
+        number.textContent = `FIELD NOTE ${String(index + 1).padStart(2, '0')}`;
+        const title = document.createElement('h4');
+        title.textContent = row.cells[0].textContent.trim();
+        const findingLabel = document.createElement('strong');
+        findingLabel.textContent = 'What was measured';
+        const finding = document.createElement('p');
+        finding.append(...[...row.cells[1].childNodes].map((node) => node.cloneNode(true)));
+        const testLabel = document.createElement('strong');
+        testLabel.textContent = 'Before shipping';
+        const test = document.createElement('p');
+        test.append(...[...row.cells[2].childNodes].map((node) => node.cloneNode(true)));
+        card.append(number, title, findingLabel, finding, testLabel, test);
+        grid.append(card);
+      }
+      evidenceTable.replaceWith(grid);
+    }
+  }
+
   const itemText = new WeakMap();
   const resourceItems = new Map();
   for (const section of sections) {
