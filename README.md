@@ -2,7 +2,7 @@
 
 <p><a href="https://abdelstark.github.io/awesome-typesafe-jev/#community-projects"><picture><source media="(max-width: 640px)" srcset="https://abdelstark.github.io/awesome-typesafe-jev/assets/jev-map-mobile.svg"><img src="assets/jev-map.svg" alt="A visual map of Jev: context enters a typed judgment, then application code decides what happens"></picture></a></p>
 
-[![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
+[![Awesome](https://awesome.re/badge-flat2.svg)](https://github.com/sindresorhus/awesome)
 [![Live site](https://img.shields.io/badge/explore-live%20directory-111827?logo=github)](https://abdelstark.github.io/awesome-typesafe-jev/)
 [![Checks](https://github.com/AbdelStark/awesome-typesafe-jev/actions/workflows/checks.yml/badge.svg)](https://github.com/AbdelStark/awesome-typesafe-jev/actions/workflows/checks.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -326,7 +326,7 @@ Listed here? Your [project page](https://abdelstark.github.io/awesome-typesafe-j
 
 ## Contributors
 
-Thanks to everyone who has improved the list. The portraits below are generated from [All Contributors](https://allcontributors.org/en/cli/); contribution types reflect work in this repository.
+Thanks to everyone who has improved the list. The portraits below are generated from [All Contributors](https://github.com/all-contributors/cli); contribution types reflect work in this repository.
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
