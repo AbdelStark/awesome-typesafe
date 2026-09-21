@@ -58,7 +58,7 @@ If your project is listed, you can link back with this optional badge:
 [![Listed in Awesome Jev](https://abdelstark.github.io/awesome-typesafe-jev/assets/listed-badge.svg)](https://abdelstark.github.io/awesome-typesafe-jev/#community-projects)
 ```
 
-For a link to your specific entry, search its name in the [live directory](https://abdelstark.github.io/awesome-typesafe-jev/), click **Copy this view**, and use that URL as the badge destination. “Listed” means the resource met this directory's inclusion rules; it does not imply an endorsement or security review.
+For a link to your specific entry, find it in the [live directory](https://abdelstark.github.io/awesome-typesafe-jev/) and use **Link to this project** as the badge destination. “Listed” means the resource met this directory's inclusion rules; it does not imply an endorsement or security review.
 
 ## Pull request scope
 

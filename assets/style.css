@@ -113,6 +113,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .resource-list li:hover { border-color: #76a99c; background: var(--panel-raised); }
 .resource-list li > a:first-child { color: var(--text); font-weight: 760; font-size: 1rem; text-decoration-color: #60837c; }
 .resource-list li > a:first-child:hover { color: var(--mint); }
+.resource-permalink { display: block; width: fit-content; margin-top: .7rem; color: var(--aqua); font-size: .75rem; font-weight: 700; text-decoration: none; }
+.resource-permalink:hover { text-decoration: underline; }
 #contributors + p { color: var(--muted); }
 #contributors ~ table img { border-radius: 50%; }
 

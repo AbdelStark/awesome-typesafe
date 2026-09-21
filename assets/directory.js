@@ -19,6 +19,28 @@
   }
   if (!sections.length) return;
 
+  const itemText = new WeakMap();
+  const resourceItems = new Map();
+  for (const section of sections) {
+    for (const item of section.items) {
+      itemText.set(item, item.textContent.toLocaleLowerCase());
+      const source = item.querySelector('a[href]');
+      if (!source) continue;
+      const resourceUrl = source.href;
+      const permalink = new URL(location.href);
+      permalink.search = '';
+      permalink.searchParams.set('resource', resourceUrl);
+      permalink.hash = 'community-projects';
+      const link = document.createElement('a');
+      link.className = 'resource-permalink';
+      link.href = permalink.href;
+      link.textContent = 'Link to this project ↗';
+      link.setAttribute('aria-label', `Link to ${source.textContent.trim()} in Awesome Jev`);
+      item.append(link);
+      resourceItems.set(resourceUrl, item);
+    }
+  }
+
   const tools = document.createElement('section');
   tools.className = 'directory-tools';
   tools.setAttribute('aria-label', 'Find a community resource');
@@ -44,6 +66,7 @@
     label.textContent = name;
     button.append(number, label);
     button.addEventListener('click', () => {
+      activeResource = '';
       select.value = id;
       update();
     });
@@ -106,11 +129,17 @@
   search.value = params.get('q') || '';
   const category = params.get('category') || '';
   if (sections.some((section) => section.heading.id === category)) select.value = category;
+  let activeResource = params.get('resource') || '';
+  if (!resourceItems.has(activeResource)) activeResource = '';
+  if (activeResource) {
+    search.value = '';
+    select.value = '';
+  }
 
   function update() {
     const query = search.value.trim().toLocaleLowerCase();
     for (const button of categoryButtons) {
-      button.setAttribute('aria-pressed', String(button.dataset.category === select.value));
+      button.setAttribute('aria-pressed', String(!activeResource && button.dataset.category === select.value));
     }
     let shown = 0;
     let total = 0;
@@ -120,7 +149,9 @@
       const headingMatches = section.heading.textContent.toLocaleLowerCase().includes(query);
       for (const item of section.items) {
         total += 1;
-        const matches = categoryMatches && (headingMatches || item.textContent.toLocaleLowerCase().includes(query));
+        const matches = activeResource
+          ? resourceItems.get(activeResource) === item
+          : categoryMatches && (headingMatches || itemText.get(item).includes(query));
         item.hidden = !matches;
         if (matches) {
           visibleInSection += 1;
@@ -137,11 +168,16 @@
     else url.searchParams.delete('q');
     if (select.value) url.searchParams.set('category', select.value);
     else url.searchParams.delete('category');
+    if (activeResource) {
+      url.searchParams.delete('q');
+      url.searchParams.delete('category');
+      url.searchParams.set('resource', activeResource);
+    } else url.searchParams.delete('resource');
     history.replaceState(null, '', url);
   }
 
-  search.addEventListener('input', update);
-  select.addEventListener('change', update);
+  search.addEventListener('input', () => { activeResource = ''; update(); });
+  select.addEventListener('change', () => { activeResource = ''; update(); });
   document.addEventListener('keydown', (event) => {
     if (event.key === '/' && !event.ctrlKey && !event.metaKey && !event.altKey &&
         !['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName)) {
@@ -150,9 +186,11 @@
     }
     if (event.key === 'Escape' && document.activeElement === search) {
       search.value = '';
+      activeResource = '';
       update();
       search.blur();
     }
   });
   update();
+  if (activeResource) resourceItems.get(activeResource).scrollIntoView({ block: 'center' });
 })();
