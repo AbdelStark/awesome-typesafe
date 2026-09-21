@@ -562,6 +562,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "murdore",
+      "name": "Sachin Sharma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5094230",
+      "profile": "https://github.com/murdore",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-9de3bc.svg?style=flat-square)](#contributors)"
