@@ -411,7 +411,21 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 @media (max-width: 620px) {
   .markdown-body > h1:first-child { font-size: 2.45rem; letter-spacing: -.035em; }
-  .markdown-body > p.quick-actions a:last-child { display: none; }
+  .markdown-body > p:first-of-type { display: none; }
+  .markdown-body > p.hero-claim { margin-top: 0; font-size: 1.7rem; }
+  .markdown-body > p.hero-description { font-size: 1rem; line-height: 1.5; }
+  .markdown-body > p.quick-actions { margin: 1rem 0 1.25rem; }
+  .markdown-body > p.quick-actions a:nth-of-type(n+3) { display: none; }
+  .documented-example { display: flex; flex-direction: column; padding: 1rem; }
+  .documented-example__heading p { margin-bottom: .5rem !important; }
+  .documented-example__answers { order: 1; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .35rem; margin-top: .45rem; }
+  .documented-example__answers article { padding: .55rem; }
+  .documented-example__answers h3 { font-size: .65rem; }
+  .documented-example__answers strong { font-size: clamp(.95rem, 4vw, 1.15rem); }
+  .documented-example__answers p { font-size: .68rem; }
+  .documented-example__state { order: 2; margin-top: .7rem; padding: .7rem; }
+  .documented-example__state p { font-size: .88rem; }
+  .documented-example__foot { order: 3; }
   .decision-designer__mode button { flex: 1; justify-content: center; }
   .decision-designer__mode button small { display: none; }
   .decision-designer__option { grid-template-columns: 1fr; }
