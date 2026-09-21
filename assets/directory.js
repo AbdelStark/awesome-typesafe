@@ -24,6 +24,7 @@
 
   const projectPaths = new Map();
   const projectResources = new Map();
+  const projectPages = new Map();
   try {
     const response = await fetch(new URL('resources.json', location.href));
     if (response.ok) {
@@ -32,7 +33,9 @@
         for (const resource of category.resources) {
           const url = new URL(resource.url).href;
           projectPaths.set(url, resource.permalink);
-          projectResources.set(url, { ...resource, category: category.name });
+          const entry = { ...resource, category: category.name };
+          projectResources.set(url, entry);
+          projectPages.set(new URL(resource.permalink.replace(/^\//, ''), location.href).href, entry);
         }
       }
     }
@@ -42,25 +45,26 @@
 
   const routeTable = [...article.querySelectorAll(':scope > table')]
     .find((table) => table.tHead?.rows[0]?.cells[0]?.textContent.trim() === 'I want to…');
-  const liveRow = [...(routeTable?.tBodies[0]?.rows || [])]
-    .find((row) => row.cells[0]?.textContent.trim() === 'See it work live');
-  const featured = [...(liveRow?.cells[1]?.querySelectorAll('a[href]') || [])]
-    .map((link) => projectResources.get(link.href))
+  const featuredHeading = article.querySelector('#see-jev-at-work');
+  const featuredIntro = featuredHeading?.nextElementSibling;
+  const featuredTable = featuredIntro?.tagName === 'P' ? featuredIntro.nextElementSibling : null;
+  const featured = [...(featuredTable?.tagName === 'TABLE' ? featuredTable.tBodies[0]?.rows[0]?.cells || [] : [])]
+    .map((cell) => projectPages.get(cell.querySelector('a[href]')?.href))
     .filter(Boolean)
     .slice(0, 3);
-  if (featured.length) {
+  if (featured.length === 3) {
     const spotlight = document.createElement('section');
     spotlight.className = 'featured-live';
-    spotlight.setAttribute('aria-labelledby', 'featured-live-title');
+    spotlight.setAttribute('aria-labelledby', 'see-jev-at-work');
     const label = document.createElement('p');
     label.className = 'featured-live__label';
     label.textContent = 'A few places to start';
     const title = document.createElement('h2');
-    title.id = 'featured-live-title';
-    title.textContent = 'See Jev at work';
+    title.id = 'see-jev-at-work';
+    title.textContent = featuredHeading.textContent.trim();
     const intro = document.createElement('p');
     intro.className = 'featured-live__intro';
-    intro.textContent = 'Open a live build, or read what it actually does before you try it.';
+    intro.textContent = featuredIntro.textContent.trim();
     const cards = document.createElement('div');
     cards.className = 'featured-live__cards';
     cards.setAttribute('role', 'group');
@@ -128,9 +132,9 @@
     controls.append(previous, next);
     navigation.append(position, controls);
     spotlight.append(label, title, intro, navigation, cards);
-    const example = article.querySelector('.documented-example');
-    if (example) example.after(spotlight);
-    else (article.querySelector(':scope > blockquote') || article.querySelector('#contents'))?.before(spotlight);
+    featuredHeading.replaceWith(spotlight);
+    featuredIntro.remove();
+    featuredTable.remove();
     const cardOffsets = () => [...cards.children].map((card) => card.offsetLeft - cards.firstElementChild.offsetLeft);
     const currentCard = () => cardOffsets().reduce((best, offset, index, offsets) =>
       Math.abs(offset - cards.scrollLeft) < Math.abs(offsets[best] - cards.scrollLeft) ? index : best, 0);

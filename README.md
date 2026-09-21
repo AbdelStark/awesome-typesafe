@@ -25,11 +25,20 @@ Explore the docs, live builds, and independent tests behind Jev. It turns contex
 | Score | `1` on a 0–2 frustration rubric (`Frustrated but civil`) |
 | Noul | `1.0` urgency probability |
 
+## See Jev at work
+
+Open a live build, or read what it actually does before you try it.
+
+| Jev Chess | TypeSafe Typewriter | Jevtown |
+| :---: | :---: | :---: |
+| [![Jev Chess project preview](assets/cards/site-jevchess-com.png)](https://abdelstark.github.io/awesome-typesafe-jev/projects/site-jevchess-com/) | [![TypeSafe Typewriter project preview](assets/cards/site-typesafe-demo-val-run.png)](https://abdelstark.github.io/awesome-typesafe-jev/projects/site-typesafe-demo-val-run/) | [![Jevtown project preview](assets/cards/site-jevtown-ivanhabor-com.png)](https://abdelstark.github.io/awesome-typesafe-jev/projects/site-jevtown-ivanhabor-com/) |
+| [Play and inspect →](https://abdelstark.github.io/awesome-typesafe-jev/projects/site-jevchess-com/) | [Try the 16 judgments →](https://abdelstark.github.io/awesome-typesafe-jev/projects/site-typesafe-demo-val-run/) | [Explore the simulated town →](https://abdelstark.github.io/awesome-typesafe-jev/projects/site-jevtown-ivanhabor-com/) |
+
 | I want to… | Go here |
 | :--- | :--- |
 | Understand the idea in 2 minutes | See [where Jev fits](#choose-the-right-tool), [try the policy threshold](#try-a-policy-threshold), then read [the introduction](https://docs.typesafe.ai/introduction) and [the three primitives](https://docs.typesafe.ai/primitives) |
 | Make my first typed call | [Copy the runnable example](#make-your-first-decision), [shape your own question](#shape-a-typed-question), then explore the [official SDKs](#sdks-and-developer-tools) |
-| See it work live | Play [Jev Chess](https://jevchess.com/), try [Typewriter's 16 judgments](https://typesafe-demo.val.run/) or [Jevtown's simulated audience](https://jevtown.ivanhabor.com/); browse [more applications](#applications-and-workflows) |
+| See it work live | [Explore the featured builds](#see-jev-at-work), then browse [more applications](#applications-and-workflows) |
 | Test the claims | [Read what independent tests found](#before-you-trust-a-decision), inspect [JevBench's cross-model results](https://github.com/fstandhartinger/jevbench/blob/main/RESULTS-v1.2.md), then browse [independent evaluations](#evaluations-and-independent-research) and [TypeSafe's own evals](https://evals.typesafe.ai/) |
 
 **[Download the JSON directory](resources.json)** · **[Use with a coding agent](https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/skills/awesome-jev/SKILL.md)** · **[Suggest a resource](https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/CONTRIBUTING.md)** · **[Follow updates](https://github.com/AbdelStark/awesome-typesafe-jev/releases)** · **[Join the builder community](https://discord.gg/typesafe)**
@@ -40,6 +49,7 @@ Last updated: 2026-09-21. Links and project descriptions change; please [report 
 
 ## Contents
 
+- [See Jev at work](#see-jev-at-work)
 - [Start here](#start-here)
   - [Choose the right tool](#choose-the-right-tool)
   - [Make your first decision](#make-your-first-decision)
