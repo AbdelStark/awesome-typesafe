@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-21",
-  "total_resources": 152,
+  "total_resources": 155,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -240,6 +240,12 @@
           "url": "https://github.com/vercel-labs/fx",
           "description_markdown": "Experimental Zig coding agent with an [optional Jev permission reviewer](https://github.com/vercel-labs/fx/blob/main/src/builtins/gateway/typesafe_permission_reviewer.zig): setting `review_model` to `typesafeai/jev` sends the composed policy, context, and pending action to TypeSafe directly or through Vercel AI Gateway, then maps Jev's Choice to a permission decision; recorded probabilities and confidence are not threshold gates.",
           "permalink": "/projects/gh-vercel-labs-fx/"
+        },
+        {
+          "name": "Hermes Jev Skills",
+          "url": "https://github.com/kerpopule/hermes-jev-skills",
+          "description_markdown": "Python toolkit and nine agent skills for Hermes, Claude Code, and Codex: Jev can route models, filter retrieved passages, select skills, and choose bounded computer or browser actions. The installer has a dry run and routing offers shadow mode; enabled features send redacted prompts or excerpts to TypeSafe, so read the per-feature data disclosure before use.",
+          "permalink": "/projects/gh-kerpopule-hermes-jev-skills/"
         },
         {
           "name": "Hippo Memory",
@@ -874,6 +880,12 @@
           "permalink": "/projects/gh-nandhakishorm-laya/"
         },
         {
+          "name": "LLM2Jev",
+          "url": "https://github.com/Yinsongxu/LLM2Jev",
+          "description_markdown": "Apache-licensed local toolkit that reads causal-model logits for Choice, Score, and Noul answers through Transformers or SGLang, with a System One-shaped HTTP endpoint, web and Snake demos, and shared-prefix cache measurements. Its published performance benchmark compares cache modes on one model and GPU, not decision quality against Jev.",
+          "permalink": "/projects/gh-yinsongxu-llm2jev/"
+        },
+        {
           "name": "Luce",
           "url": "https://github.com/scienthoon/luce",
           "description_markdown": "Open recipe for Jev-style decision models: a task description, an LLM teacher that writes the data, then LoRA plus a decision head on Qwen3-4B-Base returning calibrated choice, score, and boolean probabilities on a 12 GB GPU; the README reports accuracy and ECE against Jev on identical test items, including where training does not help, with a GPU-free replay demo.",
@@ -890,6 +902,12 @@
           "url": "https://github.com/ikermoel/open-alternative-jev",
           "description_markdown": "Apache-licensed Python library that reads option-token probabilities from open models through Transformers or vLLM, with packed and separate question modes, temperature scaling, benchmark scripts, and raw result files; its measurements compare modes of the same open model rather than Jev, packed answers can change with question order, and the package is not a drop-in System One API server.",
           "permalink": "/projects/gh-ikermoel-open-alternative-jev/"
+        },
+        {
+          "name": "OpenJev (DiffusionGemma)",
+          "url": "https://github.com/razorback16/openjev",
+          "description_markdown": "Apache-licensed decision server that reads Choice, Score, and Noul probabilities from DiffusionGemma 26B through a System One-shaped API, with NVIDIA and Apple silicon backends plus optional image input. Its NVIDIA path pins an unmerged vLLM branch, some limits differ from Jev, and answer quality needs evaluation on the reader's own tasks.",
+          "permalink": "/projects/gh-razorback16-openjev/"
         },
         {
           "name": "poorjev",
