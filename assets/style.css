@@ -242,7 +242,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .directory-tools { margin: 1.6rem 0 2.4rem; padding: 1.4rem; border: 1px solid #60837c; border-radius: .7rem; background: linear-gradient(130deg, #1d383b, var(--panel)); }
 .directory-tools__title { margin: 0 0 .9rem !important; color: var(--text); font-size: 1.12rem !important; }
 .directory-tools__hint { margin: -.35rem 0 1rem !important; color: var(--muted); font-size: .84rem; }
-.category-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .55rem; margin-bottom: 1.6rem; }
+.category-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .55rem; margin: 1.25rem 0 1.1rem; }
 .category-card { display: flex; flex-direction: column; justify-content: space-between; gap: .55rem; min-width: 0; min-height: 6rem; padding: .75rem .9rem; border: 1px solid #4d6a6e; border-radius: .4rem; background: #10222c; color: var(--text); text-align: left; cursor: pointer; }
 .category-card:hover { border-color: var(--mint); background: #18343a; }
 .category-card[aria-pressed="true"], .category-card[aria-pressed="true"]:hover { border-color: var(--mint); background: var(--mint); color: #0b1820; }
@@ -403,6 +403,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .site-nav .site-nav__primary { font-size: .76rem; }
   .page-shell { padding-top: 1.4rem; }
   .directory-tools__controls { grid-template-columns: 1fr; }
+  .category-card { min-height: 4.7rem; }
+  .category-card__count { font-size: 1.35rem; }
   .resource-list--gallery { grid-template-columns: 1fr; }
   .category-page__grid { grid-template-columns: 1fr; }
   .reader-paths__grid { grid-template-columns: 1fr; }

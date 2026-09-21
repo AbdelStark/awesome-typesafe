@@ -1,5 +1,6 @@
 /* Enhance the README-derived directory. The README remains the only resource data source. */
 (async () => {
+  const initialHash = location.hash;
   const article = document.querySelector('.markdown-body');
   for (const pre of article?.querySelectorAll('.highlight > pre') || []) {
     pre.tabIndex = 0;
@@ -345,10 +346,10 @@
   tools.setAttribute('aria-label', 'Find a community resource');
   const categoryTitle = document.createElement('h3');
   categoryTitle.className = 'directory-tools__title';
-  categoryTitle.textContent = 'Browse by category';
+  categoryTitle.textContent = 'Find a project';
   const hint = document.createElement('p');
   hint.className = 'directory-tools__hint';
-  hint.textContent = 'Listed here? Open your page for a badge and shareable image.';
+  hint.textContent = 'Search the directory or choose a category. Each listing has a shareable page.';
   const categoryGrid = document.createElement('div');
   categoryGrid.className = 'category-grid';
   categoryGrid.setAttribute('role', 'group');
@@ -381,7 +382,7 @@
   }
   const label = document.createElement('label');
   label.htmlFor = 'resource-search';
-  label.textContent = 'Find a project';
+  label.textContent = 'Search projects';
   const controls = document.createElement('div');
   controls.className = 'directory-tools__controls';
   const search = document.createElement('input');
@@ -459,7 +460,7 @@
   empty.hidden = true;
   empty.textContent = 'No projects match. Try another term or category.';
   controls.append(search, select);
-  tools.append(categoryTitle, hint, categoryGrid, label, controls, statusRow, empty);
+  tools.append(categoryTitle, hint, label, controls, categoryGrid, statusRow, empty);
   start.after(tools);
 
   const params = new URLSearchParams(location.search);
@@ -536,10 +537,14 @@
     }
   });
   update();
-  if (activeResource) {
-    const selected = resourceItems.get(activeResource);
-    window.addEventListener('load', () => {
-      requestAnimationFrame(() => selected.scrollIntoView({ block: 'center', behavior: 'instant' }));
-    }, { once: true });
+  if (initialHash || activeResource) {
+    const restoreInitialPosition = () => {
+      if (location.hash !== initialHash) return;
+      const target = activeResource ? resourceItems.get(activeResource) : document.querySelector(':target');
+      target?.scrollIntoView({ block: activeResource ? 'center' : 'start', behavior: 'instant' });
+    };
+    const afterLayout = () => requestAnimationFrame(restoreInitialPosition);
+    if (document.readyState === 'complete') afterLayout();
+    else window.addEventListener('load', afterLayout, { once: true });
   }
 })();
