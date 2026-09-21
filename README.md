@@ -1,6 +1,6 @@
 # Awesome Jev / TypeSafe
 
-[![A visual map of Jev: context enters a typed judgment, then application code decides what happens](assets/jev-map.svg)](https://abdelstark.github.io/awesome-typesafe-jev/#community-projects)
+<p><a href="https://abdelstark.github.io/awesome-typesafe-jev/#community-projects"><picture><source media="(max-width: 640px)" srcset="https://abdelstark.github.io/awesome-typesafe-jev/assets/jev-map-mobile.svg"><img src="assets/jev-map.svg" alt="A visual map of Jev: context enters a typed judgment, then application code decides what happens"></picture></a></p>
 
 [![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
 [![Live site](https://img.shields.io/badge/explore-live%20directory-111827?logo=github)](https://abdelstark.github.io/awesome-typesafe-jev/)

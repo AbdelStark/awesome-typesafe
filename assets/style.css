@@ -53,8 +53,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .page-shell { padding-block: 2.5rem 6rem; }
 .markdown-body { max-width: 100%; }
 .markdown-body > h1:first-child {
-  margin: 0 0 1.3rem; font-size: clamp(2.6rem, 7vw, 5.3rem); line-height: 1;
-  letter-spacing: -.075em; font-weight: 820;
+  margin: 0 0 1.3rem; font-size: clamp(2.6rem, 7vw, 5rem); line-height: 1.04;
+  letter-spacing: -.05em; font-weight: 820;
 }
 .markdown-body > p:first-of-type { margin: 0 0 1rem; }
 .markdown-body > p:first-of-type img { display: block; width: 100%; border: 1px solid var(--line); border-radius: 1rem; }
@@ -219,6 +219,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .markdown-body #contents + ul { columns: 1; }
 }
 @media (max-width: 620px) {
+  .markdown-body > h1:first-child { font-size: 2.45rem; letter-spacing: -.035em; }
   .decision-designer__mode button { flex: 1; justify-content: center; }
   .decision-designer__mode button small { display: none; }
   .decision-designer__option { grid-template-columns: 1fr; }

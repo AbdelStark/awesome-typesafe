@@ -71,7 +71,7 @@ By participating, you agree to keep discussion technical, specific, and respectf
 
 ## Credit contributors
 
-We use the [All Contributors CLI](https://allcontributors.org/en/cli/usage/) to credit work on the list, including documentation and code. The `.all-contributorsrc` file records the contribution types, and the CLI generates the badge and portrait table in `README.md`. Since the Pages site renders that same README, credits appear in both places.
+We use the [All Contributors CLI](https://github.com/all-contributors/allcontributors.org/blob/main/src/content/docs/en/cli/usage.mdx) to credit work on the list, including documentation and code. The `.all-contributorsrc` file records the contribution types, and the CLI generates the badge and portrait table in `README.md`. Since the Pages site renders that same README, credits appear in both places.
 
 To add a contributor after their contribution has landed, run:
 
@@ -82,4 +82,4 @@ npx --yes all-contributors-cli@6.26.1 check
 python3 scripts/check.py
 ```
 
-Use the [contribution types](https://allcontributors.org/en/reference/emoji-key/) that describe the actual work. Commit both `.all-contributorsrc` and `README.md`. Do not credit a project author solely because their project is listed; credit their contribution to this repository.
+Use the [contribution types](https://github.com/all-contributors/allcontributors.org/blob/main/src/content/docs/en/reference/emoji-key.mdx) that describe the actual work. Commit both `.all-contributorsrc` and `README.md`. Do not credit a project author solely because their project is listed; credit their contribution to this repository.
