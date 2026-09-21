@@ -33,8 +33,12 @@ Very early work is welcome when it teaches something concrete, but please label 
 5. Run the local checks:
 
    ```bash
+   python3 scripts/export.py
+   python3 scripts/export.py --check
    python3 scripts/check.py
    ```
+
+   Commit the updated `resources.json` with `README.md`. The JSON directory is generated from the README; edit only the README entry.
 
 6. In the pull request, explain why the resource belongs and disclose whether you maintain or are affiliated with it.
 

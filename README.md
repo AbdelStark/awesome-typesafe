@@ -21,7 +21,7 @@ Official docs, working integrations, independent experiments, and the builders p
 | See it work live | [Typewriter's 16 judgments](https://typesafe-demo.val.run/) or [Jevtown's simulated audience](https://jevtown.ivanhabor.com/); then browse [all community projects](#community-projects) |
 | Test the claims | [Independent evaluations](#evaluations-and-independent-research) and [TypeSafe's own evals](https://evals.typesafe.ai/) |
 
-**[Explore the searchable web directory →](https://abdelstark.github.io/awesome-typesafe-jev/)** · **[Suggest a resource](https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/CONTRIBUTING.md)** · **[Join the builder community](https://discord.gg/typesafe)**
+**[Explore the searchable web directory →](https://abdelstark.github.io/awesome-typesafe-jev/)** · **[Download the JSON directory](resources.json)** · **[Suggest a resource](https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/CONTRIBUTING.md)** · **[Join the builder community](https://discord.gg/typesafe)**
 
 **Independent community project.** This repository is not affiliated with or endorsed by TypeSafe AI. Community entries are labeled by section; inclusion is not a claim that TypeSafe has reviewed or approved them.
 

@@ -24,6 +24,9 @@ jobs:
       - name: Run structural checks
         run: python3 scripts/check.py
 
+      - name: Verify README-derived JSON directory
+        run: python3 scripts/export.py --check
+
       - name: Check directory JavaScript
         run: node --check assets/directory.js
 
