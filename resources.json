@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-21",
-  "total_resources": 149,
+  "total_resources": 152,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -34,6 +34,12 @@
           "url": "https://github.com/carldaws/hunch",
           "description_markdown": "Ruby gem that turns judgment calls into control flow: `if Hunch.likely?(\"fraudulent\", given: order)` branches on a typed Jev answer, with `pick` for Choice, `rate` for Score, and graded predicates from `possibly?` to `definitely?`; not affiliated with TypeSafe AI.",
           "permalink": "/projects/gh-carldaws-hunch/"
+        },
+        {
+          "name": "Jev for Apple Foundation Models",
+          "url": "https://github.com/peterfriese/jev-foundation-models",
+          "description_markdown": "Swift 6 bridge that translates Apple `@Generable` Boolean, enum, and bounded score fields into one Jev question set, then decodes the typed answers through `LanguageModelSession`; ships mock-transport tests and two demos, but requires iOS, macOS, or visionOS 27 and an API key kept on a backend or trusted machine rather than in a mobile app.",
+          "permalink": "/projects/gh-peterfriese-jev-foundation-models/"
         },
         {
           "name": "jev-acp",
@@ -416,6 +422,12 @@
           "permalink": "/projects/gh-wobsoriano-oxlint-plugin-jev/"
         },
         {
+          "name": "patdown",
+          "url": "https://github.com/tyler-dot-earth/patdown",
+          "description_markdown": "CLI, GitHub Action, and agent hooks that judge files or changes against Markdown rules with a provider-swappable Jev backend and configurable probability threshold; it sends matched file content to TypeSafe, has no request budget or result cache yet, and its semantic verdicts need human review for consequential gates.",
+          "permalink": "/projects/gh-tyler-dot-earth-patdown/"
+        },
+        {
           "name": "pi-heed",
           "url": "https://github.com/Nyarlathoteppppp/pi-heed",
           "description_markdown": "Pi extension that turns constraints stated in conversation (English and Chinese) into a scoped, replayable policy (deny, allow, exceptions, once/run permissions, ask-first, tests-before-push) and checks side-effecting tool calls against it before they run; rules handle side effects and paths while Jev only classifies how each message changes the policy, re-checks exceptions and skips tools a free-text rule cannot concern; ships a replayable [benchmark](https://github.com/Nyarlathoteppppp/pi-heed/blob/main/bench/README.md) and an [experiment log](https://github.com/Nyarlathoteppppp/pi-heed/blob/main/EXPERIMENTS.md) on Jev calibration and question design; experimental, shadow mode by default, fails open, and the benchmark is scripted rather than drawn from real sessions.",
@@ -592,6 +604,12 @@
           "url": "https://crowdcheck-ai.vercel.app/",
           "description_markdown": "Live demo that tests a 144-character post on 10,000 persistent synthetic personas: code decides who sees it, and batched Jev calls return read, like/dislike, agreement, repost, follow, and block probabilities per persona group; posting requires Google sign-in, post text is sent to Jev through Vercel AI Gateway, and the simulated reactions are not a forecast of real audience behavior.",
           "permalink": "/projects/site-crowdcheck-ai-vercel-app/"
+        },
+        {
+          "name": "discoprint",
+          "url": "https://github.com/lirantal/discoprint",
+          "description_markdown": "CLI that fetches an artist's discography and available lyrics, asks Jev five typed questions per song about theme, mood, complexity, explicit content, and perspective, then draws a terminal dashboard; full lyrics go to TypeSafe, missing lyrics are skipped, and the classifications are model judgments rather than verified music metadata.",
+          "permalink": "/projects/gh-lirantal-discoprint/"
         },
         {
           "name": "DocJev",
