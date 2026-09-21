@@ -64,9 +64,10 @@
     for (const section of sections) {
       let visibleInSection = 0;
       const categoryMatches = !select.value || select.value === section.heading.id;
+      const headingMatches = section.heading.textContent.toLocaleLowerCase().includes(query);
       for (const item of section.items) {
         total += 1;
-        const matches = categoryMatches && item.textContent.toLocaleLowerCase().includes(query);
+        const matches = categoryMatches && (headingMatches || item.textContent.toLocaleLowerCase().includes(query));
         item.hidden = !matches;
         if (matches) {
           visibleInSection += 1;

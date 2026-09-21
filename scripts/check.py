@@ -93,9 +93,7 @@ def main() -> int:
     except IndexError:
         community = ""
 
-    community_entries = [
-        line for line in community.splitlines() if line.startswith("- [")
-    ]
+    community_entries = [line for line in community.splitlines() if line.startswith("- ")]
     if len(community_entries) < MINIMUM_COMMUNITY_ENTRIES:
         fail(
             f"community list has {len(community_entries)} entries; "
@@ -117,7 +115,7 @@ def main() -> int:
         if line.startswith("### "):
             current_heading = line.removeprefix("### ")
             entries_by_heading[current_heading] = []
-        elif line.startswith("- ["):
+        elif line.startswith("- "):
             match = re.match(r"^- \[([^]]+)]\((https://[^)]+)\) — (.+)$", line)
             if not match:
                 fail(
