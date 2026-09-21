@@ -350,6 +350,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .category-page__topics { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1rem; padding: .7rem 0; border-block: 1px solid var(--line); }
 .category-page__topics a { display: inline-block; padding: .36rem .66rem; border: 1px solid #567a79; border-radius: 999px; color: var(--muted); font-size: .76rem; font-weight: 700; line-height: 1.35; text-decoration: none; }
 .category-page__topics a:hover, .category-page__topics a[aria-current="page"] { border-color: var(--mint); background: #1d393a; color: var(--mint); }
+.category-page__filter { margin: 0 0 1rem; padding: 1rem 1.2rem; border: 1px solid #60837c; border-radius: .6rem; background: linear-gradient(130deg, #1d383b, var(--panel)); }
+.category-page__filter label { display: block; margin-bottom: .45rem; color: var(--mint); font-size: 1rem; font-weight: 750; }
+.category-page__filter-controls { display: flex; gap: .55rem; }
+.category-page__filter input { flex: 1; min-width: 0; min-height: 2.8rem; padding: .55rem .7rem; border: 1px solid #6f858b; border-radius: .4rem; background: #0f1d28; color: var(--text); font: inherit; }
+.category-page__filter input::placeholder { color: #9cafb8; }
+.category-page__filter-clear { padding: .45rem .85rem; border: 1px solid #6a978d; border-radius: .4rem; background: #1c383a; color: var(--mint); font-family: inherit; font-size: .85rem; font-weight: 700; line-height: 1.4; cursor: pointer; }
+.category-page__filter-clear:hover { border-color: var(--mint); background: #25504a; }
+.category-page__filter-status { margin: .45rem 0 0 !important; color: var(--muted); font-size: .82rem; }
+.category-page__empty { margin: .8rem 0 0 !important; color: var(--gold); }
 .category-page__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .85rem; scroll-margin-top: 5rem; }
 .category-page__card { display: flex; min-width: 0; flex-direction: column; overflow: hidden; border: 1px solid #4f7271; border-radius: .6rem; background: var(--panel); }
 .category-page__card:hover { border-color: var(--mint); }

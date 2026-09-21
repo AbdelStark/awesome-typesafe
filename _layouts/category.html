@@ -13,7 +13,7 @@ layout: default
       <p class="category-page__eyebrow">Community projects / {{ page.resources.size }} listings</p>
       <h1>{{ page.category_name | escape }}</h1>
       <p class="category-page__intro">{{ page.description | escape }}</p>
-      <p class="category-page__actions"><a href="#category-projects">Browse {{ page.resources.size }} listings ↓</a> <span aria-hidden="true">·</span> <a href="{{ '/' | relative_url }}?category={{ page.category_id | url_encode }}#community-projects">Search this category →</a></p>
+      <p class="category-page__actions"><a href="#category-projects">Browse {{ page.resources.size }} listings ↓</a> <span aria-hidden="true">·</span> <a href="{{ '/' | relative_url }}#community-projects">Search all projects →</a></p>
     </header>
     <a class="category-page__visual" href="{{ page.social_image | relative_url }}" download="awesome-jev-{{ page.category_id | escape }}.png" aria-label="Download the share card for {{ page.category_name | escape }}">
       <img src="{{ page.social_image | relative_url }}" width="1200" height="630" alt="Awesome Jev share card for {{ page.category_name | escape }}" decoding="async">
@@ -39,6 +39,15 @@ layout: default
     {% endfor %}
   </nav>
 
+  <div class="category-page__filter" hidden>
+    <label for="category-search">Find a {{ page.category_name | escape }} listing</label>
+    <div class="category-page__filter-controls">
+      <input id="category-search" type="search" placeholder="Search names and descriptions" autocomplete="off" aria-controls="category-projects">
+      <button type="button" class="category-page__filter-clear" hidden>Clear</button>
+    </div>
+    <p class="category-page__filter-status" role="status" aria-live="polite"></p>
+  </div>
+
   <div class="category-page__grid" id="category-projects" tabindex="-1">
     {% for resource in page.resources %}
     <article class="category-page__card">
@@ -56,6 +65,7 @@ layout: default
     </article>
     {% endfor %}
   </div>
+  <p class="category-page__empty" hidden>No listings match that search. Try another term or clear the filter.</p>
 
   <p class="category-page__note">Community entries are independent unless their source says otherwise. Inclusion is not an endorsement or security review. <a href="https://github.com/AbdelStark/awesome-typesafe-jev/issues/new?template=report-stale.yml">Report an outdated detail →</a></p>
 </div>
