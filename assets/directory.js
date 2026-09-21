@@ -47,9 +47,10 @@
     .find((table) => table.tHead?.rows[0]?.cells[0]?.textContent.trim() === 'I want to…');
   const featuredHeading = article.querySelector('#see-jev-at-work');
   const featuredIntro = featuredHeading?.nextElementSibling;
-  const featuredTable = featuredIntro?.tagName === 'P' ? featuredIntro.nextElementSibling : null;
-  const featured = [...(featuredTable?.tagName === 'TABLE' ? featuredTable.tBodies[0]?.rows[0]?.cells || [] : [])]
-    .map((cell) => projectPages.get(cell.querySelector('a[href]')?.href))
+  const featuredPreviews = article.querySelector('#featured-previews');
+  const featured = [...(featuredPreviews?.querySelectorAll('a[href]') || [])]
+    .filter((link) => link.querySelector('img'))
+    .map((link) => projectPages.get(link.href))
     .filter(Boolean)
     .slice(0, 3);
   if (featured.length === 3) {
@@ -134,7 +135,7 @@
     spotlight.append(label, title, intro, navigation, cards);
     featuredHeading.replaceWith(spotlight);
     featuredIntro.remove();
-    featuredTable.remove();
+    featuredPreviews.remove();
     const cardOffsets = () => [...cards.children].map((card) => card.offsetLeft - cards.firstElementChild.offsetLeft);
     const currentCard = () => cardOffsets().reduce((best, offset, index, offsets) =>
       Math.abs(offset - cards.scrollLeft) < Math.abs(offsets[best] - cards.scrollLeft) ? index : best, 0);

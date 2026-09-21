@@ -29,10 +29,11 @@ Explore the docs, live builds, and independent tests behind Jev. It turns contex
 
 Open a live build, or read what it actually does before you try it.
 
-| Jev Chess | TypeSafe Typewriter | Jevtown |
-| :---: | :---: | :---: |
-| [![Jev Chess project preview](assets/cards/site-jevchess-com.png)](https://abdelstark.github.io/awesome-typesafe-jev/projects/site-jevchess-com/) | [![TypeSafe Typewriter project preview](assets/cards/site-typesafe-demo-val-run.png)](https://abdelstark.github.io/awesome-typesafe-jev/projects/site-typesafe-demo-val-run/) | [![Jevtown project preview](assets/cards/site-jevtown-ivanhabor-com.png)](https://abdelstark.github.io/awesome-typesafe-jev/projects/site-jevtown-ivanhabor-com/) |
-| [Play and inspect →](https://abdelstark.github.io/awesome-typesafe-jev/projects/site-jevchess-com/) | [Try the 16 judgments →](https://abdelstark.github.io/awesome-typesafe-jev/projects/site-typesafe-demo-val-run/) | [Explore the simulated town →](https://abdelstark.github.io/awesome-typesafe-jev/projects/site-jevtown-ivanhabor-com/) |
+<div id="featured-previews">
+  <a href="https://abdelstark.github.io/awesome-typesafe-jev/projects/site-jevchess-com/"><img src="assets/cards/site-jevchess-com.png" width="280" height="147" alt="Jev Chess — play and inspect a Jev-controlled chessboard"></a>
+  <a href="https://abdelstark.github.io/awesome-typesafe-jev/projects/site-typesafe-demo-val-run/"><img src="assets/cards/site-typesafe-demo-val-run.png" width="280" height="147" alt="TypeSafe Typewriter — try 16 typed judgments on changing text"></a>
+  <a href="https://abdelstark.github.io/awesome-typesafe-jev/projects/site-jevtown-ivanhabor-com/"><img src="assets/cards/site-jevtown-ivanhabor-com.png" width="280" height="147" alt="Jevtown — explore a simulated audience"></a>
+</div>
 
 | I want to… | Go here |
 | :--- | :--- |
