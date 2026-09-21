@@ -8,11 +8,14 @@
     <title>{{ page.title | default: site.title | escape }}</title>
     <meta name="description" content="{{ page.description | default: site.description | escape }}">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Awesome Jev">
     <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
     <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta property="og:image" content="{{ '/assets/jev-social.png' | absolute_url }}">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title | default: site.title | escape }}">
+    <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}">
     <meta name="twitter:image" content="{{ '/assets/jev-social.png' | absolute_url }}">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     <link rel="alternate" type="text/markdown" href="{{ '/README.md' | relative_url }}">

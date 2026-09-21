@@ -2,7 +2,7 @@
 
 > An independent, source-backed field guide to Jev and TypeSafe's System One models. The README is the canonical list; the JSON file is generated from its community entries. Inclusion is not endorsement.
 
-Use the README for descriptions and caveats. Use the JSON file when you need structured category, project, URL, and description fields. Check linked sources before relying on a project or a reported result.
+Use the README for descriptions and caveats. Use the JSON file when you need structured category, project, URL, description, and dedicated page permalink fields. The project pages are generated from README entries. Check linked sources before relying on a project or a reported result.
 
 ## Directory
 

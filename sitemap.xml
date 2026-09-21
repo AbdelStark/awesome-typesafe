@@ -6,4 +6,9 @@ layout: null
   <url>
     <loc>{{ '/' | absolute_url }}</loc>
   </url>
+  {% for project in site.pages %}{% if project.layout == 'resource' %}
+  <url>
+    <loc>{{ project.url | absolute_url }}</loc>
+  </url>
+  {% endif %}{% endfor %}
 </urlset>

@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<div class="resource-page">
+  <p class="resource-page__eyebrow">Community project / {{ page.category_name | escape }}</p>
+  <h1>{{ page.resource_name | escape }}</h1>
+  <div class="resource-page__description">{{ page.description_markdown | escape | markdownify }}</div>
+
+  <div class="resource-page__actions">
+    <a class="resource-page__primary" href="{{ page.resource_url | escape }}">Open the original resource ↗</a>
+    <a href="{{ '/' | relative_url }}?resource={{ page.resource_url | url_encode }}#community-projects">See it in the full directory</a>
+  </div>
+
+  <p class="resource-page__note">This is an independent community listing. Check the source, license, data handling, and evaluation caveats before relying on a project. Inclusion is not an endorsement or security review.</p>
+
+  {% if page.related.size > 0 %}
+  <h2>More in {{ page.category_name | escape }}</h2>
+  <ul class="resource-page__related">
+    {% for related in page.related %}
+    <li><a href="{{ related.permalink | relative_url }}">{{ related.name | escape }} →</a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>

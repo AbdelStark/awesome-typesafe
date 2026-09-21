@@ -49,6 +49,7 @@ def main() -> int:
     site_files = {
         ROOT / "_config.yml": "missing GitHub Pages configuration",
         ROOT / "_layouts" / "default.html": "missing site layout",
+        ROOT / "_layouts" / "resource.html": "missing project page layout",
         ROOT / "assets" / "style.css": "missing site stylesheet",
         ROOT / "assets" / "directory.js": "missing site directory enhancement",
         ROOT / "assets" / "policy.js": "missing policy sandbox enhancement",

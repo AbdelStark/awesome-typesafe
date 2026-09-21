@@ -1,5 +1,5 @@
 /* Enhance the README-derived directory. The README remains the only resource data source. */
-(() => {
+(async () => {
   const article = document.querySelector('.markdown-body');
   const start = article?.querySelector('#community-projects');
   const end = article?.querySelector('#contributing');
@@ -19,6 +19,21 @@
   }
   if (!sections.length) return;
 
+  const projectPaths = new Map();
+  try {
+    const response = await fetch(new URL('resources.json', location.href));
+    if (response.ok) {
+      const directory = await response.json();
+      for (const category of directory.categories) {
+        for (const resource of category.resources) {
+          projectPaths.set(new URL(resource.url).href, resource.permalink);
+        }
+      }
+    }
+  } catch {
+    // The README-rendered directory still works if the JSON feed is unavailable.
+  }
+
   const itemText = new WeakMap();
   const resourceItems = new Map();
   for (const section of sections) {
@@ -27,10 +42,15 @@
       const source = item.querySelector('a[href]');
       if (!source) continue;
       const resourceUrl = source.href;
-      const permalink = new URL(location.href);
-      permalink.search = '';
-      permalink.searchParams.set('resource', resourceUrl);
-      permalink.hash = 'community-projects';
+      const projectPath = projectPaths.get(resourceUrl);
+      const permalink = projectPath
+        ? new URL(projectPath.replace(/^\//, ''), location.href)
+        : new URL(location.href);
+      if (!projectPath) {
+        permalink.search = '';
+        permalink.searchParams.set('resource', resourceUrl);
+        permalink.hash = 'community-projects';
+      }
       const link = document.createElement('a');
       link.className = 'resource-permalink';
       link.href = permalink.href;
