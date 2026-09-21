@@ -391,6 +391,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 @media (max-width: 620px) {
   .markdown-body > h1:first-child { font-size: 2.45rem; letter-spacing: -.035em; }
+  .markdown-body > p.quick-actions a:last-child { display: none; }
   .decision-designer__mode button { flex: 1; justify-content: center; }
   .decision-designer__mode button small { display: none; }
   .decision-designer__option { grid-template-columns: 1fr; }

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 380" role="img" aria-labelledby="title desc">
   <title id="title">Jev turns context into typed judgments</title>
   <desc id="desc">Context enters Jev. It returns a Noul, Choice, or Score judgment. Application code sets the threshold and acts.</desc>
   <defs>
@@ -18,32 +18,28 @@
       .sans{font-family:Inter,Arial,sans-serif}
     </style>
   </defs>
-  <rect width="400" height="500" rx="18" fill="url(#bg)"/>
-  <rect width="400" height="500" rx="18" fill="url(#grid)"/>
-  <path d="M0 48H400M0 466H400" stroke="#607587" stroke-opacity=".4"/>
+  <rect width="400" height="380" rx="18" fill="url(#bg)"/>
+  <rect width="400" height="380" rx="18" fill="url(#grid)"/>
+  <path d="M0 48H400M0 362H400" stroke="#607587" stroke-opacity=".4"/>
   <circle cx="29" cy="25" r="5" fill="#b9f6d6"/>
   <text x="46" y="30" class="mono" fill="#bed5df" font-size="13" letter-spacing="1">AWESOME JEV / TYPESAFE</text>
-  <text x="27" y="84" class="sans" fill="#fff" font-size="30" font-weight="700">Make a judgment.</text>
-  <text x="27" y="118" class="sans" fill="#b9f6d6" font-size="30" font-weight="700">Keep control.</text>
-  <text x="27" y="145" class="sans" fill="#b9c9d2" font-size="14">A field guide to typed decisions.</text>
+  <rect x="27" y="60" width="346" height="57" rx="9" fill="#223342" stroke="#4a6470"/>
+  <text x="43" y="81" class="mono" fill="#a7bbca" font-size="11">01 / INPUT</text>
+  <text x="43" y="102" class="sans" fill="#fff" font-size="19" font-weight="700">context and evidence</text>
+  <path d="M200 120V137m-7-8 7 8 7-8" fill="none" stroke="url(#signal)" stroke-width="2"/>
 
-  <rect x="27" y="163" width="346" height="57" rx="9" fill="#223342" stroke="#4a6470"/>
-  <text x="43" y="184" class="mono" fill="#a7bbca" font-size="11">01 / INPUT</text>
-  <text x="43" y="205" class="sans" fill="#fff" font-size="19" font-weight="700">context and evidence</text>
-  <path d="M200 222V239m-7-8 7 8 7-8" fill="none" stroke="url(#signal)" stroke-width="2"/>
+  <rect x="27" y="140" width="346" height="57" rx="9" fill="#183c3c" stroke="#89d8c5"/>
+  <text x="43" y="161" class="mono" fill="#b9f6d6" font-size="11">02 / MODEL / JEV</text>
+  <text x="43" y="182" class="sans" fill="#fff" font-size="19" font-weight="700">typed judgment</text>
+  <path d="M200 200V217m-7-8 7 8 7-8" fill="none" stroke="url(#signal)" stroke-width="2"/>
 
-  <rect x="27" y="242" width="346" height="57" rx="9" fill="#183c3c" stroke="#89d8c5"/>
-  <text x="43" y="263" class="mono" fill="#b9f6d6" font-size="11">02 / MODEL / JEV</text>
-  <text x="43" y="284" class="sans" fill="#fff" font-size="19" font-weight="700">typed judgment</text>
-  <path d="M200 301V318m-7-8 7 8 7-8" fill="none" stroke="url(#signal)" stroke-width="2"/>
+  <rect x="27" y="220" width="346" height="57" rx="9" fill="#223342" stroke="#4a6470"/>
+  <text x="43" y="241" class="mono" fill="#a7bbca" font-size="11">03 / OUTPUT / PROBABILITIES</text>
+  <text x="43" y="262" class="mono" fill="#fff" font-size="17">Noul · Choice · Score</text>
+  <path d="M200 280V297m-7-8 7 8 7-8" fill="none" stroke="url(#signal)" stroke-width="2"/>
 
-  <rect x="27" y="321" width="346" height="57" rx="9" fill="#223342" stroke="#4a6470"/>
-  <text x="43" y="342" class="mono" fill="#a7bbca" font-size="11">03 / OUTPUT / PROBABILITIES</text>
-  <text x="43" y="363" class="mono" fill="#fff" font-size="17">Noul · Choice · Score</text>
-  <path d="M200 380V397m-7-8 7 8 7-8" fill="none" stroke="url(#signal)" stroke-width="2"/>
-
-  <rect x="27" y="400" width="346" height="57" rx="9" fill="#293240" stroke="#efca86"/>
-  <text x="43" y="421" class="mono" fill="#efca86" font-size="11">04 / YOUR CODE</text>
-  <text x="43" y="442" class="sans" fill="#fff" font-size="19" font-weight="700">threshold → action</text>
-  <text x="27" y="486" class="mono" fill="#b9f6d6" font-size="14" font-weight="700">EXPLORE THE DIRECTORY →</text>
+  <rect x="27" y="300" width="346" height="57" rx="9" fill="#293240" stroke="#efca86"/>
+  <text x="43" y="321" class="mono" fill="#efca86" font-size="11">04 / YOUR CODE</text>
+  <text x="43" y="342" class="sans" fill="#fff" font-size="19" font-weight="700">threshold → action</text>
+  <text x="27" y="374" class="mono" fill="#b9f6d6" font-size="11" font-weight="700">EXPLORE THE DIRECTORY →</text>
 </svg>
