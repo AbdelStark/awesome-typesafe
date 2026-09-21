@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Jevtown illustrated preview</title>
+  <desc id="desc">A post branching into waves of simulated audience reactions. The image illustrates the live demo; it is not a forecast or a recorded run.</desc>
+  <defs>
+    <linearGradient id="back" x2="1" y2="1"><stop stop-color="#151a2b"/><stop offset="1" stop-color="#173a3b"/></linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#8de8ee" stroke-opacity=".06"/></pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#020910" flood-opacity=".38"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#back)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <path d="M0 1H1200M0 629H1200" stroke="#83bba9" stroke-opacity=".38"/>
+  <circle cx="69" cy="57" r="8" fill="#efca86"/>
+  <text x="91" y="65" fill="#d7e9e9" font-family="ui-monospace,monospace" font-size="20" letter-spacing="3">LIVE BUILD / 03</text>
+  <text x="1120" y="65" fill="#9fc8c7" font-family="ui-monospace,monospace" font-size="18" text-anchor="end">ILLUSTRATION</text>
+  <g filter="url(#shadow)">
+    <circle cx="344" cy="325" r="215" fill="#152732" stroke="#638987" stroke-width="2"/>
+    <circle cx="344" cy="325" r="166" fill="none" stroke="#8de8ee" stroke-opacity=".45" stroke-width="2"/>
+    <circle cx="344" cy="325" r="109" fill="none" stroke="#8de8ee" stroke-opacity=".65" stroke-width="2"/>
+    <circle cx="344" cy="325" r="57" fill="#234543" stroke="#b9f6d6" stroke-width="3"/>
+    <path d="M324 308h40M324 325h40M324 342h24" stroke="#e8fff4" stroke-width="5" stroke-linecap="round"/>
+    <g fill="#b9f6d6"><circle cx="343" cy="215" r="10"/><circle cx="432" cy="262" r="10"/><circle cx="437" cy="381" r="10"/><circle cx="288" cy="422" r="10"/><circle cx="241" cy="278" r="10"/><circle cx="180" cy="331" r="9"/><circle cx="259" cy="176" r="9"/><circle cx="482" cy="220" r="9"/><circle cx="495" cy="419" r="9"/></g>
+    <g fill="#efca86"><circle cx="334" cy="159" r="9"/><circle cx="211" cy="207" r="9"/><circle cx="187" cy="420" r="9"/><circle cx="383" cy="486" r="9"/><circle cx="517" cy="326" r="9"/><circle cx="427" cy="165" r="9"/><circle cx="119" cy="309" r="7"/><circle cx="251" cy="497" r="7"/><circle cx="549" cy="389" r="7"/></g>
+    <g fill="#8de8ee"><circle cx="301" cy="260" r="8"/><circle cx="396" cy="299" r="8"/><circle cx="355" cy="429" r="8"/><circle cx="248" cy="367" r="8"/><circle cx="141" cy="247" r="7"/><circle cx="472" cy="466" r="7"/><circle cx="550" cy="271" r="7"/><circle cx="339" cy="521" r="7"/></g>
+  </g>
+  <text x="650" y="207" fill="#efca86" font-family="ui-monospace,monospace" font-size="20" letter-spacing="3">SIMULATED AUDIENCE</text>
+  <text x="646" y="298" fill="#f1f8f6" font-family="Inter,system-ui,sans-serif" font-size="84" font-weight="800" letter-spacing="-4">Jevtown</text>
+  <text x="651" y="359" fill="#c4d7d8" font-family="Inter,system-ui,sans-serif" font-size="30">Send a post into a computed town.</text>
+  <text x="651" y="399" fill="#c4d7d8" font-family="Inter,system-ui,sans-serif" font-size="30">Watch reactions spread in waves.</text>
+  <rect x="650" y="451" width="296" height="61" rx="10" fill="#b9f6d6"/>
+  <text x="679" y="490" fill="#0b1820" font-family="ui-monospace,monospace" font-size="23" font-weight="700">EXPLORE THE DEMO ↗</text>
+  <text x="67" y="591" fill="#9fb8bb" font-family="ui-monospace,monospace" font-size="19" letter-spacing="2">AWESOME JEV / SEE IT WORK</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">TypeSafe Typewriter illustrated preview</title>
+  <desc id="desc">Editable text beside sixteen abstract judgment signals. The image illustrates the live demo; the signals are not recorded model results.</desc>
+  <defs>
+    <linearGradient id="back" x2="1" y2="1"><stop stop-color="#111a29"/><stop offset="1" stop-color="#243342"/></linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#8de8ee" stroke-opacity=".06"/></pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#020910" flood-opacity=".38"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#back)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <path d="M0 1H1200M0 629H1200" stroke="#83bba9" stroke-opacity=".38"/>
+  <circle cx="69" cy="57" r="8" fill="#8de8ee"/>
+  <text x="91" y="65" fill="#d7e9e9" font-family="ui-monospace,monospace" font-size="20" letter-spacing="3">LIVE BUILD / 02</text>
+  <text x="1120" y="65" fill="#9fc8c7" font-family="ui-monospace,monospace" font-size="18" text-anchor="end">ILLUSTRATION</text>
+  <g filter="url(#shadow)">
+    <rect x="65" y="129" width="473" height="390" rx="14" fill="#15232f" stroke="#84a7a8" stroke-width="2"/>
+    <path d="M65 195H538" stroke="#405b63" stroke-width="2"/>
+    <circle cx="95" cy="162" r="8" fill="#efca86"/><circle cx="122" cy="162" r="8" fill="#8de8ee"/><circle cx="149" cy="162" r="8" fill="#b9f6d6"/>
+    <text x="85" y="239" fill="#86b6b4" font-family="ui-monospace,monospace" font-size="19" letter-spacing="2">INPUT / CHANGE THE WORDS</text>
+    <text x="85" y="306" fill="#f1f8f6" font-family="Inter,system-ui,sans-serif" font-size="35" font-weight="700">What happens if I</text>
+    <text x="85" y="355" fill="#f1f8f6" font-family="Inter,system-ui,sans-serif" font-size="35" font-weight="700">change this sentence?</text>
+    <rect x="85" y="390" width="7" height="45" fill="#b9f6d6"/>
+    <path d="M85 464H475" stroke="#405b63" stroke-width="2"/>
+    <text x="85" y="491" fill="#9fc0c3" font-family="ui-monospace,monospace" font-size="16">LIVE TEXT / LIVE JUDGMENTS</text>
+    <path d="M552 319H611" stroke="#8de8ee" stroke-width="5" stroke-linecap="round"/>
+    <path d="m598 306 14 13-14 13" fill="none" stroke="#8de8ee" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="624" y="129" width="513" height="390" rx="14" fill="#15232f" stroke="#84a7a8" stroke-width="2"/>
+    <text x="652" y="174" fill="#8de8ee" font-family="ui-monospace,monospace" font-size="19" letter-spacing="2">16 TYPED JUDGMENTS</text>
+    <g fill="#243e47" stroke="#638987" stroke-width="1">
+      <rect x="653" y="201" width="106" height="56" rx="9"/><rect x="771" y="201" width="106" height="56" rx="9"/><rect x="889" y="201" width="106" height="56" rx="9"/><rect x="1007" y="201" width="106" height="56" rx="9"/>
+      <rect x="653" y="275" width="106" height="56" rx="9"/><rect x="771" y="275" width="106" height="56" rx="9"/><rect x="889" y="275" width="106" height="56" rx="9"/><rect x="1007" y="275" width="106" height="56" rx="9"/>
+      <rect x="653" y="349" width="106" height="56" rx="9"/><rect x="771" y="349" width="106" height="56" rx="9"/><rect x="889" y="349" width="106" height="56" rx="9"/><rect x="1007" y="349" width="106" height="56" rx="9"/>
+      <rect x="653" y="423" width="106" height="56" rx="9"/><rect x="771" y="423" width="106" height="56" rx="9"/><rect x="889" y="423" width="106" height="56" rx="9"/><rect x="1007" y="423" width="106" height="56" rx="9"/>
+    </g>
+    <g fill="#b9f6d6"><rect x="665" y="222" width="59" height="13" rx="6"/><rect x="783" y="222" width="31" height="13" rx="6"/><rect x="901" y="222" width="78" height="13" rx="6"/><rect x="1019" y="222" width="45" height="13" rx="6"/><rect x="665" y="296" width="39" height="13" rx="6"/><rect x="783" y="296" width="78" height="13" rx="6"/><rect x="901" y="296" width="53" height="13" rx="6"/><rect x="1019" y="296" width="69" height="13" rx="6"/></g>
+    <g fill="#8de8ee"><rect x="665" y="370" width="74" height="13" rx="6"/><rect x="783" y="370" width="50" height="13" rx="6"/><rect x="901" y="370" width="34" height="13" rx="6"/><rect x="1019" y="370" width="81" height="13" rx="6"/><rect x="665" y="444" width="48" height="13" rx="6"/><rect x="783" y="444" width="82" height="13" rx="6"/><rect x="901" y="444" width="61" height="13" rx="6"/><rect x="1019" y="444" width="37" height="13" rx="6"/></g>
+  </g>
+  <text x="70" y="573" fill="#f1f8f6" font-family="Inter,system-ui,sans-serif" font-size="34" font-weight="800">TypeSafe Typewriter</text>
+  <text x="1091" y="571" fill="#b9f6d6" font-family="ui-monospace,monospace" font-size="22" font-weight="700" text-anchor="end">TRY THE LIVE DEMO ↗</text>
+</svg>

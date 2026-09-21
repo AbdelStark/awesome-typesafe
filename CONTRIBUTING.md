@@ -55,6 +55,10 @@ Fix moved links and stale descriptions in place. Propose removal when a resource
 
 Removal is maintenance, not a judgment on the author.
 
+## Maintainer discovery
+
+The [Ecosystem discovery workflow](https://github.com/AbdelStark/awesome-typesafe-jev/actions/workflows/discovery.yml) writes a daily review queue to its run summary. Run `python3 scripts/discover.py` locally for the same report (the GitHub CLI must be authenticated), or pass `--since YYYY-MM-DD` to widen the search window. The script samples bounded GitHub repository searches, removes GitHub URLs already listed in the community section, and shows both recently pushed and starred results. A search hit is not a recommendation: inspect the project's own code, license, documentation, and evidence against the criteria above before changing the README. GitHub search can omit results, and the report states when it has sampled only a fraction of the matches.
+
 ## Share your listing
 
 If your project is listed, you can link back with this optional badge:
