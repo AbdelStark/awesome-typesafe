@@ -14,7 +14,7 @@
 
 Explore the docs, live builds, and independent tests behind Jev. It turns context into a probability, choice, or score; your code decides what happens next.
 
-<p class="quick-actions"><a href="https://abdelstark.github.io/awesome-typesafe-jev/#shape-a-typed-question">Try the decision designer</a> <a href="https://abdelstark.github.io/awesome-typesafe-jev/#community-projects">Explore community projects</a> <a href="https://github.com/AbdelStark/awesome-typesafe-jev">Star on GitHub</a></p>
+<p class="quick-actions"><a href="https://abdelstark.github.io/awesome-typesafe-jev/#shape-a-typed-question">Try the decision designer</a> <a href="https://abdelstark.github.io/awesome-typesafe-jev/#community-projects">Explore community projects</a> <a href="https://abdelstark.github.io/awesome-typesafe-jev/#build-a-listing">Add your project</a> <a href="https://github.com/AbdelStark/awesome-typesafe-jev">Star on GitHub</a></p>
 
 > **One call, three typed answers.** In [TypeSafe's documented support-ticket example](https://docs.typesafe.ai/introduction/quickstart), Jev chooses the technical team (0.85 probability), scores frustration at level 1 on a 0–2 rubric, and gives urgency a 1.0 Noul probability. The example response is from `jev-1.13.0`; application code still decides when to route or escalate.
 
@@ -54,6 +54,7 @@ Last updated: 2026-09-21. Links and project descriptions change; please [report 
   - [Evaluations and independent research](#evaluations-and-independent-research)
   - [Showcases and field notes](#showcases-and-field-notes)
 - [Contributing](#contributing)
+  - [Build a listing](#build-a-listing)
 - [Contributors](#contributors)
 
 ## Start here
@@ -368,6 +369,10 @@ Contributions are welcome. Please read the [contribution guide](https://github.c
 The short version: submit a public, directly useful resource; describe what it actually does; put it in one category; and include limitations when a result depends on a private dataset, a single run, or an unverified claim.
 
 Listed here? Your [project page](https://abdelstark.github.io/awesome-typesafe-jev/#community-projects) has a direct link, a README badge, and a downloadable image for sharing your entry.
+
+### Build a listing
+
+Use the [live listing builder](https://abdelstark.github.io/awesome-typesafe-jev/#build-a-listing) to draft one entry and find its alphabetical position. It runs in your browser and does not submit anything. Copy the result into [README.md on GitHub](https://github.com/AbdelStark/awesome-typesafe-jev/edit/main/README.md), then open a pull request. If you cannot send a pull request, [suggest the resource in an issue](https://github.com/AbdelStark/awesome-typesafe-jev/issues/new?template=add-resource.yml).
 
 ## Contributors
 

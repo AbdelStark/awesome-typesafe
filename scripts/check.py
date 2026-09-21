@@ -55,6 +55,7 @@ def main() -> int:
         ROOT / "assets" / "directory.js": "missing site directory enhancement",
         ROOT / "assets" / "policy.js": "missing policy sandbox enhancement",
         ROOT / "assets" / "designer.js": "missing typed-question designer enhancement",
+        ROOT / "assets" / "contribute.js": "missing listing builder enhancement",
         ROOT / "assets" / "resource.js": "missing project page share controls",
         ROOT / "assets" / "jev-map.svg": "missing visual guide",
         ROOT / "assets" / "jev-map-mobile.svg": "missing mobile visual guide",

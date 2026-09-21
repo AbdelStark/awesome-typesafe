@@ -199,6 +199,28 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .policy-lab__result[data-action="review"] .policy-lab__action { color: var(--gold); }
 .policy-lab__foot { margin: 0 !important; padding: .7rem 1.3rem 1rem; color: var(--muted); font-size: .78rem; }
 
+.listing-builder { margin: 1.2rem 0 1.8rem; overflow: hidden; border: 1px solid #648b82; border-radius: .65rem; background: #11232a; }
+.listing-builder__head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .35rem 1rem; padding: .7rem 1.1rem; border-bottom: 1px solid var(--line); background: #173238; color: var(--muted); font-size: .76rem; }
+.listing-builder__head span:first-child { color: var(--mint); font: 700 .72rem/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .07em; }
+.listing-builder__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; padding: 1.1rem; }
+.listing-builder__fields label { display: block; margin: .65rem 0 .3rem; color: var(--mint); font-size: .82rem; font-weight: 750; }
+.listing-builder__fields label:first-child { margin-top: 0; }
+.listing-builder__fields input, .listing-builder__fields select, .listing-builder__fields textarea { width: 100%; padding: .55rem .7rem; border: 1px solid #708b8c; border-radius: .35rem; background: #0d1a24; color: var(--text); font: inherit; font-size: .86rem; }
+.listing-builder__fields textarea { min-height: 7rem; resize: vertical; }
+.listing-builder__fields input::placeholder, .listing-builder__fields textarea::placeholder { color: #9cafb8; }
+.listing-builder__result { display: flex; min-width: 0; flex-direction: column; padding: 1rem; border: 1px solid var(--line); border-radius: .4rem; background: var(--panel); }
+.listing-builder__label { margin: 0 0 .45rem !important; color: var(--mint); font: 700 .72rem/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .07em; text-transform: uppercase; }
+.listing-builder__result pre { flex: 1; min-height: 8rem; max-height: 18rem; margin: 0; overflow: auto; padding: .8rem; background: #0d1a24; }
+.listing-builder__result pre code { white-space: pre-wrap; overflow-wrap: anywhere; font-size: .82rem; line-height: 1.5; }
+.listing-builder__placement, .listing-builder__error { min-height: 1.4rem; margin: .6rem 0 0 !important; font-size: .82rem; }
+.listing-builder__placement { color: var(--muted); }
+.listing-builder__error { color: var(--gold); }
+.listing-builder__actions { display: flex; flex-wrap: wrap; align-items: center; gap: .55rem; margin: .8rem 0 .2rem; }
+.listing-builder__actions button, .listing-builder__actions a { display: inline-block; padding: .48rem .75rem; border: 1px solid #6a978d; border-radius: .35rem; background: #1c383a; color: var(--mint); font-family: inherit; font-size: .82rem; font-weight: 700; line-height: 1.4; text-decoration: none; cursor: pointer; }
+.listing-builder__actions button:hover:not(:disabled), .listing-builder__actions a:hover { border-color: var(--mint); background: #25504a; color: #fff; }
+.listing-builder__actions button:disabled { opacity: .5; cursor: not-allowed; }
+.listing-builder__foot { margin: .7rem 0 0 !important; color: var(--muted); font-size: .78rem; }
+
 .directory-tools { margin: 1.6rem 0 2.4rem; padding: 1.4rem; border: 1px solid #60837c; border-radius: .7rem; background: linear-gradient(130deg, #1d383b, var(--panel)); }
 .directory-tools__title { margin: 0 0 .9rem !important; color: var(--text); font-size: 1.12rem !important; }
 .directory-tools__hint { margin: -.35rem 0 1rem !important; color: var(--muted); font-size: .84rem; }
@@ -324,6 +346,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .featured-live__card { flex: 0 0 min(19rem, 82vw); scroll-snap-align: start; }
   .decision-designer__grid { grid-template-columns: 1fr; }
   .policy-lab__body { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .listing-builder__grid { grid-template-columns: 1fr; }
   .policy-lab__control { grid-column: 1 / -1; grid-row: 2; }
   .resource-page__hero { grid-template-columns: 1fr; }
   .resource-page__related { grid-template-columns: 1fr; }

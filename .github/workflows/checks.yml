@@ -35,6 +35,7 @@ jobs:
           node --check assets/directory.js
           node --check assets/policy.js
           node --check assets/designer.js
+          node --check assets/contribute.js
           node --check assets/resource.js
 
       - name: Verify generated contributor credits

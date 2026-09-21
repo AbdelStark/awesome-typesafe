@@ -23,6 +23,8 @@ Very early work is welcome when it teaches something concrete, but please label 
 
 You can [edit the README on GitHub](https://github.com/AbdelStark/awesome-typesafe-jev/edit/main/README.md) and open a pull request. If you cannot send a pull request, [suggest a resource](https://github.com/AbdelStark/awesome-typesafe-jev/issues/new?template=add-resource.yml) instead. To correct an existing entry, use a pull request or [report a listing correction](https://github.com/AbdelStark/awesome-typesafe-jev/issues/new?template=report-stale.yml).
 
+The [live listing builder](https://abdelstark.github.io/awesome-typesafe-jev/#build-a-listing) helps format the entry and find its alphabetical position. It keeps your draft in your browser; you still need to edit the README and open a pull request.
+
 1. Choose exactly one section in `README.md`.
 2. Add one bullet in alphabetical order by display name.
 3. Use the canonical public URL, without tracking parameters.
