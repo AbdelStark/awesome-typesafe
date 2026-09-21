@@ -200,7 +200,11 @@ For a comparison across decision models, [JevBench's method](https://github.com/
 
 Community projects are independent unless their repository says otherwise. Read the code, licenses, data-handling notes, and evaluation caveats before using them in a consequential system.
 
+Browse a focused page: [Client libraries and integrations](https://abdelstark.github.io/awesome-typesafe-jev/categories/client-libraries-and-integrations/) · [Agent and developer tooling](https://abdelstark.github.io/awesome-typesafe-jev/categories/agent-and-developer-tooling/) · [Browser agents](https://abdelstark.github.io/awesome-typesafe-jev/categories/browser-agents/) · [Applications and workflows](https://abdelstark.github.io/awesome-typesafe-jev/categories/applications-and-workflows/) · [Games and robotics](https://abdelstark.github.io/awesome-typesafe-jev/categories/games-and-robotics/) · [Evaluations and independent research](https://abdelstark.github.io/awesome-typesafe-jev/categories/evaluations-and-independent-research/) · [Showcases and field notes](https://abdelstark.github.io/awesome-typesafe-jev/categories/showcases-and-field-notes/).
+
 ### Client libraries and integrations
+
+Build with Jev from a language, framework, gateway, or data system you already use. Check each community client's maturity and data handling before adopting it.
 
 - [Advocaat](https://github.com/pithings/advocaat) — Small TypeScript client with ergonomic tagged helpers for typed chances, choices, and scores.
 - [AnyDecisionModel](https://github.com/mattt/AnyDecisionModel) — Swift 6.2 package with typed sessions, enum-backed choices, and ordered scores over either TypeSafe's Jev API or a local MLX language model on Apple silicon; the local backend reads answer-token probabilities without generating text, and its calibration is caller-configured rather than established for every task.
@@ -233,6 +237,8 @@ Community projects are independent unless their repository says otherwise. Read 
 - [vgi-typesafe](https://github.com/Query-farm/vgi-typesafe) — DuckDB integration, loaded through the community VGI extension, that exposes Choice, Noul, and Score as SQL table functions to `LATERAL` join against a table, returning typed columns with confidence, probabilities, and per-row token usage, plus an `is_true()` scalar for `WHERE` clauses; several questions share one request per row and repeated values are asked once per batch, but every other non-null row is a billable request that sends its content to TypeSafe's API.
 
 ### Agent and developer tooling
+
+These tools use typed judgments to search, route, review, or gate developer work. Inspect each tool's action policy, fallback behavior, and request costs.
 
 - [Augustus](https://github.com/24601/Augustus) — Agent skill for choosing where typed judgments fit beside code, policy, and generation, with Jev examples on question design and abstention plus an offline probability/threshold evaluator.
 - [Bicameral](https://github.com/AbdelStark/bicameral) — Pi coding harness where an LLM writes while Jev supplies typed reflexes for policy, loop detection, and review; explicitly not a sandbox.
@@ -274,6 +280,8 @@ Community projects are independent unless their repository says otherwise. Read 
 
 ### Browser agents
 
+Browser projects put Jev between page observations and bounded actions or use it to classify page content. Check permissions and human review points before automating clicks.
+
 - [Cline Jev Browser](https://github.com/cline/plugins/tree/main/plugins/jev-browser) — Cline plugin that delegates bounded Playwright browser steps to Jev through Vercel AI Gateway using structured DOM observations; a separate text model fills form values, page text and field values go to Gateway, and its review instruction is model guidance rather than an enforced safety boundary.
 - [Jev for Chrome](https://github.com/chy4pro/jev-for-chrome) — Unofficial Chrome extension (Manifest V3) port of Jev Ultrafast: Jev picks the operation and DOM element in one request, a small text model writes typed values, and it runs in the user's own tabs through OpenRouter, TypeSafe or Cloudflare; includes a 17-task headless-Chromium suite with recorded traces.
 - [Jev Social](https://github.com/socai-io/jev-social) — Local Instagram and TikTok research app where Jev makes confidence-gated typed choices over the platform and next socai operation, deterministic Node code validates each decision, and the local socai CLI performs read-only browser capture.
@@ -284,6 +292,8 @@ Community projects are independent unless their repository says otherwise. Read 
 - [unclutter](https://github.com/kitze/unclutter) — Chrome/Firefox extension that uses Jev through TypeSafe or Vercel AI Gateway to classify bounded page-element snippets, then stores reusable local hiding rules by page template. Paid analysis is manual by default; optional on-visit analysis sends snippets to the selected provider. The API key stays in unencrypted local extension storage.
 
 ### Applications and workflows
+
+End-user apps and workflow prototypes show where typed decisions can help with real tasks. Their source availability, evaluation depth, and data paths vary.
 
 - [BTK audit studies](https://boringtoolskit.com/blog/seo-audit-cost-2026/) — Production SEO studies driven by Jev striking-distance triage: 1,204 pages judged per run, 4,816 typed judgments in under 3 minutes, $0.0048 per 12-query batch (jev-1.13.0).
 - [Crowdcheck](https://crowdcheck-ai.vercel.app/) — Live demo that tests a 144-character post on 10,000 persistent synthetic personas: code decides who sees it, and batched Jev calls return read, like/dislike, agreement, repost, follow, and block probabilities per persona group; posting requires Google sign-in, post text is sent to Jev through Vercel AI Gateway, and the simulated reactions are not a forecast of real audience behavior.
@@ -302,6 +312,8 @@ Community projects are independent unless their repository says otherwise. Read 
 
 ### Games and robotics
 
+Playable and physical-world experiments pair Jev judgments with deterministic environments. A successful run demonstrates that task and setup, not general reliability.
+
 - [HEIST//ONE](https://github.com/AbdelStark/heist-one) — Observable browser stealth game where Jev supplies batched typed judgments for six guards while deterministic code owns the simulation and validates every proposal; includes a Decision Lens, scripted offline mode, evidence traces, tests, and one documented live sandbox extraction.
 - [Jev Chess](https://jevchess.com) — Anyone can play Jev on a shared chessboard. One Choice question covers every legal move; probabilities shade the board. Its confidence panel uses a narrow, one-ply material check. Source is closed.
 - [Jev Drone](https://github.com/RomanSlack/jev-drone) — MuJoCo quadrotor stack that keeps control and safety in code while using Jev for slower tactical judgments.
@@ -314,6 +326,8 @@ Community projects are independent unless their repository says otherwise. Read 
 - [TypeSafe Mario](https://github.com/fhshaik/typesafe-mario) — NES controller experiment that turns emulator telemetry into structured state and has Jev choose legal actions.
 
 ### Evaluations and independent research
+
+Independent tests and open decision-model alternatives provide methods and results to inspect. Compare task data, calibration, and costs before carrying a result into your own workflow.
 
 - [Janus](https://github.com/FirasSX914/Janus) — Independent calibration measurement of Jev on two labelled datasets, Banking77 and Web of Science, with a Jev to frontier cascade priced per row from measured tokens, now also packaged as an installable tool (`pip install janus-decide`) that measures a threshold on your own data and ships none by default; the protocol was frozen before any result and the raw JSONL and figures are committed, and no routing parameter transferred between the two datasets, as the optimal threshold, the sign of the accuracy gap between the two models, and whether routing paid for itself all changed; the Web of Science labels come from publication metadata rather than per-document annotation, so part of the error measured there is label ambiguity.
 - [jeff](https://github.com/logan-markewich/jeff) — Self-hosted GLiFormer 400M server for Choice, Score, and Noul through a Jev-compatible API, with public benchmark code and per-item results. Its documented JevBench comparison finds weaker accuracy than Jev on reasoning-heavy items; hosted cost figures are estimates and depend on deployment throughput.
@@ -336,6 +350,8 @@ Community projects are independent unless their repository says otherwise. Read 
 - [TypeSafe AI Benchmark](https://github.com/iammrduncan/typesafe-ai-benchmark) — Side-by-side Jev and Qwen-on-Cerebras comparison with raw exports, cost accounting, methodology, and task-specific limitations.
 
 ### Showcases and field notes
+
+Short demos and builder reports show what was tried and observed. Treat reported numbers as starting points for your own tests.
 
 - [Browser Use + Jev](https://x.com/gregpr07/status/2100411066966749359) — Gregor Zunic's real-time flight-search demo and short description of the dynamic DOM action space.
 - [Internal classifier field note](https://x.com/identityTorn/status/2100475121324728615) — A builder's early matched-precision comparison against a private fine-tuned Qwen classifier; useful anecdotal evidence, not a reproducible benchmark.

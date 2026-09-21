@@ -41,7 +41,7 @@ You can [edit the README on GitHub](https://github.com/AbdelStark/awesome-typesa
    python3 scripts/check.py
    ```
 
-   Commit `resources.json`, changed `projects/*.html` pages, and changed `assets/cards/*.png` images with `README.md`. All are generated from the README; edit only the README entry by hand. Use a virtual environment if your Python installation does not allow global package installs.
+   Commit `resources.json`, changed `projects/*.html` and `categories/*.html` pages, and changed `assets/cards/*.png` images with `README.md`. All are generated from the README; edit only the README entry by hand. Category introductions also live in the README. Use a virtual environment if your Python installation does not allow global package installs.
 
 6. In the pull request, explain why the resource belongs and disclose whether you maintain or are affiliated with it.
 

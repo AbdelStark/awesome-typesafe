@@ -6,7 +6,7 @@ layout: null
   <url>
     <loc>{{ '/' | absolute_url }}</loc>
   </url>
-  {% for project in site.pages %}{% if project.layout == 'resource' %}
+  {% for project in site.pages %}{% if project.layout == 'resource' or project.layout == 'category' %}
   <url>
     <loc>{{ project.url | absolute_url }}</loc>
   </url>

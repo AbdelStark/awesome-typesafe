@@ -50,6 +50,7 @@ def main() -> int:
         ROOT / "_config.yml": "missing GitHub Pages configuration",
         ROOT / "_layouts" / "default.html": "missing site layout",
         ROOT / "_layouts" / "resource.html": "missing project page layout",
+        ROOT / "_layouts" / "category.html": "missing category page layout",
         ROOT / "assets" / "style.css": "missing site stylesheet",
         ROOT / "assets" / "directory.js": "missing site directory enhancement",
         ROOT / "assets" / "policy.js": "missing policy sandbox enhancement",
@@ -108,6 +109,15 @@ def main() -> int:
         community = ""
 
     community_entries = [line for line in community.splitlines() if line.startswith("- ")]
+    category_headings = [
+        github_slug(line.removeprefix("### "))
+        for line in community.splitlines()
+        if line.startswith("### ")
+    ]
+    category_navigation = re.search(r"^Browse a focused page: (.+)$", community, re.M)
+    category_links = re.findall(r"/categories/([^/]+)/", category_navigation.group(1)) if category_navigation else []
+    if category_links != category_headings:
+        fail("community category links must match the category headings in order", failures)
     if len(community_entries) < MINIMUM_COMMUNITY_ENTRIES:
         fail(
             f"community list has {len(community_entries)} entries; "

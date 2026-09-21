@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-21",
   "total_resources": 124,
@@ -8,6 +8,8 @@
     {
       "id": "client-libraries-and-integrations",
       "name": "Client libraries and integrations",
+      "description": "Build with Jev from a language, framework, gateway, or data system you already use. Check each community client's maturity and data handling before adopting it.",
+      "permalink": "/categories/client-libraries-and-integrations/",
       "resources": [
         {
           "name": "Advocaat",
@@ -188,6 +190,8 @@
     {
       "id": "agent-and-developer-tooling",
       "name": "Agent and developer tooling",
+      "description": "These tools use typed judgments to search, route, review, or gate developer work. Inspect each tool's action policy, fallback behavior, and request costs.",
+      "permalink": "/categories/agent-and-developer-tooling/",
       "resources": [
         {
           "name": "Augustus",
@@ -416,6 +420,8 @@
     {
       "id": "browser-agents",
       "name": "Browser agents",
+      "description": "Browser projects put Jev between page observations and bounded actions or use it to classify page content. Check permissions and human review points before automating clicks.",
+      "permalink": "/categories/browser-agents/",
       "resources": [
         {
           "name": "Cline Jev Browser",
@@ -470,6 +476,8 @@
     {
       "id": "applications-and-workflows",
       "name": "Applications and workflows",
+      "description": "End-user apps and workflow prototypes show where typed decisions can help with real tasks. Their source availability, evaluation depth, and data paths vary.",
+      "permalink": "/categories/applications-and-workflows/",
       "resources": [
         {
           "name": "BTK audit studies",
@@ -560,6 +568,8 @@
     {
       "id": "games-and-robotics",
       "name": "Games and robotics",
+      "description": "Playable and physical-world experiments pair Jev judgments with deterministic environments. A successful run demonstrates that task and setup, not general reliability.",
+      "permalink": "/categories/games-and-robotics/",
       "resources": [
         {
           "name": "HEIST//ONE",
@@ -626,6 +636,8 @@
     {
       "id": "evaluations-and-independent-research",
       "name": "Evaluations and independent research",
+      "description": "Independent tests and open decision-model alternatives provide methods and results to inspect. Compare task data, calibration, and costs before carrying a result into your own workflow.",
+      "permalink": "/categories/evaluations-and-independent-research/",
       "resources": [
         {
           "name": "Janus",
@@ -746,6 +758,8 @@
     {
       "id": "showcases-and-field-notes",
       "name": "Showcases and field notes",
+      "description": "Short demos and builder reports show what was tried and observed. Treat reported numbers as starting points for your own tests.",
+      "permalink": "/categories/showcases-and-field-notes/",
       "resources": [
         {
           "name": "Browser Use + Jev",

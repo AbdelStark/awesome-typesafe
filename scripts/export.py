@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 README = ROOT / "README.md"
 OUTPUT = ROOT / "resources.json"
 PROJECTS_DIR = ROOT / "projects"
+CATEGORIES_DIR = ROOT / "categories"
 CARDS_DIR = ROOT / "assets" / "cards"
 ENTRY = re.compile(r"^- \[([^]]+)]\((https://[^)]+)\) — (.+)$")
 
@@ -32,7 +33,8 @@ def project_slug(url: str) -> str:
 
 def plain_description(markdown: str) -> str:
     text = re.sub(r"\[([^]]+)]\(https?://[^)]+\)", r"\1", markdown)
-    return re.sub(r"[`*_]", "", text)
+    text = re.sub(r"[`*]", "", text)
+    return re.sub(r"(?<!\w)_(?=\S)|(?<=\S)_(?!\w)", "", text)
 
 
 def build_document() -> dict[str, object]:
@@ -45,7 +47,14 @@ def build_document() -> dict[str, object]:
     for line in community.splitlines():
         if line.startswith("### "):
             name = line[4:]
-            categories.append({"id": github_slug(name), "name": name, "resources": []})
+            slug = github_slug(name)
+            categories.append({
+                "id": slug,
+                "name": name,
+                "description": "",
+                "permalink": f"/categories/{slug}/",
+                "resources": [],
+            })
         elif line.startswith("- "):
             match = ENTRY.fullmatch(line)
             if not match or not categories:
@@ -57,11 +66,16 @@ def build_document() -> dict[str, object]:
                 "description_markdown": description,
                 "permalink": f"/projects/{project_slug(url)}/",
             })
-    if not categories or any(not category["resources"] for category in categories):
-        raise ValueError("Every community category must have resources")
+        elif line.strip() and categories:
+            category = categories[-1]
+            if category["description"] or category["resources"]:
+                raise ValueError(f"Unexpected text in community category {category['name']}: {line}")
+            category["description"] = line.strip()
+    if not categories or any(not category["description"] or not category["resources"] for category in categories):
+        raise ValueError("Every community category needs an introduction and resources")
     total = sum(len(category["resources"]) for category in categories)
     return {
-        "schema_version": 1,
+        "schema_version": 2,
         "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
         "last_updated": updated.group(1),
         "total_resources": total,
@@ -110,6 +124,34 @@ def build_pages(document: dict[str, object]) -> dict[Path, str]:
     return pages
 
 
+def build_category_pages(document: dict[str, object]) -> dict[Path, str]:
+    pages: dict[Path, str] = {}
+    for category in document["categories"]:
+        metadata = {
+            "layout": "category",
+            "title": f"{category['name']} | Awesome Jev",
+            "description": category["description"],
+            "permalink": category["permalink"],
+            "category_name": category["name"],
+            "category_id": category["id"],
+        }
+        lines = ["---"] + [
+            f"{key}: {json.dumps(value, ensure_ascii=False)}"
+            for key, value in metadata.items()
+        ]
+        lines.append("resources:")
+        for resource in category["resources"]:
+            lines.append(f"  - name: {json.dumps(resource['name'], ensure_ascii=False)}")
+            lines.append(f"    url: {json.dumps(resource['url'], ensure_ascii=False)}")
+            lines.append(f"    description: {json.dumps(plain_description(resource['description_markdown']), ensure_ascii=False)}")
+            lines.append(f"    permalink: {json.dumps(resource['permalink'], ensure_ascii=False)}")
+            lines.append(f"    image: {json.dumps('/assets/cards/' + project_slug(resource['url']) + '.png', ensure_ascii=False)}")
+        lines.extend(["---", ""])
+        path = CATEGORIES_DIR / f"{category['id']}.html"
+        pages[path] = "\n".join(lines)
+    return pages
+
+
 def card_specs(document: dict[str, object]) -> dict[Path, tuple[str, str, str]]:
     cards: dict[Path, tuple[str, str, str]] = {}
     for category in document["categories"]:
@@ -133,24 +175,33 @@ def main() -> int:
         document = build_document()
         generated = json.dumps(document, ensure_ascii=False, indent=2) + "\n"
         pages = build_pages(document)
+        category_pages = build_category_pages(document)
         cards = card_specs(document)
     except (IndexError, ValueError) as error:
         print(f"ERROR: {error}", file=sys.stderr)
         return 1
     if args.check:
         actual_pages = set(PROJECTS_DIR.glob("*.html"))
+        actual_category_pages = set(CATEGORIES_DIR.glob("*.html"))
         actual_cards = set(CARDS_DIR.glob("*.png"))
         if not OUTPUT.is_file() or OUTPUT.read_text(encoding="utf-8") != generated or actual_pages != set(pages) or any(
             path.read_text(encoding="utf-8") != content for path, content in pages.items()
+        ) or actual_category_pages != set(category_pages) or any(
+            path.read_text(encoding="utf-8") != content for path, content in category_pages.items()
         ) or actual_cards != set(cards) or any(not card_matches(path, *spec) for path, spec in cards.items()):
-            print("ERROR: README-derived directory, project pages, or social cards are stale; run python3 scripts/export.py", file=sys.stderr)
+            print("ERROR: README-derived directory, category pages, project pages, or social cards are stale; run python3 scripts/export.py", file=sys.stderr)
             return 1
-        print(f"OK: resources.json, {len(pages)} project pages, and {len(cards)} social cards match README.md")
+        print(f"OK: resources.json, {len(category_pages)} category pages, {len(pages)} project pages, and {len(cards)} social cards match README.md")
         return 0
     PROJECTS_DIR.mkdir(exist_ok=True)
     for stale in set(PROJECTS_DIR.glob("*.html")) - set(pages):
         stale.unlink()
     for path, content in pages.items():
+        path.write_text(content, encoding="utf-8")
+    CATEGORIES_DIR.mkdir(exist_ok=True)
+    for stale in set(CATEGORIES_DIR.glob("*.html")) - set(category_pages):
+        stale.unlink()
+    for path, content in category_pages.items():
         path.write_text(content, encoding="utf-8")
     CARDS_DIR.mkdir(exist_ok=True)
     for stale in set(CARDS_DIR.glob("*.png")) - set(cards):
@@ -158,7 +209,7 @@ def main() -> int:
     for path, spec in cards.items():
         path.write_bytes(render_card(*spec))
     OUTPUT.write_text(generated, encoding="utf-8")
-    print(f"Exported {document['total_resources']} resources to resources.json, {len(pages)} project pages, and {len(cards)} social cards")
+    print(f"Exported {document['total_resources']} resources to resources.json, {len(category_pages)} category pages, {len(pages)} project pages, and {len(cards)} social cards")
     return 0
 
 

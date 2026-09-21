@@ -32,6 +32,16 @@
     <link rel="describedby" href="{{ '/llms.txt' | relative_url }}">
     <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
     <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}?v={{ asset_version }}">
+    {% if page.category_id %}
+    {% assign category_path = '/categories/' | append: page.category_id | append: '/' %}
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Awesome Jev","item":{{ '/' | absolute_url | jsonify }}},
+        {"@type":"ListItem","position":2,"name":{{ page.category_name | jsonify }},"item":{{ category_path | absolute_url | jsonify }}}
+        {% if page.resource_name %},{"@type":"ListItem","position":3,"name":{{ page.resource_name | jsonify }},"item":{{ page.url | absolute_url | jsonify }}}{% endif %}
+      ]}
+    </script>
+    {% endif %}
     <script src="{{ '/assets/directory.js' | relative_url }}?v={{ asset_version }}" defer></script>
     <script src="{{ '/assets/policy.js' | relative_url }}?v={{ asset_version }}" defer></script>
     <script src="{{ '/assets/designer.js' | relative_url }}?v={{ asset_version }}" defer></script>

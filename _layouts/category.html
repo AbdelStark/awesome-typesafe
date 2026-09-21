@@ -1,0 +1,44 @@
+---
+layout: default
+---
+<div class="category-page">
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="{{ '/' | relative_url }}">Awesome Jev</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ page.category_name | escape }}</span>
+  </nav>
+
+  <header class="category-page__header">
+    <p class="category-page__eyebrow">Community projects / {{ page.resources.size }} listings</p>
+    <h1>{{ page.category_name | escape }}</h1>
+    <p class="category-page__intro">{{ page.description | escape }}</p>
+    <p class="category-page__actions"><a href="{{ '/' | relative_url }}?category={{ page.category_id | url_encode }}#community-projects">Search this category in the full directory →</a></p>
+  </header>
+
+  <nav class="category-page__topics" aria-label="Community categories">
+    {% assign category_pages = site.pages | where: 'layout', 'category' | sort: 'category_name' %}
+    {% for category in category_pages %}
+    <a href="{{ category.url | relative_url }}" {% if category.category_id == page.category_id %}aria-current="page"{% endif %}>{{ category.category_name | escape }}</a>
+    {% endfor %}
+  </nav>
+
+  <div class="category-page__grid">
+    {% for resource in page.resources %}
+    <article class="category-page__card">
+      <a class="category-page__image" href="{{ resource.permalink | relative_url }}" aria-label="Read the Awesome Jev listing for {{ resource.name | escape }}">
+        <img src="{{ resource.image | relative_url }}" width="1200" height="630" alt="" loading="lazy" decoding="async">
+      </a>
+      <div class="category-page__card-body">
+        <h2><a href="{{ resource.permalink | relative_url }}">{{ resource.name | escape }}</a></h2>
+        <p>{{ resource.description | escape }}</p>
+        <div class="category-page__card-actions">
+          <a href="{{ resource.permalink | relative_url }}">Read listing →</a>
+          <a href="{{ resource.url | escape }}">Open original ↗</a>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+
+  <p class="category-page__note">Community entries are independent unless their source says otherwise. Inclusion is not an endorsement or security review. <a href="https://github.com/AbdelStark/awesome-typesafe-jev/issues/new?template=report-stale.yml">Report an outdated detail →</a></p>
+</div>

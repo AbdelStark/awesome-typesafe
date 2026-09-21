@@ -2,6 +2,14 @@
 layout: default
 ---
 <div class="resource-page">
+  {% assign category_path = '/categories/' | append: page.category_id | append: '/' %}
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="{{ '/' | relative_url }}">Awesome Jev</a>
+    <span aria-hidden="true">/</span>
+    <a href="{{ category_path | relative_url }}">{{ page.category_name | escape }}</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ page.resource_name | escape }}</span>
+  </nav>
   <div class="resource-page__hero">
     <div class="resource-page__intro">
       <p class="resource-page__eyebrow">Community project / {{ page.category_name | escape }}</p>
@@ -10,7 +18,7 @@ layout: default
       <div class="resource-page__actions">
         <a class="resource-page__primary" href="{{ page.resource_url | escape }}">Open the original resource ↗</a>
         <a href="{{ '/' | relative_url }}?resource={{ page.resource_url | url_encode }}#community-projects">See it in the full directory</a>
-        <a href="{{ '/' | relative_url }}?category={{ page.category_id | url_encode }}#community-projects">Browse all {{ page.category_name | escape }}</a>
+        <a href="{{ category_path | relative_url }}">Browse all {{ page.category_name | escape }}</a>
       </div>
     </div>
     <a class="resource-page__visual" href="{{ page.social_image | relative_url }}" download="awesome-jev-{{ page.resource_slug | escape }}.png" aria-label="Download the share card for {{ page.resource_name | escape }}">
