@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-21",
-  "total_resources": 105,
+  "total_resources": 114,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -26,6 +26,12 @@
           "url": "https://github.com/jerryjliu/docjev",
           "description_markdown": "Python library, CLI, and local app that uses LiteParse for document text and Jev to classify PDF, DOCX, and PPTX files or split mixed packets; optional LlamaParse provides cloud OCR. Its published 40-document, eight-packet comparison includes raw results but no human label review; normalized page text goes to the decision provider.",
           "permalink": "/projects/gh-jerryjliu-docjev/"
+        },
+        {
+          "name": "DuckDB Jev",
+          "url": "https://github.com/prasanthj/duckdb-jev",
+          "description_markdown": "Native DuckDB extension for Jev predicates, Choice classification, Score rubrics, and streaming batched judgments over SQL rows, with per-query budgets, caching, and request telemetry; published live throughput uses a repeated synthetic ticket corpus and does not measure classification accuracy, and binaries must match the DuckDB version and platform.",
+          "permalink": "/projects/gh-prasanthj-duckdb-jev/"
         },
         {
           "name": "HA-Jev",
@@ -172,6 +178,12 @@
           "permalink": "/projects/site-vercel-com-ai-gateway-models-jev/"
         },
         {
+          "name": "Vercel AI SDK for Python",
+          "url": "https://github.com/vercel-labs/ai-python",
+          "description_markdown": "Vercel's public-beta Python SDK includes an experimental `evaluate` operation that asks typed Choice, Score, and Boolean questions through AI Gateway using `typesafe-ai/jev`; the evaluation API is still experimental and requires Gateway access.",
+          "permalink": "/projects/gh-vercel-labs-ai-python/"
+        },
+        {
           "name": "vgi-typesafe",
           "url": "https://github.com/Query-farm/vgi-typesafe",
           "description_markdown": "DuckDB integration, loaded through the community VGI extension, that exposes Choice, Noul, and Score as SQL table functions to `LATERAL` join against a table, returning typed columns with confidence, probabilities, and per-row token usage, plus an `is_true()` scalar for `WHERE` clauses; several questions share one request per row and repeated values are asked once per batch, but every other non-null row is a billable request that sends its content to TypeSafe's API.",
@@ -218,6 +230,12 @@
           "url": "https://github.com/luantak/is-malicious",
           "description_markdown": "CLI that scans source, configuration, build, and CI files with Jev, reports suspicious behavior with file and line pointers, and sends scanned file contents to TypeSafe's API.",
           "permalink": "/projects/gh-luantak-is-malicious/"
+        },
+        {
+          "name": "Jev Cookbook",
+          "url": "https://github.com/nexibeo/jev-cookbook",
+          "description_markdown": "Fifteen runnable OpenRouter recipes for support triage, data cleanup, search, browser actions, and Gmail labeling, with small labelled samples and saved live results; the examples keep action thresholds in code, and their sample results do not establish production accuracy.",
+          "permalink": "/projects/gh-nexibeo-jev-cookbook/"
         },
         {
           "name": "Jev MCP",
@@ -382,6 +400,12 @@
           "permalink": "/projects/gh-itsmostafa-typesafe-mcp/"
         },
         {
+          "name": "Vercel Eve",
+          "url": "https://github.com/vercel/eve",
+          "description_markdown": "Agent framework whose `auto` model router defaults to Jev through Vercel AI Gateway and whose `evaluate` helper asks typed Choice, Score, and Boolean questions inside tools; the underlying AI SDK evaluation model specification is experimental, and the caller owns routing and effects.",
+          "permalink": "/projects/gh-vercel-eve/"
+        },
+        {
           "name": "wakegate",
           "url": "https://github.com/shitianfang/wakegate",
           "description_markdown": "Experimental TypeScript gate for long-running agents on Workers, Durable Objects, and Node: before a sleeping agent's LLM is resumed on a timer or incoming event, Jev answers one Choice (wake, not yet, unrelated) against the agent's own sleep note, and code skips the wakeup only below 0.2 on wake while always waking on user messages, bare timers, a skip limit, errors, and timeouts; its eval is 21 hand-written scenarios, not a benchmark.",
@@ -393,6 +417,12 @@
       "id": "browser-agents",
       "name": "Browser agents",
       "resources": [
+        {
+          "name": "Cline Jev Browser",
+          "url": "https://github.com/cline/plugins/tree/main/plugins/jev-browser",
+          "description_markdown": "Cline plugin that delegates bounded Playwright browser steps to Jev through Vercel AI Gateway using structured DOM observations; a separate text model fills form values, page text and field values go to Gateway, and its review instruction is model guidance rather than an enforced safety boundary.",
+          "permalink": "/projects/gh-cline-plugins-tree-main-plugins-jev-browser/"
+        },
         {
           "name": "Jev for Chrome",
           "url": "https://github.com/chy4pro/jev-for-chrome",
@@ -586,6 +616,12 @@
           "permalink": "/projects/gh-wallerchen-jev-measured/"
         },
         {
+          "name": "jev-ood-calibration",
+          "url": "https://github.com/scienthoon/jev-ood-calibration",
+          "description_markdown": "Independent Jev calibration study with raw Gateway responses from three public benchmarks and 900 rule-generated support tickets; probabilities were near calibrated on the public sets but overconfident on an unseen priority rule, while the Boolean question showed a different error direction. The synthetic task is one family and the Gateway did not expose a fixed model version.",
+          "permalink": "/projects/gh-scienthoon-jev-ood-calibration/"
+        },
+        {
           "name": "jev-orderby-bench",
           "url": "https://github.com/yodablocks/jev-orderby-bench",
           "description_markdown": "Independent measurement of whether `ORDER BY` over a Jev probability is defensible, with a pre-registered gate on pairwise inversion, Score ordinality against a graded target, calibration, and negation and paraphrase invariants; jev-1.13.0 passes on 20 Newsgroups topic membership and fails four of six conditions on Amazon ESCI human-graded product relevance, the DuckDB integrations' request shapes are shown to change the numbers (a 40-row batched state fails the ranking gate that one row per request passes), and two-decimal output leaves 53 of 360 rows tied at the top so `LIMIT k` cuts inside a tie; one seed and 30 ESCI queries, aggregates committed, corpus and cached responses regenerated locally for about a cent.",
@@ -598,10 +634,22 @@
           "permalink": "/projects/gh-gaurav-gosain-jev-sec-bench/"
         },
         {
+          "name": "Laya",
+          "url": "https://github.com/NandhaKishorM/laya",
+          "description_markdown": "Open local Choice, Score, and Noul decision models with published checkpoints and a router for English and multilingual inputs; its Jev comparisons use different prompts and sample sizes rather than a controlled head-to-head, and raw calibration and some languages remain weak.",
+          "permalink": "/projects/gh-nandhakishorm-laya/"
+        },
+        {
           "name": "Luce",
           "url": "https://github.com/scienthoon/luce",
           "description_markdown": "Open recipe for Jev-style decision models: a task description, an LLM teacher that writes the data, then LoRA plus a decision head on Qwen3-4B-Base returning calibrated choice, score, and boolean probabilities on a 12 GB GPU; the README reports accuracy and ECE against Jev on identical test items, including where training does not help, with a GPU-free replay demo.",
           "permalink": "/projects/gh-scienthoon-luce/"
+        },
+        {
+          "name": "NanoJev",
+          "url": "https://github.com/TianyuCodings/NanoJev",
+          "description_markdown": "Open 0.6B Jev-style model for one-pass action probabilities in Maze, Snake, and ViZDoom, with public checkpoint, training data, and replayable game comparisons; it is specialized to those games and is not a general Jev API replacement.",
+          "permalink": "/projects/gh-tianyucodings-nanojev/"
         },
         {
           "name": "poorjev",
@@ -656,6 +704,12 @@
           "url": "https://github.com/ufec/jev-block-android-ad",
           "description_markdown": "Android app that asks Jev whether each incoming notification or SMS is noise and suppresses only what Jev explicitly flags, with a local pre-filter for verification codes that never reaches the API and a fail-open default on every uncertain path; experimental and developed against a single device, message bodies are sent to the API except when that local gate matches, and credentials are stored unencrypted in app-private storage.",
           "permalink": "/projects/gh-ufec-jev-block-android-ad/"
+        },
+        {
+          "name": "Paper Trellis Citation Verifier",
+          "url": "https://github.com/MarissaFamularo/citation-verifier",
+          "description_markdown": "Human-reviewed manuscript citation checker: code verifies retrieved passages, Claude proposes evidence, and Jev scores whether the cited passage supports the claim; citation text and paper content go to the selected providers, and the model verdicts have no labelled biomedical validation set yet.",
+          "permalink": "/projects/gh-marissafamularo-citation-verifier/"
         },
         {
           "name": "Qwen on Cerebras comparison",
