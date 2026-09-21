@@ -259,6 +259,7 @@
       itemText.set(item, item.textContent.toLocaleLowerCase());
       const source = item.querySelector('a[href]');
       if (!source) continue;
+      source.classList.add('resource-source');
       const resourceUrl = source.href;
       const projectPath = projectPaths.get(resourceUrl);
       const permalink = projectPath
@@ -284,6 +285,30 @@
       }
       if (description.querySelector('a[href]')) description.classList.add('resource-list__description--linked');
       source.after(description);
+      const summary = document.createElement('p');
+      summary.className = 'resource-list__summary';
+      const plain = description.textContent.replace(/\s+/g, ' ').trim();
+      const preview = plain.slice(0, 170);
+      summary.textContent = plain.length > 170
+        ? `${preview.slice(0, preview.lastIndexOf(' ') > 0 ? preview.lastIndexOf(' ') : 170)}…`
+        : plain;
+      description.after(summary);
+      if (projectPath) {
+        const thumbnail = document.createElement('a');
+        thumbnail.className = 'resource-thumbnail';
+        thumbnail.href = permalink.href;
+        thumbnail.setAttribute('aria-label', `View the full Awesome Jev listing for ${source.textContent.trim()}`);
+        const image = document.createElement('img');
+        const slug = projectPath.split('/').filter(Boolean).at(-1);
+        image.src = new URL(`assets/cards/${slug}.png`, location.href).href;
+        image.alt = '';
+        image.width = 1200;
+        image.height = 630;
+        image.loading = 'lazy';
+        image.decoding = 'async';
+        thumbnail.append(image);
+        item.prepend(thumbnail);
+      }
       const actions = document.createElement('div');
       actions.className = 'resource-actions';
       actions.append(link);
@@ -374,6 +399,21 @@
   status.setAttribute('aria-live', 'polite');
   const statusRow = document.createElement('div');
   statusRow.className = 'directory-tools__status-row';
+  const viewControls = document.createElement('div');
+  viewControls.className = 'directory-tools__views';
+  viewControls.setAttribute('role', 'group');
+  viewControls.setAttribute('aria-label', 'Directory view');
+  const viewButtons = [];
+  for (const [value, name] of [['gallery', 'Gallery'], ['compact', 'Compact']]) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = name;
+    button.setAttribute('aria-pressed', 'false');
+    button.addEventListener('click', () => { view = value; update(); });
+    viewButtons.push({ button, value });
+    viewControls.append(button);
+  }
+  viewControls.hidden = !projectPaths.size;
   const shareActions = document.createElement('div');
   shareActions.className = 'directory-tools__share-actions';
   if (navigator.share) {
@@ -409,7 +449,7 @@
     window.setTimeout(() => { share.textContent = 'Copy this view'; }, 2000);
   });
   shareActions.append(share);
-  statusRow.append(status, shareActions);
+  statusRow.append(status, viewControls, shareActions);
   const empty = document.createElement('p');
   empty.className = 'directory-tools__empty';
   empty.hidden = true;
@@ -419,6 +459,7 @@
   start.after(tools);
 
   const params = new URLSearchParams(location.search);
+  let view = projectPaths.size && params.get('view') !== 'compact' ? 'gallery' : 'compact';
   search.value = params.get('q') || '';
   const category = params.get('category') || '';
   if (sections.some((section) => section.heading.id === category)) select.value = category;
@@ -431,12 +472,16 @@
 
   function update() {
     const query = search.value.trim().toLocaleLowerCase();
+    for (const { button, value } of viewButtons) {
+      button.setAttribute('aria-pressed', String(value === view));
+    }
     for (const button of categoryButtons) {
       button.setAttribute('aria-pressed', String(!activeResource && button.dataset.category === select.value));
     }
     let shown = 0;
     let total = 0;
     for (const section of sections) {
+      section.list.classList.toggle('resource-list--gallery', view === 'gallery');
       let visibleInSection = 0;
       const categoryMatches = !select.value || select.value === section.heading.id;
       const headingMatches = section.heading.textContent.toLocaleLowerCase().includes(query);
@@ -466,6 +511,8 @@
       url.searchParams.delete('category');
       url.searchParams.set('resource', activeResource);
     } else url.searchParams.delete('resource');
+    if (view === 'compact' && projectPaths.size) url.searchParams.set('view', 'compact');
+    else url.searchParams.delete('view');
     history.replaceState(null, '', url);
   }
 
