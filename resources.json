@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-21",
-  "total_resources": 114,
+  "total_resources": 115,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -50,6 +50,12 @@
           "url": "https://github.com/WiktorB2004/llama-index-jev",
           "description_markdown": "Unofficial LlamaIndex reranker and query-engine selector on the official Python SDK: Jev scores retrieved passages and chooses which tool handles a query; score mode is a 0–3 rubric, not cosine similarity.",
           "permalink": "/projects/gh-wiktorb2004-llama-index-jev/"
+        },
+        {
+          "name": "NeuroLink",
+          "url": "https://github.com/juspay/neurolink",
+          "description_markdown": "TypeScript SDK that exposes Jev as a third inference type alongside `generate` and `stream`, declared per provider through an `inferenceKinds` field rather than inferred from behaviour, and consumes it internally for model routing, context compaction, MCP tool selection, and RAG planning; every internal caller uses a fail-open wrapper that returns `null` on any failure, so with no key configured the library behaves exactly as it did before, and it is not affiliated with TypeSafe AI.",
+          "permalink": "/projects/gh-juspay-neurolink/"
         },
         {
           "name": "OCaml SDK",
