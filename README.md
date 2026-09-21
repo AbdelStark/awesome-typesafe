@@ -19,11 +19,11 @@ Official docs, working integrations, independent experiments, and the builders p
 | I want to… | Go here |
 | :--- | :--- |
 | Understand the idea in 2 minutes | [Try the policy threshold](#try-a-policy-threshold), then read [the introduction](https://docs.typesafe.ai/introduction) and [the three primitives](https://docs.typesafe.ai/primitives) |
-| Make my first typed call | [Copy the runnable example](#make-your-first-decision), then explore the [official SDKs](#sdks-and-developer-tools) |
+| Make my first typed call | [Copy the runnable example](#make-your-first-decision), [shape your own question](#shape-a-typed-question), then explore the [official SDKs](#sdks-and-developer-tools) |
 | See it work live | [Typewriter's 16 judgments](https://typesafe-demo.val.run/) or [Jevtown's simulated audience](https://jevtown.ivanhabor.com/); explore [applications and workflows](#applications-and-workflows) |
 | Test the claims | [Independent evaluations](#evaluations-and-independent-research) and [TypeSafe's own evals](https://evals.typesafe.ai/) |
 
-**[Explore the searchable web directory →](https://abdelstark.github.io/awesome-typesafe-jev/)** · **[Download the JSON directory](resources.json)** · **[Suggest a resource](https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/CONTRIBUTING.md)** · **[Join the builder community](https://discord.gg/typesafe)**
+**[Shape a typed question →](https://abdelstark.github.io/awesome-typesafe-jev/#shape-a-typed-question)** · **[Explore the searchable web directory](https://abdelstark.github.io/awesome-typesafe-jev/)** · **[Download the JSON directory](resources.json)** · **[Suggest a resource](https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/CONTRIBUTING.md)** · **[Join the builder community](https://discord.gg/typesafe)**
 
 **Independent community project.** This repository is not affiliated with or endorsed by TypeSafe AI. Community entries are labeled by section; inclusion is not a claim that TypeSafe has reviewed or approved them.
 
@@ -33,6 +33,7 @@ Last updated: 2026-09-21. Links and project descriptions change; please [report 
 
 - [Start here](#start-here)
   - [Make your first decision](#make-your-first-decision)
+  - [Shape a typed question](#shape-a-typed-question)
   - [Try a policy threshold](#try-a-policy-threshold)
   - [Before you trust a decision](#before-you-trust-a-decision)
 - [Official resources](#official-resources)
@@ -96,6 +97,21 @@ console.log({ team, probability, refundProbability: answers.refund.noul, action 
 ```
 
 Jev returns the typed answers; the `0.9` routing rule is ordinary application code. It is an illustrative threshold, not a measured or recommended operating point. The ticket text is sent to TypeSafe's API; use a synthetic ticket for this first call.
+
+### Shape a typed question
+
+Start with one state and a question whose answer your code can use. This synthetic support report can be asked as a Choice, Noul, or Score. On the [live site](https://abdelstark.github.io/awesome-typesafe-jev/#shape-a-typed-question), edit the fields and copy a JavaScript SDK call. The designer runs in your browser without making a model request; running the copied code later sends the state to TypeSafe.
+
+| Design input | Synthetic example |
+| :--- | :--- |
+| State text | `The PDF upload fails with a 500 error. I need it before today's deadline.` |
+| Choice question | `Which team should handle this report?` |
+| Choice options | `technical=Failures and integrations; support=Account and usage help; other=Neither team` |
+| Noul question | `Does the message explicitly mention a deadline?` |
+| Score question | `How much does the reported issue block the user's work?` |
+| Score levels | `Cosmetic; Workaround available; Blocks the task` |
+
+Keep the state short, describe the options so they do not overlap, and include a no-match option when the task allows it. Choose thresholds and actions only after measuring your own labelled cases.
 
 ### Try a policy threshold
 

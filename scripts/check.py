@@ -53,6 +53,7 @@ def main() -> int:
         ROOT / "assets" / "style.css": "missing site stylesheet",
         ROOT / "assets" / "directory.js": "missing site directory enhancement",
         ROOT / "assets" / "policy.js": "missing policy sandbox enhancement",
+        ROOT / "assets" / "designer.js": "missing typed-question designer enhancement",
         ROOT / "assets" / "resource.js": "missing project page share controls",
         ROOT / "assets" / "jev-map.svg": "missing visual guide",
         ROOT / "assets" / "jev-social.png": "missing site sharing image",

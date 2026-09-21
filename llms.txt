@@ -13,4 +13,5 @@ Use the README for descriptions and caveats. Use the JSON file when you need str
 ## Optional
 
 - [Human-readable directory](https://abdelstark.github.io/awesome-typesafe-jev/): Searchable visual mirror of the README.
+- [Typed-question designer](https://abdelstark.github.io/awesome-typesafe-jev/#shape-a-typed-question): Browser-only Choice, Noul, and Score SDK code generator seeded from the README's synthetic example; it makes no model request.
 - [Official TypeSafe documentation](https://docs.typesafe.ai/): Current product and API documentation, maintained by TypeSafe AI.
