@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-21",
-  "total_resources": 122,
+  "total_resources": 123,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -686,6 +686,12 @@
           "url": "https://github.com/Gaurav-Gosain/jev-sec-bench",
           "description_markdown": "Blind Jev-1.13.0 security evaluation with Go runner, raw per-sample results, and a TUI: 662 public prompt-injection messages and 200 matched vulnerable-code pairs; its reported classification scores use the study's stated context and a fixed 0.5 threshold, so deployment policy and corpus labels matter.",
           "permalink": "/projects/gh-gaurav-gosain-jev-sec-bench/"
+        },
+        {
+          "name": "JevBench",
+          "url": "https://github.com/fstandhartinger/jevbench",
+          "description_markdown": "Independent cross-model benchmark for typed decisions with 534 frozen cases per complete entrant, source adapters, scoring code, public per-task outcomes, and aggregate result artifacts. Its four-axis score includes accuracy, calibration, latency, and cost; some self-hosted latency is adjusted by assumption, hosting costs can be estimates, and withheld cases are exposed to the services being measured.",
+          "permalink": "/projects/gh-fstandhartinger-jevbench/"
         },
         {
           "name": "Laya",
