@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-21",
-  "total_resources": 101,
+  "total_resources": 105,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -18,6 +18,11 @@
           "name": "BTK audit studies",
           "url": "https://boringtoolskit.com/blog/seo-audit-cost-2026/",
           "description_markdown": "Production SEO studies driven by Jev striking-distance triage: 1,204 pages judged per run, 4,816 typed judgments in under 3 minutes, $0.0048 per 12-query batch (jev-1.13.0)."
+        },
+        {
+          "name": "DocJev",
+          "url": "https://github.com/jerryjliu/docjev",
+          "description_markdown": "Python library, CLI, and local app that uses LiteParse for document text and Jev to classify PDF, DOCX, and PPTX files or split mixed packets; optional LlamaParse provides cloud OCR. Its published 40-document, eight-packet comparison includes raw results but no human label review; normalized page text goes to the decision provider."
         },
         {
           "name": "HA-Jev",
@@ -38,6 +43,11 @@
           "name": "jevql",
           "url": "https://github.com/kylemclaren/jevql",
           "description_markdown": "psql-shaped CLI and Go/TypeScript/Python SDKs that let you write `WHERE jev(alias, 'condition')`, `jev_prob`, `jev_choice`, and `jev_score` against a vanilla Postgres with no extension: it runs the plain SQL on the server, judges the surviving rows with Jev in batches (cached in local SQLite), and applies filter, sort, and group in the client; every row that survives the SQL filters is sent to TypeSafe and judged, so put cheap predicates in SQL first."
+        },
+        {
+          "name": "json-render",
+          "url": "https://github.com/vercel-labs/json-render",
+          "description_markdown": "Generative UI framework with an experimental Jev composer that selects components and layout from application-supplied candidates through Vercel AI Gateway. The [Jev API](https://json-render.dev/docs/jev) is unreleased and requires a source build; application code owns components, actions, and side effects."
         },
         {
           "name": "LlamaIndex Jev",
@@ -159,6 +169,11 @@
           "name": "Every",
           "url": "https://github.com/sufianetaouil/every",
           "description_markdown": "Semantic code search CLI that asks a yes/no question of every function and ranks the resulting probabilities."
+        },
+        {
+          "name": "fx",
+          "url": "https://github.com/vercel-labs/fx",
+          "description_markdown": "Experimental Zig coding agent with an [optional Jev permission reviewer](https://github.com/vercel-labs/fx/blob/main/src/builtins/gateway/typesafe_permission_reviewer.zig): setting `review_model` to `typesafeai/jev` sends the composed policy, context, and pending action to TypeSafe directly or through Vercel AI Gateway, then maps Jev's Choice to a permission decision; recorded probabilities and confidence are not threshold gates."
         },
         {
           "name": "hush",
@@ -345,6 +360,11 @@
           "name": "PlotVeil",
           "url": "https://github.com/Dearest/plotveil",
           "description_markdown": "Chrome extension (Manifest V3) that covers a YouTube comment while one Jev Noul question decides whether it reveals a concrete plot event, fate, ending or result of the video being watched or of any other title the user chose to protect; the typed question lives in the extension, application code owns the 0.5 / 0.7 / 0.85 threshold, and a failed or quota-rejected check leaves the comment covered rather than revealed. Requests go through the author's Cloudflare Worker, which forwards comment text, video title and channel but not the anonymous install ID; the committed evaluation is a 10-sample hand-written regression set across English, Chinese, Japanese and prompt injection, not a production accuracy measurement."
+        },
+        {
+          "name": "unclutter",
+          "url": "https://github.com/kitze/unclutter",
+          "description_markdown": "Chrome/Firefox extension that uses Jev through TypeSafe or Vercel AI Gateway to classify bounded page-element snippets, then stores reusable local hiding rules by page template. Paid analysis is manual by default; optional on-visit analysis sends snippets to the selected provider. The API key stays in unencrypted local extension storage."
         }
       ]
     },
