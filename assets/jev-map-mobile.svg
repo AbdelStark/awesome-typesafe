@@ -45,5 +45,5 @@
   <rect x="27" y="400" width="346" height="57" rx="9" fill="#293240" stroke="#efca86"/>
   <text x="43" y="421" class="mono" fill="#efca86" font-size="11">04 / YOUR CODE</text>
   <text x="43" y="442" class="sans" fill="#fff" font-size="19" font-weight="700">threshold → action</text>
-  <text x="27" y="486" class="mono" fill="#9aabb8" font-size="11">OFFICIAL DOCS  /  COMMUNITY BUILDS  /  EVIDENCE</text>
+  <text x="27" y="486" class="mono" fill="#b9f6d6" font-size="14" font-weight="700">EXPLORE THE DIRECTORY →</text>
 </svg>
