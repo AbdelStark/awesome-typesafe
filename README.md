@@ -32,6 +32,7 @@ Last updated: 2026-09-21. Links and project descriptions change; please [report 
 ## Contents
 
 - [Start here](#start-here)
+  - [Try a policy threshold](#try-a-policy-threshold)
   - [Before you trust a decision](#before-you-trust-a-decision)
 - [Official resources](#official-resources)
   - [Product and documentation](#product-and-documentation)
@@ -66,6 +67,18 @@ One state can answer several focused questions in the same request. Pick the ans
 | **Score** | An ordered rubric, such as calm, concerned, or angry. | A position on your rubric, probabilities over its levels, and confidence. |
 
 Ask independent questions together. Set thresholds, fallback behavior, and side effects in application code.
+
+### Try a policy threshold
+
+The documented support-ticket example above selects `technical` with probability `0.85`. In this illustrative policy, a ticket routes automatically only when the selected probability reaches the application's threshold. At `0.90`, it goes to review; at `0.80`, it routes to technical. The model answer stays the same. These thresholds are teaching examples, not measured operating points or safety guarantees.
+
+| Policy input | Example value |
+| :--- | :--- |
+| Selected team | `technical` |
+| Selected probability | `0.85` |
+| Starting threshold | `0.90` |
+
+On the [live site](https://abdelstark.github.io/awesome-typesafe-jev/#try-a-policy-threshold), move the threshold to see which action the application takes. A real threshold needs evaluation on your own labelled cases, with a review path for uncertainty.
 
 ### Before you trust a decision
 

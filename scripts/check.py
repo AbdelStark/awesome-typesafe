@@ -51,6 +51,7 @@ def main() -> int:
         ROOT / "_layouts" / "default.html": "missing site layout",
         ROOT / "assets" / "style.css": "missing site stylesheet",
         ROOT / "assets" / "directory.js": "missing site directory enhancement",
+        ROOT / "assets" / "policy.js": "missing policy sandbox enhancement",
         ROOT / "assets" / "jev-map.svg": "missing visual guide",
         ROOT / "assets" / "jev-social.png": "missing site sharing image",
         ROOT / "assets" / "listed-badge.svg": "missing shareable listing badge",

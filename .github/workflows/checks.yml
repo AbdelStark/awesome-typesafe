@@ -27,8 +27,10 @@ jobs:
       - name: Verify README-derived JSON directory
         run: python3 scripts/export.py --check
 
-      - name: Check directory JavaScript
-        run: node --check assets/directory.js
+      - name: Check site JavaScript
+        run: |
+          node --check assets/directory.js
+          node --check assets/policy.js
 
       - name: Verify generated contributor credits
         run: |
