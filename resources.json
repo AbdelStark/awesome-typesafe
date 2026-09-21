@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-21",
-  "total_resources": 117,
+  "total_resources": 122,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -14,6 +14,12 @@
           "url": "https://github.com/pithings/advocaat",
           "description_markdown": "Small TypeScript client with ergonomic tagged helpers for typed chances, choices, and scores.",
           "permalink": "/projects/gh-pithings-advocaat/"
+        },
+        {
+          "name": "AnyDecisionModel",
+          "url": "https://github.com/mattt/AnyDecisionModel",
+          "description_markdown": "Swift 6.2 package with typed sessions, enum-backed choices, and ordered scores over either TypeSafe's Jev API or a local MLX language model on Apple silicon; the local backend reads answer-token probabilities without generating text, and its calibration is caller-configured rather than established for every task.",
+          "permalink": "/projects/gh-mattt-anydecisionmodel/"
         },
         {
           "name": "DuckDB Jev",
@@ -484,6 +490,12 @@
           "permalink": "/projects/gh-abovecolin-ha-jev/"
         },
         {
+          "name": "Jev Chat Assistant",
+          "url": "https://github.com/Finderchangchang/jev-chat-JARVIS",
+          "description_markdown": "Android overlay that reads visible WeChat, QQ, and X conversations through accessibility, asks Jev for typed intent and action judgments, has a text model draft three replies, and can fill a selected reply without sending it; device tests are author-reported, Lark capture is partial, and chat content goes to the configured model APIs.",
+          "permalink": "/projects/gh-finderchangchang-jev-chat-jarvis/"
+        },
+        {
           "name": "Jev Search",
           "url": "https://github.com/superagents-lab/jev-search",
           "description_markdown": "Web search demo using Jev's typed Choice and Noul judgments to select sources, time ranges, and query candidates, then rank results retrieved through Search1API; relevance scores are model judgments, not verified accuracy.",
@@ -562,6 +574,12 @@
           "permalink": "/projects/gh-romanslack-jev-drone/"
         },
         {
+          "name": "Jev Minecraft Agent",
+          "url": "https://github.com/rmalde/minecraft-agent",
+          "description_markdown": "Astra plans while Jev selects bounded actions from structured Minecraft state through Mineflayer. The author reports an 8-minute-43-second dragon kill and exit in Survival/Peaceful mode on a preselected seed with a naturally active End portal; source and local tests are public, but the recording and per-run event log remain local, so that run is not independently replayable from the repository.",
+          "permalink": "/projects/gh-rmalde-minecraft-agent/"
+        },
+        {
           "name": "Jev Plays Pokémon",
           "url": "https://github.com/anxkhn/JevPlaysPokemon",
           "description_markdown": "A Pokémon agent that lets you emulate GBA games and has Jev make the battle decisions based on the current stats, state, moves, and Pokémon.",
@@ -608,6 +626,12 @@
           "url": "https://github.com/FirasSX914/Janus",
           "description_markdown": "Independent calibration measurement of Jev on two labelled datasets, Banking77 and Web of Science, with a Jev to frontier cascade priced per row from measured tokens, now also packaged as an installable tool (`pip install janus-decide`) that measures a threshold on your own data and ships none by default; the protocol was frozen before any result and the raw JSONL and figures are committed, and no routing parameter transferred between the two datasets, as the optimal threshold, the sign of the accuracy gap between the two models, and whether routing paid for itself all changed; the Web of Science labels come from publication metadata rather than per-document annotation, so part of the error measured there is label ambiguity.",
           "permalink": "/projects/gh-firassx914-janus/"
+        },
+        {
+          "name": "jeff",
+          "url": "https://github.com/logan-markewich/jeff",
+          "description_markdown": "Self-hosted GLiFormer 400M server for Choice, Score, and Noul through a Jev-compatible API, with public benchmark code and per-item results. Its documented JevBench comparison finds weaker accuracy than Jev on reasoning-heavy items; hosted cost figures are estimates and depend on deployment throughput.",
+          "permalink": "/projects/gh-logan-markewich-jeff/"
         },
         {
           "name": "Jev Enterprise Decision Fabric",
@@ -686,6 +710,12 @@
           "url": "https://github.com/rupeshpoojary9/poorjev",
           "description_markdown": "Open, local reproduction of the Choice/Score/Noul interface on commodity zero-shot NLI models with temperature scaling and conformal abstention; ships a reproducible calibration eval (ECE 0.170 to 0.071 on its own small labelled set, cross-validated) and runs offline with no API key.",
           "permalink": "/projects/gh-rupeshpoojary9-poorjev/"
+        },
+        {
+          "name": "Rizzo Flow",
+          "url": "https://github.com/Rizzo-AI-Academy/rizzo-flow",
+          "description_markdown": "Local, open-model decision server that reads answer-token probabilities instead of generating text, with a Jev-compatible Choice, Score, and Noul API plus its own numeric primitive. Its authors explicitly make no quality-parity claim with Jev; probabilities need calibration on the user's own data.",
+          "permalink": "/projects/gh-rizzo-ai-academy-rizzo-flow/"
         },
         {
           "name": "SemIf (formerly OpenJev)",
