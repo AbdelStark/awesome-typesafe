@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-21",
-  "total_resources": 132,
+  "total_resources": 133,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -414,6 +414,12 @@
           "url": "https://github.com/DevMortimer/pi-warden",
           "description_markdown": "Pi guardrails built on pi-typesafe that return Jev's verdict to the agent as a held tool result or a short steer instead of a dialog, check writes against a project rules file, and grade their own holds against the user's next message on recorded sessions; the action guard is calibrated on one user's 17k calls, the other guards on synthetic cases only.",
           "permalink": "/projects/gh-devmortimer-pi-warden/"
+        },
+        {
+          "name": "pytest-jev",
+          "url": "https://github.com/allebee/pytest-jev",
+          "description_markdown": "pytest plugin for semantic assertions about LLM output: `jev.expect(text, holds=[...], lacks=[...])` asks one Noul per claim in a single request and fails with every claim's probability, a claim holds at 0.8 or above and lacks at 0.2 or below so anything in between fails, and `jev.choice` and `jev.score` compare Choice and Score answers by probability mass; answers are cached in `.pytest_cache`, tests skip without an API key, and the asserted text and context are sent to TypeSafe or OpenRouter.",
+          "permalink": "/projects/gh-allebee-pytest-jev/"
         },
         {
           "name": "slop-grader",
