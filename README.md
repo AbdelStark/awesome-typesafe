@@ -1,4 +1,4 @@
-# Awesome TypeSafe
+# Awesome TypeSafe / Awesome Jev
 
 [![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
 [![Live site](https://img.shields.io/badge/live-GitHub%20Pages-111827?logo=github)](https://abdelstark.github.io/awesome-typesafe/)
@@ -10,8 +10,6 @@
 TypeSafe's Jev returns typed, probabilistic decisions instead of generated text. This list focuses on the things you can use to understand that model shape, build with it, test its limits, and reproduce community experiments.
 
 **Independent community project.** This repository is not affiliated with or endorsed by TypeSafe AI. Community entries are labeled by section; inclusion is not a claim that TypeSafe has reviewed or approved them.
-
-*Last reviewed: 2026-09-17. Jev and its ecosystem are moving quickly; please open a pull request when something changes.*
 
 ## Contents
 
