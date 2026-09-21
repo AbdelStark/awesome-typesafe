@@ -57,11 +57,14 @@ jobs:
       - name: Check links
         uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2
         with:
+          # All Contributors generates author-filtered commit URLs. Its output is
+          # verified above; crawling dozens of these makes GitHub return 504s.
           args: >-
             --root-dir "${{ github.workspace }}"
             --verbose
             --no-progress
             --max-retries 2
+            --exclude '^https://github[.]com/AbdelStark/awesome-typesafe-jev/commits[?]author='
             './**/*.md'
           fail: true
           token: "${{ secrets.GITHUB_TOKEN }}"
