@@ -1,0 +1,7 @@
+# These files are exported from README.md and reviewed through that source.
+projects/*.html linguist-generated
+assets/cards/*.png linguist-generated
+resources.json linguist-generated
+
+# Bundled card fonts are third-party build inputs.
+scripts/fonts/*.ttf linguist-vendored
