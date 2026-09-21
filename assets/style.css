@@ -113,6 +113,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 .directory-tools { margin: 1.6rem 0 2.4rem; padding: 1.4rem; border: 1px solid #60837c; border-radius: .7rem; background: linear-gradient(130deg, #1d383b, var(--panel)); }
 .directory-tools__title { margin: 0 0 .9rem !important; color: var(--text); font-size: 1.12rem !important; }
+.directory-tools__hint { margin: -.35rem 0 1rem !important; color: var(--muted); font-size: .84rem; }
 .category-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .55rem; margin-bottom: 1.6rem; }
 .category-card { display: flex; flex-direction: column; justify-content: space-between; gap: .55rem; min-width: 0; min-height: 6rem; padding: .75rem .9rem; border: 1px solid #4d6a6e; border-radius: .4rem; background: #10222c; color: var(--text); text-align: left; cursor: pointer; }
 .category-card:hover { border-color: var(--mint); background: #18343a; }
@@ -134,8 +135,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .resource-list li:hover { border-color: #76a99c; background: var(--panel-raised); }
 .resource-list li > a:first-child { color: var(--text); font-weight: 760; font-size: 1rem; text-decoration-color: #60837c; }
 .resource-list li > a:first-child:hover { color: var(--mint); }
-.resource-permalink { display: block; width: fit-content; margin-top: .7rem; color: var(--aqua); font-size: .75rem; font-weight: 700; text-decoration: none; }
+.resource-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem 1rem; margin-top: .7rem; }
+.resource-permalink, .resource-badge { width: fit-content; color: var(--aqua); font-family: inherit; font-size: .75rem; font-weight: 700; line-height: 1.5; text-decoration: none; }
 .resource-permalink:hover { text-decoration: underline; }
+.resource-badge { padding: 0; border: 0; background: transparent; cursor: pointer; }
+.resource-badge:hover { text-decoration: underline; }
 #contributors + p { color: var(--muted); }
 #contributors ~ table img { border-radius: 50%; }
 

@@ -36,7 +36,29 @@
       link.href = permalink.href;
       link.textContent = 'Link to this project ↗';
       link.setAttribute('aria-label', `Link to ${source.textContent.trim()} in Awesome Jev`);
-      item.append(link);
+      const actions = document.createElement('div');
+      actions.className = 'resource-actions';
+      actions.append(link);
+      if (navigator.clipboard?.writeText) {
+        const badge = document.createElement('button');
+        badge.type = 'button';
+        badge.className = 'resource-badge';
+        badge.textContent = 'Copy listing badge';
+        badge.setAttribute('aria-label', `Copy a listing badge for ${source.textContent.trim()}`);
+        badge.addEventListener('click', async () => {
+          const image = new URL('assets/listed-badge.svg', location.href).href;
+          const markdown = `[![Listed in Awesome Jev](${image})](${permalink.href})`;
+          try {
+            await navigator.clipboard.writeText(markdown);
+            badge.textContent = 'Badge copied';
+          } catch {
+            badge.textContent = 'Copy unavailable';
+          }
+          window.setTimeout(() => { badge.textContent = 'Copy listing badge'; }, 2000);
+        });
+        actions.append(badge);
+      }
+      item.append(actions);
       resourceItems.set(resourceUrl, item);
     }
   }
@@ -47,6 +69,9 @@
   const categoryTitle = document.createElement('h3');
   categoryTitle.className = 'directory-tools__title';
   categoryTitle.textContent = 'Browse by category';
+  const hint = document.createElement('p');
+  hint.className = 'directory-tools__hint';
+  hint.textContent = 'Listed here? Find your card and copy a badge linking to your exact entry.';
   const categoryGrid = document.createElement('div');
   categoryGrid.className = 'category-grid';
   categoryGrid.setAttribute('role', 'group');
@@ -122,7 +147,7 @@
   empty.hidden = true;
   empty.textContent = 'No projects match. Try another term or category.';
   controls.append(search, select);
-  tools.append(categoryTitle, categoryGrid, label, controls, statusRow, empty);
+  tools.append(categoryTitle, hint, categoryGrid, label, controls, statusRow, empty);
   start.after(tools);
 
   const params = new URLSearchParams(location.search);
