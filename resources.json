@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-21",
-  "total_resources": 145,
+  "total_resources": 149,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -210,6 +210,12 @@
           "url": "https://github.com/AbdelStark/bicameral",
           "description_markdown": "Pi coding harness where an LLM writes while Jev supplies typed reflexes for policy, loop detection, and review; explicitly not a sandbox.",
           "permalink": "/projects/gh-abdelstark-bicameral/"
+        },
+        {
+          "name": "Canny",
+          "url": "https://github.com/qkal/Canny",
+          "description_markdown": "Claude Code and Codex hooks that record edits and checks in an append-only ledger, flag a \"done\" claim without a passing check after the last code edit, and use optional Jev Noul judgments for advisory rule checks or to recognize a non-completion message; its default gate allows a repeated stop after warning, the author has not measured project-wide quality gains, and enabling Jev sends clipped diffs, project rules, and final messages to TypeSafe.",
+          "permalink": "/projects/gh-qkal-canny/"
         },
         {
           "name": "DGP",
@@ -420,6 +426,12 @@
           "url": "https://github.com/y0usaf/pi-jev",
           "description_markdown": "Pi extension with a shadow-mode tool-call gate, output judge, and a general typed `jev_ask` tool.",
           "permalink": "/projects/gh-y0usaf-pi-jev/"
+        },
+        {
+          "name": "pi-jev-compaction",
+          "url": "https://github.com/nourhelmi/pi-jev-compaction",
+          "description_markdown": "Pi extension that asks Jev which older tool results to hide after context pressure rises, retains the original session messages, and exposes a `jev_read` tool to recover an output without rerunning its command; it protects recent results and leaves context unchanged on API failure, but Jev sees bounded conversation and tool-output excerpts that may contain private data, and tests do not establish live relevance quality or cost savings.",
+          "permalink": "/projects/gh-nourhelmi-pi-jev-compaction/"
         },
         {
           "name": "pi-jev-context",
@@ -760,6 +772,12 @@
           "permalink": "/projects/gh-logan-markewich-jeff/"
         },
         {
+          "name": "Jev Capability Atlas",
+          "url": "https://github.com/Zaious/jev-capability-atlas",
+          "description_markdown": "Bilingual English and Chinese map of Jev use cases and failure modes that separates the author's small, raw-response API suites from cited third-party results and TypeSafe claims; its case studies help frame task-fit questions, but they do not establish population-level accuracy or a reusable confidence threshold.",
+          "permalink": "/projects/gh-zaious-jev-capability-atlas/"
+        },
+        {
           "name": "Jev Enterprise Decision Fabric",
           "url": "https://github.com/ghubnab99/jev-enterprise-decision-fabric",
           "description_markdown": "Experimental .NET decision architecture with a 111-case Jev-versus-Claude agent-action evaluation, public labels and raw JSONL, report-rebuild tooling, and a decision inspector; one annotator revised labels after reviewing a Jev pilot.",
@@ -848,6 +866,12 @@
           "url": "https://github.com/TianyuCodings/NanoJev",
           "description_markdown": "Open 0.6B Jev-style model for one-pass action probabilities in Maze, Snake, and ViZDoom, with public checkpoint, training data, and replayable game comparisons; it is specialized to those games and is not a general Jev API replacement.",
           "permalink": "/projects/gh-tianyucodings-nanojev/"
+        },
+        {
+          "name": "Open Alternative to Jev",
+          "url": "https://github.com/ikermoel/open-alternative-jev",
+          "description_markdown": "Apache-licensed Python library that reads option-token probabilities from open models through Transformers or vLLM, with packed and separate question modes, temperature scaling, benchmark scripts, and raw result files; its measurements compare modes of the same open model rather than Jev, packed answers can change with question order, and the package is not a drop-in System One API server.",
+          "permalink": "/projects/gh-ikermoel-open-alternative-jev/"
         },
         {
           "name": "poorjev",
