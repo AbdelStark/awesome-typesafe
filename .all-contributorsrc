@@ -598,6 +598,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "allebee",
+      "name": "Alibi Serikbay",
+      "avatar_url": "https://avatars.githubusercontent.com/u/108667115",
+      "profile": "https://github.com/allebee",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-9de3bc.svg?style=flat-square)](#contributors)"

@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-21",
-  "total_resources": 139,
+  "total_resources": 140,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -370,7 +370,7 @@
         {
           "name": "jevgrep (allebee)",
           "url": "https://github.com/allebee/jevgrep",
-          "description_markdown": "Streaming grep-by-meaning CLI that asks Jev one Noul per line of a log or other text stream, including `tail -f` output, and prints lines at or above a threshold; the repository includes a hand-labelled benchmark against Claude, and every judged line is sent to OpenRouter or TypeSafe.",
+          "description_markdown": "Streaming grep-by-meaning CLI (`jevgrep-cli` on PyPI) for logs and other text, including `tail -f`: it batches one Jev Noul per line and prints lines above a code-set threshold. Its hand-labelled, 195-line synthetic-log benchmark compares Jev with Claude; every judged line goes to TypeSafe or OpenRouter, and optional `--explain` sends selected lines to Anthropic through OpenRouter.",
           "permalink": "/projects/gh-allebee-jevgrep/"
         },
         {
@@ -420,6 +420,12 @@
           "url": "https://github.com/DevMortimer/pi-warden",
           "description_markdown": "Pi guardrails built on pi-typesafe that return Jev's verdict to the agent as a held tool result or a short steer instead of a dialog, check writes against a project rules file, and grade their own holds against the user's next message on recorded sessions; the action guard is calibrated on one user's 17k calls, the other guards on synthetic cases only.",
           "permalink": "/projects/gh-devmortimer-pi-warden/"
+        },
+        {
+          "name": "pytest-jev",
+          "url": "https://github.com/allebee/pytest-jev",
+          "description_markdown": "pytest plugin for semantic assertions about LLM output: `jev.expect` batches Noul claims about one text, reports each probability, and by default fails uncertain claims (holds needs at least 0.8, lacks at most 0.2); Choice checks the selected option and Score checks probability mass across ordered levels. It caches answers in `.pytest_cache`, skips Jev tests without a key by default, and sends tested text and context to TypeSafe or OpenRouter.",
+          "permalink": "/projects/gh-allebee-pytest-jev/"
         },
         {
           "name": "SkillRanker",
