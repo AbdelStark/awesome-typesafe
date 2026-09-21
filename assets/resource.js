@@ -30,22 +30,23 @@
   }
 
   const pageUrl = canonical.href;
+  const isProject = Boolean(document.querySelector('.resource-page'));
   if (navigator.clipboard?.writeText) {
+    buttons.prepend(copyButton('Copy page link', pageUrl, 'Page link copied.'));
+  }
+  if (isProject && navigator.clipboard?.writeText) {
     const badgeUrl = new URL('assets/listed-badge.svg', home.href).href;
     const badge = `[![Listed in Awesome Jev](${badgeUrl})](${pageUrl})`;
-    buttons.prepend(
-      copyButton('Copy page link', pageUrl, 'Page link copied.'),
-      copyButton('Copy listing badge', badge, 'Badge Markdown copied.'),
-    );
+    buttons.append(copyButton('Copy listing badge', badge, 'Badge Markdown copied.'));
   }
   if (navigator.share) {
     const shareButton = document.createElement('button');
     shareButton.type = 'button';
-    shareButton.textContent = 'Share project';
+    shareButton.textContent = isProject ? 'Share project' : 'Share topic';
     shareButton.addEventListener('click', async () => {
       try {
         await navigator.share({ title: document.title, url: pageUrl });
-        report('Project shared.');
+        report(isProject ? 'Project shared.' : 'Topic shared.');
       } catch (error) {
         if (error?.name !== 'AbortError') report('Share unavailable in this browser.');
       }

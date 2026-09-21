@@ -8,6 +8,7 @@ Use the README for descriptions and caveats. Use the JSON file when you need str
 
 - [Full directory in Markdown](https://abdelstark.github.io/awesome-typesafe-jev/README.md): Official resources, community projects, practical starting points, and contribution guidance.
 - [Community directory in JSON](https://abdelstark.github.io/awesome-typesafe-jev/resources.json): README-derived, machine-readable community entries grouped by category.
+- [Focused category pages](https://abdelstark.github.io/awesome-typesafe-jev/#community-projects): README-derived pages for each project category, each with a shareable topic card.
 - [Contribution guide](https://abdelstark.github.io/awesome-typesafe-jev/CONTRIBUTING.md): Inclusion rules, evidence requirements, and correction process.
 
 ## Optional

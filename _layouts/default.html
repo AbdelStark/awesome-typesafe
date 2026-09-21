@@ -21,12 +21,12 @@
     <meta property="og:image:width" content="1280">
     <meta property="og:image:height" content="640">
     {% endif %}
-    <meta property="og:image:alt" content="{{ page.resource_name | default: 'A visual map of Jev typed decisions' | escape }} | Awesome Jev">
+    <meta property="og:image:alt" content="{{ page.resource_name | default: page.category_name | default: 'A visual map of Jev typed decisions' | escape }} | Awesome Jev">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ page.title | default: site.title | escape }}">
     <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}">
     <meta name="twitter:image" content="{{ page.social_image | default: '/assets/jev-social.png' | absolute_url }}">
-    <meta name="twitter:image:alt" content="{{ page.resource_name | default: 'A visual map of Jev typed decisions' | escape }} | Awesome Jev">
+    <meta name="twitter:image:alt" content="{{ page.resource_name | default: page.category_name | default: 'A visual map of Jev typed decisions' | escape }} | Awesome Jev">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     <link rel="alternate" type="text/markdown" href="{{ '/README.md' | relative_url }}">
     <link rel="describedby" href="{{ '/llms.txt' | relative_url }}">

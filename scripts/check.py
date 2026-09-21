@@ -61,11 +61,13 @@ def main() -> int:
         ROOT / "assets" / "jev-map-mobile.svg": "missing mobile visual guide",
         ROOT / "assets" / "jev-social.png": "missing site sharing image",
         ROOT / "scripts" / "cards.py": "missing README-derived social-card renderer",
+        ROOT / "scripts" / "category_cards.py": "missing README-derived category-card renderer",
         ROOT / "scripts" / "requirements.txt": "missing social-card build dependency",
         ROOT / "assets" / "listed-badge.svg": "missing shareable listing badge",
         ROOT / "resources.json": "missing README-derived JSON directory",
         ROOT / "llms.txt": "missing agent-readable site index",
         ROOT / "sitemap.xml": "missing site sitemap",
+        ROOT / "robots.txt": "missing sitemap discovery file",
         ROOT / "index.md": "missing site entry point",
     }
     for path, message in site_files.items():

@@ -8,12 +8,27 @@ layout: default
     <span aria-current="page">{{ page.category_name | escape }}</span>
   </nav>
 
-  <header class="category-page__header">
-    <p class="category-page__eyebrow">Community projects / {{ page.resources.size }} listings</p>
-    <h1>{{ page.category_name | escape }}</h1>
-    <p class="category-page__intro">{{ page.description | escape }}</p>
-    <p class="category-page__actions"><a href="{{ '/' | relative_url }}?category={{ page.category_id | url_encode }}#community-projects">Search this category in the full directory →</a></p>
-  </header>
+  <div class="category-page__hero">
+    <header class="category-page__header">
+      <p class="category-page__eyebrow">Community projects / {{ page.resources.size }} listings</p>
+      <h1>{{ page.category_name | escape }}</h1>
+      <p class="category-page__intro">{{ page.description | escape }}</p>
+      <p class="category-page__actions"><a href="{{ '/' | relative_url }}?category={{ page.category_id | url_encode }}#community-projects">Search this category in the full directory →</a></p>
+    </header>
+    <a class="category-page__visual" href="{{ page.social_image | relative_url }}" download="awesome-jev-{{ page.category_id | escape }}.png" aria-label="Download the share card for {{ page.category_name | escape }}">
+      <img src="{{ page.social_image | relative_url }}" width="1200" height="630" alt="Awesome Jev share card for {{ page.category_name | escape }}" decoding="async">
+      <span>Download topic card <span aria-hidden="true">↓</span></span>
+    </a>
+  </div>
+
+  <section class="resource-share" aria-labelledby="share-title">
+    <h2 id="share-title">Share this topic</h2>
+    <p>Help people find the projects and evidence in this category. Listings are independent and inclusion is not an endorsement.</p>
+    <div class="resource-share__buttons">
+      <a href="{{ page.social_image | relative_url }}" download="awesome-jev-{{ page.category_id | escape }}.png">Download topic card</a>
+    </div>
+    <span class="resource-share__status" role="status" aria-live="polite"></span>
+  </section>
 
   <nav class="category-page__topics" aria-label="Community categories">
     {% assign category_pages = site.pages | where: 'layout', 'category' | sort: 'category_name' %}
