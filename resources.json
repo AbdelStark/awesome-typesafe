@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-21",
-  "total_resources": 100,
+  "total_resources": 101,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -443,6 +443,11 @@
           "name": "Janus",
           "url": "https://github.com/FirasSX914/Janus",
           "description_markdown": "Independent calibration measurement of Jev on two labelled datasets, Banking77 and Web of Science, with a Jev to frontier cascade priced per row from measured tokens, now also packaged as an installable tool (`pip install janus-decide`) that measures a threshold on your own data and ships none by default; the protocol was frozen before any result and the raw JSONL and figures are committed, and no routing parameter transferred between the two datasets, as the optimal threshold, the sign of the accuracy gap between the two models, and whether routing paid for itself all changed; the Web of Science labels come from publication metadata rather than per-document annotation, so part of the error measured there is label ambiguity."
+        },
+        {
+          "name": "Jev Enterprise Decision Fabric",
+          "url": "https://github.com/ghubnab99/jev-enterprise-decision-fabric",
+          "description_markdown": "Experimental .NET decision architecture with a 111-case Jev-versus-Claude agent-action evaluation, public labels and raw JSONL, report-rebuild tooling, and a decision inspector; one annotator revised labels after reviewing a Jev pilot."
         },
         {
           "name": "Jev Judge vs Dimension Scores",

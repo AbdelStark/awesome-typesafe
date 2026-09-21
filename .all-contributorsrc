@@ -552,6 +552,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "ghubnab99",
+      "name": "Mohammed Nabil",
+      "avatar_url": "https://avatars.githubusercontent.com/u/95178618",
+      "profile": "https://github.com/ghubnab99",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-9de3bc.svg?style=flat-square)](#contributors)"
