@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-21",
-  "total_resources": 116,
+  "total_resources": 117,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -326,6 +326,12 @@
           "url": "https://github.com/antiyro/jevdroid",
           "description_markdown": "Experimental Python framework that uses Jev to choose Android actions from accessibility trees and executes them through ADB or UIAutomator2, with explicit action permissions and per-run budgets; goals and visible UI text are sent to the selected TypeSafe or Vercel provider.",
           "permalink": "/projects/gh-antiyro-jevdroid/"
+        },
+        {
+          "name": "Jevonian",
+          "url": "https://github.com/xinyao27/jevonian",
+          "description_markdown": "Local OpenAI, Anthropic, and Responses-compatible proxy for coding agents, where one Jev call answers both the model route and the thinking level for the virtual model `jevonian/auto`; deterministic code filters candidates by wire protocol, context window, and thinking-level floor and drops providers whose quota window is spent before Jev is asked, `minConfidence` marks a low-confidence route in the ledger and response headers rather than accepting it silently, a pinned model ID or explicit `jevonian/<route>` skips Jev entirely, and every turn is recorded with the serving model, the reason, real token usage, cache reads, and an estimated cost. The state sent to Jev includes recent messages and tool results, consecutive error counts, context headroom, and cache-switch penalties, so the decision is a cost one as well as a capability one; costs are estimated from a price table rather than read back from a vendor invoice, and cache figures are estimates because the on-wire prefix is not yet compared.",
+          "permalink": "/projects/gh-xinyao27-jevonian/"
         },
         {
           "name": "jgrep",
