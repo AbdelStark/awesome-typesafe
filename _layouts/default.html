@@ -13,8 +13,13 @@
     <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta property="og:image" content="{{ page.social_image | default: '/assets/jev-social.png' | absolute_url }}">
+    {% if page.social_image %}
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    {% else %}
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="640">
+    {% endif %}
     <meta property="og:image:alt" content="{{ page.resource_name | default: 'A visual map of Jev typed decisions' | escape }} | Awesome Jev">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ page.title | default: site.title | escape }}">
