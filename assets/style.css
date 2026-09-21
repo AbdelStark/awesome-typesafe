@@ -47,6 +47,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .site-nav { display: flex; align-items: center; gap: 1.4rem; font-size: .86rem; font-weight: 700; }
 .site-nav a { color: var(--muted); text-decoration: none; }
 .site-nav a:hover { color: var(--text); }
+.site-nav .site-nav__browse { color: var(--mint); }
 .site-nav .site-nav__primary { padding: .46rem .8rem; border: 1px solid var(--mint); border-radius: .35rem; color: var(--mint); }
 .site-nav .site-nav__primary:hover { background: var(--mint); color: #0b111a; }
 
@@ -357,6 +358,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .not-found h1 { font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1; letter-spacing: -.06em; }
 
 @media (max-width: 800px) {
+  .site-nav__section, .site-nav__external { display: none; }
   .documented-example__answers { grid-template-columns: 1fr; }
   .tool-fit { grid-template-columns: 1fr; }
   .featured-live__navigation { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin: -.35rem 0 .7rem; }
@@ -388,7 +390,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .decision-designer__option { grid-template-columns: 1fr; }
   .site-header__inner, .site-footer__inner, .page-shell { width: min(100% - 1.5rem, 1200px); }
   .site-nav { gap: .5rem; }
-  .site-nav > a:not(.site-nav__primary) { display: none; }
+  .site-nav .site-nav__browse { font-size: .76rem; }
+  .site-nav__github-prefix { display: none; }
   .site-nav .site-nav__primary { font-size: .76rem; }
   .page-shell { padding-top: 1.4rem; }
   .directory-tools__controls { grid-template-columns: 1fr; }

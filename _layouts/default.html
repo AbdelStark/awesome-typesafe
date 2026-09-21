@@ -51,7 +51,7 @@
     <script src="{{ '/assets/resource.js' | relative_url }}?v={{ asset_version }}" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#content">Skip to the list</a>
+    <a class="skip-link" href="#content">Skip to content</a>
 
     <header class="site-header">
       <div class="site-header__inner">
@@ -60,9 +60,11 @@
           <span>awesome<span class="wordmark__accent">jev</span></span>
         </a>
         <nav class="site-nav" aria-label="Primary navigation">
-          <a href="https://docs.typesafe.ai/">Docs</a>
-          <a href="https://discord.gg/typesafe">Discord</a>
-          <a class="site-nav__primary" href="https://github.com/AbdelStark/awesome-typesafe-jev">View on GitHub ↗</a>
+          <a class="site-nav__section" href="{{ '/' | relative_url }}#start-here">Start here</a>
+          <a class="site-nav__browse" href="{{ '/' | relative_url }}#community-projects">Explore projects</a>
+          <a class="site-nav__section" href="{{ '/' | relative_url }}#before-you-trust-a-decision">Evidence</a>
+          <a class="site-nav__external" href="https://docs.typesafe.ai/">Docs ↗</a>
+          <a class="site-nav__primary" href="https://github.com/AbdelStark/awesome-typesafe-jev"><span class="site-nav__github-prefix">View on </span>GitHub ↗</a>
         </nav>
       </div>
     </header>
