@@ -1,6 +1,9 @@
 /* Enhance the README-derived directory. The README remains the only resource data source. */
 (async () => {
   const article = document.querySelector('.markdown-body');
+  for (const pre of article?.querySelectorAll('.highlight > pre') || []) {
+    pre.tabIndex = 0;
+  }
   const start = article?.querySelector('#community-projects');
   const end = article?.querySelector('#contributing');
   if (!start || !end) return;
@@ -54,8 +57,18 @@
       const link = document.createElement('a');
       link.className = 'resource-permalink';
       link.href = permalink.href;
-      link.textContent = 'Link to this project ↗';
-      link.setAttribute('aria-label', `Link to ${source.textContent.trim()} in Awesome Jev`);
+      link.textContent = 'Full listing →';
+      link.setAttribute('aria-label', `View the full Awesome Jev listing for ${source.textContent.trim()}`);
+      const description = document.createElement('div');
+      description.className = 'resource-list__description';
+      for (const node of [...item.childNodes]) {
+        if (node !== source) description.append(node);
+      }
+      if (description.firstChild?.nodeType === Node.TEXT_NODE) {
+        description.firstChild.textContent = description.firstChild.textContent.replace(/^\s*—\s*/, '');
+      }
+      if (description.querySelector('a[href]')) description.classList.add('resource-list__description--linked');
+      source.after(description);
       const actions = document.createElement('div');
       actions.className = 'resource-actions';
       actions.append(link);
@@ -91,7 +104,7 @@
   categoryTitle.textContent = 'Browse by category';
   const hint = document.createElement('p');
   hint.className = 'directory-tools__hint';
-  hint.textContent = 'Listed here? Find your card and copy a badge linking to your exact entry.';
+  hint.textContent = 'Listed here? Open your page for a badge and shareable image.';
   const categoryGrid = document.createElement('div');
   categoryGrid.className = 'category-grid';
   categoryGrid.setAttribute('role', 'group');
