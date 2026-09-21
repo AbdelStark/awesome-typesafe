@@ -62,6 +62,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .markdown-body > p.hero-claim { max-width: 30ch; margin: 1.35rem 0 .8rem; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 750; line-height: 1.17; letter-spacing: -.045em; }
 .markdown-body > p.hero-description { max-width: 66rem; color: var(--muted); font-size: 1.13rem; }
 .markdown-body > p.quick-actions { display: flex; flex-wrap: wrap; gap: .55rem; margin: 1.4rem 0 1.8rem; }
+.quick-action-separator { display: none; }
 .markdown-body > p.hero-map { margin: 1.5rem 0 2rem; }
 .markdown-body > p.hero-map img { display: block; width: 100%; border: 1px solid var(--line); border-radius: 1rem; }
 .quick-actions a { display: inline-block; padding: .65rem .9rem; border: 1px solid #70988d; border-radius: .4rem; background: #1b3639; color: var(--mint); font-size: .88rem; font-weight: 750; line-height: 1.4; text-decoration: none; }
