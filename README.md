@@ -18,7 +18,7 @@ Official docs, working integrations, independent experiments, and the builders p
 | :--- | :--- |
 | Understand the idea in 2 minutes | [The introduction](https://docs.typesafe.ai/introduction) and [the three primitives](https://docs.typesafe.ai/primitives) |
 | Make my first typed call | [Quick start](https://docs.typesafe.ai/introduction/quickstart) and [official SDKs](#sdks-and-developer-tools) |
-| See what builders made | [Community projects](#community-projects), from [agent tooling](#agent-and-developer-tooling) to [interactive demos](#games-robotics-and-interactive-demos) |
+| See it work live | [Typewriter's 16 judgments](https://typesafe-demo.val.run/) or [Jevtown's simulated audience](https://jevtown.ivanhabor.com/); then browse [all community projects](#community-projects) |
 | Test the claims | [Independent evaluations](#evaluations-and-independent-research) and [TypeSafe's own evals](https://evals.typesafe.ai/) |
 
 **[Explore the searchable web directory →](https://abdelstark.github.io/awesome-typesafe-jev/)** · **[Suggest a resource](https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/CONTRIBUTING.md)** · **[Join the builder community](https://discord.gg/typesafe)**
