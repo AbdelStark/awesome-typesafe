@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-21",
-  "total_resources": 155,
+  "total_resources": 156,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -854,6 +854,12 @@
           "url": "https://github.com/Gaurav-Gosain/jev-sec-bench",
           "description_markdown": "Blind Jev-1.13.0 security evaluation with Go runner, raw per-sample results, and a TUI: 662 public prompt-injection messages and 200 matched vulnerable-code pairs; its reported classification scores use the study's stated context and a fixed 0.5 threshold, so deployment policy and corpus labels matter.",
           "permalink": "/projects/gh-gaurav-gosain-jev-sec-bench/"
+        },
+        {
+          "name": "Jevals.com",
+          "url": "https://jevals.com/",
+          "description_markdown": "Independent benchmark of hosted Jev and six LLMs on PubMedQA, Banking77, and HelpSteer2, with human labels, proper scores, calibration, cost, and latency; [suite files and per-decision logs](https://github.com/Jevals/jevals-data) and the [methodology](https://jevals.com/methodology/) are public, while the run harness is not published, LLM probabilities come from a prompt adapter, and the Gateway does not expose Jev's exact version.",
+          "permalink": "/projects/site-jevals-com/"
         },
         {
           "name": "JevBench",

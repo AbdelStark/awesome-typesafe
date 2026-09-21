@@ -616,6 +616,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Jevals",
+      "name": "Jevals.com",
+      "avatar_url": "https://avatars.githubusercontent.com/u/330885312",
+      "profile": "https://jevals.com/",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-9de3bc.svg?style=flat-square)](#contributors)"
