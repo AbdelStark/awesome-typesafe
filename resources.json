@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-22",
-  "total_resources": 171,
+  "total_resources": 173,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -260,6 +260,12 @@
           "permalink": "/projects/gh-evoke-build-evoke/"
         },
         {
+          "name": "fast-jev-compaction",
+          "url": "https://github.com/tamaratran/fast-jev-compaction",
+          "description_markdown": "Claude Code function-hook plugin and npm library that asks Jev which older tool calls and results to keep, truncate, or remove without rewriting user and assistant messages; it sends a bounded version of the conversation and tool inputs to TypeSafe, and its relevance probabilities do not guarantee safe deletion.",
+          "permalink": "/projects/gh-tamaratran-fast-jev-compaction/"
+        },
+        {
           "name": "Foreman",
           "url": "https://github.com/thruwire/foreman",
           "description_markdown": "Experimental Codex/OpenCode supervisor that sends bounded job, output, and diff context to Jev for progress checks; workers run locally without isolation, and judgment accuracy is unproven.",
@@ -390,6 +396,12 @@
           "url": "https://github.com/doeixd/jev-pref",
           "description_markdown": "CLI and GitHub Action that turn project-defined semantic preferences into Jev Noul or Choice checks over code changes, then map results to advisory or blocking outcomes in code; supports tuning on labelled diffs, and sends reviewed change text to TypeSafe.",
           "permalink": "/projects/gh-doeixd-jev-pref/"
+        },
+        {
+          "name": "jev-pruner",
+          "url": "https://github.com/tamaratran/jev-pruner",
+          "description_markdown": "Claude Code plugin and opt-in Codex wrapper that use Jev to trim long Bash output before the main model sees it, while preserving diagnostics and archiving the full output locally for recovery; scoring sends command output and session history to TypeSafe, and its retention rules are heuristics rather than guarantees.",
+          "permalink": "/projects/gh-tamaratran-jev-pruner/"
         },
         {
           "name": "jev-router",
