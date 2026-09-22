@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-22",
-  "total_resources": 181,
+  "total_resources": 182,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -790,6 +790,12 @@
           "url": "https://jevtown.ivanhabor.com",
           "description_markdown": "Town of 10,000 computed personas that reads a post, listing, product, or headline: one opening request scores the text against about 60 audience attributes, 83 for a listing or a product, plus seven moderation questions, and plans the first wave of 600 readers; batched Choice questions then return each persona's reaction, and the text reaches the next wave only while glad reactions outweigh sorry ones. Also returns the audience by interest, job, age, city, and budget, the question buyers would ask a listing first, and a demand curve over an author-set price ladder. Personas are computed from their id rather than written by a model, and each reaction is sampled from the returned probabilities with a fixed seed, so the result is a simulation of a typed audience and not a forecast of real behaviour; open source (MIT), no sign-in, runs on a TypeSafe or OpenRouter key.",
           "permalink": "/projects/site-jevtown-ivanhabor-com/"
+        },
+        {
+          "name": "Lossless Rewrite",
+          "url": "https://github.com/dttfrancesco/lossless-rewrite",
+          "description_markdown": "Helps AI say the same thing in fewer words: choose which ideas must stay, let your model rewrite, and use Jev to check for lost meaning and guide repairs; available as a local editor and CLI; MIT licensed.",
+          "permalink": "/projects/gh-dttfrancesco-lossless-rewrite/"
         },
         {
           "name": "Paper Trellis Citation Verifier",
