@@ -37,6 +37,7 @@ jobs:
         run: |
           node --check assets/example.js
           node --check assets/directory.js
+          node --check assets/search.js
           node --check assets/policy.js
           node --check assets/designer.js
           node --check assets/contribute.js

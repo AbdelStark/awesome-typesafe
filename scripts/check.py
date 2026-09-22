@@ -53,6 +53,7 @@ def main() -> int:
         ROOT / "_layouts" / "category.html": "missing category page layout",
         ROOT / "assets" / "style.css": "missing site stylesheet",
         ROOT / "assets" / "directory.js": "missing site directory enhancement",
+        ROOT / "assets" / "search.js": "missing site-wide project search",
         ROOT / "assets" / "example.js": "missing documented-response enhancement",
         ROOT / "assets" / "policy.js": "missing policy sandbox enhancement",
         ROOT / "assets" / "designer.js": "missing typed-question designer enhancement",

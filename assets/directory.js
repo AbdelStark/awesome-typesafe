@@ -395,7 +395,6 @@
   search.type = 'search';
   search.placeholder = 'Search names, descriptions, and use cases';
   search.autocomplete = 'off';
-  search.setAttribute('aria-keyshortcuts', '/');
   const select = document.createElement('select');
   select.id = 'resource-category';
   select.setAttribute('aria-label', 'Resource category');
@@ -546,11 +545,6 @@
   search.addEventListener('input', () => { activeResource = ''; update(); });
   select.addEventListener('change', () => { activeResource = ''; update(); });
   document.addEventListener('keydown', (event) => {
-    if (event.key === '/' && !event.ctrlKey && !event.metaKey && !event.altKey &&
-        !['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName)) {
-      event.preventDefault();
-      search.focus();
-    }
     if (event.key === 'Escape' && document.activeElement === search) {
       search.value = '';
       activeResource = '';

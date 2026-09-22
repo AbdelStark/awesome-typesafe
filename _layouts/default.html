@@ -33,6 +33,7 @@
     <link rel="describedby" href="{{ '/llms.txt' | relative_url }}">
     <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
     <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}?v={{ asset_version }}">
+    <script src="{{ '/assets/search.js' | relative_url }}?v={{ asset_version }}" data-directory-version="{{ asset_version }}" defer></script>
     {% if page.category_id %}
     {% assign category_path = '/categories/' | append: page.category_id | append: '/' %}
     <script type="application/ld+json">
@@ -63,6 +64,7 @@
           <span>awesome<span class="wordmark__accent">jev</span></span>
         </a>
         <nav class="site-nav" aria-label="Primary navigation">
+          <a class="site-nav__search" href="{{ '/' | relative_url }}#community-projects" aria-haspopup="dialog" aria-controls="site-search" aria-keyshortcuts="/" aria-label="Search Jev projects"><span class="site-nav__search-icon" aria-hidden="true"></span><span class="site-nav__search-label">Search <kbd>/</kbd></span></a>
           <a class="site-nav__section" href="{{ '/' | relative_url }}#start-here">Start here</a>
           <a class="site-nav__browse" href="{{ '/' | relative_url }}#community-projects">Explore<span class="site-nav__browse-detail"> projects</span></a>
           <a class="site-nav__section" href="{{ '/' | relative_url }}#before-you-trust-a-decision">Evidence</a>
@@ -84,5 +86,20 @@
         <p><a href="https://github.com/AbdelStark/awesome-typesafe-jev">Source</a> · <a href="https://github.com/AbdelStark/awesome-typesafe-jev/releases">Updates</a> · <a href="https://github.com/AbdelStark/awesome-typesafe-jev/issues/new?template=add-resource.yml">Suggest a resource</a> · <a href="https://github.com/AbdelStark/awesome-typesafe-jev/issues/new?template=report-stale.yml">Report a correction</a></p>
       </div>
     </footer>
+    <dialog class="site-search" id="site-search" aria-labelledby="site-search-title">
+      <div class="site-search__header">
+        <div>
+          <p>README-DERIVED DIRECTORY</p>
+          <h2 id="site-search-title">Find a Jev project</h2>
+        </div>
+        <button class="site-search__close" type="button" aria-label="Close search">×</button>
+      </div>
+      <label class="site-search__label" for="site-search-input">Search by name, use case, or category</label>
+      <input id="site-search-input" type="search" maxlength="120" autocomplete="off" placeholder="Try agent routing, browser, evaluation…">
+      <p class="site-search__status" role="status" aria-live="polite">Loading projects…</p>
+      <ul class="site-search__results"></ul>
+      <a class="site-search__all" href="{{ '/' | relative_url }}#community-projects" hidden>View all matches →</a>
+      <p class="site-search__foot">Every listing comes from the <a href="https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md">README</a>. Inclusion is not an endorsement.</p>
+    </dialog>
   </body>
 </html>
