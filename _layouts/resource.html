@@ -18,6 +18,7 @@ layout: default
       <div class="resource-page__actions">
         <a class="resource-page__primary" href="{{ page.resource_url | escape }}">Open the original resource ↗</a>
         <a href="{{ '/' | relative_url }}?resource={{ page.resource_url | url_encode }}#community-projects">See it in the full directory</a>
+        <a href="{{ '/' | relative_url }}?list={{ page.resource_slug | url_encode }}&amp;resource={{ page.resource_url | url_encode }}#community-projects">Start a reading list →</a>
         <a href="{{ category_path | relative_url }}">Browse all {{ page.category_name | escape }}</a>
       </div>
     </div>
