@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-22",
-  "total_resources": 182,
+  "total_resources": 183,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -492,6 +492,12 @@
           "url": "https://github.com/droidrun/mobile-jev",
           "description_markdown": "Local Android agent and studio using Mobilerun: Jev selects operations and observed targets, code rejects stale actions, and the included dark-theme demo checks the resulting switch; it needs a device plus Mobilerun and TypeSafe keys, while CI tests do not control a live phone.",
           "permalink": "/projects/gh-droidrun-mobile-jev/"
+        },
+        {
+          "name": "Oko",
+          "url": "https://github.com/bartlomein/oko",
+          "description_markdown": "Local MCP code search for Codex, Claude Code and OpenCode that reranks a keyword shortlist with Jev `Noul` judgments and returns whole-function excerpts; sends the question and up to 90 code chunks per search to TypeSafe, and a keyword-only mode works without a key.",
+          "permalink": "/projects/gh-bartlomein-oko/"
         },
         {
           "name": "oxlint-plugin-jev",
