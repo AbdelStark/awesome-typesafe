@@ -260,11 +260,12 @@
     }
   }
 
+  const normalizeSearch = (value) => value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase();
   const itemText = new WeakMap();
   const resourceItems = new Map();
   for (const section of sections) {
     for (const item of section.items) {
-      itemText.set(item, item.textContent.toLocaleLowerCase());
+      itemText.set(item, normalizeSearch(`${section.heading.textContent} ${item.textContent}`));
       const source = item.querySelector('a[href]');
       if (!source) continue;
       source.classList.add('resource-source');
@@ -352,7 +353,7 @@
   categoryTitle.textContent = 'Find a project';
   const hint = document.createElement('p');
   hint.className = 'directory-tools__hint';
-  hint.textContent = 'Search the directory or choose a category. Each listing has a shareable page.';
+  hint.textContent = 'Search names and use cases with words in any order, or choose a category. Each listing has a shareable page.';
   const categoryGrid = document.createElement('div');
   categoryGrid.className = 'category-grid';
   categoryGrid.setAttribute('role', 'group');
@@ -491,7 +492,8 @@
   }
 
   function update() {
-    const query = search.value.trim().toLocaleLowerCase();
+    const query = search.value.trim();
+    const terms = normalizeSearch(query).split(/\s+/).filter(Boolean);
     for (const { button, value } of viewButtons) {
       button.setAttribute('aria-pressed', String(value === view));
     }
@@ -504,12 +506,11 @@
       section.list.classList.toggle('resource-list--gallery', view === 'gallery');
       let visibleInSection = 0;
       const categoryMatches = !select.value || select.value === section.heading.id;
-      const headingMatches = section.heading.textContent.toLocaleLowerCase().includes(query);
       for (const item of section.items) {
         total += 1;
         const matches = activeResource
           ? resourceItems.get(activeResource) === item
-          : categoryMatches && (headingMatches || itemText.get(item).includes(query));
+          : categoryMatches && terms.every((term) => itemText.get(item).includes(term));
         item.hidden = !matches;
         if (matches) {
           visibleInSection += 1;

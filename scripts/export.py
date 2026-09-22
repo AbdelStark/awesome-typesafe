@@ -229,12 +229,14 @@ def main() -> int:
     for stale in set(CARDS_DIR.glob("*.png")) - set(cards):
         stale.unlink()
     for path, spec in cards.items():
-        path.write_bytes(render_card(*spec))
+        if not card_matches(path, *spec):
+            path.write_bytes(render_card(*spec))
     CATEGORY_CARDS_DIR.mkdir(exist_ok=True)
     for stale in set(CATEGORY_CARDS_DIR.glob("*.png")) - set(category_cards):
         stale.unlink()
     for path, spec in category_cards.items():
-        path.write_bytes(render_category_card(*spec))
+        if not category_card_matches(path, *spec):
+            path.write_bytes(render_category_card(*spec))
     OUTPUT.write_text(generated, encoding="utf-8")
     print(f"Exported {document['total_resources']} resources to resources.json, {len(category_pages)} category pages, {len(pages)} project pages, {len(cards)} project cards, and {len(category_cards)} category cards")
     return 0
