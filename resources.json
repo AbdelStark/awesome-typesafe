@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-22",
-  "total_resources": 178,
+  "total_resources": 179,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -638,6 +638,12 @@
           "url": "https://github.com/jkudish/jev-browser",
           "description_markdown": "MIT-licensed Playwright navigator with MCP, CLI, and library interfaces: Jev chooses DOM actions and judges goal/stuck state while code bounds the loop and returns a trace, final page, and screenshot; early software without iframe, shadow-DOM, or file-input support.",
           "permalink": "/projects/gh-jkudish-jev-browser/"
+        },
+        {
+          "name": "Jev Browser Use",
+          "url": "https://github.com/wy-coliney/jev-browser-use",
+          "description_markdown": "Codex Computer Use skill that sends an accessibility snapshot to TypeSafe or OpenRouter for Jev to choose among host-allowed clicks and scrolls while Codex handles typing and verifies outcomes; browser execution is validated only in Codex, page text leaves the browser, and the author's approximate speedup is not an independent benchmark.",
+          "permalink": "/projects/gh-wy-coliney-jev-browser-use/"
         },
         {
           "name": "Jev for Chrome",
