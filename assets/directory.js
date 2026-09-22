@@ -185,7 +185,7 @@
       section.setAttribute('aria-labelledby', 'recently-curated');
       const eyebrow = document.createElement('p');
       eyebrow.className = 'recent-picks__eyebrow';
-      eyebrow.textContent = 'NEW IN THE DIRECTORY / 22 SEPTEMBER';
+      eyebrow.textContent = 'NEW IN THE DIRECTORY';
       const title = document.createElement('h2');
       title.id = 'recently-curated';
       title.textContent = recentHeading.textContent.trim();
