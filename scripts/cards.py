@@ -65,10 +65,16 @@ def wrap(draw: ImageDraw.ImageDraw, value: str, face: ImageFont.FreeTypeFont,
     shown = lines[:limit]
     if not shown:
         return shown
-    last = shown[-1]
-    while last and draw.textlength(f"{last}…", font=face) > width:
-        last = last[:-1]
-    shown[-1] = f"{last.rstrip()}…"
+    original_last = shown[-1]
+    last_words = original_last.split()
+    while last_words and draw.textlength(f"{' '.join(last_words)}…", font=face) > width:
+        last_words.pop()
+    if last_words:
+        shown[-1] = f"{' '.join(last_words)}…"
+    else:
+        while original_last and draw.textlength(f"{original_last}…", font=face) > width:
+            original_last = original_last[:-1]
+        shown[-1] = f"{original_last.rstrip()}…"
     return shown
 
 

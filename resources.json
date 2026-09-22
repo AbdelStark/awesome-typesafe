@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-22",
-  "total_resources": 168,
+  "total_resources": 171,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -258,6 +258,12 @@
           "url": "https://github.com/evoke-build/evoke",
           "description_markdown": "Rust CLI and TypeScript SDK that ask Jev to select an installed reflex and bounded arguments, then gate the outcome in code as run, confirm, ask, or abstain. Reflexes fetched from Git run as your user without a sandbox, so inspect them before installing.",
           "permalink": "/projects/gh-evoke-build-evoke/"
+        },
+        {
+          "name": "Foreman",
+          "url": "https://github.com/thruwire/foreman",
+          "description_markdown": "Experimental Codex/OpenCode supervisor that sends bounded job, output, and diff context to Jev for progress checks; workers run locally without isolation, and judgment accuracy is unproven.",
+          "permalink": "/projects/gh-thruwire-foreman/"
         },
         {
           "name": "fx",
@@ -750,6 +756,12 @@
           "permalink": "/projects/gh-openbyteinc-quantdinger/"
         },
         {
+          "name": "Tax Document Classifier",
+          "url": "https://github.com/kyotofin/tax-doc-classifier",
+          "description_markdown": "Apache-licensed, text-only classifier for 261 federal tax forms that sends PDF text to Jev; the author reports no wrong labels on two test corpora but 38 low-confidence pages, without committed page-level results.",
+          "permalink": "/projects/gh-kyotofin-tax-doc-classifier/"
+        },
+        {
           "name": "TypeSafe Typewriter",
           "url": "https://typesafe-demo.val.run/",
           "description_markdown": "Live Val Town demo that updates 16 typed judgments as text changes.",
@@ -1004,6 +1016,12 @@
           "url": "https://github.com/TheoLeeCJ/SemIf",
           "description_markdown": "Independent open-model research baseline for direct typed option scoring; it reproduces the interface pattern, not Jev's undisclosed model or training.",
           "permalink": "/projects/gh-theoleecj-semif/"
+        },
+        {
+          "name": "Simple Jev",
+          "url": "https://github.com/featherless-ai/simple-jev",
+          "description_markdown": "Apache-licensed local server that scores Choice, Score, and Noul with open-model logits; tokenizer support and decision calibration vary by model.",
+          "permalink": "/projects/gh-featherless-ai-simple-jev/"
         },
         {
           "name": "TypeSafe AI Benchmark",
