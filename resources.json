@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-22",
-  "total_resources": 175,
+  "total_resources": 177,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -596,6 +596,12 @@
           "permalink": "/projects/gh-vercel-eve/"
         },
         {
+          "name": "VexJoy Agent",
+          "url": "https://github.com/notque/vexjoy-agent",
+          "description_markdown": "Cross-harness coding-agent toolkit whose `/d` path uses up to two Jev evaluations to select agents, skills, and a pipeline, then checks the proposed intent before dispatch; deterministic force-route rules bypass Jev. Request text goes to TypeSafe or Vercel AI Gateway, and the installer changes local agent configuration and hooks.",
+          "permalink": "/projects/gh-notque-vexjoy-agent/"
+        },
+        {
           "name": "wakegate",
           "url": "https://github.com/shitianfang/wakegate",
           "description_markdown": "Experimental TypeScript gate for long-running agents on Workers, Durable Objects, and Node: before a sleeping agent's LLM is resumed on a timer or incoming event, Jev answers one Choice (wake, not yet, unrelated) against the agent's own sleep note, and code skips the wakeup only below 0.2 on wake while always waking on user messages, bare timers, a skip limit, errors, and timeouts; its eval is 21 hand-written scenarios, not a benchmark.",
@@ -736,6 +742,12 @@
           "url": "https://github.com/aowang-ai/jev-trade",
           "description_markdown": "Live Hyperliquid desk across five isolated wallets: each tick packages book, tape, and position as state, Jev answers Choice questions for long/short, open/close/hold, and leverage, and application code places or pulls the quote (hold sends no order). Documents a dry-run path; a configured live key sends real testnet or mainnet orders. [Live demo](https://www.jev-trade.com/).",
           "permalink": "/projects/gh-aowang-ai-jev-trade/"
+        },
+        {
+          "name": "Jev Trader",
+          "url": "https://github.com/jarrodwatts/jev-trader",
+          "description_markdown": "Monad/Kuru MON-USDC bot that packages order-book and trade data for an opt-in Jev buy/sell Choice while code places post-only quotes; the default model and public demo use a mock dry-run, and configuring a private key can place real orders and consume gas. The stated block-time latency is measured with the mock model, not Jev.",
+          "permalink": "/projects/gh-jarrodwatts-jev-trader/"
         },
         {
           "name": "Jev Wrapped",
