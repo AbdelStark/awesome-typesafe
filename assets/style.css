@@ -441,8 +441,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .markdown-body > p:first-of-type { display: none; }
   .markdown-body > p.hero-claim { margin-top: 0; font-size: 1.7rem; }
   .markdown-body > p.hero-description { font-size: 1rem; line-height: 1.5; }
-  .markdown-body > p.quick-actions { flex-wrap: nowrap; overflow-x: auto; margin: 1rem 0 1.25rem; padding-bottom: .35rem; scroll-snap-type: x proximity; scrollbar-width: thin; }
-  .quick-actions a { flex: 0 0 auto; min-height: 2.75rem; padding: .55rem .6rem; scroll-snap-align: start; white-space: nowrap; font-size: .82rem; }
+  .markdown-body > p.quick-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; margin: 1rem 0 1.25rem; }
+  .quick-actions a { display: grid; align-items: center; min-height: 2.75rem; padding: .55rem .6rem; font-size: .82rem; line-height: 1.25; text-align: center; }
+  .quick-actions a:last-child { grid-column: 1 / -1; }
   .documented-example { display: flex; flex-direction: column; padding: 1rem; }
   .documented-example__heading p { margin-bottom: .5rem !important; }
   .documented-example__state { order: 1; margin-top: .45rem; padding: .7rem; }
