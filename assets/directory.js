@@ -25,6 +25,7 @@
 
   const projectPaths = new Map();
   const projectResources = new Map();
+  const projectResourcesByPath = new Map();
   try {
     const directoryUrl = new URL('resources.json', location.href);
     const buildVersion = document.currentScript?.dataset.directoryVersion;
@@ -38,6 +39,7 @@
           projectPaths.set(url, resource.permalink);
           const entry = { ...resource, category: category.name };
           projectResources.set(url, entry);
+          projectResourcesByPath.set(new URL(resource.permalink.replace(/^\//, ''), location.href).pathname, entry);
         }
       }
     }
@@ -158,6 +160,87 @@
     cards.addEventListener('scroll', updateNavigation, { passive: true });
     window.addEventListener('resize', updateNavigation);
     updateNavigation();
+  }
+
+  // The dated picks and their links live in README.md. Enrich only listings
+  // that the README-derived directory confirms still exist.
+  const recentHeading = article.querySelector('#recently-curated');
+  const recentIntro = recentHeading?.nextElementSibling;
+  const recentList = recentIntro?.nextElementSibling;
+  if (recentIntro?.tagName === 'P' && recentList?.tagName === 'UL') {
+    const items = [...recentList.children].filter((item) => item.tagName === 'LI');
+    const picks = items.map((item) => {
+      const link = item.querySelector('a[href]');
+      const resource = link && projectResourcesByPath.get(new URL(link.href).pathname);
+      if (!resource) return null;
+      return {
+        resource,
+        note: item.textContent.trim().slice(link.textContent.trim().length).replace(/^\s*[—-]\s*/, ''),
+      };
+    });
+    if (items.length && picks.every(Boolean)) {
+      const section = document.createElement('section');
+      section.className = 'recent-picks';
+      section.setAttribute('aria-labelledby', 'recently-curated');
+      const eyebrow = document.createElement('p');
+      eyebrow.className = 'recent-picks__eyebrow';
+      eyebrow.textContent = 'NEW IN THE DIRECTORY / 22 SEPTEMBER';
+      const title = document.createElement('h2');
+      title.id = 'recently-curated';
+      title.textContent = recentHeading.textContent.trim();
+      const intro = document.createElement('p');
+      intro.className = 'recent-picks__intro';
+      intro.textContent = recentIntro.textContent.trim();
+      const grid = document.createElement('div');
+      grid.className = 'recent-picks__grid';
+      for (const { resource, note } of picks) {
+        const card = document.createElement('article');
+        card.className = 'recent-picks__card';
+        const path = new URL(resource.permalink.replace(/^\//, ''), location.href);
+        const slug = resource.permalink.split('/').filter(Boolean).at(-1);
+        const imageLink = document.createElement('a');
+        imageLink.href = path.href;
+        imageLink.className = 'recent-picks__image';
+        imageLink.setAttribute('aria-label', `Read the Awesome Jev listing for ${resource.name}`);
+        const image = document.createElement('img');
+        image.src = new URL(`assets/cards/${slug}.png`, location.href).href;
+        image.alt = '';
+        image.width = 1200;
+        image.height = 630;
+        image.loading = 'lazy';
+        image.decoding = 'async';
+        imageLink.append(image);
+        const body = document.createElement('div');
+        body.className = 'recent-picks__body';
+        const category = document.createElement('p');
+        category.className = 'recent-picks__category';
+        category.textContent = resource.category;
+        const name = document.createElement('h3');
+        const nameLink = document.createElement('a');
+        nameLink.href = path.href;
+        nameLink.textContent = resource.name;
+        name.append(nameLink);
+        const detail = document.createElement('p');
+        detail.className = 'recent-picks__detail';
+        detail.textContent = note;
+        const actions = document.createElement('div');
+        actions.className = 'recent-picks__actions';
+        const listing = document.createElement('a');
+        listing.href = path.href;
+        listing.textContent = 'Read listing →';
+        const original = document.createElement('a');
+        original.href = resource.url;
+        original.textContent = 'Open original ↗';
+        actions.append(listing, original);
+        body.append(category, name, detail, actions);
+        card.append(imageLink, body);
+        grid.append(card);
+      }
+      section.append(eyebrow, title, intro, grid);
+      recentHeading.replaceWith(section);
+      recentIntro.remove();
+      recentList.remove();
+    }
   }
 
   // Present the README's four intent routes as cards on Pages. The table stays

@@ -37,6 +37,14 @@ Open a live build from a preview, or read its listing first.
   <a href="https://jevtown.ivanhabor.com"><img src="assets/previews/jevtown.svg" width="260" height="137" alt="Illustration of Jevtown: simulated audience groups around a post"></a>
 </div>
 
+## Recently curated
+
+Three additions from 22 September 2026. These are places to explore, not a ranking or endorsement; the full listings include limitations and source links.
+
+- [pg-jev](https://abdelstark.github.io/awesome-typesafe-jev/projects/gh-realzachi-pg-jev/) — Jev judgments over PostgreSQL rows; inspect the data transfer and superuser requirements.
+- [Kev](https://abdelstark.github.io/awesome-typesafe-jev/projects/gh-jaredpalmer-kev/) — Local Jev-style models with released weights and evaluation suites; compare on your own task.
+- [Jevals.com](https://abdelstark.github.io/awesome-typesafe-jev/projects/site-jevals-com/) — Independent hosted-model benchmark with public suites and per-decision logs; read the harness limits.
+
 | I want to… | Go here |
 | :--- | :--- |
 | Understand the idea in 2 minutes | See [where Jev fits](#choose-the-right-tool), [try the policy threshold](#try-a-policy-threshold), then read [the introduction](https://docs.typesafe.ai/introduction) and [the three primitives](https://docs.typesafe.ai/primitives) |
@@ -53,6 +61,7 @@ Last updated: 2026-09-22. Links and project descriptions change; please [report 
 ## Contents
 
 - [See Jev at work](#see-jev-at-work)
+- [Recently curated](#recently-curated)
 - [Start here](#start-here)
   - [Choose the right tool](#choose-the-right-tool)
   - [Choose where to call Jev](#choose-where-to-call-jev)
