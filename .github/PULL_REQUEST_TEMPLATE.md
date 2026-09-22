@@ -22,5 +22,6 @@
 - [ ] The entry is in exactly one section and alphabetized by display name.
 - [ ] The description is factual, concise, and free of star counts or promotional superlatives.
 - [ ] Source code has a license and does not instruct users to commit credentials.
-- [ ] I installed `scripts/requirements.txt`, ran `python3 scripts/export.py` after changing a community entry, and committed the generated `resources.json`, `projects/*.html`, and `assets/cards/*.png` changes.
-- [ ] I ran `python3 scripts/check.py` and `python3 scripts/export.py --check`.
+- [ ] I edited the canonical README entry rather than a generated project page or card.
+
+For an initial resource submission, a README-only pull request is enough. CI validates the derived pages and cards; a maintainer commits them before merging. Local checks are welcome but optional for contributors.

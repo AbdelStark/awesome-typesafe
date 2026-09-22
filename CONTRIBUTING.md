@@ -34,7 +34,9 @@ The [live listing builder](https://abdelstark.github.io/awesome-typesafe-jev/#bu
    - [Project name](https://example.com) — What it does, what is distinctive, and any limitation a reader needs to know.
    ```
 
-5. Run the local checks:
+5. Open a pull request with the `README.md` edit. You do not need to install Python or commit generated files for the initial review. CI verifies that the directory, pages, and cards can be generated from your README change; a maintainer adds those artifacts before merging. Category introductions also live in the README. Do not edit generated files by hand.
+
+   If you want to preview and check the generated output locally, run:
 
    ```bash
    python3 -m pip install -r scripts/requirements.txt
@@ -43,9 +45,11 @@ The [live listing builder](https://abdelstark.github.io/awesome-typesafe-jev/#bu
    python3 scripts/check.py
    ```
 
-   Commit `resources.json`, changed `projects/*.html` and `categories/*.html` pages, and changed `assets/cards/*.png` images with `README.md`. All are generated from the README; edit only the README entry by hand. Category introductions also live in the README. Use a virtual environment if your Python installation does not allow global package installs.
+   You may include the generated files in your pull request. Use a virtual environment if your Python installation does not allow global package installs.
 
 6. In the pull request, explain why the resource belongs and disclose whether you maintain or are affiliated with it.
+
+Before merging a README-only pull request, maintainers run `python3 scripts/export.py`, commit the changed `resources.json`, project and category pages, and social cards, then run `python3 scripts/export.py --check` and `python3 scripts/check.py`. Pushes to `main` require those committed artifacts to match the README exactly.
 
 Please do not add star counts, follower counts, or speed claims to the description. Those values drift quickly. Link to the project's evidence instead.
 

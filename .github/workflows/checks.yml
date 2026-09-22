@@ -30,7 +30,15 @@ jobs:
       - name: Check discovery sampling
         run: python3 -m unittest discover -s tests -p 'test_discover.py'
 
-      - name: Verify README-derived directory and social cards
+      - name: Render README-derived directory and social cards for pull requests
+        if: github.event_name == 'pull_request'
+        run: |
+          python3 scripts/export.py
+          python3 scripts/export.py --check
+          git status --short -- resources.json projects categories assets/cards assets/category-cards assets/jev-example.png
+
+      - name: Verify committed README-derived directory and social cards
+        if: github.event_name != 'pull_request'
         run: python3 scripts/export.py --check
 
       - name: Check site JavaScript

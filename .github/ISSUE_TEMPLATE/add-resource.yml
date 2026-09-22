@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Ready to add the entry yourself? [Edit README.md](https://github.com/AbdelStark/awesome-typesafe-jev/edit/main/README.md) and open a pull request using the [contribution guide](https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/CONTRIBUTING.md). That is the fastest path to a listing and contributor credit.
+        Ready to add the entry yourself? [Edit README.md](https://github.com/AbdelStark/awesome-typesafe-jev/edit/main/README.md) and open a pull request using the [contribution guide](https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/CONTRIBUTING.md). You only need to edit the README; CI validates the derived pages and images, and a maintainer adds them before merging. That is the fastest path to a listing and contributor credit.
 
         Use this form to nominate a resource when you cannot send a pull request. Suggestions are reviewed against the same inclusion rules and may need follow-up evidence.
 
