@@ -227,6 +227,40 @@
     }
   }
 
+  // Keep the README table canonical and show its provider paths as cards on Pages.
+  const accessHeading = article.querySelector('#choose-where-to-call-jev');
+  let accessTable = accessHeading?.nextElementSibling;
+  while (accessTable && !['TABLE', 'H2', 'H3'].includes(accessTable.tagName)) {
+    accessTable = accessTable.nextElementSibling;
+  }
+  if (accessTable?.tagName === 'TABLE') {
+    const rows = [...accessTable.tBodies[0].rows].filter((row) => row.cells.length === 3);
+    if (rows.length) {
+      const grid = document.createElement('div');
+      grid.className = 'access-paths';
+      for (const [index, row] of rows.entries()) {
+        const card = document.createElement('article');
+        card.className = 'access-paths__card';
+        const number = document.createElement('span');
+        number.className = 'access-paths__number';
+        number.textContent = `ROUTE ${String(index + 1).padStart(2, '0')}`;
+        const title = document.createElement('h4');
+        title.append(...[...row.cells[0].childNodes].map((node) => node.cloneNode(true)));
+        const way = document.createElement('p');
+        way.className = 'access-paths__way';
+        way.append(...[...row.cells[1].childNodes].map((node) => node.cloneNode(true)));
+        const checkLabel = document.createElement('strong');
+        checkLabel.textContent = 'Before using it';
+        const check = document.createElement('p');
+        check.className = 'access-paths__check';
+        check.append(...[...row.cells[2].childNodes].map((node) => node.cloneNode(true)));
+        card.append(number, title, way, checkLabel, check);
+        grid.append(card);
+      }
+      accessTable.replaceWith(grid);
+    }
+  }
+
   const evidenceHeading = article.querySelector('#before-you-trust-a-decision');
   let evidenceTable = evidenceHeading?.nextElementSibling;
   while (evidenceTable && !['TABLE', 'H2', 'H3'].includes(evidenceTable.tagName)) {

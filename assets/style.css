@@ -161,6 +161,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .tool-fit__job { margin: 0 0 1.1rem !important; color: var(--text); font-weight: 700; line-height: 1.4; }
 .tool-fit__example { margin: 0 !important; padding-top: .75rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .87rem; line-height: 1.55; }
 
+.access-paths { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: .75rem; margin: 1.35rem 0 1.5rem; }
+.access-paths__card { display: flex; flex-direction: column; min-width: 0; padding: 1.1rem 1.25rem; border: 1px solid #536d72; border-radius: .6rem; background: linear-gradient(145deg, #1a3038, var(--panel) 70%); }
+.access-paths__card:first-child { border-color: var(--mint); background: linear-gradient(145deg, #204139, var(--panel) 72%); }
+.access-paths__card:hover { border-color: var(--mint); }
+.access-paths__number { color: var(--gold); font: 700 .7rem/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .08em; }
+.access-paths h4 { margin: .4rem 0 .6rem; font-size: 1.3rem; line-height: 1.25; letter-spacing: -.03em; }
+.access-paths h4 a { color: var(--text); text-decoration: none; }
+.access-paths h4 a:hover { color: var(--mint); text-decoration: underline; }
+.access-paths__way { margin: 0 0 1rem !important; color: var(--text); font-size: .88rem; line-height: 1.5; }
+.access-paths__card > strong { margin-top: auto; padding-top: .7rem; border-top: 1px solid var(--line); color: var(--mint); font-size: .7rem; letter-spacing: .04em; text-transform: uppercase; }
+.access-paths__check { margin: .35rem 0 0 !important; color: var(--muted); font-size: .82rem; line-height: 1.5; }
+
 .field-evidence { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin: 1.3rem 0 1.5rem; }
 .field-evidence__card { min-width: 0; padding: 1.2rem 1.35rem; border: 1px solid #536d72; border-radius: .55rem; background: var(--panel); overflow-wrap: anywhere; }
 .field-evidence__card:last-child:nth-child(odd) { grid-column: 1 / -1; }

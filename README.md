@@ -55,6 +55,7 @@ Last updated: 2026-09-22. Links and project descriptions change; please [report 
 - [See Jev at work](#see-jev-at-work)
 - [Start here](#start-here)
   - [Choose the right tool](#choose-the-right-tool)
+  - [Choose where to call Jev](#choose-where-to-call-jev)
   - [Make your first decision](#make-your-first-decision)
   - [Shape a typed question](#shape-a-typed-question)
   - [Try a policy threshold](#try-a-policy-threshold)
@@ -105,6 +106,20 @@ One state can answer several focused questions in the same request. Pick the ans
 | **Score** | An ordered rubric, such as calm, concerned, or angry. | A position on your rubric, probabilities over its levels, and confidence. |
 
 Ask independent questions together. Set thresholds, fallback behavior, and side effects in application code.
+
+### Choose where to call Jev
+
+The typed decision is the common idea; the client, model name, authentication, and billing depend on the route. Start with the direct API below if you want TypeSafe's documented `systemOne` contract, or follow the platform guide for an app already running there.
+
+| Route | Documented way in | Check before using it |
+| :--- | :--- | :--- |
+| [TypeSafe direct](#make-your-first-decision) | Official JavaScript or Python SDK with a TypeSafe API key. | The runnable example below uses this route and sends its state to TypeSafe. |
+| [Cloudflare Workers AI](https://developers.cloudflare.com/ai/models/typesafe/jev/) | Run `typesafe/jev` with a Workers AI binding or Cloudflare API call. | Use Cloudflare's request shape and credentials; its model page labels Jev as a third-party model. |
+| [Netlify AI Gateway](https://docs.netlify.com/build/ai-gateway/overview/) | Use the official TypeSafe JavaScript SDK from a Netlify Function or Edge Function; the gateway supplies its environment configuration when enabled. | Follow Netlify's plan and key-override rules. This is a server-side path, not a browser key. |
+| [Vercel AI Gateway](https://vercel.com/changelog/typesafe-ai-jev-now-available-on-ai-gateway) | AI SDK's experimental `evaluate` with `typesafe-ai/jev`. | Its Boolean question maps to Jev's Noul; the AI SDK interface differs from `systemOne`. |
+| [OpenRouter](https://openrouter.ai/labs/jev/compile) | OpenRouter's decisions API with `typesafe/jev-1.13` or its latest-model route. | Use an OpenRouter key and its decisions request shape; do not send these questions to a chat-completions API. |
+
+These are documented access paths, not equivalent SDKs or claims about price, latency, or reliability. Check the linked provider page before deploying because availability and terms change.
 
 ### Make your first decision
 
@@ -192,6 +207,7 @@ For a comparison across decision models, [JevBench's method](https://github.com/
 - [JavaScript SDK](https://github.com/typesafe-ai/typesafe-sdk-js) — Official JavaScript and TypeScript client with inferred answer types.
 - [Python SDK](https://github.com/typesafe-ai/typesafe-sdk-python) — Official synchronous and asynchronous Python client.
 - [System One Adapter](https://github.com/typesafe-ai/system-one-adapter-python) — Drop-in Python adapter for running the same typed interface over OpenAI, Anthropic, and OpenAI-compatible LLM APIs.
+- [Ax TypeSafe integration](https://axllm.dev/typescript/skills/ax-typesafe/) — Provider-maintained TypeScript integration for Boolean and class signatures, plus native Noul, Choice, and Score questions when probabilities or criteria matter.
 - [TypeSafe Agent Skills](https://github.com/typesafe-ai/skills) — Official agent skill for designing TypeSafe workflows from Claude Code, Codex, and other skill-compatible agents.
 - [TypeSafe GitHub organization](https://github.com/typesafe-ai) — Source repositories maintained by TypeSafe.
 
