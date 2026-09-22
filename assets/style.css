@@ -161,8 +161,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .tool-fit__job { margin: 0 0 1.1rem !important; color: var(--text); font-weight: 700; line-height: 1.4; }
 .tool-fit__example { margin: 0 !important; padding-top: .75rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .87rem; line-height: 1.55; }
 
-.access-paths { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: .75rem; margin: 1.35rem 0 1.5rem; }
-.access-paths__card { display: flex; flex-direction: column; min-width: 0; padding: 1.1rem 1.25rem; border: 1px solid #536d72; border-radius: .6rem; background: linear-gradient(145deg, #1a3038, var(--panel) 70%); }
+.access-paths { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: .75rem; margin: 1.35rem 0 1.5rem; }
+.access-paths__card { display: flex; flex-direction: column; grid-column: span 2; min-width: 0; padding: 1.1rem 1.25rem; border: 1px solid #536d72; border-radius: .6rem; background: linear-gradient(145deg, #1a3038, var(--panel) 70%); }
+.access-paths__card:nth-last-child(2), .access-paths__card:last-child { grid-column: span 3; }
 .access-paths__card:first-child { border-color: var(--mint); background: linear-gradient(145deg, #204139, var(--panel) 72%); }
 .access-paths__card:hover { border-color: var(--mint); }
 .access-paths__number { color: var(--gold); font: 700 .7rem/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .08em; }
@@ -422,6 +423,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .not-found h1 { font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1; letter-spacing: -.06em; }
 
 @media (max-width: 800px) {
+  .access-paths { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .access-paths__card, .access-paths__card:nth-last-child(2) { grid-column: auto; }
+  .access-paths__card:last-child { grid-column: 1 / -1; }
   .site-nav__section, .site-nav__external { display: none; }
   .documented-example__answers { grid-template-columns: 1fr; }
   .tool-fit { grid-template-columns: 1fr; }
@@ -449,6 +453,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .markdown-body #contents + ul { columns: 1; }
 }
 @media (max-width: 620px) {
+  .access-paths { grid-template-columns: 1fr; }
+  .access-paths__card:last-child { grid-column: auto; }
   .markdown-body > h1:first-child { font-size: 2.45rem; letter-spacing: -.035em; }
   .markdown-body > p:first-of-type { display: none; }
   .markdown-body > p.hero-claim { margin-top: 0; font-size: 1.7rem; }
