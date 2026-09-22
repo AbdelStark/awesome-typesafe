@@ -78,20 +78,20 @@ def render_card(model: str, values: dict[str, tuple[str, str]]) -> bytes:
     draw.text((36, 67), "One request. Three typed answers.", font=font(44, 750), fill="#f1f8f6")
     draw.text((38, 126), "Saved TypeSafe quick-start response. No model request is made here.", font=font(19), fill="#b0c0c8")
 
+    draw.rounded_rectangle((36, 160, 1164, 244), radius=12, fill="#14202a", outline="#354c53", width=2)
+    draw.text((54, 171), "INPUT / SUPPORT MESSAGE", font=font(15, mono=True), fill=MINT)
+    for index, line in enumerate(wrap(draw, values["State"][0], font(18), 1092, 2)):
+        draw.text((54, 195 + index * 22), line, font=font(18), fill="#d9e6e6")
+
     for index, kind in enumerate(KINDS[1:]):
         left = 36 + index * 376
         right = left + 360
-        draw.rounded_rectangle((left, 168, right, 302), radius=12, fill="#1b3338", outline="#557873", width=2)
+        draw.rounded_rectangle((left, 260, right, 394), radius=12, fill="#1b3338", outline="#557873", width=2)
         primary, detail = values[kind]
-        draw.text((left + 18, 184), kind.upper(), font=font(16, mono=True), fill="#8de8ee")
-        draw.text((left + 18, 210), primary, font=font(42, 750), fill="#f1f8f6")
+        draw.text((left + 18, 276), kind.upper(), font=font(16, mono=True), fill="#8de8ee")
+        draw.text((left + 18, 302), primary, font=font(42, 750), fill="#f1f8f6")
         for line_index, line in enumerate(wrap(draw, detail, font(17), 324, 2)):
-            draw.text((left + 18, 256 + line_index * 21), line, font=font(17), fill="#b0c0c8")
-
-    draw.line((36, 319, 1164, 319), fill="#354c53", width=2)
-    draw.text((36, 334), "INPUT / SUPPORT MESSAGE", font=font(15, mono=True), fill=MINT)
-    for index, line in enumerate(wrap(draw, values["State"][0], font(18), 1128, 2)):
-        draw.text((36, 355 + index * 22), line, font=font(18), fill="#d9e6e6")
+            draw.text((left + 18, 348 + line_index * 21), line, font=font(17), fill="#b0c0c8")
 
     metadata = PngInfo()
     metadata.add_text("source_sha256", fingerprint(model, values))
