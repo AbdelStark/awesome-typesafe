@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-22",
-  "total_resources": 183,
+  "total_resources": 184,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -1046,6 +1046,12 @@
           "url": "https://github.com/Yinsongxu/LLM2Jev",
           "description_markdown": "Apache-licensed local toolkit that reads causal-model logits for Choice, Score, and Noul answers through Transformers or SGLang, with a System One-shaped HTTP endpoint, web and Snake demos, and shared-prefix cache measurements. Its published performance benchmark compares cache modes on one model and GPU, not decision quality against Jev.",
           "permalink": "/projects/gh-yinsongxu-llm2jev/"
+        },
+        {
+          "name": "Love-Language Arena",
+          "url": "https://github.com/shentonyan/love-arena-v2",
+          "description_markdown": "Experimental local reproduction of the Choice, Score, and Noul pattern on Ollama logprobs, with order-reversed and negated re-asks to expose position bias, used to test three open models as fully crossed judges of Chinese and English rewrites, with self-preference correction, per-judge Platt calibration, dev/holdout prompt selection, and raw per-call JSONL. It does not call Jev, and its validation labels are Claude-generated rather than human, so the judge pass rates and model ranking show that the pipeline runs, not that the judges are valid.",
+          "permalink": "/projects/gh-shentonyan-love-arena-v2/"
         },
         {
           "name": "Luce",
