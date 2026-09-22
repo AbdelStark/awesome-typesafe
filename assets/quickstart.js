@@ -18,6 +18,7 @@
 
   const shell = document.createElement('div');
   shell.className = 'quickstart';
+  sections[0].heading.before(shell);
   const toolbar = document.createElement('div');
   toolbar.className = 'quickstart__toolbar';
   const label = document.createElement('span');
@@ -78,5 +79,4 @@
   });
   toolbar.append(label, tablist);
   shell.append(toolbar, ...panels);
-  heading.nextElementSibling?.before(shell);
 })();
