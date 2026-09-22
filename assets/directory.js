@@ -17,7 +17,8 @@
       const items = [...node.children].filter((child) => child.tagName === 'LI');
       node.classList.add('resource-list');
       heading.classList.add('resource-heading');
-      sections.push({ heading, list: node, items });
+      const intro = heading.nextElementSibling;
+      sections.push({ heading, intro: intro?.tagName === 'P' ? intro : null, list: node, items });
       heading = null;
     }
   }
@@ -796,6 +797,7 @@
         }
       }
       section.heading.hidden = visibleInSection === 0;
+      if (section.intro) section.intro.hidden = visibleInSection === 0;
       section.list.hidden = visibleInSection === 0;
     }
     status.textContent = `Showing ${shown} of ${total} community projects`;
