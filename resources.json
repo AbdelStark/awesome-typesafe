@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-22",
-  "total_resources": 174,
+  "total_resources": 175,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -462,6 +462,12 @@
           "url": "https://github.com/andududu/jeview",
           "description_markdown": "Experimental unofficial loopback proxy and live map of Jev calls, grouping decisions by project and linking later calls to earlier answers; it forwards requests to TypeSafe and stores requests, responses, and the API key in local SQLite (the key in plaintext), so keep it off public addresses.",
           "permalink": "/projects/gh-andududu-jeview/"
+        },
+        {
+          "name": "JevLoop (Python)",
+          "url": "https://github.com/parkavenue9639/jevloop",
+          "description_markdown": "Experimental Python agent runtime where Jev selects typed actions and targets, low-confidence decisions can trigger LLM arbitration, and a shared guarded kernel executes file and shell operations in Docker sandboxes; task and tool context are sent to the configured model providers.",
+          "permalink": "/projects/gh-parkavenue9639-jevloop/"
         },
         {
           "name": "Jevonian",

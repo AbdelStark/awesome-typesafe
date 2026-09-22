@@ -634,6 +634,24 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "parkavenue9639",
+      "name": "Lu Chong",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92194680",
+      "profile": "https://github.com/parkavenue9639",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "ruban-24",
+      "name": "Ruban",
+      "avatar_url": "https://avatars.githubusercontent.com/u/167326848",
+      "profile": "https://github.com/ruban-24",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-9de3bc.svg?style=flat-square)](#contributors)"
