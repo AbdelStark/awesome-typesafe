@@ -44,6 +44,17 @@
       ]}
     </script>
     {% endif %}
+    {% if page.layout == 'category' %}
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"CollectionPage",
+       "name":{{ page.category_name | jsonify }},
+       "description":{{ page.description | jsonify }},
+       "url":{{ page.url | absolute_url | jsonify }},
+       "mainEntity":{"@type":"ItemList","numberOfItems":{{ page.resources.size }},"itemListElement":[
+         {% for resource in page.resources %}{"@type":"ListItem","position":{{ forloop.index }},"url":{{ resource.permalink | absolute_url | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}
+       ]}}
+    </script>
+    {% endif %}
     {% if page.layout == 'resource' or page.layout == 'category' %}
     <script src="{{ '/assets/resource.js' | relative_url }}?v={{ asset_version }}" defer></script>
     {% elsif page.url == '/' %}
