@@ -149,8 +149,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .recent-picks__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; }
 .recent-picks__card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid #4f7271; border-radius: .6rem; background: var(--panel); }
 .recent-picks__card:hover { border-color: var(--mint); }
-.recent-picks__image { display: block; border-bottom: 1px solid var(--line); }
-.recent-picks__image img { display: block; width: 100%; height: auto; }
+.recent-picks__image { display: block; height: 7.25rem; overflow: hidden; border-bottom: 1px solid var(--line); }
+.recent-picks__image img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 39%; }
 .recent-picks__body { display: flex; flex: 1; flex-direction: column; min-width: 0; padding: .85rem 1rem 1rem; }
 .recent-picks__category { margin: 0 0 .25rem !important; color: var(--mint); font: 700 .68rem/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .05em; text-transform: uppercase; }
 .recent-picks h3 { margin: 0 0 .35rem; font-size: 1.2rem; }
