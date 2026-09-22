@@ -132,6 +132,10 @@ These are documented access paths, not equivalent SDKs or claims about price, la
 
 ### Make your first decision
 
+Pick JavaScript or Python. Both examples send a synthetic support ticket to TypeSafe's API and return a Choice and a Noul. Jev returns typed answers; the `0.9` routing rule is ordinary application code. It is an illustrative threshold, not a measured or recommended operating point.
+
+#### JavaScript
+
 Install the [official JavaScript SDK](#sdks-and-developer-tools) with `npm install @typesafe-ai/sdk` (Node.js 20+), set `TYPESAFE_API_KEY` in your environment, save this as `first-decision.mjs`, then run `node first-decision.mjs`:
 
 ```js
@@ -156,7 +160,39 @@ const action = team !== 'other' && probability >= 0.9
 console.log({ team, probability, refundProbability: answers.refund.noul, action });
 ```
 
-Jev returns the typed answers; the `0.9` routing rule is ordinary application code. It is an illustrative threshold, not a measured or recommended operating point. The ticket text is sent to TypeSafe's API; use a synthetic ticket for this first call.
+#### Python
+
+Install the [official Python SDK](#sdks-and-developer-tools) with `python3 -m pip install typesafe-sdk` (Python 3.10+), set `TYPESAFE_API_KEY` in your environment, save this as `first_decision.py`, then run `python3 first_decision.py`:
+
+```python
+from typesafe_sdk import Choice, Noul, TypeSafeClient
+
+with TypeSafeClient() as client:
+    result = client.system_one(
+        state={"ticket": "I was charged twice. Please refund the extra payment."},
+        questions={
+            "team": Choice(
+                instructions="Which team should handle this ticket?",
+                criteria={
+                    "billing": "Payments and refunds",
+                    "technical": "Bugs and integrations",
+                    "other": "None of the above",
+                },
+            ),
+            "refund": Noul(instructions="Does the customer explicitly request a refund?"),
+        },
+    )
+
+team = result.choices["team"].choice
+probability = result.choices["team"].probabilities[team]
+action = f"route to {team}" if team != "other" and probability >= 0.9 else "send to review"
+print({
+    "team": team,
+    "probability": probability,
+    "refund_probability": result.nouls["refund"].noul,
+    "action": action,
+})
+```
 
 ### Shape a typed question
 

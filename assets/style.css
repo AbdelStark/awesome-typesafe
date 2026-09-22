@@ -105,6 +105,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .markdown-body img { max-width: 100%; height: auto; }
 .markdown-body hr { height: 1px; margin: 2rem 0; border: 0; background: var(--line); }
 
+.quickstart { margin: 1.35rem 0 1.8rem; border: 1px solid #557873; border-radius: .65rem; background: #101a25; overflow: hidden; }
+.quickstart__toolbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem 1rem; padding: .7rem 1rem; border-bottom: 1px solid var(--line); background: #1b3338; }
+.quickstart__label { color: var(--mint); font: 700 .68rem/1.4 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .1em; }
+.quickstart__tabs { display: flex; gap: .3rem; padding: .2rem; border: 1px solid var(--line); border-radius: .4rem; background: #101a25; }
+.quickstart__tabs button { padding: .42rem .8rem; border: 0; border-radius: .27rem; background: transparent; color: var(--muted); font-family: inherit; font-size: .8rem; font-weight: 700; line-height: 1.2; cursor: pointer; }
+.quickstart__tabs button:hover { color: #fff; }
+.quickstart__tabs button[aria-selected="true"] { background: var(--mint); color: #0b1820; }
+.quickstart__panel { padding: 1rem clamp(.8rem, 2.5vw, 1.5rem) 1.3rem; }
+.markdown-body .quickstart__panel h4 { margin: .1rem 0 .5rem; color: var(--text); font-size: 1.05rem; }
+.markdown-body .quickstart__panel p { margin: .35rem 0 .95rem; color: var(--muted); font-size: .88rem; }
+.markdown-body .quickstart__panel pre { margin: 0; border-color: var(--line); background: #0c1520; }
+
 .documented-example { margin: 1.35rem 0 2.1rem; padding: clamp(1.1rem, 3vw, 1.8rem); border: 1px solid #648b82; border-radius: .8rem; background: radial-gradient(circle at 92% 0, #284344, transparent 35rem), #14202c; }
 .documented-example__heading > span, .documented-example__state > span { color: var(--mint); font: 700 .7rem/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .08em; }
 .documented-example h2 { margin: .3rem 0 .35rem; padding: 0; border: 0; font-size: clamp(1.65rem, 3vw, 2.35rem); }
