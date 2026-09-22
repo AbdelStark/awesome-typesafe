@@ -53,7 +53,15 @@
       }
       return;
     }
-    const matches = entries.filter((entry) => terms.every((term) => entry.search.includes(term)));
+    const normalizedQuery = normalize(query);
+    const rank = (entry) =>
+      (entry.nameSearch === normalizedQuery ? 100 : 0) +
+      (entry.nameSearch.startsWith(normalizedQuery) ? 50 : 0) +
+      (entry.nameSearch.includes(normalizedQuery) ? 25 : 0) +
+      terms.filter((term) => entry.nameSearch.includes(term)).length * 10;
+    const matches = entries
+      .filter((entry) => terms.every((term) => entry.search.includes(term)))
+      .sort((left, right) => rank(right) - rank(left) || left.name.localeCompare(right.name));
     status.textContent = matches.length
       ? `${matches.length} of ${entries.length} projects match “${query}”.`
       : `No projects match “${query}”. Try another term.`;
@@ -90,6 +98,7 @@
       entries = categories.flatMap((category) => category.resources.map((resource) => ({
         ...resource,
         category: category.name,
+        nameSearch: normalize(resource.name),
         search: normalize(`${category.name} ${resource.name} ${plain(resource.description_markdown)}`),
       })));
       update();
