@@ -727,7 +727,7 @@
         },
         {
           "name": "Jev Chat Assistant",
-          "url": "https://github.com/Finderchangchang/jev-chat-JARVIS",
+          "url": "https://github.com/jev-chat/jev-chat-jarvis",
           "description_markdown": "Android overlay that reads visible WeChat, QQ, and X conversations through accessibility, asks Jev for typed intent and action judgments, has a text model draft three replies, and can fill a selected reply without sending it; device tests are author-reported, Lark capture is partial, and chat content goes to the configured model APIs.",
           "permalink": "/projects/gh-finderchangchang-jev-chat-jarvis/"
         },

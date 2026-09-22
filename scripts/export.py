@@ -25,9 +25,15 @@ CARDS_DIR = ROOT / "assets" / "cards"
 CATEGORY_CARDS_DIR = ROOT / "assets" / "category-cards"
 EXAMPLE_CARD = ROOT / "assets" / "jev-example.png"
 ENTRY = re.compile(r"^- \[([^]]+)]\((https://[^)]+)\) — (.+)$")
+PERMALINK_OVERRIDES = {
+    # The repository moved; keep previously shared project pages and cards live.
+    "https://github.com/jev-chat/jev-chat-jarvis": "gh-finderchangchang-jev-chat-jarvis",
+}
 
 
 def project_slug(url: str) -> str:
+    if url in PERMALINK_OVERRIDES:
+        return PERMALINK_OVERRIDES[url]
     parsed = urlsplit(url)
     host = (parsed.hostname or "").lower()
     path = parsed.path.strip("/").replace("/", "-")
