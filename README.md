@@ -14,7 +14,7 @@
 
 <p class="quick-actions"><a href="https://abdelstark.github.io/awesome-typesafe-jev/#see-jev-at-work">Try a live build</a> <span class="quick-action-separator" aria-hidden="true">·</span> <a href="https://abdelstark.github.io/awesome-typesafe-jev/#shape-a-typed-question">Shape a decision</a> <span class="quick-action-separator" aria-hidden="true">·</span> <a href="https://abdelstark.github.io/awesome-typesafe-jev/#community-projects">Explore projects</a> <span class="quick-action-separator" aria-hidden="true">·</span> <a href="https://abdelstark.github.io/awesome-typesafe-jev/#build-a-listing">Add your project</a> <span class="quick-action-separator" aria-hidden="true">·</span> <a href="https://github.com/AbdelStark/awesome-typesafe-jev">Star on GitHub</a></p>
 
-<p class="hero-example"><img src="assets/jev-example.png" width="1200" height="420" alt="Saved Jev quick-start response showing Choice, Score, Noul, and the support message. The documented values appear in the table below."></p>
+<p class="hero-example"><img src="assets/jev-example.png?v=20260922-input-first" width="1200" height="420" alt="Saved Jev quick-start response showing the support message before Choice, Score, and Noul. The documented values appear in the table below."></p>
 
 <p class="hero-map"><a href="https://abdelstark.github.io/awesome-typesafe-jev/#community-projects"><picture><source media="(max-width: 640px)" srcset="https://abdelstark.github.io/awesome-typesafe-jev/assets/jev-map-mobile.svg?v=20260921-flow" width="400" height="380"><img src="assets/jev-map.svg" width="1200" height="420" alt="A visual map of Jev: context enters a typed judgment, then application code decides what happens. Explore the directory."></picture></a></p>
 
