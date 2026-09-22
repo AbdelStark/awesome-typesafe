@@ -380,6 +380,10 @@
   const normalizeSearch = (value) => value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase();
   const itemText = new WeakMap();
   const resourceItems = new Map();
+  const savedCatalog = new Map();
+  const savedItems = new Map();
+  const saveButtons = new Map();
+  let renderReadingList = () => {};
   for (const section of sections) {
     for (const item of section.items) {
       itemText.set(item, normalizeSearch(`${section.heading.textContent} ${item.textContent}`));
@@ -438,6 +442,28 @@
       const actions = document.createElement('div');
       actions.className = 'resource-actions';
       actions.append(link);
+      if (projectPath) {
+        const slug = projectPath.split('/').filter(Boolean).at(-1);
+        savedCatalog.set(slug, {
+          name: source.textContent.trim(),
+          category: section.heading.textContent.trim(),
+          description: plain,
+          permalink: permalink.href,
+        });
+        const save = document.createElement('button');
+        save.type = 'button';
+        save.className = 'resource-save';
+        save.textContent = 'Save';
+        save.setAttribute('aria-label', `Save ${source.textContent.trim()} to a reading list`);
+        save.setAttribute('aria-pressed', 'false');
+        save.addEventListener('click', () => {
+          if (savedItems.has(slug)) savedItems.delete(slug);
+          else if (savedItems.size < 8) savedItems.set(slug, savedCatalog.get(slug));
+          renderReadingList();
+        });
+        actions.append(save);
+        saveButtons.set(slug, save);
+      }
       if (navigator.clipboard?.writeText) {
         const badge = document.createElement('button');
         badge.type = 'button';
@@ -470,7 +496,7 @@
   categoryTitle.textContent = 'Find a project';
   const hint = document.createElement('p');
   hint.className = 'directory-tools__hint';
-  hint.textContent = 'Search names and use cases with words in any order, or choose a category. Each listing has a shareable page.';
+  hint.textContent = 'Search names and use cases with words in any order, or choose a category. Save up to eight projects to share a reading list.';
   const categoryGrid = document.createElement('div');
   categoryGrid.className = 'category-grid';
   categoryGrid.setAttribute('role', 'group');
@@ -601,6 +627,137 @@
   start.after(tools);
 
   const params = new URLSearchParams(location.search);
+  if (savedCatalog.size && typeof HTMLDialogElement !== 'undefined') {
+    const bar = document.createElement('button');
+    bar.type = 'button';
+    bar.className = 'reading-list-bar';
+    bar.hidden = true;
+    const dialog = document.createElement('dialog');
+    dialog.className = 'reading-list';
+    dialog.setAttribute('aria-labelledby', 'reading-list-title');
+    const header = document.createElement('div');
+    header.className = 'reading-list__header';
+    const title = document.createElement('h2');
+    title.id = 'reading-list-title';
+    title.textContent = 'Your Jev reading list';
+    const close = document.createElement('button');
+    close.type = 'button';
+    close.className = 'reading-list__close';
+    close.textContent = 'Close';
+    close.addEventListener('click', () => dialog.close());
+    header.append(title, close);
+    const intro = document.createElement('p');
+    intro.className = 'reading-list__intro';
+    intro.textContent = 'Save up to eight listings, then share a link to this selection. Every entry comes from the README.';
+    const list = document.createElement('ul');
+    list.className = 'reading-list__items';
+    const empty = document.createElement('p');
+    empty.className = 'reading-list__empty';
+    empty.textContent = 'Save a project from the directory to start a reading list.';
+    const actions = document.createElement('div');
+    actions.className = 'reading-list__actions';
+    const copy = document.createElement('button');
+    copy.type = 'button';
+    copy.textContent = 'Copy list link';
+    copy.hidden = !navigator.clipboard?.writeText;
+    const nativeShare = document.createElement('button');
+    nativeShare.type = 'button';
+    nativeShare.textContent = 'Share list';
+    nativeShare.hidden = !navigator.share;
+    const clear = document.createElement('button');
+    clear.type = 'button';
+    clear.textContent = 'Clear list';
+    const message = document.createElement('p');
+    message.className = 'reading-list__message';
+    message.setAttribute('role', 'status');
+    message.setAttribute('aria-live', 'polite');
+    const listUrl = () => {
+      const url = new URL(location.pathname, location.origin);
+      url.searchParams.set('list', [...savedItems.keys()].join(','));
+      url.hash = 'community-projects';
+      return url.href;
+    };
+    renderReadingList = (writeUrl = true) => {
+      for (const [slug, button] of saveButtons) {
+        const selected = savedItems.has(slug);
+        button.textContent = selected ? 'Saved ✓' : 'Save';
+        button.setAttribute('aria-pressed', String(selected));
+        button.setAttribute('aria-label', `${selected ? 'Remove' : 'Save'} ${savedCatalog.get(slug).name} ${selected ? 'from' : 'to'} the reading list`);
+        button.disabled = !selected && savedItems.size >= 8;
+      }
+      bar.hidden = savedItems.size === 0;
+      bar.textContent = `Reading list · ${savedItems.size} saved · Open →`;
+      empty.hidden = savedItems.size !== 0;
+      copy.disabled = savedItems.size === 0;
+      nativeShare.disabled = savedItems.size === 0;
+      clear.disabled = savedItems.size === 0;
+      list.replaceChildren();
+      for (const [slug, resource] of savedItems) {
+        const item = document.createElement('li');
+        const body = document.createElement('div');
+        const category = document.createElement('span');
+        category.textContent = resource.category;
+        const link = document.createElement('a');
+        link.href = resource.permalink;
+        link.textContent = resource.name;
+        const detail = document.createElement('p');
+        detail.textContent = resource.description.length > 160
+          ? `${resource.description.slice(0, 157).trimEnd()}…` : resource.description;
+        body.append(category, link, detail);
+        const remove = document.createElement('button');
+        remove.type = 'button';
+        remove.textContent = 'Remove';
+        remove.setAttribute('aria-label', `Remove ${resource.name} from the reading list`);
+        remove.addEventListener('click', () => {
+          savedItems.delete(slug);
+          renderReadingList();
+          const next = dialog.querySelector('.reading-list__items button');
+          if (next) next.focus();
+          else close.focus();
+        });
+        item.append(body, remove);
+        list.append(item);
+      }
+      if (writeUrl) {
+        const url = new URL(location.href);
+        if (savedItems.size) url.searchParams.set('list', [...savedItems.keys()].join(','));
+        else url.searchParams.delete('list');
+        history.replaceState(null, '', url);
+      }
+    };
+    bar.addEventListener('click', () => { dialog.showModal(); close.focus(); });
+    dialog.addEventListener('close', () => {
+      if (bar.hidden) search.focus();
+      else bar.focus();
+    });
+    dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
+    copy.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(listUrl());
+        message.textContent = 'Reading list link copied.';
+      } catch {
+        message.textContent = 'Copy unavailable in this browser.';
+      }
+    });
+    nativeShare.addEventListener('click', async () => {
+      try {
+        await navigator.share({ title: 'Jev projects to explore', url: listUrl() });
+        message.textContent = 'Reading list shared.';
+      } catch (error) {
+        if (error?.name !== 'AbortError') message.textContent = 'Share unavailable in this browser.';
+      }
+    });
+    clear.addEventListener('click', () => { savedItems.clear(); renderReadingList(); close.focus(); });
+    actions.append(copy, nativeShare, clear);
+    dialog.append(header, intro, empty, list, actions, message);
+    document.body.append(bar, dialog);
+    for (const slug of (params.get('list') || '').split(',')) {
+      if (savedCatalog.has(slug) && !savedItems.has(slug) && savedItems.size < 8) {
+        savedItems.set(slug, savedCatalog.get(slug));
+      }
+    }
+    renderReadingList(Boolean(params.get('list')));
+  }
   let view = projectPaths.size && params.get('view') !== 'compact' ? 'gallery' : 'compact';
   search.value = params.get('q') || '';
   const category = params.get('category') || '';

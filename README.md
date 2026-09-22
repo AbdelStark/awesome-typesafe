@@ -284,6 +284,8 @@ Community projects are independent unless their repository says otherwise. Read 
 
 Browse a focused page: [Client libraries and integrations](https://abdelstark.github.io/awesome-typesafe-jev/categories/client-libraries-and-integrations/) · [Agent and developer tooling](https://abdelstark.github.io/awesome-typesafe-jev/categories/agent-and-developer-tooling/) · [Browser agents](https://abdelstark.github.io/awesome-typesafe-jev/categories/browser-agents/) · [Applications and workflows](https://abdelstark.github.io/awesome-typesafe-jev/categories/applications-and-workflows/) · [Games and robotics](https://abdelstark.github.io/awesome-typesafe-jev/categories/games-and-robotics/) · [Evaluations and independent research](https://abdelstark.github.io/awesome-typesafe-jev/categories/evaluations-and-independent-research/) · [Showcases and field notes](https://abdelstark.github.io/awesome-typesafe-jev/categories/showcases-and-field-notes/).
 
+On the live directory, save up to eight projects to a reading list and share its link. The selection uses the entries below; no account is needed.
+
 ### Client libraries and integrations
 
 Build with Jev from a language, framework, gateway, or data system you already use. Check each community client's maturity and data handling before adopting it.
