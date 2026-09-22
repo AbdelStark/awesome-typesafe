@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-22",
-  "total_resources": 166,
+  "total_resources": 167,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -546,6 +546,12 @@
           "url": "https://github.com/supercorp-ai/supercov",
           "description_markdown": "Code quality for coding agents: Jev scores each source file so the agent knows what to fix first.",
           "permalink": "/projects/gh-supercorp-ai-supercov/"
+        },
+        {
+          "name": "Switchboard",
+          "url": "https://github.com/ruban-24/switchboard",
+          "description_markdown": "Local Claude Code and Codex wrapper that assesses a new conversation's task with Jev, applies local confidence policy to choose the model and reasoning effort, and pins that route through follow-ups, tool calls, and resume to avoid unnecessary prompt-cache disruption. It preserves native authentication and sends task text to the configured TypeSafe, Vercel, or OpenRouter Jev endpoint; raw prompt history is stored only when explicitly enabled.",
+          "permalink": "/projects/gh-ruban-24-switchboard/"
         },
         {
           "name": "TypeSafe MCP",
