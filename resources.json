@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-22",
-  "total_resources": 173,
+  "total_resources": 174,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -22,6 +22,12 @@
           "url": "https://github.com/mattt/AnyDecisionModel",
           "description_markdown": "Swift 6.2 package with typed sessions, enum-backed choices, and ordered scores over either TypeSafe's Jev API or a local MLX language model on Apple silicon; the local backend reads answer-token probabilities without generating text, and its calibration is caller-configured rather than established for every task.",
           "permalink": "/projects/gh-mattt-anydecisionmodel/"
+        },
+        {
+          "name": "Ax TypeSafe integration",
+          "url": "https://axllm.dev/typescript/skills/ax-typesafe/",
+          "description_markdown": "Ax's TypeScript provider supports required Boolean and class signatures and a native Jev client for Noul, Choice, and Score questions with probabilities and criteria; free-form text and numeric signature fields are not native Jev outputs, so use its explicit native interface for scoring rather than treating a bounded number as a Score rubric.",
+          "permalink": "/projects/site-axllm-dev-typescript-skills-ax-typesafe/"
         },
         {
           "name": "DuckDB Jev",
