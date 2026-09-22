@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-22",
-  "total_resources": 167,
+  "total_resources": 168,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -866,6 +866,12 @@
           "url": "https://github.com/ghubnab99/jev-enterprise-decision-fabric",
           "description_markdown": "Experimental .NET decision architecture with a 111-case Jev-versus-Claude agent-action evaluation, public labels and raw JSONL, report-rebuild tooling, and a decision inspector; one annotator revised labels after reviewing a Jev pilot.",
           "permalink": "/projects/gh-ghubnab99-jev-enterprise-decision-fabric/"
+        },
+        {
+          "name": "Jev IDS",
+          "url": "https://github.com/jev-ids/jev-ids",
+          "description_markdown": "MIT-licensed intrusion-detection prototype that asks Jev one Noul and one five-way Choice per network flow, comparing it with GPT-5.6 Luna and a Random Forest on NSL-KDD; it publishes run records and evidence limits, but the reported results are a 300-flow pilot and the gateway masks Jev's exact version.",
+          "permalink": "/projects/gh-jev-ids-jev-ids/"
         },
         {
           "name": "Jev Judge vs Dimension Scores",
