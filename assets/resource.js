@@ -74,13 +74,14 @@
     const cards = [...categoryPage.querySelectorAll('.category-page__card')];
     if (!filter || !input || !clear || !count || !empty || !cards.length) return;
 
-    const searchable = cards.map((card) => [
+    const normalizeSearch = (value) => value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase();
+    const searchable = cards.map((card) => normalizeSearch([
       card.querySelector('h2')?.textContent || '',
       card.querySelector('.category-page__card-body p')?.textContent || '',
-    ].join(' ').toLocaleLowerCase());
+    ].join(' ')));
     function updateFilter(updateUrl) {
       const query = input.value.trim();
-      const terms = query.toLocaleLowerCase().split(/\s+/).filter(Boolean);
+      const terms = normalizeSearch(query).split(/\s+/).filter(Boolean);
       let visible = 0;
       cards.forEach((card, index) => {
         const matches = terms.every((term) => searchable[index].includes(term));

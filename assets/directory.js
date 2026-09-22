@@ -437,6 +437,11 @@
   viewControls.hidden = !projectPaths.size;
   const shareActions = document.createElement('div');
   shareActions.className = 'directory-tools__share-actions';
+  const viewUrl = () => {
+    const url = new URL(location.href);
+    url.hash = 'community-projects';
+    return url.href;
+  };
   if (navigator.share) {
     const nativeShare = document.createElement('button');
     nativeShare.type = 'button';
@@ -444,7 +449,7 @@
     nativeShare.textContent = 'Share this view';
     nativeShare.addEventListener('click', async () => {
       try {
-        await navigator.share({ title: document.title, url: location.href });
+        await navigator.share({ title: document.title, url: viewUrl() });
         nativeShare.textContent = 'View shared';
       } catch (error) {
         if (error?.name === 'AbortError') return;
@@ -462,7 +467,7 @@
   share.hidden = !navigator.clipboard?.writeText;
   share.addEventListener('click', async () => {
     try {
-      await navigator.clipboard.writeText(location.href);
+      await navigator.clipboard.writeText(viewUrl());
       share.textContent = 'Link copied';
     } catch {
       share.textContent = 'Copy unavailable';
