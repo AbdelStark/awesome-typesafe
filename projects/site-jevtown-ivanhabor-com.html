@@ -19,8 +19,8 @@ related:
     permalink: "/projects/gh-openbyteinc-quantdinger/"
     description: "Self-hosted quantitative trading platform that uses Jev System One as an optional, auditable PASS / REJECT gate for strategy and Quick Trade entry orders, with LLM fallback and deterministic bypasses for exits and protective orders; enabling the filter sends its prepared decision context to the configured AI provider."
     image: "/assets/cards/gh-openbyteinc-quantdinger.png"
-  - name: "Tax Document Classifier"
-    permalink: "/projects/gh-kyotofin-tax-doc-classifier/"
-    description: "Apache-licensed, text-only classifier for 261 federal tax forms that sends PDF text to Jev; the author reports no wrong labels on two test corpora but 38 low-confidence pages, without committed page-level results."
-    image: "/assets/cards/gh-kyotofin-tax-doc-classifier.png"
+  - name: "Slop Filter for LinkedIn"
+    permalink: "/projects/gh-arpit-khandelwal-jev-linkedin-slop-filter/"
+    description: "Chrome extension that judges each LinkedIn post as it scrolls into view and stamps engagement bait or corporate marketing onto the post, leaving it readable, with the probability printed on the stamp; two Noul questions and a Choice category run per post, local keyword rules settle obvious cases before any API call, and verdicts are cached per post. Post text goes to TypeSafe through a local proxy that holds the key so the extension never receives it, and a proxy or model error leaves every post visible. Thresholds (is_slop 0.60, is_corporate 0.70) are fitted to the bundled 14-post labelled set, which is too small to characterise precision beyond that sample; English and text only, and the LinkedIn DOM selector will need updating when LinkedIn rebuilds its feed."
+    image: "/assets/cards/gh-arpit-khandelwal-jev-linkedin-slop-filter.png"
 ---
