@@ -814,6 +814,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "josharsh",
+      "name": "Harsh Joshi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26869672",
+      "profile": "https://josharsh.com/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-9de3bc.svg?style=flat-square)](#contributors)",

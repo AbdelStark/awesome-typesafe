@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-23",
-  "total_resources": 199,
+  "total_resources": 200,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -1210,6 +1210,12 @@
           "url": "https://x.com/identityTorn/status/2100475121324728615",
           "description_markdown": "A builder's early matched-precision comparison against a private fine-tuned Qwen classifier; useful anecdotal evidence, not a reproducible benchmark.",
           "permalink": "/projects/site-x-com-identitytorn-status-2100475121324728615/"
+        },
+        {
+          "name": "Jev by Example",
+          "url": "https://github.com/ReallyArtificial/jev-by-example",
+          "description_markdown": "Ten MIT-licensed JavaScript exercises for decisions between agent steps, pairing Jev Choice, Score, or Noul questions with explicit application policies, hand-authored response fixtures, and simple baselines; offline demos need no key, while opt-in live runs send case state to TypeSafe, and the project has not yet verified live Jev outcomes or accuracy.",
+          "permalink": "/projects/gh-reallyartificial-jev-by-example/"
         },
         {
           "name": "Jev Typewriter launch post",
