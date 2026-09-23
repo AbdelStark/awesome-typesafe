@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-23",
-  "total_resources": 204,
+  "total_resources": 205,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -516,6 +516,12 @@
           "url": "https://github.com/kyu1204/jgrep",
           "description_markdown": "Semantic grep CLI (`npm install -g jevgrep`) that splits files or git diff hunks into 5–60 line chunks, packs several chunks into one request with a Noul question per chunk, and prints `file:line` hits above a probability threshold with grep-style exit codes, so a diff can be linted in CI against rules written in English; ships an interactive `jgrep init` and an opt-in Claude Code and Codex skill; chunks are judged in isolation so cross-file questions do not match, and every chunk's text is sent to TypeSafe's API.",
           "permalink": "/projects/gh-kyu1204-jgrep/"
+        },
+        {
+          "name": "langchain-loadout",
+          "url": "https://github.com/deyna256/langchain-loadout",
+          "description_markdown": "Per-turn skill routing for LangChain deepagents: Jev ranks the `SKILL.md` catalog against the request and the recent conversation, verifies the top candidates, and the middleware loads one skill's instructions or offers a short list instead of keeping the whole catalog in the prompt. MIT; the judge is a protocol, so a self-hosted model or deterministic rules can replace Jev, and only the request, the recent conversation and the skills' text leave the machine, to whichever judge is configured. Every turn pays for a full pass over the catalog — about 3 s on 236 skills — and the published measurements come from one generated testbed with one agent model.",
+          "permalink": "/projects/gh-deyna256-langchain-loadout/"
         },
         {
           "name": "Mobile Jev",
