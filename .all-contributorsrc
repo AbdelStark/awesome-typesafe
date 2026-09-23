@@ -652,7 +652,161 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "PerryLink",
+      "name": "PerryLink",
+      "avatar_url": "https://avatars.githubusercontent.com/u/255665900",
+      "profile": "https://github.com/PerryLink",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "shentonyan",
+      "name": "Shenton YAN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/130656411",
+      "profile": "https://github.com/shentonyan",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "choice404",
+      "name": "Austin Choi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/115042027",
+      "profile": "https://austinchoi.net/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "bradAGI",
+      "name": "Brad",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46579244",
+      "profile": "https://github.com/bradAGI",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "trashhalo",
+      "name": "Stephen Solka",
+      "avatar_url": "https://avatars.githubusercontent.com/u/177491",
+      "profile": "https://github.com/trashhalo",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "dttfrancesco",
+      "name": "Francesco Dettori",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41641559",
+      "profile": "https://github.com/dttfrancesco",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "YeefyisOK",
+      "name": "Flora Wang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53204786",
+      "profile": "https://github.com/YeefyisOK",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "zc277584121",
+      "name": "Cheney Zhang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17022025",
+      "profile": "https://github.com/zc277584121",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "bartlomein",
+      "name": "Bartlomiej Tyrpien",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3741391",
+      "profile": "https://tyrpien.com/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "mastryhub-dev",
+      "name": "mastryhub-dev",
+      "avatar_url": "https://avatars.githubusercontent.com/u/249627082",
+      "profile": "https://github.com/mastryhub-dev",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "KantaHayashiAI",
+      "name": "Kanta Hayashi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/130632231",
+      "profile": "https://github.com/KantaHayashiAI",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "dajiaohuang",
+      "name": "Wu Shuwen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/108231307",
+      "profile": "https://github.com/dajiaohuang",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Kunyanli230",
+      "name": "Kunyanli230",
+      "avatar_url": "https://avatars.githubusercontent.com/u/166660863",
+      "profile": "https://github.com/Kunyanli230",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "KNambiarDJsc",
+      "name": "Karthik Nambiar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/130730442",
+      "profile": "https://www.psyflo.com/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "harshithsunku",
+      "name": "Harshith Sunku",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19268623",
+      "profile": "https://harshith.in/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Eliot5566",
+      "name": "Eliot5566",
+      "avatar_url": "https://avatars.githubusercontent.com/u/121885583",
+      "profile": "https://github.com/Eliot5566",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Yifan-Lan",
+      "name": "Yifan Lan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/95392102",
+      "profile": "https://yifan-lan.github.io/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
-  "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-9de3bc.svg?style=flat-square)](#contributors)"
+  "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-9de3bc.svg?style=flat-square)](#contributors)",
+  "commitConvention": "angular"
 }
