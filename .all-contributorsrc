@@ -823,6 +823,78 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "jiaqiangbandongg",
+      "name": "jiaqiangbandongg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9290829",
+      "profile": "https://github.com/jiaqiangbandongg",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "deyna256",
+      "name": "Ivan Deyna",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84927447",
+      "profile": "https://github.com/deyna256",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "christiina02",
+      "name": "christiina02",
+      "avatar_url": "https://avatars.githubusercontent.com/u/168747524",
+      "profile": "https://github.com/christiina02",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "maayanlevy",
+      "name": "Maayan Levy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5357386",
+      "profile": "https://github.com/maayanlevy",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "JANANI-RS06",
+      "name": "JANANI-RS06",
+      "avatar_url": "https://avatars.githubusercontent.com/u/223864652",
+      "profile": "https://github.com/JANANI-RS06",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "bladedevoff",
+      "name": "BladeDev",
+      "avatar_url": "https://avatars.githubusercontent.com/u/99643174",
+      "profile": "https://github.com/bladedevoff",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "blowxian",
+      "name": "Lison Allen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1855830",
+      "profile": "https://github.com/blowxian",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "romeromarcelo",
+      "name": "Marcelo Romero",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31069339",
+      "profile": "https://github.com/romeromarcelo",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-9de3bc.svg?style=flat-square)](#contributors)",

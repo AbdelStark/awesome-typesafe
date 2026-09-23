@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-23",
-  "total_resources": 206,
+  "total_resources": 211,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -70,6 +70,12 @@
           "url": "https://github.com/kylemclaren/jevql",
           "description_markdown": "psql-shaped CLI and Go/TypeScript/Python SDKs that let you write `WHERE jev(alias, 'condition')`, `jev_prob`, `jev_choice`, and `jev_score` against a vanilla Postgres with no extension: it runs the plain SQL on the server, judges the surviving rows with Jev in batches (cached in local SQLite), and applies filter, sort, and group in the client; every row that survives the SQL filters is sent to TypeSafe and judged, so put cheap predicates in SQL first.",
           "permalink": "/projects/gh-kylemclaren-jevql/"
+        },
+        {
+          "name": "jevsearch",
+          "url": "https://github.com/kylemclaren/jevsearch",
+          "description_markdown": "shadcn/ui registry block for ⌘K site search: a local keyword pass streams hits on the first keystroke, then the top 20 go to Jev in one request (a Noul per page, a Choice for the single best answer, and a Noul for whether any page answers) and code re-orders or drops them; with no embeddings or vector database it only re-ranks what the keyword pass retrieves, and keyword order stands if TypeSafe is slow or down.",
+          "permalink": "/projects/gh-kylemclaren-jevsearch/"
         },
         {
           "name": "json-render",
@@ -506,6 +512,12 @@
           "permalink": "/projects/gh-xinyao27-jevonian/"
         },
         {
+          "name": "jevr",
+          "url": "https://github.com/romeromarcelo/jev-retrieval",
+          "description_markdown": "Rust CLI for semantic code and document search: a local BM25 pass recalls candidate files, Jev Noul questions judge bounded windows, and a Choice reranks the survivors into grep-style `path:line` results; the query and selected source excerpts go to TypeSafe in requests containing up to 24 KB of source text.",
+          "permalink": "/projects/gh-romeromarcelo-jev-retrieval/"
+        },
+        {
           "name": "JevRouter",
           "url": "https://github.com/BillionsBobby/JevRouter",
           "description_markdown": "Routes models, skills, MCP tools, CLIs, and plugins through Jev's typed choices while code enforces availability, permissions, risk, and confirmation; it includes an offline demo mode and append-only decision receipts.",
@@ -518,9 +530,9 @@
           "permalink": "/projects/gh-kyu1204-jgrep/"
         },
         {
-          "name": "langchain-loadout",
-          "url": "https://github.com/deyna256/langchain-loadout",
-          "description_markdown": "Per-turn skill routing for LangChain deepagents: Jev ranks the `SKILL.md` catalog against the request and the recent conversation, verifies the top candidates, and the middleware loads one skill's instructions or offers a short list instead of keeping the whole catalog in the prompt. MIT; the judge is a protocol, so a self-hosted model or deterministic rules can replace Jev, and only the request, the recent conversation and the skills' text leave the machine, to whichever judge is configured. Every turn pays for a full pass over the catalog — about 3 s on 236 skills — and the published measurements come from one generated testbed with one agent model.",
+          "name": "langchain-skill-router",
+          "url": "https://github.com/deyna256/langchain-skill-router",
+          "description_markdown": "Per-turn skill routing for LangChain deepagents: a Jev adapter or another configured judge ranks and verifies candidates before middleware loads one skill or offers a shortlist; the request, recent conversation, and skill text go to that judge, and the published evaluation uses one generated testbed and one agent model.",
           "permalink": "/projects/gh-deyna256-langchain-loadout/"
         },
         {
@@ -846,6 +858,12 @@
           "permalink": "/projects/gh-ufec-jev-block-android-ad/"
         },
         {
+          "name": "JevPDF",
+          "url": "https://github.com/kylemclaren/jevpdf",
+          "description_markdown": "Browser PDF viewer for finding passages when you do not know the exact words: pdf.js extracts lines locally, each line gets one Jev Noul on whether it answers the query (batched with the page text as shared state), and lines above a code-owned threshold light up ranked by probability; only extracted text is sent to TypeSafe, never the PDF, and the API key stays behind a server-side proxy.",
+          "permalink": "/projects/gh-kylemclaren-jevpdf/"
+        },
+        {
           "name": "Jevtown",
           "url": "https://jevtown.ivanhabor.com",
           "description_markdown": "Town of 10,000 computed personas that reads a post, listing, product, or headline: one opening request scores the text against about 60 audience attributes, 83 for a listing or a product, plus seven moderation questions, and plans the first wave of 600 readers; batched Choice questions then return each persona's reaction, and the text reaches the next wave only while glad reactions outweigh sorry ones. Also returns the audience by interest, job, age, city, and budget, the question buyers would ask a listing first, and a demand curve over an author-set price ladder. Personas are computed from their id rather than written by a model, and each reaction is sampled from the returned probabilities with a fixed seed, so the result is a simulation of a typed audience and not a forecast of real behaviour; open source (MIT), no sign-in, runs on a TypeSafe or OpenRouter key.",
@@ -1078,6 +1096,12 @@
           "permalink": "/projects/gh-kantahayashiai-jev-does-not-play-dice/"
         },
         {
+          "name": "jev-fanout-bench",
+          "url": "https://github.com/blowxian/jev-fanout-bench",
+          "description_markdown": "Billing study comparing batched and one-question-per-call Jev requests through OpenRouter's TypeSafe-compatible endpoint, with synthetic English tickets sent to the provider, raw responses and charge records, and repeated requests to measure answer stability; the tickets are unlabelled, and separate-call latency was measured serially.",
+          "permalink": "/projects/gh-blowxian-jev-fanout-bench/"
+        },
+        {
           "name": "jev-measured",
           "url": "https://github.com/WallerChen/jev-measured",
           "description_markdown": "Reproducible OpenRouter measurements of Jev's response shapes, cost, and latency across eight use cases, plus a small head-to-head on 27 author-written support tickets; the author publishes raw data and corrections to earlier comparison errors.",
@@ -1202,6 +1226,12 @@
           "url": "https://github.com/featherless-ai/simple-jev",
           "description_markdown": "Apache-licensed local server that scores Choice, Score, and Noul with open-model logits; tokenizer support and decision calibration vary by model.",
           "permalink": "/projects/gh-featherless-ai-simple-jev/"
+        },
+        {
+          "name": "stuntd",
+          "url": "https://github.com/bladedevoff/stuntd",
+          "description_markdown": "Experimental local Jev-compatible proxy on Laya that records typed decisions in local SQLite, trains a head per decision site, and forwards uncertain requests to a configured upstream; its reported demos use rule-based teachers rather than hosted Jev, and proxy mode sends requests to the chosen upstream.",
+          "permalink": "/projects/gh-bladedevoff-stuntd/"
         },
         {
           "name": "TypeSafe AI Benchmark",

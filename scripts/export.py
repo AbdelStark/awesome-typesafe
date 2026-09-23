@@ -28,6 +28,7 @@ ENTRY = re.compile(r"^- \[([^]]+)]\((https://[^)]+)\) — (.+)$")
 PERMALINK_OVERRIDES = {
     # The repository moved; keep previously shared project pages and cards live.
     "https://github.com/jev-chat/jev-chat-jarvis": "gh-finderchangchang-jev-chat-jarvis",
+    "https://github.com/deyna256/langchain-skill-router": "gh-deyna256-langchain-loadout",
 }
 
 
