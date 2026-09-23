@@ -690,13 +690,13 @@
         {
           "name": "fastbrowse",
           "url": "https://github.com/agent-labs-dev/fastbrowse",
-          "description_markdown": "Pre-alpha browser agent where Jev picks actions from observed controls, an LLM plans and reads, and code requires page quotes for answer claims and explicit authorization for consequential actions; its author publishes per-run comparisons, but the 14-task head-to-head used an earlier build and its success count varied on a same-day repeat.",
+          "description_markdown": "Pre-alpha browser agent where Jev picks actions from observed controls, an LLM plans and reads, and code requires page quotes for answer claims; a classifier stops before consequential actions unless the operator passes `--authorize`, but that gate is not a guarantee. Browser Use Cloud is the default browser, with local Chrome optional. Page observations go to the selected Jev provider and planner model; its author publishes versioned per-run comparisons, not an independent benchmark.",
           "permalink": "/projects/gh-agent-labs-dev-fastbrowse/"
         },
         {
           "name": "Jev Browser",
           "url": "https://github.com/jkudish/jev-browser",
-          "description_markdown": "MIT-licensed Playwright navigator with MCP, CLI, and library interfaces: Jev chooses DOM actions and judges goal/stuck state while code bounds the loop and returns a trace, final page, and screenshot; early software without iframe, shadow-DOM, or file-input support.",
+          "description_markdown": "MIT-licensed Playwright navigator with MCP, CLI, and library interfaces: Jev chooses DOM actions and judges goal/stuck state from page excerpts sent to TypeSafe, OpenRouter, Cloudflare, or Vercel; an optional separate model generates typed text. Code bounds the loop and returns a trace, final page, and screenshot, but does not require human approval for each action; iframe, shadow-DOM, and file-input controls are unsupported.",
           "permalink": "/projects/gh-jkudish-jev-browser/"
         },
         {
@@ -708,13 +708,13 @@
         {
           "name": "Jev for Chrome",
           "url": "https://github.com/chy4pro/jev-for-chrome",
-          "description_markdown": "Unofficial Chrome extension (Manifest V3) port of Jev Ultrafast: Jev picks the operation and DOM element in one request, a small text model writes typed values, and it runs in the user's own tabs through OpenRouter, TypeSafe or Cloudflare; includes a 17-task headless-Chromium suite with recorded traces.",
+          "description_markdown": "Unofficial Chrome extension (Manifest V3) port of Jev Ultrafast: Jev picks the operation and DOM element, and a separate text model writes typed values in the user's own tabs. The selected OpenRouter, TypeSafe, or Cloudflare provider receives the goal, URL, visible page text, and control labels/values; the text model also receives page text when typing. Step and Stop allow manual oversight, but Run executes steps without per-action human approval; includes a 17-task headless-Chromium suite with recorded traces.",
           "permalink": "/projects/gh-chy4pro-jev-for-chrome/"
         },
         {
           "name": "Jev Social",
           "url": "https://github.com/socai-io/jev-social",
-          "description_markdown": "Local Instagram and TikTok research app where Jev makes confidence-gated typed choices over the platform and next socai operation, deterministic Node code validates each decision, and the local socai CLI performs read-only browser capture.",
+          "description_markdown": "Local Instagram, TikTok, and LinkedIn research app where Jev makes confidence-gated choices over observed, bounded socai CLI operations. The goal and captured result excerpts go to OpenRouter; local code validates choices and stops at access gates. Browser capture is read-only except for an optional TikTok media download when explicitly requested; there is no per-step human approval.",
           "permalink": "/projects/gh-socai-io-jev-social/"
         },
         {
