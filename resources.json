@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-23",
-  "total_resources": 203,
+  "total_resources": 204,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -88,6 +88,12 @@
           "url": "https://github.com/WiktorB2004/llama-index-jev",
           "description_markdown": "Unofficial LlamaIndex reranker and query-engine selector on the official Python SDK: Jev scores retrieved passages and chooses which tool handles a query; score mode is a 0–3 rubric, not cosine similarity.",
           "permalink": "/projects/gh-wiktorb2004-llama-index-jev/"
+        },
+        {
+          "name": "mysql-ailike",
+          "url": "https://github.com/maayanlevy/mysql-ailike",
+          "description_markdown": "Native MySQL plugin that adds an `AILIKE` predicate for natural-language row filters in `WHERE` and a three-argument `ailike(left, right, prompt)` for semantic `JOIN ... ON` conditions, powered by Jev; it is a preview release, each uncached evaluation is an API request, and evaluated values and prompts are sent to TypeSafe.",
+          "permalink": "/projects/gh-maayanlevy-mysql-ailike/"
         },
         {
           "name": "NeuroLink",
