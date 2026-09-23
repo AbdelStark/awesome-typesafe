@@ -2,6 +2,16 @@
 
 Thank you for helping make Awesome Jev more useful.
 
+## Start with one small contribution
+
+| If you noticed… | Do this | What to include |
+| :--- | :--- | :--- |
+| A missing public project you have used or inspected | Add one README entry using the [listing builder](https://abdelstark.github.io/awesome-typesafe-jev/#build-a-listing), or [suggest it](https://github.com/AbdelStark/awesome-typesafe-jev/issues/new?template=add-resource.yml) | Canonical URL, license for code, what data leaves the machine, and one material limitation |
+| A broken link or inaccurate existing description | [Report it](https://github.com/AbdelStark/awesome-typesafe-jev/issues/new?template=report-stale.yml) or fix that one entry in a pull request | The current source showing the correction |
+| A scoped maintenance task | Choose a [good first issue](https://github.com/AbdelStark/awesome-typesafe-jev/labels/good%20first%20issue) | A focused change and the source used to verify it |
+
+For a first resource pull request, changing only `README.md` is sufficient. A maintainer generates the site artifacts before merging. You do not need a TypeSafe API key to contribute.
+
 This is a curated list, not a directory of every repository that mentions Jev. A submission should help someone learn the model shape, build a real integration, reproduce an experiment, or understand a limitation.
 
 ## Before you submit
