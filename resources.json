@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-23",
-  "total_resources": 205,
+  "total_resources": 206,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -1130,6 +1130,12 @@
           "url": "https://github.com/NandhaKishorM/laya",
           "description_markdown": "Open local Choice, Score, and Noul decision models with published checkpoints and a router for English and multilingual inputs; its Jev comparisons use different prompts and sample sizes rather than a controlled head-to-head, and raw calibration and some languages remain weak.",
           "permalink": "/projects/gh-nandhakishorm-laya/"
+        },
+        {
+          "name": "LeJudge",
+          "url": "https://github.com/AbdelStark/lejudge-jev-jepa",
+          "description_markdown": "MIT-licensed PushT study and cost module that turns LeWorldModel's imagined latents into closed-vocabulary facts, asks Jev typed questions about natural-language constraints, and adds the probabilities to a CEM planner's cost; ships oracle and keyword baselines, cached responses, and an offline paper rebuild; live runs send constraint text and probe facts to TypeSafe, and results cover one world model and twelve constraints, with near-miss false positives and rollout drift as material limitations.",
+          "permalink": "/projects/gh-abdelstark-lejudge-jev-jepa/"
         },
         {
           "name": "LLM2Jev",
