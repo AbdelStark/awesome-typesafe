@@ -162,7 +162,7 @@ console.log({ team, probability, refundProbability: answers.refund.noul, action 
 
 #### Python
 
-Install the [official Python SDK](#sdks-and-developer-tools) with `python3 -m pip install typesafe-sdk` (Python 3.10+), set `TYPESAFE_API_KEY` in your environment, save this as `first_decision.py`, then run `python3 first_decision.py`:
+Install the [official Python SDK](#sdks-and-developer-tools) with `uv add typesafe-sdk` (Python 3.10+), set `TYPESAFE_API_KEY` in your environment, save this as `first_decision.py`, then run `python3 first_decision.py`:
 
 ```python
 from typesafe_sdk import Choice, Noul, TypeSafeClient
