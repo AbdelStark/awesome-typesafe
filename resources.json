@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
-  "last_updated": "2026-09-22",
-  "total_resources": 184,
+  "last_updated": "2026-09-23",
+  "total_resources": 198,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -314,6 +314,18 @@
           "permalink": "/projects/gh-luantak-is-malicious/"
         },
         {
+          "name": "jeff",
+          "url": "https://github.com/saembit/jeff-cli",
+          "description_markdown": "Go CLI with noul, choice, score and eval commands that map a threshold to an exit code, plus a rank command that sends one Score per item per weighted dimension of a YAML spec in a single request and computes the composite order in code; the state goes to TypeSafe, and the weighted sum is the tool's own arithmetic rather than a Jev feature.",
+          "permalink": "/projects/gh-saembit-jeff-cli/"
+        },
+        {
+          "name": "Jev Clean",
+          "url": "https://github.com/Kunyanli230/jev-clean",
+          "description_markdown": "Experimental CSV cleaning tool that computes repair candidates locally and uses Jev Choice, Noul, and Score judgments to gate changes, with audit and rollback records; it sends bounded candidate details and data samples to TypeSafe, and currently limits inputs to 10,000 rows and 30 columns.",
+          "permalink": "/projects/gh-kunyanli230-jev-clean/"
+        },
+        {
           "name": "Jev Codex Router",
           "url": "https://github.com/0xNatoshi/jev-codex-router",
           "description_markdown": "Local Codex Router extension that asks Jev for a model tier and thinking depth on each model call, including tool continuations, then relays the native Responses request; it needs a local routing stack, and its published savings backtest simulates an older policy rather than measuring current quota saved.",
@@ -482,6 +494,12 @@
           "permalink": "/projects/gh-xinyao27-jevonian/"
         },
         {
+          "name": "JevRouter",
+          "url": "https://github.com/BillionsBobby/JevRouter",
+          "description_markdown": "Routes models, skills, MCP tools, CLIs, and plugins through Jev's typed choices while code enforces availability, permissions, risk, and confirmation; it includes an offline demo mode and append-only decision receipts.",
+          "permalink": "/projects/gh-billionsbobby-jevrouter/"
+        },
+        {
           "name": "jgrep",
           "url": "https://github.com/kyu1204/jgrep",
           "description_markdown": "Semantic grep CLI (`npm install -g jevgrep`) that splits files or git diff hunks into 5–60 line chunks, packs several chunks into one request with a Noul question per chunk, and prints `file:line` hits above a probability threshold with grep-style exit codes, so a diff can be linted in CI against rules written in English; ships an interactive `jgrep init` and an opt-in Claude Code and Codex skill; chunks are judged in isolation so cross-file questions do not match, and every chunk's text is sent to TypeSafe's API.",
@@ -558,6 +576,12 @@
           "url": "https://github.com/allebee/pytest-jev",
           "description_markdown": "pytest plugin for semantic assertions about LLM output: `jev.expect` batches Noul claims about one text, reports each probability, and by default fails uncertain claims (holds needs at least 0.8, lacks at most 0.2); Choice checks the selected option and Score checks probability mass across ordered levels. It caches answers in `.pytest_cache`, skips Jev tests without a key by default, and sends tested text and context to TypeSafe or OpenRouter.",
           "permalink": "/projects/gh-allebee-pytest-jev/"
+        },
+        {
+          "name": "Second Thought",
+          "url": "https://github.com/KNambiarDJsc/second-thought",
+          "description_markdown": "Python SDK, CLI, and optional local dashboard that captures typed decisions from Laya, Jev, or a custom classifier, measures calibration, and routes uncertain cases to human review; its dataset export excludes Jev decisions in code, and its reported Laya result comes from a 24-ticket example run.",
+          "permalink": "/projects/gh-knambiardjsc-second-thought/"
         },
         {
           "name": "Skillbox",
@@ -738,6 +762,12 @@
           "permalink": "/projects/gh-timrogers-formanator/"
         },
         {
+          "name": "GeekLink Jev Subtitle Translator",
+          "url": "https://github.com/GeekLinkDev/jev-subtitle-translator",
+          "description_markdown": "Open-source SRT translator and quality-control tool that sends each source–translation pair to Jev as a `Noul` decision, then flags suspected omissions or meaning changes for human review without automatically rewriting subtitles.",
+          "permalink": "/projects/gh-geeklinkdev-jev-subtitle-translator/"
+        },
+        {
           "name": "HA-Jev",
           "url": "https://github.com/AboveColin/HA-Jev",
           "description_markdown": "Home Assistant integration that turns typed questions about entity state into sensors and automation actions, with entities reporting daily calls, tokens, and estimated cost and a token budget that halts evaluation; answers carry no explanation, so it is not suitable for safety decisions.",
@@ -802,6 +832,12 @@
           "url": "https://github.com/dttfrancesco/lossless-rewrite",
           "description_markdown": "Helps AI say the same thing in fewer words: choose which ideas must stay, let your model rewrite, and use Jev to check for lost meaning and guide repairs; available as a local editor and CLI; MIT licensed.",
           "permalink": "/projects/gh-dttfrancesco-lossless-rewrite/"
+        },
+        {
+          "name": "Paper Radar",
+          "url": "https://github.com/Eliot5566/JEV-Paper-Radar",
+          "description_markdown": "GitHub Action that sends paper titles, abstracts, and categories from arXiv, bioRxiv, or RSS to Jev for interest and contribution-type judgments, then applies code-owned thresholds to publish a page and RSS feed; a committed 50-paper run reports 5 seconds and $0.001957 with jev-1.13.0, while calibration requires the reader's own labels and the judgments do not inspect full papers.",
+          "permalink": "/projects/gh-eliot5566-jev-paper-radar/"
         },
         {
           "name": "Paper Trellis Citation Verifier",
@@ -922,6 +958,24 @@
       "permalink": "/categories/evaluations-and-independent-research/",
       "resources": [
         {
+          "name": "Awesome Jev Robustness",
+          "url": "https://github.com/Yifan-Lan/awesome-jev-robustness",
+          "description_markdown": "Curated index of independent Jev tests grouped by calibration, consistency, perturbation, injection, abstention, failure modes, and language; it links original sources, reports their numbers as author findings, and keeps task benchmarks without a robustness angle in a separate data file.",
+          "permalink": "/projects/gh-yifan-lan-awesome-jev-robustness/"
+        },
+        {
+          "name": "Bosun v3.1",
+          "url": "https://huggingface.co/Hanno-Labs/bosun-v3.1-1.7b",
+          "description_markdown": "Apache-2.0 open-weight Qwen3 decision model family with released 0.6B and 1.7B weights and shipped `choice`, `score`, and `noul` inference; a separate Jev-style alternative, not hosted Jev.",
+          "permalink": "/projects/site-huggingface-co-hanno-labs-bosun-v3-1-1-7b/"
+        },
+        {
+          "name": "DecisionBench",
+          "url": "https://github.com/Hanno-Labs/decision-bench",
+          "description_markdown": "Open benchmark runtime for document-grounded decision models, with pinned tasks and a native OpenRouter adapter for Jev.",
+          "permalink": "/projects/gh-hanno-labs-decision-bench/"
+        },
+        {
           "name": "Janus",
           "url": "https://github.com/FirasSX914/Janus",
           "description_markdown": "Independent calibration measurement of Jev on two labelled datasets, Banking77 and Web of Science, with a Jev to frontier cascade priced per row from measured tokens, now also packaged as an installable tool (`pip install janus-decide`) that measures a threshold on your own data and ships none by default; the protocol was frozen before any result and the raw JSONL and figures are committed, and no routing parameter transferred between the two datasets, as the optimal threshold, the sign of the accuracy gap between the two models, and whether routing paid for itself all changed; the Web of Science labels come from publication metadata rather than per-document annotation, so part of the error measured there is label ambiguity.",
@@ -986,6 +1040,12 @@
           "url": "https://github.com/nikkoxgonzales/jev-certify",
           "description_markdown": "Early Python toolkit and CLINC150 study of conformal routing thresholds and prediction-powered audits over Jev 1.13 through OpenRouter, with request plans, 2,412 journalled answers and usage records, analysis code, and tests; its per-incoming-query risk bound depends on matching calibration and deployment traffic, and the study shows the scope gate missing its target after out-of-scope prevalence shifts while fallback accuracy remains unmeasured.",
           "permalink": "/projects/gh-nikkoxgonzales-jev-certify/"
+        },
+        {
+          "name": "jev-does-not-play-dice",
+          "url": "https://github.com/KantaHayashiAI/jev-does-not-play-dice",
+          "description_markdown": "Calibration check on inputs whose true probability is fixed by construction (hidden fair dice, coins, four-way spinners) and on synthetic forecast documents, with raw responses and offline recomputation; Choice put 82.9% on face 1 across all 400 rolls at 19.0% accuracy and turned a stated 30% risk into 5.3%, while Noul stayed near the truth for 2 to 4 options and reported 15 to 17% for 8 to 20 options; no comparison with other models and no realistic task set, so it shows how far the probabilities can drift when the input carries no evidence rather than how Jev ranks against alternatives, run in launch week against jev-1.13.0.",
+          "permalink": "/projects/gh-kantahayashiai-jev-does-not-play-dice/"
         },
         {
           "name": "jev-measured",
@@ -1090,6 +1150,12 @@
           "permalink": "/projects/gh-rizzo-ai-academy-rizzo-flow/"
         },
         {
+          "name": "ruling",
+          "url": "https://github.com/bradAGI/ruling",
+          "description_markdown": "MIT-licensed System One-compatible server for Apple Silicon that scores typed questions from a stock model's logits with no training, accepts the official SDK unchanged, and re-scores the 256 public judgments that carry Jev's own answers (231 vs 238, no significant difference); serves MLX checkpoints or any OpenAI-compatible endpoint, with no native CUDA path.",
+          "permalink": "/projects/gh-bradagi-ruling/"
+        },
+        {
           "name": "SemIf (formerly OpenJev)",
           "url": "https://github.com/TheoLeeCJ/SemIf",
           "description_markdown": "Independent open-model research baseline for direct typed option scoring; it reproduces the interface pattern, not Jev's undisclosed model or training.",
@@ -1112,6 +1178,12 @@
           "url": "https://github.com/wfzyx/von",
           "description_markdown": "Open local Choice, Noul, and Score model with public weights, training code, and a System One-shaped API. Benchmark comparisons are author-reported: its README gives a 91.23% accuracy headline without a matching result artifact in the repo, while its 49-task table reports 71.5% macro accuracy.",
           "permalink": "/projects/gh-wfzyx-von/"
+        },
+        {
+          "name": "When a Judgment Layer’s Self-Reported Fields Lie",
+          "url": "https://doi.org/10.5281/zenodo.22901853",
+          "description_markdown": "Independent measurement of Jev’s typed decisions as one of three judgment layers run on identical items (Laya locally, Jev and a frontier model remotely), with per-call ledger-based cost accounting and Murphy/Brier/ECE calibration against binary ground truth; the Jev-specific findings are a verdict vocabulary reaching three values where six are documented, and a sufficient field that does not separate thin evidence from contradictory evidence, and the claim about contradiction rests on seven live readings that have no JSON artifact behind them, which the write-up states in its own errata rather than leaving to be discovered.",
+          "permalink": "/projects/site-doi-org-10-5281-zenodo-22901853/"
         }
       ]
     },
@@ -1140,10 +1212,22 @@
           "permalink": "/projects/site-x-com-stevekrouse-status-2100287368221659289/"
         },
         {
+          "name": "Jev Web Analyzer",
+          "url": "https://github.com/replynodes/jev-web-analyzer",
+          "description_markdown": "Inspectable Next.js demo that fetches public webpage Markdown, sends bounded state to Jev through Vercel's hosted Gateway, and exposes Boolean, Choice, Score, probability, and streaming results; live analysis requires both configured credentials.",
+          "permalink": "/projects/gh-replynodes-jev-web-analyzer/"
+        },
+        {
           "name": "jev-agent-skill",
           "url": "https://github.com/yuyang2230/jev-agent-skill",
           "description_markdown": "Claude Code / ZCode skill that offloads small judgments (classify/route, batch screening, scoring, compliance pre-checks) from the main model to Jev on OpenCode Zen's free `/v1/systemone` endpoint; bundles a zero-dependency `jev.py` caller with retries for the gateway's transient 500s, a WAF-safe User-Agent, GBK-pipe-safe stdin handling, SKILL.md auto-trigger rules so agents invoke it unprompted, and a production e-commerce comment-triage case study; adapted from the official typesafe-ai/skills SKILL.md (MIT).",
           "permalink": "/projects/gh-yuyang2230-jev-agent-skill/"
+        },
+        {
+          "name": "Learn Jev end to end",
+          "url": "https://github.com/harshithsunku/learn-jev-end-to-end",
+          "description_markdown": "MIT-licensed course of 12 Python notebooks that puts Jev inside a hand-rolled LLM agent loop as router, tool-call guard, done gate, and judge across 13 use cases checked against labeled fixtures, and compares Jev with two LLMs asked the same typed questions through system-one-adapter; tools are read-only or dry-run, and results come from one committed run, including the cases where the LLMs did better.",
+          "permalink": "/projects/gh-harshithsunku-learn-jev-end-to-end/"
         },
         {
           "name": "Qwen on Cerebras comparison",
