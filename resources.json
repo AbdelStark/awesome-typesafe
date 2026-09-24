@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-23",
-  "total_resources": 211,
+  "total_resources": 215,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -94,6 +94,12 @@
           "url": "https://github.com/WiktorB2004/llama-index-jev",
           "description_markdown": "Unofficial LlamaIndex reranker and query-engine selector on the official Python SDK: Jev scores retrieved passages and chooses which tool handles a query; score mode is a 0–3 rubric, not cosine similarity.",
           "permalink": "/projects/gh-wiktorb2004-llama-index-jev/"
+        },
+        {
+          "name": "Milvus Model",
+          "url": "https://github.com/milvus-io/milvus-model",
+          "description_markdown": "Python reranker adapter that sends a query and candidate documents to TypeSafe as batched Jev Noul questions, then sorts the scores while preserving original document indices; the current prompt is claim/evidence-specific, requires a TypeSafe API key, and is confirmed in source but not yet in a verified package release.",
+          "permalink": "/projects/gh-milvus-io-milvus-model/"
         },
         {
           "name": "mysql-ailike",
@@ -244,7 +250,7 @@
         {
           "name": "Augustus",
           "url": "https://github.com/24601/Augustus",
-          "description_markdown": "Agent skill for choosing where typed judgments fit beside code, policy, and generation, with Jev examples on question design and abstention plus an offline probability/threshold evaluator.",
+          "description_markdown": "Independent agent skill for building and improving decision-model systems, with composition rules, evaluation workflows, bounded prompt/program optimization, and an offline paired-outcome evaluator; TypeSafe Jev is the default hosted exemplar.",
           "permalink": "/projects/gh-24601-augustus/"
         },
         {
@@ -264,6 +270,12 @@
           "url": "https://github.com/qkal/Canny",
           "description_markdown": "Claude Code and Codex hooks that record edits and checks in an append-only ledger, flag a \"done\" claim without a passing check after the last code edit, and use optional Jev Noul judgments for advisory rule checks or to recognize a non-completion message; its default gate allows a repeated stop after warning, the author has not measured project-wide quality gains, and enabling Jev sends clipped diffs, project rules, and final messages to TypeSafe.",
           "permalink": "/projects/gh-qkal-canny/"
+        },
+        {
+          "name": "Codex Jev Router",
+          "url": "https://github.com/suenot/codex-jev-router",
+          "description_markdown": "Instruction-driven Codex subagent router that asks Jev Choice and Noul questions about a short task summary, applies confidence thresholds in code, and falls back to Sol when the decision fails; hosted Jev receives the summary, while local compatible backends are optional. Its installer changes local Codex configuration with a backup, but routing is not enforced at the tool boundary.",
+          "permalink": "/projects/gh-suenot-codex-jev-router/"
         },
         {
           "name": "DGP",
@@ -858,6 +870,12 @@
           "permalink": "/projects/gh-ufec-jev-block-android-ad/"
         },
         {
+          "name": "Jevometry",
+          "url": "https://github.com/Kunyanli230/Jevometry",
+          "description_markdown": "Alpha Python toolkit for offline analysis of Jev-like output distributions, parameter sensitivity, and Fisher geometry, with an optional TypeSafe SDK adapter that sends experiment states and questions to the provider. System-information and Cramér–Rao results require explicit statistical assumptions; its first live smoke test captured responses but did not yield stable Fisher estimates.",
+          "permalink": "/projects/gh-kunyanli230-jevometry/"
+        },
+        {
           "name": "JevPDF",
           "url": "https://github.com/kylemclaren/jevpdf",
           "description_markdown": "Browser PDF viewer for finding passages when you do not know the exact words: pdf.js extracts lines locally, each line gets one Jev Noul on whether it answers the query (batched with the page text as shared state), and lines above a code-owned threshold light up ranked by probability; only extracted text is sent to TypeSafe, never the PDF, and the API key stays behind a server-side proxy.",
@@ -1306,6 +1324,12 @@
           "url": "https://github.com/harshithsunku/learn-jev-end-to-end",
           "description_markdown": "MIT-licensed course of 12 Python notebooks that puts Jev inside a hand-rolled LLM agent loop as router, tool-call guard, done gate, and judge across 13 use cases checked against labeled fixtures, and compares Jev with two LLMs asked the same typed questions through system-one-adapter; tools are read-only or dry-run, and results come from one committed run, including the cases where the LLMs did better.",
           "permalink": "/projects/gh-harshithsunku-learn-jev-end-to-end/"
+        },
+        {
+          "name": "Milvus Search with Jev",
+          "url": "https://github.com/milvus-io/bootcamp/tree/master/bootcamp/RAG/search_with_jev",
+          "description_markdown": "Nine runnable Python notebooks combining Gemini embeddings, Milvus retrieval, and Jev decisions for reranking, filtering, search stopping, routing, cache reuse, curation, guardrails, and evaluation; examples use synthetic data, send embedding inputs to Gemini and judgment text to TypeSafe, and are not quality benchmarks.",
+          "permalink": "/projects/gh-milvus-io-bootcamp-tree-master-bootcamp-rag-search-with-jev/"
         },
         {
           "name": "Qwen on Cerebras comparison",

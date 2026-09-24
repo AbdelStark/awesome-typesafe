@@ -895,6 +895,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "suenot",
+      "name": "Eugen Soloviov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1426876",
+      "profile": "https://suenot.profitmaker.cc/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-9de3bc.svg?style=flat-square)](#contributors)",
