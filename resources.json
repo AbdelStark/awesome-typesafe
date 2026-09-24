@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-23",
-  "total_resources": 219,
+  "total_resources": 223,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -58,6 +58,12 @@
           "url": "https://github.com/formulahendry/jev-acp",
           "description_markdown": "Standalone ACP agent for Jev Choice, Score, and Noul decisions, with guided input, reusable templates, and probability displays; requires a TypeSafe API key and sends decision inputs to TypeSafe.",
           "permalink": "/projects/gh-formulahendry-jev-acp/"
+        },
+        {
+          "name": "Jevelry",
+          "url": "https://github.com/backant-io/jevelry",
+          "description_markdown": "Early-stage TypeScript CLI, library, and coding-agent skill for reusable Jev question templates: it maps typed answers to act, mark, or fall back, and keeps a local decision/outcome log for review. Question state goes to TypeSafe; the log keeps a state hash by default but can opt into full state, and configured `run` commands may execute locally without per-action confirmation when confidence is high.",
+          "permalink": "/projects/gh-backant-io-jevelry/"
         },
         {
           "name": "jevframe",
@@ -438,6 +444,12 @@
           "url": "https://github.com/eugeniughelbur/jev-engineering",
           "description_markdown": "Decision layer for coding agents: deterministic rules run before any model call, then one Jev request, shipped as a Claude Code PreToolUse hook, an MCP server, a loopback service and a team policy where personal overrides may tighten thresholds but never loosen them. Includes an adversarial kit and its published results: over 300 calls, blunt injections moved 0 of 30 dangerous commands but caused 10% false denials on safe ones, while authority framing moved 3 of 30.",
           "permalink": "/projects/gh-eugeniughelbur-jev-engineering/"
+        },
+        {
+          "name": "jev-graphify",
+          "url": "https://github.com/190ibrahim/jev-graphify",
+          "description_markdown": "Python CLI that names and classifies [graphify](https://github.com/Graphify-Labs/graphify) code-graph communities by having Jev pick from candidate names built from the graph, then routes a developer question to the community and symbol to read first; sends symbol names, file paths and short code comments (not source bodies) to TypeSafe, and has only been tested on one codebase.",
+          "permalink": "/projects/gh-190ibrahim-jev-graphify/"
         },
         {
           "name": "jev-logtriage",
@@ -1204,6 +1216,12 @@
           "permalink": "/projects/gh-abdelstark-lejudge-jev-jepa/"
         },
         {
+          "name": "LLM Memory Audit: Jev earnings test",
+          "url": "https://github.com/lizhuojunx86/llm-memory-audit/tree/main/studies/2026-09-jev",
+          "description_markdown": "Pre-registered test of whether `jev-1.13-20260917` remembers how 12,533 US earnings announcements turned out, comparing each company only with itself; it found no detectable memory (within-company AUC 0.506 on beats, against 0.587 pooled for Claude Sonnet 5 as a positive control) and publishes code, per-call probabilities and a freeze proof, but withholds the licensed FMP earnings and price data, and the verdict stays provisional until 757 prospective announcements are scored in January 2027.",
+          "permalink": "/projects/gh-lizhuojunx86-llm-memory-audit-tree-main-studies-2026-09-jev/"
+        },
+        {
           "name": "LLM2Jev",
           "url": "https://github.com/Yinsongxu/LLM2Jev",
           "description_markdown": "Apache-licensed local toolkit that reads causal-model logits for Choice, Score, and Noul answers through Transformers or SGLang, with a System One-shaped HTTP endpoint, web and Snake demos, and shared-prefix cache measurements. Its published performance benchmark compares cache modes on one model and GPU, not decision quality against Jev.",
@@ -1280,6 +1298,12 @@
           "url": "https://github.com/iammrduncan/typesafe-ai-benchmark",
           "description_markdown": "Side-by-side Jev and Qwen-on-Cerebras comparison with raw exports, cost accounting, methodology, and task-specific limitations.",
           "permalink": "/projects/gh-iammrduncan-typesafe-ai-benchmark/"
+        },
+        {
+          "name": "Verdict",
+          "url": "https://github.com/Manavarya09/verdict",
+          "description_markdown": "Apache-2.0 118M multilingual bi-encoder for Choice, Score, and Noul on a System One-compatible endpoint, with temperature scaling and optional split-conformal abstention whose coverage depends on its calibration assumptions; it can run locally on CPU or in a browser through ONNX, and the author's reported calibration and typed-decision results are task-specific, including a lower score than Laya on the published typed-decision suite.",
+          "permalink": "/projects/gh-manavarya09-verdict/"
         },
         {
           "name": "Von",
