@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-23",
-  "total_resources": 215,
+  "total_resources": 218,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -324,6 +324,12 @@
           "url": "https://github.com/kerpopule/hermes-jev-skills",
           "description_markdown": "Python toolkit and nine agent skills for Hermes, Claude Code, and Codex: Jev can route models, filter retrieved passages, select skills, and choose bounded computer or browser actions. The installer has a dry run and routing offers shadow mode; enabled features send redacted prompts or excerpts to TypeSafe, so read the per-feature data disclosure before use.",
           "permalink": "/projects/gh-kerpopule-hermes-jev-skills/"
+        },
+        {
+          "name": "Hermes JIT Context OS",
+          "url": "https://github.com/wojciechwiesner/jit-context",
+          "description_markdown": "Coding-agent context runtime with an optional Jev Noul ranker for candidate facts: it sends a bounded query and fact excerpts to OpenRouter, caches scores, and labels deterministic token-overlap fallback when the remote path is unavailable. Its published ten-task live-call record uses small SWE-bench-style fixtures built from inline files, not full repository checkouts or a SWE-bench score.",
+          "permalink": "/projects/gh-wojciechwiesner-jit-context/"
         },
         {
           "name": "Hippo Memory",
@@ -998,6 +1004,12 @@
           "permalink": "/projects/gh-valentynkit-jev-plays-pokemon-red/"
         },
         {
+          "name": "Magic Jev Ball",
+          "url": "https://github.com/mikecann/magic-jev-ball",
+          "description_markdown": "Playable 3D Magic 8 Ball whose Convex backend sends a question to Jev through Convex AI Gateway as a Choice over the 20 classic answers, then displays the full probability distribution and highest-probability answer; the question and result are stored in the app's Convex database, and users do not supply an API key.",
+          "permalink": "/projects/gh-mikecann-magic-jev-ball/"
+        },
+        {
           "name": "PlayJev",
           "url": "https://github.com/OmniJev/PlayJev",
           "description_markdown": "Open 0.8B model that plays ten browser games from the frame alone, one forward pass per move, with public weights and a browser demo.",
@@ -1034,6 +1046,12 @@
           "url": "https://huggingface.co/Hanno-Labs/bosun-v3.1-1.7b",
           "description_markdown": "Apache-2.0 open-weight Qwen3 decision model family with released 0.6B and 1.7B weights and shipped `choice`, `score`, and `noul` inference; a separate Jev-style alternative, not hosted Jev.",
           "permalink": "/projects/site-huggingface-co-hanno-labs-bosun-v3-1-1-7b/"
+        },
+        {
+          "name": "Convex Decision Evals",
+          "url": "https://www.convex.dev/evals/decision",
+          "description_markdown": "Convex-run leaderboard comparing Jev with structured-output LLMs on 108 four-option questions about the Convex platform; its open runner sends questions and shuffled options to OpenRouter, uses native Jev Choice, and publishes per-answer evidence. This tests one platform's API knowledge, not whether a model can write working code.",
+          "permalink": "/projects/site-convex-dev-evals-decision/"
         },
         {
           "name": "DecisionBench",
