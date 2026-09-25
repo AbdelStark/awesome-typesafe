@@ -464,6 +464,7 @@ End-user apps and workflow prototypes show where typed decisions can help with r
 
 Playable and physical-world experiments pair Jev judgments with deterministic environments. A successful run demonstrates that task and setup, not general reliability.
 
+- [1 Million Emojis](https://chriswijnia.com/experiments/emoji) — Shared canvas of a million emoji cells read as one strip: visitors place emoji and see everyone else's arrive live, and Jev paints the next cell as one Choice over up to 20 named options drawn from the neighbours and their Unicode groups, its pick sampled from its probabilities ([source](https://github.com/cwdx/1-million-emojis)).
 - [HEIST//ONE](https://github.com/AbdelStark/heist-one) — Observable browser stealth game where Jev supplies batched typed judgments for six guards while deterministic code owns the simulation and validates every proposal; includes a Decision Lens, scripted offline mode, evidence traces, tests, and one documented live sandbox extraction.
 - [Jev Chess](https://jevchess.com) — Anyone can play Jev on a shared chessboard. One Choice question covers every legal move; probabilities shade the board. Its confidence panel uses a narrow, one-ply material check. Source is closed.
 - [Jev Drone](https://github.com/RomanSlack/jev-drone) — MuJoCo quadrotor stack that keeps control and safety in code while using Jev for slower tactical judgments.
