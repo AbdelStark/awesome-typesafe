@@ -2,7 +2,7 @@
   "schema_version": 2,
   "source": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/main/README.md",
   "last_updated": "2026-09-23",
-  "total_resources": 223,
+  "total_resources": 228,
   "notice": "Community entries are independent unless their source says otherwise. Inclusion is not endorsement.",
   "categories": [
     {
@@ -38,7 +38,7 @@
         {
           "name": "Hunch",
           "url": "https://github.com/carldaws/hunch",
-          "description_markdown": "Ruby gem that turns judgment calls into control flow: `if Hunch.likely?(\"fraudulent\", given: order)` branches on a typed Jev answer, with `pick` for Choice, `rate` for Score, and graded predicates from `possibly?` to `definitely?`; not affiliated with TypeSafe AI.",
+          "description_markdown": "Ruby gem that turns judgment calls into control flow: `if Hunch.likely?(\"fraudulent\", given: order)` branches on a typed Jev answer, with `pick` for Choice, `rate` for Score, and graded predicates from `possibly?` to `almost_certainly?`; a [TypeScript port](https://github.com/carldaws/hunch-ts) offers the same interface; not affiliated with TypeSafe AI.",
           "permalink": "/projects/gh-carldaws-hunch/"
         },
         {
@@ -154,6 +154,12 @@
           "url": "https://github.com/ticofab/scala-jev-sdk",
           "description_markdown": "Community Scala 3 client for TypeSafe's System One API with typed Noul, Choice, and Score questions whose answers are retrieved with the question value itself, no effect system of its own so the same code runs on any sttp backend from `Future` to blocking, cats-effect, or ZIO, retries that honour `Retry-After`, and local validation that rejects a malformed question set before it costs a round trip; every call returns an `Either` rather than throwing, effects other than `Future` and the blocking `Identity` must supply a one-line sleeper for the retry timer, Scala 2.13 is not supported, and it is not affiliated with TypeSafe AI.",
           "permalink": "/projects/gh-ticofab-scala-jev-sdk/"
+        },
+        {
+          "name": "SemanticPolicy",
+          "url": "https://github.com/semanticpolicy/semantic-policy",
+          "description_markdown": "Alpha .NET 10 library (Apache-2.0) that writes application and agent decisions as Boolean, Choice or Score rules Jev answers, turns the probability into a verdict with thresholds measured on labelled examples by an evals CLI run from a clone, and adds checks before the model call, before a tool runs and after it returns in Microsoft Agent Framework agents; the evaluated text goes to Jev through OpenRouter or TypeSafe's endpoint and the library does not log it, and a rule is a signal, not a security boundary.",
+          "permalink": "/projects/gh-semanticpolicy-semantic-policy/"
         },
         {
           "name": "Swift SDK",
@@ -968,6 +974,18 @@
       "permalink": "/categories/games-and-robotics/",
       "resources": [
         {
+          "name": "1 Million Emojis",
+          "url": "https://chriswijnia.com/experiments/emoji",
+          "description_markdown": "Shared 1000 × 1000 emoji canvas, live for everyone: visitors paint strokes, and after each one Jev chooses a square next to it and its emoji as one Choice over named (square, emoji) pairs, its pick sampled from its probabilities ([source](https://github.com/cwdx/1-million-emojis)).",
+          "permalink": "/projects/site-chriswijnia-com-experiments-emoji/"
+        },
+        {
+          "name": "Chess with Jev",
+          "url": "https://chriswijnia.com/experiments/chess",
+          "description_markdown": "Browser chess and Chess960 where code works out every legal move's facts (exchanges, mates, threats) and Jev picks one per turn as a single Choice, with its candidates drawn as arrows ([source](https://github.com/cwdx/chess-with-jev)).",
+          "permalink": "/projects/site-chriswijnia-com-experiments-chess/"
+        },
+        {
           "name": "HEIST//ONE",
           "url": "https://github.com/AbdelStark/heist-one",
           "description_markdown": "Observable browser stealth game where Jev supplies batched typed judgments for six guards while deterministic code owns the simulation and validates every proposal; includes a Decision Lens, scripted offline mode, evidence traces, tests, and one documented live sandbox extraction.",
@@ -1252,6 +1270,12 @@
           "permalink": "/projects/gh-ikermoel-open-alternative-jev/"
         },
         {
+          "name": "Open Medical Jev",
+          "url": "https://github.com/FeiLiuEM/open-medical-jev",
+          "description_markdown": "MIT-licensed independent reproduction of the Jev decision loop with two frozen open-weight readers, a fit-free confidence gate, and split-conformal candidate sets; its four-reading configuration lands within 2 points of hosted Jev 1.13.0 on three 600-item medical licensing papers without training anything, running locally on one 24 GB GPU; only the China paper is a real exam (the US and India papers are fixed-seed draws), the exam items are not redistributed, and its coverage–accuracy curve still trails hosted Jev at the highest precision tiers.",
+          "permalink": "/projects/gh-feiliuem-open-medical-jev/"
+        },
+        {
           "name": "OpenJev (DiffusionGemma)",
           "url": "https://github.com/razorback16/openjev",
           "description_markdown": "Apache-licensed decision server that reads Choice, Score, and Noul probabilities from DiffusionGemma 26B through a System One-shaped API, with NVIDIA and Apple silicon backends plus optional image input. Its NVIDIA path pins an unmerged vLLM branch, some limits differ from Jev, and answer quality needs evaluation on the reader's own tasks.",
@@ -1366,6 +1390,12 @@
           "url": "https://jevbooks.com/en/patterns",
           "description_markdown": "Bilingual gallery of open-source Jev projects in which Jev itself gates and tags every listing from the README, with the probabilities printed on each project page, plus sixteen design patterns read out of ten codebases, each with the recognition question the pipeline sends; the site’s own source is not public, pattern tags are README-based rather than hand-verified, and the ask box sends your text to Jev and a DeepSeek model.",
           "permalink": "/projects/site-jevbooks-com-en-patterns/"
+        },
+        {
+          "name": "laya.tools",
+          "url": "https://laya.tools",
+          "description_markdown": "Independent directory of projects built on Laya, the Apache-2.0 open typed-decision model, imported daily from GitHub, npm, Hugging Face, and X, moderated, and browsable by platform and use case; unofficial and not affiliated with ConvAI Innovations or TypeSafe, it covers the Laya ecosystem rather than Jev itself apart from a Laya vs Jev comparison page, and the site promotes a hosted Laya API.",
+          "permalink": "/projects/site-laya-tools/"
         },
         {
           "name": "Learn Jev end to end",
